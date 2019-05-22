@@ -1,29 +1,49 @@
-# README #
+# moveup
 
-This README would normally document whatever steps are necessary to get your application up and running.
+This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
+version 0.16.0.
 
-### What is this repository for? ###
+## Install for windows
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+1.Install `node`  `git`  `ruby`
 
-### How do I get set up? ###
+2.Add    `環境変数`    `NODE_PATH` `X:\xx\nodejs\npm-global`     fill in your nodejs npm-global folder
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+3.In the `コマンド` get into `moveup-front` folder
 
-### Contribution guidelines ###
+4.Run      `npm install -g bower grunt-cli yo`         install bower and grunt
 
-* Writing tests
-* Code review
-* Other guidelines
+5.Run      `npm install -g generator-angular`          install angular scaffolding
 
-### Who do I talk to? ###
+6.Run      `bower install`            install bower
 
-* Repo owner or admin
-* Other community or team contact
+7.Run       `gem install compass`     install compass
+
+8.Run       `npm install jit-grunt --save-dev`     install jit-grunt
+
+
+## Build & development
+
+Run `sudo grunt build --force` for building and `grunt serve` for preview.
+
+## Testing 
+
+Running `grunt test` will run the unit tests with karma.
+
+
+## Trouble Shooting  
+
+
+
+`      Warning: Running "imagemin:dist" (imagemin) task  `
+`    Warning: Error: spawn /Users/xieyoujun/project/moveup-front/node_modules/jpegtran-bin/vendor/jpegtran ENOENT in file app/images/Banner/Banner_1.jpg Use --force to continue. `
+
+
+try:  
+npm uninstall grunt-contrib-imagemin  
+npm install grunt-contrib-imagemin  
+
+---
+
+
+
