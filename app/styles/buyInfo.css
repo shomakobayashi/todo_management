@@ -1,0 +1,474 @@
+.buy_table_right label{
+  margin-bottom: 0;
+}
+.arrowW {
+  margin: 20px 0;
+  line-height: 60px;
+  position: relative;
+  /* cursor: pointer; */
+  user-select: none;
+}
+.arrowW:before, .arrowW:after {
+  content: '';
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-style: solid;
+  border-width: 0;
+}
+li.arrowW{
+  list-style: none;
+  font-weight: bold;
+  letter-spacing: 2px;
+  display: inline-block;
+}
+li.arrowW:after, li.arrowW:before {
+  border-width: 30px 0 30px 30px;
+}
+li.arrowW:before {
+  left: -30px;
+}
+li.arrowW:after {
+  right: -30px;
+}
+.buy_table_right input[type="radio"] + label::before {
+    content: "\a0";
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 10px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    margin-top: -3px;
+}
+.buy_table_right input[type="radio"]:checked + label::before {
+    background-color: red;
+    background-clip: content-box;
+    padding: .2em;
+}
+.buy_table_right input[type="radio"] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+/***************************************************/
+.buyMarginLeft{
+    margin-left: 15px;
+}
+.buyPaddingLeft{
+    padding-left: 15px;
+}
+.buy_TopImg{
+    width: 40%;
+}
+.buy_TopP{
+    font-size: 24px;
+    margin-top: 50px;
+    color: black;
+}
+.buyRadio{
+    float: left;
+    width: 2%;
+}
+.buyFristRadioSpan{
+    width: 20%;
+    float: left;
+    padding-top: 3px;
+    margin-bottom: 3px;
+}
+.buyRadioSpan{
+    width: 14%;
+    float: left;
+    padding-top: 3px;
+    margin-bottom: 3px;
+}
+.BuyHistory{
+    width: 100%;
+    background-color: rgb(233,233,233);
+    padding-bottom: 30px;
+}
+.BuyHistory_row{
+    padding-top: 70px;
+}
+.BuyHistoryTop{
+    height: 60px;
+    padding-top: 20px;
+}
+.BuyHistoryTop span{
+    font-size: 20px;
+    color: black;
+}
+.BuyHistoryRight{
+    padding-right: 50px;
+}
+.BuyHistoryBorderTop{
+    border-top: 4px solid red;
+    background-color: white;
+    height: 100%;
+    background-color: white;
+    padding: 30px 40px;
+}
+.BuyHistoryRightTitle{
+    padding: 0;
+    font-size: 25px;
+    color: black;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+.BuyHistory_imgdiv{
+    padding: 0;
+    height: 150px;
+}
+.BuyHistoryRightContent{
+    padding: 0;
+    margin-top: 30px;
+    color: black;
+}
+.BuyHistoryRightInfo{
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 10px 0;
+    border-top: 2px solid rgb(149,149,149);
+    border-bottom: 2px solid rgb(149,149,149);
+}
+.BuyHistoryFont{
+    padding: 50px 0 0 20px;
+    height: 150px;
+    letter-spacing: 3px;
+}
+.BuyHistoryFont label{
+    color: black;
+    font-weight: normal;
+}
+.buyOverFirst_title{
+    font-size: 26px;
+    color: black;
+    letter-spacing: 5px;
+    margin-bottom: 60px;
+}
+.buyOver_title{
+    margin-top: 80px;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    letter-spacing: 5px;
+}
+.buyOver_text{
+    margin-top: 60px;
+    font-size: 17px;
+    color: black;
+    letter-spacing: 2px;
+
+}
+/****************************************/
+.buyConfirm_fontStyle{
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    letter-spacing: 2px;
+    line-height: 16px;
+}
+.buyConfirm_fontStyle div{
+    margin-top: 50px;
+}
+.buyConfirm_GoodsTotal{
+    height: 40px;
+    margin-top: 30px;
+}
+.buyConfirm_GoodsTotal span{
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 16px;
+}
+.buy_title{
+    margin-top: 35px;
+    color: rgb(25,25,25);
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+.buy_method_sel{
+    width: 850px;
+}
+.buy_method_sel input{
+    margin-top: 10px;
+}
+.buy_method_sel span{
+    font-size: 12px;
+    color: black;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.buy_addressBtn{
+    font-size: 11px;
+    font-weight: bold;
+    color: rgb(25,25,25);
+    border: none;
+    padding: 0 5px;
+    background-color: rgb(181,181,181);
+}
+.buy_table_left{
+  width: 250px;
+    background-color: #edeeef;
+    padding: 10px;
+    vertical-align: top;
+}
+.buy_table_left span{
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+.buy_table_right{
+  padding: 10px;
+}
+.buy_table_right span{
+  font-weight: bold;
+  color: black;
+  letter-spacing: 2px;
+}
+.buyInfoSubTitle{
+  width: 77%;
+  border-bottom: 1px solid rgb(181,181,181);
+}
+.buy_table_List{
+    width: 77%;
+    margin-top: 15px;
+    border: 1px solid #cccccc;
+    font-size: 14px;
+    table-layout: fixed;word-wrap:break-word;
+}
+.buy_table_icon{
+    background-color: rgb(255,5,7);
+    color: white;
+    padding-left: 14px;
+    padding-right: 14px;
+    font-size: 8px;
+    font-weight: normal;
+    float: right;
+}
+.buy_dropdown-content a {
+    color: black;
+    text-decoration: none;
+    padding: 12px 15px;
+    display: block;
+}
+.buy_confirmBtn_color1{
+  background-color: rgb(31,106,187);
+}
+.buy_confirmBtn_color2{
+  background-color: #00a7dd;
+}
+.buy_confirmBtn {
+    width: 100%;
+    height: 45px;
+    color: white;
+    border: none;
+    font-size: 13px;
+    margin-top: 100px;
+    letter-spacing: 4px;
+}
+.buy_CodeBtn {
+    font-weight: bold;
+    display: inline-block;
+}
+.buy_arrow_Img {
+    width: 10px;
+    height: 7px;
+    margin-left: -22px;
+}
+.buy_waring_Label{
+    text-align: left;
+    font-weight: bolder;
+    font-size: 12px;
+}
+.buy_error{
+    margin-top: 15px;
+}
+.buy_hide_frame{
+    height: 0px;
+    width: 0px;
+}
+.buy_footer_font {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+@media (max-width: 991px) {
+.buy_table_left{
+  width: 220px;
+}
+}
+@media (max-width: 736px) {
+.buyInfoSubTitle{
+  width: 100%;
+}
+.buy_table_List{
+  width: 100%;
+}
+.buy_confirmBtn {
+    margin-top: 30px;
+}
+}
+@media (max-width: 414px) {
+.buy_addressBtn{
+  width: 100%;
+}
+.buyOver_ML{
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+}
+.buyOverFirst_title{
+    margin-bottom: 0px;
+    font-size: 20px;
+}
+.buyOver_title{
+    margin-top: 40px;
+    font-size: 18px;
+    letter-spacing: 3px;
+}
+.buyOver_title p{
+    width: 90%
+}
+.buyOver_text{
+    padding: 0;
+    margin-top: 40px;
+    font-size: 13px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+.buyOver_text p{
+    margin: 0;
+}
+.BuyHistory{
+    margin-top: -30px;
+}
+.BuyHistory_row{
+    padding-top: 15px;
+}
+.BuyHistoryBorderTop{
+    border: none;
+    padding: 25px 15px 10px 15px;
+    box-shadow: darkgrey 3px 4px 1px 1px;
+}
+.BuyHistoryRightTitle{
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+.BuyHistoryRight{
+    padding-right: 15px;
+}
+.BuyHistoryRightInfo{
+    font-size: 13px;
+    letter-spacing: 0px;
+    padding: 10px 0 5px 5px;
+}
+.BuyHistoryRightDate{
+    font-weight: normal;
+}
+.BuyHistory_imgdiv{
+    height: 100px;
+    padding-right: 15px;
+}
+.BuyHistoryFont{
+    padding: 30px 0 0 0;
+    height: 100px;
+    font-size: 12px;
+    color: black;
+    letter-spacing: 2px;
+}
+.BuyHistoryFont label{
+    line-height: 16px;
+}
+.buy_title p{
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+.buy_TopImg{
+    width: 80%;
+}
+.buy_TopP{
+    font-size: 19px;
+    margin-top: 30px;
+}
+.buy_method_sel{
+    width: 372px;
+}
+.buyMarginLeft{
+    margin-left: 0px;
+}
+.buyFristRadioSpan{
+    width: 40%;
+}
+.buyRadioSpan{
+    width: 40%;
+}
+.buyConfirm_fontStyle div{
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight: normal;
+}
+.buyConfirm_GoodsTotal{
+    padding: 0;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgb(203,203,203);
+}
+.buyConfirm_GoodsTotal span{
+    color: black;
+}
+.buy_table_List {
+  font-size: 11px;
+  margin-top: 20px;
+}
+.buy_table_left{
+  padding: 5px 6px;
+  width: 140px;
+}
+.buy_table_right{
+  padding: 5px 6px;
+}
+.buy_table_icon {
+    display: none;
+}
+}
+@media (max-width: 375px) {
+.buyOver_title{
+    margin-top: 35px;
+    letter-spacing: 2px;
+}
+.buyOver_text{
+    margin-top: 35px;
+    font-size: 11px;
+}
+.BuyHistory{
+    margin-top: -30px;
+}
+.BuyHistoryRightTitle{
+    letter-spacing: 1px;
+}
+.BuyHistoryRight{
+    padding-right: 15px;
+}
+.BuyHistoryRightInfo{
+    font-size: 12px;
+}
+.buy_title p{
+    font-size: 13px;
+}
+.buy_TopP{
+    font-size: 18px;
+}
+.buyMarginLeft{
+    margin-left: 0px;
+}
+.buy_table_List{
+  font-size: 10px;
+}
+.buy_table_left {
+  padding: 5px;
+  width: 120px;
+}
+.buy_table_right{
+  padding: 5px;
+}
+}

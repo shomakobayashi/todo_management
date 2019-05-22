@@ -1,0 +1,232 @@
+<div ng-repeat="shop in results">
+<section>
+    <div class="container body_containerPadding">
+      	<div class="col-md-6 col-sm-6 col-xs-12 shopDetail_info padding_zero">
+      		<div class="col-md-12 col-sm-12 col-xs-12 padding_zero_sp736">
+      			<p>{{shop.name}}</p>
+      		</div>
+        </div>
+      	<div class="col-md-6 col-sm-6 col-xs-12 shopDetail_phone padding_zero">
+            <div class="col-md-8 col-sm-8 col-xs-8 padding_zero display">
+              <i class="fa fa-phone"></i><span style="margin: 0 10px;">{{shop.tel}}</span>
+            </div>
+            <div class="col-md-8 col-sm-8 col-xs-8 padding_zero displayPc" ng-click="">
+              <a class="sp_phone" href="tel:{{tel}}" >
+                <i class="fa fa-phone"></i><span style="margin: 0 10px;">{{shop.tel}}</span>
+              </a>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-4 padding_zero">
+              <button type="button" class="eventDetail_login_btn" ng-click="addMyPage()" ng-if="shop.favorite == false">お気に入り <i class="fa fa-star-o"></i></button>
+              <button type="button" class="eventDetail_login_btn" style="background-color:#A9A9A9;" ng-click="RemoveMyPage()" ng-if="shop.favorite == true">お気に入り済み <i class="fa fa-star"></i></button>
+            </div>
+        </div>
+      	<div class="col-md-12 col-sm-12 col-xs-12 shopDetail_boedertop">
+            <div class="col-md-8 col-sm-12 col-xs-12 padding_zero">
+              <img ng-src="{{shop.picUrl1}}" class="shopDetail_IMG1">
+            </div>
+            <div class="col-md-4 col-sm-12 col-xs-12 padding_zero">
+            	<div class="col-md-12 col-sm-12 col-xs-12 shopPaddingLeft20">
+                <div ng-if="videoUrl != undefined && videoUrl !=''">
+                  <iframe class="shopDetail_IMG2" ng-src="{{videoUrl}}" allow="autoplay; encrypted-media" frameborder="0" allowfullscreen="" scrolling="no"></iframe>
+                </div>
+                <div ng-if="videoUrl == undefined || videoUrl ==''">
+                  <img src="{{picUrl11}}" class="shopDetail_IMG2">
+                </div>
+              </div>
+            	<div class="col-md-12 col-sm-12 col-xs-12 shopDetail_f360">
+                <div ng-if="picUrl6 != undefined && picUrl6 != ''">
+                  <iframe src="{{picUrl6}}" frameborder="0" scrolling="no" allowfullscreen></iframe>
+              	</div>
+                <div ng-if="(picUrl6 == undefined || picUrl6 == '') && (picUrl12 != undefined && picUrl12 != '')">
+                  <img src="{{picUrl12}}" class="shopDetail_IMG2">
+              	</div>
+            	</div>
+            </div>
+      	</div>
+    	<div class="col-md-3 col-sm-12 col-xs-12 shopDetail_left">
+          <div ng-if="results[0].uuid2 != null ">
+            <a href="/recruitDetail/{{results[0].uuid2}}/">
+          		<div class="col-md-12 col-sm-12 col-xs-12 shopDetail_hidTitle padding_zero display" style="margin-bottom: 20px;border: 1px solid rgb(238,238,238);cursor: pointer;">
+            		<div class="shopDetail_left_title" align="center">
+            				<p>こちらのお店の</p><p><b>求人情報</b>はこちら</p>
+            		</div>
+            	</div>
+            </a>
+          </div>
+        	<div class="col-md-12 col-sm-12 col-xs-12 shopDetail_msg">
+        		<div class="col-md-12 col-sm-12 col-xs-12 shopDetail_now padding_zero display">
+        			<div class="col-md-4 col-sm-4 padding_zero"><img src="images/0401.svg"></div>
+              <div class="col-md-8 col-sm-8 padding_zero"><p>今日のおトク情報</p></div>
+        		</div>
+        		<div class="marginBottom3 displayPc">
+        			<b class="shopDetail_nowSP">おトク情報</b>
+        		</div>
+        		<div class="col-md-12 col-sm-12 col-xs-12 shopDetail_overhiddenDIV padding_zero">
+          		<div class="shopDetail_pre-scrollable">
+            		<div ng-repeat="coupon in shop.couponList" class="col-md-12 col-sm-12 col-xs-12 shopDetail_nowContent " >
+            			<b>{{coupon.time}}</b>
+            			<p>{{coupon.title}}</p>
+            			<div class="col-md-12 col-sm-12 col-xs-12 padding_zero">
+            				<img ng-src="{{coupon.picUrl}}" class="shopDetail_IMG">
+            			</div>
+            			<div class="col-md-12 col-sm-12 col-xs-12 dashedDiv padding_zero">
+            				<span>{{coupon.desc}}</span>
+            			</div>
+            		</div>
+          		</div>
+        		</div>
+          </div>
+        	<div class="col-md-12 col-sm-12 col-xs-12 shopDetail_msg padding_zero">
+        		<div class="col-md-12 col-sm-12 col-xs-12 shopDetail_now padding_zero display">
+        			<div class="col-md-4 col-sm-4 padding_zero"><img src="images/0501.svg"></div>
+              <div class="col-md-8 col-sm-8 padding_zero"><p>今日の店舗情報</p></div>
+        		</div>
+        		<div class="marginBottom3 displayPc">
+        			<b class="shopDetail_nowSP">店舗情報</b>
+        		</div>
+        		<div class="col-md-12 col-sm-12 col-xs-12 shopDetail_overhiddenDIV padding_zero">
+          		<div class="shopDetail_pre-scrollable">
+            		<div ng-repeat="now5 in now5List" class="col-md-12 col-sm-12 col-xs-12 shopDetail_nowContent shopDetail_expaddingR">
+                  <div class="col-md-12 col-sm-12 col-xs-12 dashedDiv padding_zero">
+              			<b>{{now5.time}}</b>
+              			<p>{{now5.content}}</p>
+                  </div>
+            		</div>
+          		</div>
+        		</div>
+        	</div>
+    	</div>
+      	<div class="col-md-9 col-sm-12 col-xs-12 shopDetail_right">
+      		<!-- <div class="col-md-12 col-sm-12 col-xs-12 shopDetail_rightInfo">
+        		<div class="shopDetail_right_title" align="left">
+        			<div style="height: 8px;"></div>
+        			<label><span>{{shop.title}}</span></label>
+        			<div class="shopDetail_underline event_paly"></div>
+        		</div>
+        		<div  class="shopDetail_oneContent">
+      				<label><span style="letter-spacing: 2px;">{{shop.desc1}}</span></label>
+        		</div>
+        		<div class="shopDetail_fourIMG">
+        			<div class="col-md-3 col-sm-6 col-xs-6" ng-repeat="image in starPic" ng-hide="$index > 3 && hideMoreButtons">
+                <img ng-src="{{image}}" class="shopDetail_IMG"/>
+              </div>
+              <div class="col-md-12 col-sm-12 col-xs-12" ng-hide="btnViewMore" align="center" style="margin-top: 15px;">
+                <button class="top_button" ng-click="appearPic()">VIEW MORE</button>
+              </div>
+        		</div>
+        	</div> -->
+          <div class="col-md-12 col-sm-12 col-xs-12 shopDetail_rightInfo">
+        		<div class="shopDetail_right_title" align="left">
+        			<div style="height: 8px;"></div>
+        			<label><span>{{shop.title}}</span></label>
+        			<div class="shopDetail_underline event_paly"></div>
+        		</div>
+        		<div class="shopDetail_oneContent"ng-bind-html="shop.desc1">
+      				<!-- <label><span style="letter-spacing: 2px; font-weight:normal;">{{shop.desc1}}</span></label> -->
+        		</div>
+        		<div class="shopDetail_fourIMG">
+        			<div class="col-md-3 col-sm-6 col-xs-6" ng-repeat="image in starPic" ng-hide="$index > 3 && hideMoreButtons">
+                <img ng-src="{{image}}" class="shopDetail_IMG"/>
+              </div>
+              <div class="col-md-12 col-sm-12 col-xs-12" ng-hide="btnViewMore" align="center" style="margin-top: 15px;">
+                <button class="top_button" ng-click="appearPic()">VIEW MORE</button>
+              </div>
+        		</div>
+        	</div>
+        	<div class="col-md-12 col-sm-12 col-xs-12 shopDetail_detailed">
+        		<div class="shopDetail_right_title display" align="left">
+        			<div style="height: 8px;"></div>
+        			<label><span>店舗詳細</span></label>
+        		</div>
+        		<div class="col-md-12 col-sm-12 col-xs-12 shopDetail_table_div">
+              <div class="col-md-12 col-sm-12 col-xs-12 shopDetail_table_tr">
+                <div class="col-md-3 col-sm-3 col-xs-3 padding_zero"><span class="shopDetail_paddingTitle">店名</span></div>
+                <div class="col-md-9 col-sm-9 col-xs-9 padding_zero"><span>{{shop.name}}</span></div>
+              </div>
+              <div class="col-md-12 col-sm-12 col-xs-12 shopDetail_table_tr">
+                <div class="col-md-3 col-sm-3 col-xs-3 padding_zero"><span class="shopDetail_paddingTitle">TEL</span></div>
+                <div class="col-md-9 col-sm-9 col-xs-9 padding_zero"><span>{{shop.tel}}</span></div>
+              </div>
+              <div class="col-md-12 col-sm-12 col-xs-12 shopDetail_table_tr">
+                <div class="col-md-3 col-sm-3 col-xs-3 padding_zero"><span class="shopDetail_paddingTitle">最寄駅</span></div>
+                <div class="col-md-9 col-sm-9 col-xs-9 padding_zero"><span>{{shop.station}}</span></div>
+              </div>
+              <div class="col-md-12 col-sm-12 col-xs-12 shopDetail_table_tr" ng-if="desc40 != null && desc40 != ''">
+                <div class="col-md-3 col-sm-3 col-xs-3 padding_zero"><span class="shopDetail_paddingTitle">アクセス</span></div>
+                <div class="col-md-9 col-sm-9 col-xs-9 padding_zero"><span>{{shop.desc40}}</span></div>
+              </div>
+              <div class="col-md-12 col-sm-12 col-xs-12 shopDetail_table_tr">
+                <div class="col-md-3 col-sm-3 col-xs-3 padding_zero"><span class="shopDetail_paddingTitle">住所</span></div>
+                <div class="col-md-9 col-sm-9 col-xs-9 padding_zero">
+                  <a href="https://www.google.co.jp/maps/dir//{{shop.coord1}},{{shop.coord2}}/@{{shop.coord1}},{{shop.coord2}},16z">
+                    <div class="col-md-9 col-sm-9 col-xs-9" style="padding: 0;"><img src="images/mapicon.svg" class="shopDetail_mpaicon"><span>{{shop.address}}</span></div>
+                  </a>
+                  <div class="col-md-3 col-sm-3 col-xs-3" style="padding: 0;">
+                    <button type="button" class="displayPc"><i class="fa fa-map-marker"></i>MAP</button>
+                  </div>
+                </div>
+              </div>
+              <div ng-if="desc2 != undefined && desc2 !=''" class="col-md-12 col-sm-12 col-xs-12 shopDetail_table_tr">
+                <div class="col-md-3 col-sm-3 col-xs-3 padding_zero"><span class="shopDetail_paddingTitle">設立</span></div>
+                <div class="col-md-9 col-sm-9 col-xs-9 padding_zero"><span>{{shop.desc2}}</span></div>
+              </div>
+              <div ng-if="desc3 != undefined && desc3 !=''" class="col-md-12 col-sm-12 col-xs-12 shopDetail_table_tr">
+                <div class="col-md-3 col-sm-3 col-xs-3 padding_zero"><span class="shopDetail_paddingTitle">代表取締役</span></div>
+                <div class="col-md-9 col-sm-9 col-xs-9 padding_zero"><span>{{shop.desc3}}</span></div>
+              </div>
+              <div ng-if="desc4 != undefined && desc4 !=''" class="col-md-12 col-sm-12 col-xs-12 shopDetail_table_tr">
+                <div class="col-md-3 col-sm-3 col-xs-3 padding_zero"><span class="shopDetail_paddingTitle">資本金</span></div>
+                <div class="col-md-9 col-sm-9 col-xs-9 padding_zero"><span>{{shop.desc4}}</span></div>
+              </div>
+              <div ng-if="desc5 != undefined && desc5 !=''" class="col-md-12 col-sm-12 col-xs-12 shopDetail_table_tr">
+                <div class="col-md-3 col-sm-3 col-xs-3 padding_zero"><span class="shopDetail_paddingTitle">従業員数</span></div>
+                <div class="col-md-9 col-sm-9 col-xs-9 padding_zero"><span>{{shop.desc5}}</span></div>
+              </div>
+              <div ng-if="desc6 != undefined && desc6 !=''" class="col-md-12 col-sm-12 col-xs-12 shopDetail_table_tr">
+                <div class="col-md-3 col-sm-3 col-xs-3 padding_zero"><span class="shopDetail_paddingTitle">事業内容</span></div>
+                <div class="col-md-9 col-sm-9 col-xs-9 padding_zero"><span>{{shop.desc6}}</span></div>
+              </div>
+              <div ng-if="desc7 != undefined && desc7 !=''" class="col-md-12 col-sm-12 col-xs-12 shopDetail_table_tr">
+                <div class="col-md-3 col-sm-2 col-xs-2 padding_zero"><span class="shopDetail_paddingTitle">営業所・支店・支社</span></div>
+                <div class="col-sm-1 col-xs-1 padding_zero displayPc"></div>
+                <div class="col-md-9 col-sm-9 col-xs-9 padding_zero"><span>{{shop.desc7}}</span></div>
+              </div>
+              <div ng-if="desc8 != undefined && desc8 !=''" class="col-md-12 col-sm-12 col-xs-12 shopDetail_table_tr">
+                <div class="col-md-3 col-sm-3 col-xs-3 padding_zero"><span class="shopDetail_paddingTitle">ホームページ</span></div>
+                <div class="col-md-9 col-sm-9 col-xs-9 padding_zero">
+                  <a target="blank" href="{{shop.desc8}}">{{shop.desc8}}</a>
+                </div>
+              </div>
+              <div ng-if="desc9 != undefined && desc9 !=''" class="col-md-12 col-sm-12 col-xs-12 shopDetail_table_tr">
+                <div class="col-md-3 col-sm-2 col-xs-2 padding_zero"><span class="shopDetail_paddingTitle">公式アカウント</span></div>
+                <div class="col-sm-1 col-xs-1 padding_zero displayPc"></div>
+                <div class="col-md-9 col-sm-9 col-xs-9 padding_zero">
+                  <div ng-bind-html="shop.desc9"></div>
+                </div>
+              </div>
+              <div ng-if="desc10 != undefined && desc10 !=''" class="col-md-12 col-sm-12 col-xs-12 shopDetail_table_tr">
+                <div class="col-md-3 col-sm-2 col-xs-2 padding_zero"><span class="shopDetail_paddingTitle">関連、系列<p></p>グループ店舗</span></div>
+                <div class="col-sm-1 col-xs-1 padding_zero displayPc"></div>
+                <div class="col-md-9 col-sm-9 col-xs-9 padding_zero">
+                  <div ng-bind-html="shop.desc10"></div>
+                </div>
+              </div>
+              <div ng-if="desc11 != undefined && desc11 !=''" class="col-md-12 col-sm-12 col-xs-12 shopDetail_table_tr">
+                <div class="col-md-3 col-sm-3 col-xs-3 padding_zero"><span class="shopDetail_paddingTitle">備考</span></div>
+                <div class="col-md-9 col-sm-9 col-xs-9 padding_zero"><span>{{shop.desc11}}</span></div>
+              </div>
+      				</table>
+        		</div>
+        	</div>
+        	<div class="col-sm-2 col-xs-2 displayPc"></div>
+          <a href="/recruit">
+          	<div class="col-sm-8 col-xs-8 shopDetail_footBtn displayPc">
+                <div class="shopDetail_footBtn_div"><span>求人情報</span></div>
+          	</div>
+          </a>
+        	<div class="col-sm-2 col-xs-2 displayPc"></div>
+      	</div>
+    </div>
+</section>
+</div>
+<div ng-include="'views/footer.html'" ng-hide="hideFooter"></div>

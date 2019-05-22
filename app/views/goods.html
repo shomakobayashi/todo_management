@@ -1,0 +1,76 @@
+<section>
+    <div class="container goods_top">
+      <div class="goodsSelectDiv" ng-hide="selectHide0" ng-click="shopCloseAllSelect()"></div>
+      <div class="goods_title displayPc" align="left">
+      	<p>アイテム数&nbsp;&nbsp;&nbsp;{{results.count}}件</p>
+      </div>
+    	<div class="container goodsSelectPdg">
+          <div class="col-md-12 col-sm-12 col-xs-12 padding_zero">
+              <div class="shop_textinput">
+                  <input type="text" placeholder="フリーワード" ng-model="searchTitle">
+              </div>
+              <div class="shop_selectinput shop_selectWidth" ng-click="shopSelect1()">
+                  <span class="selectListSpan">{{selectDesc1}}</span>
+              </div>
+              <div class="shop_selectList shop_selectWidth shop_selectPosition1" ng-hide="selectHide1" ng-click="shopCloseSelect1()" style="z-index: 500;">
+                  <div class="selectListShop" ng-click="shopSelectValue1('カテゴリー選択',0)"><span class="selectListSpan">カテゴリー選択</span></div>
+                  <div class="selectListShop" ng-click="shopSelectValue1('Tシャツ',1)"><span class="selectListSpan">Tシャツ</span></div>
+                  <div class="selectListShop" ng-click="shopSelectValue1('フリーペーパー',2)"><span class="selectListSpan">フリーペーパー</span></div>
+              </div>
+              <div class="shop_selectinput shop_selectWidth" ng-click="shopSelect2()">
+                  <span class="selectListSpan">{{selectDesc2}}</span>
+              </div>
+              <div class="shop_selectList shop_selectWidth shop_selectPosition2_old" ng-hide="selectHide2" ng-click="shopCloseSelect2()" style="z-index: 500;">
+                  <div class="selectListShop" ng-click="shopSelectValue2('価格帯を選択',0)"><span class="selectListSpan">価格帯を選択</span></div>
+                  <div class="selectListShop" ng-click="shopSelectValue2('1,000-2,000円',1)"><span class="selectListSpan">1,000-2,000円</span></div>
+                  <div class="selectListShop" ng-click="shopSelectValue2('2,000-5,000円',2)"><span class="selectListSpan">2,000-5,000円</span></div>
+                  <div class="selectListShop" ng-click="shopSelectValue2('5,000-10,000円',3)"><span class="selectListSpan">5,000-10,000円</span></div>
+                  <div class="selectListShop" ng-click="shopSelectValue2('10,000-20,000円',4)"><span class="selectListSpan">10,000-20,000円</span></div>
+                  <div class="selectListShop" ng-click="shopSelectValue2('20,000-30,000円',5)"><span class="selectListSpan">20,000-30,000円</span></div>
+                  <div class="selectListShop" ng-click="shopSelectValue2('30,000-50,000円',6)"><span class="selectListSpan">30,000-50,000円</span></div>
+              </div>
+              <div class="goods_btn display" align="left" ng-click="search()">
+                  <div class="shop_btnStyle" align="center"><i class="fa fa-search display">&nbsp;検索</i></div>
+              </div>
+              <div class="goods_btn displayPc" align="left" ng-click="search()">
+                  <div class="shop_btnStyle" align="center">検索</div>
+              </div>
+              <a href="/purchaseCart" style="color:black;">
+                <div class="fa fa-shopping-cart goods_shopcar">
+                    <div ng-hide="expression" class="goods_shopcardiv">{{resultsCart.count}}</div>
+                </div>
+              </a>
+          </div>
+    	</div>
+    </div>
+    <div class="container goods_spColor">
+        <div class="col-md-12 col-sm-12 col-xs-12 goods_title display" align="center">
+        	<p>アイテム数 {{results.count}} 件</p>
+        </div>
+        <div ng-repeat="goodsList in results.goodsList">
+          <div class="col-md-3 col-sm-3 col-xs-6 goods_info_div">
+            <a href="/goodsDetail/{{goodsList.uuid}}/">
+          	<div class="goods_shadow">
+          		  <div class="goods_img"><img ng-src="{{goodsList.picUrl}}"></div>
+                <div class="goods_info">
+                	<label class="lineStyle lineHid2">{{goodsList.title}}</label>
+                </div>
+                <div class="goods_brand display"><span>{{goodsList.brand}}</span></div>
+                <div class="goods_price"><span>￥&nbsp;{{goodsList.price|number:0}}</span></div>
+          	</div>
+            </a>
+          </div>
+        </div>
+        <div ng-if="results.goodsList.length == 0">
+          <div class="col-md-12 col-sm-12 col-xs-12 goods_list_null_div display"></div>
+        </div>
+        <div pagination class="col-md-12 col-sm-12 col-xs-12 change_page event_padding2" ng-hide="hidePages" align="center">
+            <ul>
+                <a href="javascript:void(0);"><li ng-click="upPageClick()">&lt;</li></a>
+                <div id="pagesChange"></div>
+                <a href="javascript:void(0);"><li ng-click="downPageClick()">&gt;</li></a>
+            </ul>
+        </div>
+    </div>
+</section><!--/#EventDairy-->
+<div ng-include="'views/footer.html'" ng-hide="hideFooter"></div>

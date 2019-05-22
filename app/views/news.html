@@ -1,0 +1,57 @@
+<section class="minHeightVh100">
+    <div class="container body_containerPadding">
+        <div class="col-md-4 col-sm-4 col-xs-12 list_title padding_zero">NEWS</div>
+        <div class="col-md-8 col-sm-8 col-xs-12 padding_zero display">
+        	  <div class="col-md-4 col-sm-4 col-xs-0"></div>
+            <a href="/news/0/1/">
+                <div class="col-md-2 col-sm-2" style="padding: 0 5px;"><p class="tab tab_all">ALL</p></div>
+            </a>
+            <a href="/news/2/1/">
+                <div class="col-md-2 col-sm-2" style="padding: 0 5px;"><p class="tab tab_moveup">MOVEUP</p></div>
+            </a>
+            <a href="/news/1/1/">
+                <div class="col-md-2 col-sm-2" style="padding: 0 5px;"><p class="tab tab_event">EVENT</p></div>
+            </a>
+            <a href="/news/3/1/">
+                <div class="col-md-2 col-sm-2" style="padding: 0 5px;"><p class="tab tab_news">NEWS</p></div>
+            </a>
+        </div>
+        <div class="col-md-8 col-sm-12 col-xs-12 news_selectDiv displayPc">
+            <div id="selectInput" class="news_catagoli_select" ng-click="menuClick()"><span>{{typeValue}}</span></div>
+            <div id="div1" ng-hide="menuHide">
+                <a href="/news/0/1/"><div class="selectDIV">ALL</div></a>
+                <a href="/news/2/1/"><div class="selectDIV">MOVEUP</div></a>
+                <a href="/news/1/1/"><div class="selectDIV">EVENT</div></a>
+                <a href="/news/3/1/"><div class="selectDIV">NEWS</div></a>
+          	</div>
+            <div id="div2" ng-click="menuClick2()" ng-hide="menuHide"></div>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 news_body_margin padding_zero">
+          <div ng-repeat="newsList in results.newsList">
+            <a href="/newsDetail/{{newsList.uuid}}/">
+              <div class="col-md-12 col-sm-12 newsList_div padding_zero display">
+                	<div class="col-md-2 col-sm-3 news_date padding_zero">{{newsList.date}}</div>
+                  <div class="col-md-10 col-sm-9 news_newMgL">
+                      <div class="col-md-2 col-sm-2 news_catagoli"><div style="{{newsList.color}}">{{newsList.type}}</div></div>
+                    	<div class="col-md-10 col-sm-10 news_title">{{newsList.title}}</div>
+                    	<div class="col-md-12 col-sm-12 news_excerpt lineStyle lineHid2">{{newsList.excerpt}}</div>
+                  </div>
+              </div>
+              <div class="col-sm-12 col-xs-12 newsList_div padding_zero displayPc">
+                  <div class="col-sm-12 col-xs-12 news_title">{{newsList.title}}</div>
+                  <div class="col-sm-3 col-xs-3 news_catagoli"><div style="{{newsList.color}}">{{newsList.type}}</div></div>
+                  <div class="col-sm-9 col-xs-9 news_date">{{newsList.date}}</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div pagination class="col-md-12 col-sm-12 col-xs-12 change_page event_padding2" ng-hide="hidePages" align="center">
+            <ul>
+                <a href="javascript:void(0);"><li ng-click="upPageClick()">&lt;</li></a>
+                <div id="pagesChange"></div>
+                <a href="javascript:void(0);"><li ng-click="downPageClick()">&gt;</li></a>
+            </ul>
+        </div>
+    </div>
+</section><!--/#news-->
+<div ng-include="'views/footer.html'" ng-hide="hideFooter"></div>

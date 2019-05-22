@@ -1,0 +1,81 @@
+<section class="minHeightVh100">
+    <div class="container body_containerPadding">
+        <div class="col-md-1 col-sm-12 col-xs-12 display"></div>
+        <div class="col-md-10 col-sm-12 col-xs-12 padding_zero_sp736">
+            <div class="col-md-12 col-sm-12 col-xs-12 contact_title">お問い合わせフォーム（入力画面）</div>
+            <div class="col-md-12 col-sm-12 col-xs-12 contact_message contact_message_style_1">ご意見、ご要望等、各種お問い合わせは、以下のフォームよりご連絡ください。</div>
+            <div class="col-md-12 col-sm-12 col-xs-12 contact_message contact_message_style_2">お問い合わせ内容によりましては、<br/>
+                                                                                              返信までお時間をいただく場合がございますので、<br/>
+                                                                                              予めご了承ください。</div>
+            <div class="col-md-12 col-sm-12 col-xs-12 contact_padding_2 display">
+                <table border="1" class="contact_input_table">
+                    <tr>
+                        <td class="buy_table_left">
+                            <span>メールアドレス</span>
+                            <span class="table_icon">必須</span>
+                        </td>
+                        <td class="buy_table_right">
+                            <input class="inputStyle" ng-model="contact.mail">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="buy_table_left">
+                            <span>お問い合わせ内容</span>
+                            <span class="table_icon">必須</span>
+                        </td>
+                        <td class="buy_table_right">
+                            <textarea class="inputStyle" rows="12" ng-model="contact.contents"></textarea>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 contact_padding_2 displayPc">
+                <table class="contact_input_table">
+                    <tr>
+                        <td class="buy_table_left">
+                            <span>メールアドレス</span>
+                            <span class="table_icon" style="display: block;">必須</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="buy_table_right">
+                            <input class="inputStyle" style="width:100%;" ng-model="contact.mail">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="buy_table_left">
+                            <span>お問い合わせ内容</span>
+                            <span class="table_icon" style="display: block;">必須</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="buy_table_right">
+                            <textarea class="inputStyle" rows="12" ng-model="contact.contents"></textarea>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 display contact_padding_2">
+                <div><span class="fa fa-square contact_warning_header">&nbsp;ご記入いただく個人情報の取得に際しての同意事項</span></div>
+                <div class="contact_warning_detail">
+                    <ol>
+                        <li>事業者の名称、個人情報保護管理責任者などの職名、連絡先については、個人情報保護方針をご覧ください。</li>
+                        <li>当社はお問い合わせフォームで取得した個人情報を返信目的にのみ利用いたします。</li>
+                        <li>なお返信目的に必要な限度において、当該個人情報について他サービスへ提供する場合があります。または、返信目的に必要な限度において、当該個人情報の取扱いを当社業務委託先へ委託する場合があります。</li>
+                        <li>個人情報の利用目的の通知、開示、訂正、追加、削除等をお求めの場合は、「個人情報の取扱いについて」4をご覧ください。http://japanmoveupwest.com/privacypolicy.html</li>
+                        <li>すべての項目にご記入いただけなかった場合、お問い合わせ内容に対する返信などにおいて、適切な対応ができなくなる場合がありますのでご了解ください。</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 displayPc contact_padding_2">
+                <div><span class="fa fa-square contact_warning_header">&nbsp;ご記入いただく個人情報の取得に際しての同意事項</span></div>
+                <div class="contact_warning_detail" ng-bind-html="content2"></div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 contact_padding_2 padding_zero_sp736" align="center">
+                <a href="javascript:void(0)" ng-click="contactConfirm()"><button type="submit" class="contact_btn_submit contact_btn_confirm">上記の同意事項に同意の上<br/>記入した内容を確認する。</button></a>
+            </div>
+        </div>
+        <div class="col-md-1 col-sm-12 col-xs-12 display"></div>
+    </div>
+</section>
+<div ng-include="'views/footer.html'" ng-hide="hideFooter"></div>

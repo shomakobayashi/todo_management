@@ -1,0 +1,187 @@
+<style type="text/css">
+li.arrowW1{
+  background-color: rgb(238,238,238);
+  color: white;
+  padding: 0 25px 0 15px;
+}
+li.arrowW1:after {
+  border-color: transparent rgb(238,238,238);
+}
+li.arrowW2{
+  background-color: rgb(46,167,224);
+  padding: 0 40px 0 20px;
+}
+li.arrowW2:before {
+  border-color: rgb(46,167,224) transparent;
+}
+li.arrowW2:after {
+  border-color: transparent rgb(46,167,224);
+}
+li.arrowW3{
+  background-color: rgb(220,220,220);
+  padding: 0 45px 0 35px;
+}
+li.arrowW3:before {
+  border-color: rgb(220,220,220) transparent;
+}
+li.arrowW3:after {
+  border-color: transparent rgb(220,220,220);
+}
+li.arrowW4{
+  background-color: rgb(204,204,204);
+  padding: 0 45px 0 35px;
+}
+li.arrowW4:before {
+  border-color: rgb(204,204,204) transparent;
+}
+li.arrowW4:after {
+  border-color: transparent rgb(204,204,204);
+}
+</style>
+<section>
+<div class="container body_containerPadding">
+   <div class="col-md-12 col-sm-12 col-xs-12" align="center">
+       <img src="images/login_logo.png" class="buy_TopImg">
+       <p class="buy_TopP displayPc">購入情報の入力</p>
+       <p class="buy_TopP display">ご注文内容の確認</p>
+       <div class="display">
+           <li class='arrowW arrowW1'><span style="color: black;">お届け先．支払い方法の選択</span></li>
+           <li class='arrowW arrowW2'><span style="color: white;">ご注文内容の確認</span></li>
+           <li class='arrowW arrowW3'><span style="color: black;">支払い情報を入力<span></li>
+           <li class='arrowW arrowW4'><span style="color: black;">ご注文完了</span></li>
+       </div>
+   </div>
+   <div class="col-md-12 col-sm-12 col-xs-12 displayPc" align="center">
+       <p style="color: rgb(41,162,231);font-size: 16px;letter-spacing: 1px;margin-top: 10px;">ご注文内容の確認</p>
+   </div>
+
+   <div class="col-md-12 col-sm-12 col-xs-12 buyConfirm_fontStyle" align="center">
+       <div>
+           <p>下記ご注文内容で送信してもよろしいでしょか？</p>
+           <p class="display">よろしければ、「注文を確定する」ボタンをクリックしてください。</p>
+           <p class="displayPc">よろしければ、「注文を確定する」ボタン</p>
+           <p class="displayPc">クリックしてください。</p>
+       </div>
+   </div>
+
+   <div class="col-md-12 col-sm-12 col-xs-12 goodsCart_form display" align="center">
+     <div class="col-md-7 col-sm-6 col-xs-6"><p>商品情報</p></div>
+     <div class="col-md-2 col-sm-2 col-xs-2"><p>数量</p></div>
+     <div class="col-md-3 col-sm-3 col-xs-3"><p>小計（税込）</p></div>
+   </div>
+   <div ng-repeat="goods in results.goodsList" class="col-md-12 col-sm-12 col-xs-12 goodsCart_goods">
+       <div class="col-md-7 col-sm-7 col-xs-12 goodsCart_div goodsCart_info">
+           <input type="hidden" value="{{goods.id}}" ng-model="goods.id"/>
+           <div class="col-md-7 col-sm-7 col-xs-5 goodsCart_img">
+               <img ng-src="{{goods.picUrl}}">
+           </div>
+           <div class="col-md-5 col-sm-5 col-xs-7 goodsCart_name">
+               <div class="col-md-12 col-sm-12 col-xs-12 cartHeight display"></div>
+               <label>{{goods.goodsName}}<span>{{goods.brand}}</span></label>
+               <div class="col-md-12 col-sm-12 col-xs-12 padding_zero displayPc">
+                 <span id="singlePricesp{{goods.number}}" style="display: none;">{{goods.price}}</span>
+                 <span style="color: black"><span id="cartTotalsp{{goods.number}}">{{goods.price|number:0}}</span>円</span><span>&nbsp;(税込)</span>
+               </div>
+               <div class="col-md-12 col-sm-12 col-xs-12 padding_zero displayPc" style="margin-top: 15px;">
+                   <div class="col-md-12 col-sm-6 col-xs-6 goodsCartsp_num">
+                       <label><span style="font-size: 12px;">数量&nbsp;&nbsp;&nbsp;&nbsp;{{goods.quantity}}</span></label>
+                   </div>
+               </div>
+           </div>
+       </div>
+       <div class="col-md-2 col-sm-2 col-xs-6 goodsCart_div goodsCart_num display" align="center">
+           <div class="col-md-12 col-sm-12 col-xs-12 goodsCart_total cartHeight"></div>
+           <label><span style="font-size: 12px;">{{goods.quantity}}</span></label>
+       </div>
+       <div class="col-md-3 col-sm-3 col-xs-6 goodsCart_div goodsCart_total display">
+           <div class="col-md-12 col-sm-12 col-xs-12 cartHeight display"></div>
+           <label><span id="singlePrice{{goods.number}}" style="display: none;">{{goods.price}}</span><span id="cartTotal{{goods.number}}">{{goods.price|number:0}}</span>円</label>
+       </div>
+   </div>
+   <div class="col-md-12 col-sm-12 col-xs-12 padding_zero" align="center">
+       <div class="buyConfirm_GoodsTotal">
+           <div class="col-md-6 col-sm-8 col-xs-8 display"></div>
+           <div class="col-md-4 col-sm-8 col-xs-8 buyConfirm_total_title">
+               <span>商品金额合計（税込）</span>
+           </div>
+           <div class="col-md-2 col-sm-4 col-xs-4" align="right" style="padding: 0;">
+               <span>{{results.totalPrice|number:0}}円</span>
+           </div>
+       </div>
+   </div>
+   <div class="col-lg-12 col-xs-12 buy_title padding_zero" align="center">
+       <div class="buyInfoSubTitle" align="left"><p>お客様情報</p></div>
+   </div>
+   <div class="col-lg-12 col-xs-12 padding_zero" align="center">
+       <table border="1" class="buy_table_List">
+           <tbody>
+               <tr>
+                   <td class="buy_table_left"><span>氏名（漢字）</span></td>
+                   <td class="buy_table_right"><span>{{person.firstName}}</span><span style="margin-left: 20px;">{{person.secondName}}</span></td>
+               </tr>
+               <tr>
+                   <td class="buy_table_left"><span>氏名（カナ）</span></td>
+                   <td class="buy_table_right"><span>{{person.firstNameKana}}</span><span style="margin-left: 20px;">{{person.secondNameKana}}</span></td>
+               </tr>
+               <tr>
+                   <td class="buy_table_left"><span>住所</span></td>
+                   <td class="buy_table_right">
+                       <div>
+                         <span class="buy_CodeBtn"><span>〒</span><span style="margin-left: 10px;">{{person.zipcode}}</span></span>
+                         <div><span>{{person.address}}</span></div>
+                       </div>
+                   </td>
+               </tr>
+               <tr>
+                   <td class="buy_table_left"><span>メールアドレス</span></td>
+                   <td class="buy_table_right"><span>{{person.mail}}</span></td>
+               </tr>
+           </tbody>
+       </table>
+   </div>
+   <div class="col-lg-12 col-xs-12 buy_title padding_zero" align="center">
+       <div class="buyInfoSubTitle" align="left">
+           <p>別のおけ先住所</p>
+       </div>
+   </div>
+   <div class="col-lg-12 col-xs-12 padding_zero" align="center">
+       <table border="1" class="buy_table_List">
+           <tbody>
+               <tr>
+                   <td class="buy_table_left"><span>氏名（漢字）</span></td>
+                   <td class="buy_table_right"><span>{{result.firstName1}}</span><span style="margin-left: 20px;">{{result.lastName1}}</span></td>
+               </tr>
+               <tr>
+                   <td class="buy_table_left"><span>氏名（カナ）</span></td>
+                   <td class="buy_table_right"><span>{{result.firstName2}}</span><span style="margin-left: 20px;">{{result.lastName2}}</span></td>
+               </tr>
+               <tr>
+                   <td class="buy_table_left">
+                       <div><span>住所</span></div>
+                   </td>
+                   <td class="buy_table_right">
+                       <span><span>〒</span><span style="margin-left: 10px;">{{result.zipCode}}</span></span>
+                       <div>
+                           <span>{{result.address1}}</span>
+                       </div>
+                   </td>
+               </tr>
+               <tr>
+                   <td class="buy_table_left"><span>お届け先電話番号</span></td>
+                   <td class="buy_table_right"><span>{{result.tel}}</span></td>
+               </tr>
+           </tbody>
+       </table>
+   </div>
+   <div class="col-lg-12 col-xs-12" align="center">
+     <div class="col-md-2 col-sm-2"></div>
+     <div class="col-md-4 col-sm-4 col-xs-12">
+         <a href="javascript:window.history.back(-1);"><button type="button" class="buy_confirmBtn buy_confirmBtn_color1" name="confirm" value="Confirm">ショッピングに戻る</button></a>
+     </div>
+     <div class="col-md-4 col-sm-4 col-xs-12">
+         <a href="javascript:void(0)" ng-click="postPurchaseInfoConfirm()"><button type="button" class="buy_confirmBtn buy_confirmBtn_color2" name="confirm" value="Confirm">入力内容を確認する</button></a>
+     </div>
+   </div>
+</div>
+</section>
+<div ng-include="'views/footer.html'" ng-hide="hideFooter"></div>

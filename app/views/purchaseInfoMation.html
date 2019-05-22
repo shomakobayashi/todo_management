@@ -1,0 +1,191 @@
+<style type="text/css">
+li.arrowW1{
+background-color: rgb(46,167,224);
+color: white;
+padding: 0 25px 0 15px;
+}
+li.arrowW1:after {
+border-color: transparent rgb(46,167,224);
+}
+li.arrowW2{
+background-color: rgb(238,238,238);
+padding: 0 40px 0 20px;
+}
+li.arrowW2:before {
+border-color: rgb(238,238,238) transparent;
+}
+li.arrowW2:after {
+border-color: transparent rgb(238,238,238);
+}
+li.arrowW3{
+background-color: rgb(220,220,220);
+padding: 0 45px 0 35px;
+}
+li.arrowW3:before {
+border-color: rgb(220,220,220) transparent;
+}
+li.arrowW3:after {
+border-color: transparent rgb(220,220,220);
+}
+li.arrowW4{
+background-color: rgb(204,204,204);
+padding: 0 45px 0 35px;
+}
+li.arrowW4:before {
+border-color: rgb(204,204,204) transparent;
+}
+li.arrowW4:after {
+border-color: transparent rgb(204,204,204);
+}
+</style>
+<section>
+  <div class="container body_containerPadding">
+      <div class="col-lg-12 col-xs-12" align="center">
+          <img src="images/login_logo.png" class="buy_TopImg">
+          <p class="buy_TopP">購入情報の入力</p>
+          <div class="display">
+            <li class='arrowW arrowW1'><span style="color: white;">お届け先．支払い方法の選択<span></li>
+            <li class='arrowW arrowW2'><span style="color: black;">ご注文内容の確認<span></li>
+            <li class='arrowW arrowW3'><span style="color: black;">支払い情報を入力<span></li>
+            <li class='arrowW arrowW4'><span style="color: black;">ご注文完了<span></li>
+          </div>
+      </div>
+      <div class="col-lg-12 col-xs-12 displayPc" align="center">
+          <p style="color: rgb(41,162,231);font-size: 16px;letter-spacing: 1px;margin-top: 10px;">お届け先．支払い方法の選択</p>
+      </div>
+      <div class="col-lg-12 col-xs-12 buy_title padding_zero" align="center">
+          <div class="buyInfoSubTitle" align="left"><p>お客様情報</p></div>
+      </div>
+      <div class="col-lg-12 col-xs-12 padding_zero" align="center">
+          <table border="1" class="buy_table_List">
+              <tbody>
+                  <tr>
+                      <td class="buy_table_left"><span>氏名（漢字）</span></td>
+                      <td class="buy_table_right"><span>{{person.firstName}}</span><span style="margin-left: 20px;">{{person.secondName}}</span></td>
+                  </tr>
+                  <tr>
+                      <td class="buy_table_left"><span>氏名（カナ）</span></td>
+                      <td class="buy_table_right"><span>{{person.firstNameKana}}</span><span style="margin-left: 20px;">{{person.secondNameKana}}</span></td>
+                  </tr>
+                  <tr>
+                      <td class="buy_table_left"><span>住所</span></td>
+                      <td class="buy_table_right">
+                          <div>
+                              <span class="buy_CodeBtn"><span>〒</span><span style="margin-left: 10px;">{{person.zipcode}}</span></span>
+                              <div><span>{{person.address}}</span></div>
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td class="buy_table_left"><span>メールアドレス</span></td>
+                      <td class="buy_table_right"><span>{{person.mail}}</span></td>
+                  </tr>
+                  <tr class="contact_xs_display">
+                      <td class="buy_table_left">
+                          <div><span>お届け先の選択</span></div>
+                      </td>
+                      <td class="buy_table_right">
+                          <div><input id="item3" type="radio" name="shopNow" ng-model="infoType" value="1"/><label for="item3" ng-click="upInfo()"></label>
+                            <span style="margin-left: 10px;">上記の住所へおけ</span>
+                          </div>
+                          <div style="margin-top: 3px;"><input id="item4" type="radio" name="shopNow" ng-model="infoType" value="2"/><label for="item4" ng-click="downInfo()"></label>
+                            <span style="margin-left: 10px;">別の住所へお届け</span>
+                          </div>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+      <div class="col-lg-12 col-xs-12 buy_title padding_zero displayPc" align="center">
+          <div align="left">
+              <p style="font-weight: normal;">支払い方法の選択</p>
+          </div>
+      </div>
+      <div class="col-lg-12 col-xs-12 padding_zero displayPc" align="center">
+          <div class="buy_method_sel" align="left">
+              <div class="buyRadio" ng-click="upInfo()"><input type="radio" name="methodSel" ng-model="infoType" value="1" /></div>
+              <div class="buyFristRadioSpan"><span>上记の住所へおけ</span></div>
+              <div class="buyRadio" ng-click="downInfo()"><input type="radio" name="methodSel" ng-model="infoType" value="2"  /></div>
+              <div class="buyRadioSpan"><span>別の住所へお届け</span></div>
+          </div>
+      </div>
+      <div class="col-lg-12 col-xs-12 padding_zero buy_title" align="center">
+          <div class="buyInfoSubTitle" align="left">
+              <p style="font-weight: normal;">別のお届け先住所</p>
+          </div>
+      </div>
+      <div class="col-lg-12 col-xs-12 padding_zero" align="center">
+          <table border="1" class="buy_table_List">
+              <tbody>
+              <tr>
+                  <td class="buy_table_left"><span>氏名（漢字）</span><span class="buy_table_icon">必須</span></td>
+                  <td class="buy_table_right">
+                      <div class="col-lg-4 col-xs-6" style="padding: 0 15px 0 0;font-weight: bold;">
+                          <input id="firstName" name="firstName" placeholder="姓" class="inputStyle" ng-model="info.firstName1" type="text" value="">
+                      </div>
+                      <div class="col-lg-4 col-xs-6" style="padding: 0 15px 0 0;font-weight: bold;">
+                          <input id="secondName" name="secondName" placeholder="名" class="inputStyle" ng-model="info.lastName1" type="text" value="">
+                      </div>
+                  </td>
+              </tr>
+              <tr>
+                  <td class="buy_table_left">
+                      <span>氏名（カナ）</span>
+                      <span class="buy_table_icon">必須</span>
+                  </td>
+                  <td class="buy_table_right">
+                      <div class="col-lg-4 col-xs-6" style="padding: 0 15px 0 0;font-weight: bold;">
+                      <input id="firstNameKana" name="firstNameKana" placeholder="セイ" class="inputStyle" ng-model="info.firstName2" type="text" value=""></div>
+                      <div class="col-lg-4 col-xs-6" style="padding: 0 15px 0 0;font-weight: bold;">
+                      <input id="secondNameKana" name="secondNameKana" placeholder="メイ" class="inputStyle" ng-model="info.lastName2" type="text" value=""></div>
+                  </td>
+              </tr>
+              <tr>
+                  <td class="buy_table_left">
+                      <div><span>住所</span><span class="buy_table_icon">必須</span></div>
+                  </td>
+                  <td class="buy_table_right">
+                      <div class="col-lg-1 col-xs-1 padding_zero"><span class="buy_CodeBtn">〒</span></div>
+                      <div class="col-lg-6 col-xs-7 padding_zero">
+                        <input id="zipcode" name="zipcode" onkeyup="AjaxZip3.zip2addr(this,&#39;&#39;,&#39;address&#39;,&#39;address&#39;);" placeholder="1010001"
+                        class="carry_postNo" ng-model="info.zipCode" type="text" value="">
+                      </div>
+                      <div class="col-lg-5 col-xs-4 padding_zero"><button type="button" name="" class="buy_addressBtn">住所検索</button></div>
+                      <input id="address1" name="address1" ng-model="info.address1" placeholder="○○県△△市123 　☐☐マンション１０１" class="inputStyle" style="margin-top: 10px;" type="text" value="">
+                  </td>
+              </tr>
+              <tr>
+                  <td class="buy_table_left">
+                      <span>お届け先電話番号</span>
+                      <span class="buy_table_icon">必須</span>
+                  </td>
+                  <td class="buy_table_right">
+                      <input id="" name="" ng-model="info.tel" class="inputStyle" type="text" value="">
+                  </td>
+              </tr>
+              </tbody>
+          </table>
+      </div>
+      <div class="col-lg-12 col-xs-12 buy_title padding_zero" align="center">
+          <div class="buyInfoSubTitle" align="left">
+              <p style="font-weight: normal;">支払い方法:&nbsp&nbspクレジットカード</p>
+          </div>
+          <div class="buy_method_sel" align="left">
+              <div class="buyRadio"><input type="radio" name="methodSel" ng-model="methodSel" value="1"></div>
+              <div class="buyFristRadioSpan"><span>クレジットカード</span></div>
+              <div class="buyRadio buyMarginLeft"><input type="radio" name="methodSel" ng-model="methodSel" value="2"></div>
+              <div class="buyRadioSpan"><span>コンビニ</span></div>
+          </div>
+      </div>
+      <div class="col-lg-12 col-xs-12" align="center">
+          <div class="col-md-2 col-sm-2"></div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+              <a href="javascript:window.history.back(-1);"><button type="button" class="buy_confirmBtn buy_confirmBtn_color1" name="confirm" value="Confirm">ショッピングに戻る</button></a>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+              <button type="button" class="buy_confirmBtn buy_confirmBtn_color2" ng-click="postPurchaseInfo()">入力内容を確認する</button>
+          </div>
+      </div>
+     </div>
+</section>
+<div ng-include="'views/footer.html'" ng-hide="hideFooter"></div>

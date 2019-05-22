@@ -1,0 +1,38 @@
+<div style="position: relative;">
+<section>
+    <div class="container body_containerPadding">
+        <div class="col-md-2 col-sm-2"></div>
+        <div class="col-md-8 col-sm-8 col-xs-12">
+            <div class="col-md-12 col-sm-12 col-xs-12 padding_zero" style="overflow: hidden;">
+              <div ng-if= "results.type==1" class="tvDetail_imgLogo"><div class="tvDetail_subLogo"><span>会員限定</span></div></div>
+              <div ng-if= "results.type==2" class="tvDetail_imgLogo" style="background-color:#A9A9A9"><div class="tvDetail_subLogo"><span>すべての方</span></div></div>
+              <div class="tv_btn" ng-click="addMyPage()" ng-if="results.favorite==false"><p>お気に入り<i class="fa fa-star-o"></i></p></div>
+              <div class="tv_btn" style="background-color:#A9A9A9" ng-click="RemoveMyPage()" ng-if="results.favorite==true"><p>お気に入り済み<i class="fa fa-star-o"></i></p></div>
+              <div ng-if= "results.YouTubeVideoUrl!=null">
+                <iframe class="tvDetail_pic" ng-src="{{YouTubeVideoUrl}}"
+                allow="autoplay; encrypted-media" frameborder="0" allowfullscreen="" scrolling="no" controlsList="nodownload"></iframe>
+              </div>
+              <div ng-if= "results.AWSVideoUrl!=null" >
+                <video style="background:black;" class="tvDetail_pic" ng-src="{{AWSVideoUrl}}" id="AWSVideoUrl" allow="autoplay; encrypted-media" allowfullscreen="" scrolling="no"
+                 autoplay="autoplay" controls controlsList="nodownload"></video>
+              </div>
+
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 padding_zero tvDetail_div">
+              <div class="col-md-12 col-sm-12 col-xs-12 tvDetail_date"><span>{{results.date}}</span></div>
+              <div class="col-md-12 col-sm-12 col-xs-12 tvDetail_title"><p>{{results.title}}</p></div>
+              <div class="col-md-12 col-sm-12 col-xs-12 tvDetail_content">
+                <label ng-bind-html="results.detail"></label>
+              </div>
+              <div id="ad" class="ad displayPc" style="" align="center"></div>
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-12"></div>
+    </div>
+</section><!--/#Store-->
+</div>
+<div ng-include="'views/footer.html'" ng-hide="hideFooter" style="position: relative;z-index:999;"></div>
+<script>
+  // var video= document.getElementById(AWSVideoUrl).contentWindow.document.video;
+
+</script>

@@ -1,0 +1,281 @@
+.form-check a{
+  color: rgb(69,182,226);
+}
+.table_Title {
+    font-weight: bolder;
+    font-size: 22px;
+    letter-spacing: 4px;
+}
+.table_icon {
+    background-color: #F23B26;
+    color: white;
+    padding-left: 14px;
+    padding-right: 14px;
+    font-size: 8px;
+    font-weight: normal;
+    float: right;
+}
+.table_icon_small{
+    display: none;
+}
+.phone_mail_Label{
+    display: none;
+}
+.pc_mail_Label{
+    display: block;
+}
+.table_icon1{
+    background-color: #F23B26;
+    color: white;
+    padding-left: 13px;
+    padding-right: 13px;
+    font-size: 10px;
+    font-weight: normal;
+    float: right;
+    margin-top: -25px;
+}
+.dropbtn1 {
+    color: black;
+    font-size: 12px;
+    border: 1px solid #cccccc;
+    cursor: pointer;
+    width: 120px;
+    height: 30px;
+    outline: none;
+    padding-left: 8px;
+    margin-left: 33px;
+    text-align: left;
+    font-weight: bolder;
+}
+.dropdown-content a {
+    color: black;
+    text-decoration: none;
+    padding: 12px 15px;
+    display: block;
+}
+.confirmBtn {
+    color: white;
+    background-color: #00a7dd;
+    font-size: 13px;
+    padding-left: 35px;
+    padding-right: 35px;
+    height: 45px;
+    margin-top: 20px;
+    font-weight: bolder;
+    letter-spacing: 4px;
+}
+.CodeBtn {
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 15px;
+    margin-right: 13px;
+    display: inline-block;
+}
+.lineBtn{
+    display: inline-block;
+    margin-left: 2px;
+}
+.select_Name{
+    margin-left:6px;
+    font-weight: bolder;
+}
+.arrow_Img {
+    width: 10px;
+    height: 7px;
+    margin-left: -22px;
+}
+.select_Month{
+    border: 1px solid rgb(169,169,169);
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    outline: none;
+    background-color: white;
+    border-radius: 0px;
+    width: 50px;
+      padding-left: 12px;
+}
+.select_year{
+    border: 1px solid rgb(169,169,169);
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    outline: none;
+    background-color: white;
+    border-radius: 0px;
+    width: 80px;
+    font-size: 14px;
+    padding-left: 12px;
+}
+.select_Work{
+    border: 1px solid rgb(169,169,169);
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    outline: none;
+    background-color: white;
+    border-radius: 0px;
+    width: 160px;
+    font-size: 13px;
+    padding-left: 12px;
+}
+.waring_Label{
+    text-align: left;
+    font-weight: bolder;
+    font-size: 12px;
+}
+.error{
+    margin-top: 15px;
+}
+.defult_time_Label{
+    margin-left: 6px;
+    font-weight: normal;
+}
+.hide_frame{
+    height: 0px;
+    width: 0px;
+}
+.footer_font {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+@media (max-width: 768px) {
+.table_Title {
+    font-size: 14px;
+}
+.table_icon {
+    padding-left: 4px;
+    padding-right: 4px;
+    font-size: 10px;
+}
+.phone_mail_Label{
+    display: inline-block;
+}
+.pc_mail_Label{
+    display: none;
+}
+.table_icon1{
+    padding-left: 4px;
+    padding-right: 4px;
+    font-size: 10px;
+    margin-top: 2px;
+}
+.dropbtn {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}/*drop Btn*/
+.dropbtn_small {
+    width: 90px;
+    padding-left: 60px;
+    margin-bottom: 8px;
+}
+.dropbtn1 {
+    width: 110px;
+    margin-left: 13px;
+}
+.confirmBtn {
+    font-size: 13px;
+    margin-top: 30px;
+    margin-left: 20px;
+    padding-left: 25px;
+    padding-right:25px;
+}
+.CodeBtn {
+    margin-left: 0px;
+    margin-right: 0px;
+    display: none;
+}
+.lineBtn{
+    display: none;
+}
+.select_year{
+    margin-top: 10px;
+    width: 55px;
+    margin-bottom: 10px;
+}
+.select_Month{
+    margin-top: 10px;
+    margin-left: 5px;
+    width: 35px;
+    margin-bottom: 10px;
+}
+.select_Work{
+    margin-top: 10px;
+    width: 117px;
+    margin-bottom: 10px;
+}
+.select_Name{
+    margin-left: 3px;
+}
+}
+@media (max-width: 414px) {
+.table_icon {
+    padding-left: 4px;
+    padding-right: 4px;
+    font-size: 6px;
+    display: none;
+}/*Des with red or blue bg*/
+.phone_mail_Label{
+    display: inline-block;
+}
+.pc_mail_Label{
+    display: none;
+}
+.table_icon1{
+    display: none;
+}
+.table_icon_small{
+    color: red;
+    display: inline-block;
+    float: right;
+}
+.dropbtn {
+    margin-top: 8px;
+    margin-bottom: 9px;
+}
+.dropbtn_small {
+    width: 90px;
+    padding-left: 60px;
+    margin-bottom: 8px;
+}
+.dropbtn1 {
+    width: 110px;
+    margin-left: 13px;
+}
+.confirmBtn {
+    font-size: 13px;
+    margin-top: 30px;
+    margin-left: 20px;
+    padding-left: 25px;
+    padding-right:25px;
+}
+.CodeBtn {
+    margin-left: 0px;
+    margin-right: 0px;
+    display: none;
+}
+.lineBtn{
+    display: none;
+}
+.select_year{
+    font-size:12px;
+    margin-top: 10px;
+    width: 50px;
+    padding: 0 6px;
+}
+.select_Month{
+    font-size:12px;
+    width: 35px;
+    margin-top: 10px;
+    margin-left: 2px;
+    padding: 0 6px;
+}
+.select_Work{
+    font-size: 10px;
+    padding: 0 6px;
+}
+.select_Name{
+    margin-left: 0px;
+}
+.terms{
+    font-size: 12px;
+}
+}

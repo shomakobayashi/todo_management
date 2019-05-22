@@ -1,0 +1,48 @@
+<section class="minHeightVh100">
+    <div class="container body_containerPadding">
+        <div class="col-md-12 col-sm-12 col-xs-12 text-center quit_padding_1 quit_entrance_title">
+            <span>退会する</span>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 text-center quit_padding_2">
+            <span class="fa fa-exclamation-circle fa-3x quit_entrance_warning_1"></span>
+            <span class="quit_entrance_warning_2">&nbsp;&nbsp;注意事項</span>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 text-center quit_padding_3 quit_entrance_notice">
+            <span>退会すると全ての登録データが削除され、会員限定のサービスがご利用いただけなくなります。</span>
+        </div>
+        <div class="col-md-3 col-sm-12 col-xs-12"></div>
+        <div class="col-md-6 col-sm-12 col-xs-12 quit_entrance_box">
+            <ul>
+                <li>
+                    <span>登録している</span>
+                    <span class="quit_span_red">お気に入り情報</span>
+                    <span>が削除されます。</span>
+                </li>
+                <li>
+                    <span class="quit_span_red">おトク情報</span>
+                    <span>を見ることができなくなります。</span>
+                </li>
+                <li>
+                    <span class="quit_span_red">ストア</span>
+                    <span>のご利用や購入履歴等の情報が削除されます。</span>
+                </li>
+                <!-- <li>退会後、同じIDでの再発行はできません。</li> -->
+                <li>削除されたデータは復元することはできません。</li>
+                <li>現在の所持ポイントは消失します。</li>
+                <li>いかなる理由でも退会を取り消しすることはできません。</li>
+            </ul>
+        </div>
+        <div class="col-md-3 col-sm-12 col-xs-12"></div>
+        <div class="col-md-12 col-sm-12 col-xs-12 quit_padding_3">
+            <div class="col-md-3 col-sm-12 col-xs-12"></div>
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <a href="javascript:void(0);" ng-click="withdrawReason()"><button type="submit" class="quit_btn_submit">退会手続きに進む</button></a>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <a href="javascript:void(0);" ng-click="goTop()"><button type="submit" class="quit_btn_submit">退会しない</button></a>
+            </div>
+            <div class="col-md-3 col-sm-12 col-xs-12"></div>
+        </div>
+    </div>
+</section><!--/#Quit-->
+<div ng-include="'views/footer.html'" ng-hide="hideFooter"></div>

@@ -1,0 +1,66 @@
+<style type="text/css">
+li.arrowW1{
+  background-color: rgb(238,238,238);
+  color: white;
+  padding: 0 25px 0 15px;
+}
+li.arrowW1:after {
+  border-color: transparent rgb(238,238,238);
+}
+li.arrowW2{
+  background-color: rgb(220,220,220);
+  padding: 0 40px 0 20px;
+}
+li.arrowW2:before {
+  border-color: rgb(220,220,220) transparent;
+}
+li.arrowW2:after {
+  border-color: transparent rgb(220,220,220);
+}
+li.arrowW3{
+  background-color: rgb(204,204,204);
+  padding: 0 45px 0 35px;
+}
+li.arrowW3:before {
+  border-color: rgb(204,204,204) transparent;
+}
+li.arrowW3:after {
+  border-color: transparent rgb(204,204,204);
+}
+li.arrowW4{
+  background-color: rgb(46,167,224);
+  padding: 0 55px 0 45px;
+}
+li.arrowW4:before {
+  border-color: rgb(46,167,224) transparent;
+}
+li.arrowW4:after {
+  border-color: transparent rgb(46,167,224);
+}
+</style>
+<section>
+    <div class="container body_containerPadding">
+        <div class="row col-lg-12 col-xs-12 buyOver_ML" align="center">
+            <p class="buyOverFirst_title ">ご注文完了</p>
+            <div class="display">
+                <li class='arrowW arrowW1'><span style="color: black;">お届け先．支払い方法の選択<span></li>
+                <li class='arrowW arrowW2'><span style="color: black;">ご注文内容の確認<span></li>
+                <li class='arrowW arrowW3'><span style="color: black;">支払い情報を入力<span></li>
+                <li class='arrowW arrowW4'><span style="color: white;">ご注文完了<span></li>
+            </div>
+        </div>
+        <div class="col-lg-12 col-xs-12 buyOver_title buyOver_ML" align="center">
+            <p>JAPAN MOVE UP WESTのご注文ありがとうございます。</p>
+        </div>
+        <div class="row col-lg-12 col-xs-12 buyOver_text buyOver_ML" ng-bind-html="content">
+            <!-- <p>{{person.firstName}} {{person.lastName}}様</p><br>
+            <p>この度は、MOVE UP GOODSをご利用いただき、誠にありがとうございます。</p>
+            <p>下記内容にて、ご注文を承りました。</p><br>
+            <p class="display">万一、ご確認メールが届かない場合は、トラブルの可能性もありますので大変お手数ではございますが</p>
+            <p class="display">もう一度お問い合わせいただくか、お電話にてお問い合わせくださいませ。</p>
+            <p class="displayPc">万一、ご確認メールが届かない場合は、トラブルの可能性もありますので大変お手数ではございますがもう一度お問い合わせいただくか、お電話にてお問い合わせくださいませ</p>
+            <p>今後ともご愛顧宜りますようよろしくお願い申し上げます。</p> -->
+        </div>
+    </div>
+</section>
+<div ng-include="'views/footer.html'" ng-hide="hideFooter"></div>

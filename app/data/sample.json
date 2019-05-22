@@ -1,0 +1,16 @@
+{
+  "message": "SUCCESS",
+  "statusCode": "S00000",
+  "resultList": [
+    {
+      "picUrl": "http://google.co.jp",
+      "title": "タイトル",
+      "holdDate": "2018-03-01"
+    },
+    {
+      "picUrl": "http://google.co.jp",
+      "title": "タイトル",
+      "holdDate": "2018-03-01"
+    }
+  ]
+}

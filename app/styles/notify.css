@@ -1,0 +1,108 @@
+.notify_switch_item_btn{
+    background-color: #F93;
+    width: 50%;
+    height: 35px;
+    border-radius: 5px;
+    border-style: none;
+    color: #FFF;
+    font-size: 10px;
+    letter-spacing:2px;
+    text-align: center;
+    line-height: 36px;
+    float:left;
+}
+
+.notify_switch_item{
+   width: 100%;
+   overflow: hidden;
+   margin-top: 20px;
+}
+.notify_switch_btn{
+  /* float: right; */
+  margin-top: 20px;
+}
+.notify_switch_item input {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: normal;
+    margin: 0;
+}
+.notify_switch_item input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+.switch {
+	background-color: red;
+	border-radius: 32px;
+	display: block;
+	height: 20px;
+	position: relative;
+	width: 50px;
+  margin-top: 20px;
+}
+.switch label {
+	color: #fff;
+	font-size: 13px;
+	font-weight: 300;
+	line-height: 20px;
+	text-transform: uppercase;
+	-webkit-transition: color .2s ease;
+	-moz-transition: color .2s ease;
+	-ms-transition: color .2s ease;
+	-o-transition: color .2s ease;
+	transition: color .2s ease;
+}
+.switch label:nth-of-type(1) {
+	position: absolute;
+  top: 20px;
+	left: 0;
+	text-align: right;
+}
+.switch label:nth-of-type(2) {
+	position: absolute;
+  top: 20px;
+  right: 0;
+	text-align: left;
+}
+.switch input {
+	height: 20px;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	width: 50px;
+	z-index: 2;
+}
+.switch input:checked~label:nth-of-type(1) { color: #000; }
+.switch input:checked~label:nth-of-type(2) { color: #808080; }
+.switch input~:checked~label:nth-of-type(1) { color: #808080; }
+.switch input~:checked~label:nth-of-type(2) { color: #000; }
+.switch input:checked~.toggle {
+	left: 4px;
+}
+.switch input~:checked~.toggle {
+	left: 33px;
+}
+.switch input:checked {
+	z-index: 0;
+}
+.toggle {
+	background-color: white;
+	border-radius: 50%;
+	width: 14px;
+	height: 14px;
+	left: 3px;
+	position: absolute;
+	top: 3px;
+	-webkit-transition: left .2s ease;
+	-moz-transition: left .2s ease;
+	-ms-transition: left .2s ease;
+	-o-transition: left .2s ease;
+	transition: left .2s ease;
+	z-index: 1;
+}
+
+@media (max-width: 736px){
+.notify_switch_item_btn{
+  width: 30%;
+}
+}

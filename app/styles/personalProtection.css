@@ -1,0 +1,14 @@
+.personalProtectionDIV{
+  border-bottom:2px solid #000;
+}
+.personalProtectionFont{
+  font-size: 24px;
+  font-weight: bold;
+}
+@media (max-width: 736px){
+}
+@media (max-width: 375px){
+.personalProtectionFont{
+  font-size: 23px;
+}
+}

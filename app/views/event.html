@@ -1,0 +1,80 @@
+<section class="event_body minHeightVh100">
+    <div class="container body_containerPadding">
+        <div class="col-md-12 col-sm-12 col-xs-12 list_title padding_zero">EVENT REPORT</div>
+        <div class="col-md-12 col-sm-12 event_padding4 display">
+            <div class="col-md-5 col-sm-5"></div>
+            <a href="/event/0/1/"><div class="col-md-1 col-sm-1 event_paddingLR5"><button type="button" class="event_btn">ALL</button></div></a>
+            <a href="/event/2018/1/"><div class="col-md-1 col-sm-1 event_paddingLR5"><button type="button" class="event_btn">2018</button></div></a>
+            <a href="/event/2017/1/"><div class="col-md-1 col-sm-1 event_paddingLR5"><button type="button" class="event_btn">2017</button></div></a>
+            <a href="/event/2016/1/"><div class="col-md-1 col-sm-1 event_paddingLR5"><button type="button" class="event_btn">2016</button></div></a>
+            <a href="/event/2015/1/"><div class="col-md-1 col-sm-1 event_paddingLR5"><button type="button" class="event_btn">2015</button></div></a>
+            <a href="/event/2014/1/"><div class="col-md-1 col-sm-1 event_paddingLR5"><button type="button" class="event_btn">2014</button></div></a>
+            <a href="/event/2013/1/"><div class="col-md-1 col-sm-1 event_paddingLR5"><button type="button" class="event_btn">2013</button></div></a>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 news_selectDiv displayPc">
+            <div id="selectInput" class="news_catagoli_select" ng-click="menuClick()"><span>{{yearValue}}</span></div>
+            <div id="div1" ng-hide="menuHide">
+              <a href="/event/0/1/"><div class="selectDIV">ALL</div></a>
+              <a href="/event/2018/1/"><div class="selectDIV">2018</div></a>
+              <a href="/event/2017/1/"><div class="selectDIV">2017</div></a>
+              <a href="/event/2016/1/"><div class="selectDIV">2016</div></a>
+              <a href="/event/2015/1/"><div class="selectDIV">2015</div></a>
+              <a href="/event/2014/1/"><div class="selectDIV">2014</div></a>
+              <a href="/event/2013/1/"><div class="selectDIV">2013</div></a>
+            </div>
+            <div id="div2" ng-click="menuClick2()" ng-hide="menuHide"></div>
+        </div>
+        <div ng-repeat="list in results.eventList">
+            <div class="col-md-12 col-sm-12 col-xs-12 padding_zero event_padding2">
+              <a href="/eventDetail/{{list.uuid}}/">
+                <div class="col-xs-12 event_spPadgNo displayPc">
+                  <div class="event_news_content">
+                      <label class="lineStyle lineHid3">{{list.excerpt}}</label>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4 padding_zero event_news_pic">
+                    <img ng-src="{{list.picUrl}}">
+                </div>
+                <div class="col-md-8 col-sm-8 col-xs-8 event_news_font">
+                  <a href="/eventDetail/{{list.uuid}}/">
+                    <div class="event_news_info display">
+                        <p class="event_font_color_red">{{list.holdDate}}</p>
+                        <p style="color: #454545;">{{list.guestName}}</p>
+                        <p style="color: #454545;">{{list.hallName}}</p>
+                    </div>
+                    <div class="event_news_info displayPc">
+                        <span class="event_font_color_red">{{list.holdDate}}</span>
+                    </div>
+                    <div class="event_news_title display">
+                        <label class="lineStyle lineHid2">{{list.title}}</label>
+                    </div>
+                    <div class="event_news_content display">
+                        <label class="lineStyle lineHid3">{{list.excerpt}}</label>
+                    </div>
+                    </a>
+                    <div class="event_news_viewmore display"><a href="/eventDetail/{{list.uuid}}/">VIEW MORE</a></div>
+                    <div class="col-xs-12 event_openInfo displayPc">
+                      <div class="col-xs-12 padding_zero">
+                        <div class="col-xs-3" style="padding:0;text-align:left;">ゲスト</div>
+                        <div class="col-xs-1 padding_zero event_doubledian">：</div>
+                        <div class="col-xs-8 lineStyle lineHid2 padding_zero">{{list.guestName}}</div>
+                      </div>
+                      <div class="col-xs-12 padding_zero">
+                        <div class="col-xs-3" style="padding:0;text-align:left;">会場</div>
+                        <div class="col-xs-1 padding_zero event_doubledian">：</div>
+                        <div class="col-xs-8 lineStyle lineHid2 padding_zero">{{list.hallName}}</div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div pagination class="col-md-12 col-sm-12 col-xs-12 change_page event_padding2" ng-hide="hidePages" align="center">
+            <ul>
+                <a href="javascript:void(0);"><li ng-click="upPageClick()">&lt;</li></a>
+                <div id="pagesChange"></div>
+                <a href="javascript:void(0);"><li ng-click="downPageClick()">&gt;</li></a>
+            </ul>
+        </div>
+    </div>
+</section><!--/#EventDairy-->
+<div ng-include="'views/footer.html'" ng-hide="hideFooter"></div>

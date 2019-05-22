@@ -1,0 +1,164 @@
+
+<style>
+div.responsivegallery div.galleryinner{
+	padding-top: 0;
+}
+div.responsivegallery div.figurearea{
+	max-width: 100%;
+}
+div.responsivegallery div.figurearea .thecaption{
+	display: none;
+}
+.enlarge{
+	display: none;
+}
+.enlarge2{
+	display: none;
+}
+.narrow{
+	display: none;
+}
+.narrow2{
+	display: none;
+}
+</style>
+<div ng-repeat="event in results">
+<section class="eventDetail_body">
+    <div class="container eventDetail_padding_top">
+        <div class="col-md-12 col-sm-12 col-xs-12 padding_zero eventDetail_padding_top">
+            <div class="col-md-12 col-sm-12 col-xs-8 eventDetail_date padding_zero">
+                <span class="eventDetail_font_color_red">{{event.holdDate}}</span>
+            </div>
+						<div class="col-md-2 col-sm-2 col-xs-4 padding_zero displayPc" ng-hide="hideAddMypageButtons">
+								<button type="button" class="eventDetail_login_btn" ng-click="addMyPage()" >お気に入り <i class="fa fa-star-o"></i></button>
+						</div>
+						<div class="col-md-2 col-sm-2 col-xs-4 padding_zero displayPc" ng-hide="hideRemoveMypageButtons">
+								<button type="button" class="eventDetail_login_btn" style="background-color:#A9A9A9" ng-click="RemoveMyPage()" ng-hide="hideRemoveMypageButtons">お気に入り済み <i class="fa fa-star"></i></button>
+						</div>
+            <div class="col-md-12 col-sm-12 col-xs-12 padding_zero eventDetail_title eventDetail_margin_top">
+                <label><span>{{event.title}}</span></label>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 padding_zero eventDetail_info">
+								<div class="col-md-10 col-sm-10 col-xs-12 padding_zero">
+										<div class="col-md-12 col-sm-12 col-xs-12 padding_zero">
+												<span>ゲスト： </span><span>{{event.gustName}}</span>
+                    </div>
+										<div class="col-md-12 col-sm-12 col-xs-12 padding_zero">
+												<span>開催場所 ： {{event.hallName}}</span>
+                    </div>
+                </div>
+								<div class="col-md-2 col-sm-2 col-xs-4 padding_zero display" ng-hide="hideAddMypageButtons">
+										<button type="button" class="eventDetail_login_btn" ng-click="addMyPage()" >お気に入り <i class="fa fa-star-o"></i></button>
+                </div>
+								<div class="col-md-2 col-sm-2 col-xs-4 padding_zero display" ng-hide="hideRemoveMypageButtons">
+										<button type="button" class="eventDetail_login_btn" style="background-color:#A9A9A9" ng-click="RemoveMyPage()" ng-hide="hideRemoveMypageButtons">お気に入り済み <i class="fa fa-star"></i></button>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 eventDetail_soild padding_zero"></div>
+            <div class="row">
+							<div ng-if="videoUrl != ''">
+                <div class="col-md-6 col-sm-6 col-xs-12 eventDetail_img pointer_events">
+                	<img ng-src="{{event.starPic[0]}}" ng-click="getStarPic(0)">
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12 eventDetail_spPdg">
+                	<iframe class="eventDetail_iframe" ng-src="{{videoUrl}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                </div>
+							</div>
+							<div ng-if="videoUrl == ''">
+								<div class="col-md-3 display"></div>
+                <div class="col-md-6 col-sm-6 col-xs-12 eventDetail_img pointer_events">
+                	<img ng-src="{{event.starPic[0]}}" ng-click="getStarPic(0)">
+                </div>
+								<div class="col-md-3 display"></div>
+							</div>
+            </div>
+        	  <div class="eventDetail_content">
+                <label><span ng-bind-html="event.desc1"></span></label>
+            </div>
+						<div id="ad" class="ad displayPc" style="" align="center"></div>
+            <div class="row eventDetail_under_pic">
+              <div class="col-md-3 col-sm-6 col-xs-6 pointer_events" ng-repeat="image in starPic2" ng-hide="$index > 3 && hideMoreButtons">
+              	<img ng-src="{{image}}" ng-click="getStarPic($index+1)" ondragstart="return false;" oncopy='return false;' oncontextmenu='return false;'/>
+              </div>
+
+							<div class="col-md-12 col-sm-12 col-xs-12" align="center">
+								<button ng-hide="btnViewMore" class="top_button"  ng-click="appearPic()">VIEW MORE</button>
+							</div>
+            </div>
+        </div>
+    </div>
+		<div class="slanted-div">
+			<p class="top_slanted-div_marginLeft">PHOTO&nbsp;&nbsp;GALLERY</p>
+		</div>
+	<div class="container eventDetail_footPdg" align="center">
+		<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="eventDetail_under_content">
+            <label><span ng-bind-html="event.comment"></span></label>
+        </div>
+				<div class="row eventDetail_under_pic">
+					<div class="col-md-3 col-sm-6 col-xs-6" ng-repeat="image2 in commentPic2" ng-hide="$index > 3 && hideMoreButtons2">
+						<img ng-src="{{image2}}" ng-click="getCommentPic($index)" style="pointer-events: auto;"/>
+					</div>
+					<div class="col-md-12 col-sm-12 col-xs-12" align="center">
+						<button ng-hide="btnViewMore2" class="top_button"  ng-click="appearPic2()">VIEW MORE</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-12 col-sm-12 col-xs-12 eventDetail_mgrTB">
+				<div class="eventDetail_bigbtn">
+					<button type="button" ng-click="onTwitterShare()"><i class="fa fa-twitter"></i>&nbsp;ツイート</button>
+					<button type="button" ng-click="onApplication()" class="event_detail_entry" style="background-color: #004984;"ng-hide="applicationHide">応募する</button>
+					<!-- <div class="col-md-4 col-sm-4 col-xs-4 news_detail_google" ng-hide="applicationHide">
+							<a ng-click="onApplication()" class="btn btn-default btn-block" role="button">応募する</a>
+					</div> -->
+					<button type="button" style="background-color: #1F6ABB;" ng-click="onFacebookShare()"><i class="fa fa-facebook"></i>&nbsp;シェア</button>
+        </div>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-6 display" style="margin-top: 60px;padding-bottom:5%;">
+				<div class="eventDetail_label" ng-hide="eventPreHide">
+					<a href="/eventDetail/{{event.eventPre.uuid}}/" style="color:black;">
+						<div class="col-md-1 col-sm-1 col-xs-1" style="height: 100%;">
+							<div class="row">
+								<div class="col-md-12 col-sm-12 col-xs-12" style="height: 60px;"></div>
+								<div class="col-md-12 col-sm-12 col-xs-12 eventDetail_arrow_left">
+									<label><i class="fa fa-angle-left"></i></label>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-11 col-sm-11 col-xs-11">
+							<div class="col-md-12 col-sm-12 col-xs-12" style="height: 35px;"></div>
+								<div class="col-md-12 col-sm-12 col-xs-12">
+										<p class="eventDetail_leftp">{{event.eventPre.dateStr}}</p>
+										<label><span>{{event.eventPre.title}}</span></label>
+								</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-6 display" style="margin-top: 60px;">
+				<div class="eventDetail_label" ng-hide="eventNextHide">
+					<a href="/eventDetail/{{event.eventNext.uuid}}/" style="color:black;">
+						<div class="col-md-11 col-sm-11 col-xs-11">
+							<div class="col-md-12 col-sm-12 col-xs-12" style="height: 35px;"></div>
+							<div class="col-md-12 col-sm-12 col-xs-12">
+									<p class="eventDetail_rightp">{{event.eventNext.dateStr}}</p>
+									<label><span>{{event.eventNext.title}}</span></label>
+							</div>
+						</div>
+						<div class="col-md-1 col-sm-1 col-xs-1" style="height: 100%;">
+							<div class="row">
+								<div class="col-md-12 col-sm-12 col-xs-12" style="height: 60px;"></div>
+								<div class="col-md-12 col-sm-12 col-xs-12 eventDetail_arrow_right">
+	                  <label><i class="fa fa-angle-right"></i></label>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section><!--/#EventDairy-->
+</div>
+<div ng-include="'views/footer.html'" ng-hide="hideFooter"></div>

@@ -1,0 +1,169 @@
+<style>
+nav{
+  display: none;
+}
+li.arrowW1{
+background-color: rgb(238,238,238);
+color: white;
+padding: 0 60px 0 70px;
+}
+li.arrowW1:after {
+border-color: transparent rgb(238,238,238);
+}
+li.arrowW2{
+background-color: rgb(46,167,224);
+padding: 0 60px;
+}
+li.arrowW2:before {
+border-color: rgb(46,167,224) transparent;
+}
+li.arrowW2:after {
+border-color: transparent rgb(46,167,224);
+}
+li.arrowW3{
+background-color: rgb(220,220,220);
+padding: 0 50px;
+}
+li.arrowW3:before {
+border-color: rgb(220,220,220) transparent;
+}
+li.arrowW3:after {
+border-color: transparent rgb(220,220,220);
+}
+</style>
+    <section ng-controller="EntryConfirmCtrl">
+      <div class="container carry_pdgTop">
+          <div class="col-lg-12 col-xs-12" align="center">
+              <img class="img-responsive" src="images/logo01.svg" style="width: 50%;">
+          </div>
+          <div class="col-lg-12 col-xs-12 carry_MgnTop-200" align="center">
+              <p class="table_Title">会員登録フォーム</p>
+              <div class="display">
+                <li class='arrowW arrowW1'><span style="color: black;">会員登録入力<span></li>
+                <li class='arrowW arrowW2'><span style="color: white;">登録内容確認<span></li>
+                <li class='arrowW arrowW3'><span style="color: black;">会員登録完了<span></li>
+              </div>
+          </div>
+          <div class="col-lg-12 col-xs-12" align="center">
+            <table border="1" class="buy_table_List">
+              <tbody>
+                <tr>
+                    <td class="buy_table_left">氏名（漢字）<span class="table_icon">必須</span><span class="table_icon_small">*</span></td>
+                    <td class="buy_table_right">
+                      <label for="firstName">{{formData.firstName}}&nbsp;{{formData.secondName}}</label>
+                      <div class="hide_frame">
+                          <input id="firstName" name="firstName" type="hidden" ng-model="formData.firstName">
+                          <input id="secondName" name="secondName" type="hidden" ng-model="formData.secondName">
+                      </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="buy_table_left">氏名（カナ）<span class="table_icon">必須</span><span class="table_icon_small">*</span></td>
+                    <td class="buy_table_right">
+                      <label for="firstName" >{{formData.firstNameKana}}&nbsp;{{formData.secondNameKana}}</label>
+                      <div class="hide_frame">
+                          <input id="firstNameKana" name="firstNameKana" type="hidden" ng-model="formData.firstNameKana">
+                          <input id="secondNameKana" name="secondNameKana" type="hidden" ng-model="formData.secondNameKana">
+                      </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="buy_table_left">性別<span class="table_icon">必須</span><span class="table_icon_small">*</span></td>
+                    <td class="buy_table_right">
+                      <label for="genderText">{{genderList[formData.gender]}}</label>
+                      <div class="hide_frame">
+                          <input id="gender" name="gender" type="hidden" ng-model="formData.gender">
+                      </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="buy_table_left">生年月日<span class="table_icon">必須</span><span class="table_icon_small">*</span></td>
+                    <td class="buy_table_right">
+                      <label for="birthyear">{{formData.birthyear}}</label>
+                      <span class="select_Name">年</span>
+                      <label for="birthmonth" class="defult_time_Label">{{formData.birthmonth}}</label>
+                      <span class="select_Name">月</span>
+                      <label for="birthday" class="defult_time_Label">{{formData.birthday}}</label>
+                      <span class="select_Name">日</span>
+                      <div class="hide_frame">
+                        <input id="birthyear" name="birthyear" type="hidden" ng-model="formData.birthyear">
+                        <input id="birthmonth" name="birthmonth" type="hidden" ng-model="formData.birthmonth">
+                        <input id="birthday" name="birthday" type="hidden" ng-model="formData.birthday">
+                      </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="buy_table_left">職業<span class="table_icon">必須</span><span class="table_icon_small">*</span></td>
+                    <td class="buy_table_right">
+                      <label for="occupation">{{carerrList[formData.career]}}</label>
+                      <div class="hide_frame">
+                        <input id="occupation" name="occupation" type="hidden" ng-model="formData.career"><br>
+                      </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="buy_table_left">住所<span class="table_icon">必須</span><span class="table_icon_small">*</span></td>
+                    <td class="buy_table_right">
+                      <div class="col-lg-12 col-xs-12 padding_zero">
+                          <span>〒</span>
+                          <label for="zipcode1">{{formData.zipcode}}</label>
+                          <div class="hide_frame">
+                              <input id="zipcode1" name="zipcode1" type="hidden" ng-model="formData.zipcode">
+                          </div>
+                      </div>
+                      <div class="col-lg-12 col-xs-12 padding_zero">
+                          <label for="address">{{formData.address}}</label>
+                          <div class="hide_frame">
+                              <input id="address" name="address" type="hidden" ng-model="formData.address">
+                          </div>
+                          <label for="address2">{{formData.address2}}</label>
+                          <div class="hide_frame">
+                              <input id="address2" name="address2" type="hidden" ng-model="formData.address2">
+                          </div>
+                      </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="buy_table_left">
+                        <span class="phone_mail_Label">メール(ID)</span>
+                        <span class="pc_mail_Label">メールアドレス(ID)</span>
+                        <span class="table_icon1">必須</span>
+                        <span class="table_icon_small">*</span></td>
+                    <td class="buy_table_right">
+                        <label for="mail">{{formData.mail}}</label>
+                        <div class="hide_frame">
+                          <input id="mail" name="mail" type="hidden" ng-model="formData.mail">
+                        </div>
+                    </td>
+                </tr>
+                <tr ng-hide="passwordHide">
+                    <td class="buy_table_left">パスワード<span class="table_icon">必須</span><span class="table_icon_small">*</span></td>
+                    <td class="buy_table_right">
+                      <label for="password">{{formData.password}}</label>
+                      <div class="hide_frame">
+                        <input id="password" name="password" type="hidden" ng-model="formData.password">
+                      </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="buy_table_left">ニックネーム<span class="table_icon" style="background-color: #00a7dd">任意</span></td>
+                    <td class="buy_table_right">
+                        <label for="nickname">{{formData.nickname}}</label>
+                        <div class="hide_frame">
+                          <input id="nickname" name="nickname" type="hidden" ng-model="formData.nickname">
+                        </div>
+                    </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-lg-12 col-xs-12" align="center">
+            <a href="javascript:void(0);" ng-click="postRegist()">
+            <button type="submit" class="confirmBtn">登録する</button>
+            </a>
+          </div>
+      </div>
+  </section>
+  <section id="footer_mv">
+      <div class="footer_font">Copyright HEADLINE WEST All Rights Reserved.</div>
+  </section>

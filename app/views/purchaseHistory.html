@@ -1,0 +1,52 @@
+<section class="minHeightVh100">
+    <div class="container body_containerPadding">
+        <div class="col-md-12 col-sm-12 col-xs-12 display">
+            <a href="/"><span class="mypage_route">トップ</span></a>
+            <span class="mypage_route">&gt;</span>
+            <span class="mypage_route">購入履歴</span>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-12 padding_zero_sp736">
+            <div class="col-md-12 col-sm-12 col-xs-12 mypage_box padding_zero">
+                <div class="col-md-12 col-sm-12 col-xs-6 text-center mypage_padding_3">
+                    <img ng-src="{{thumbnailUrl}}" alt="" class="img-circle mypage_nickpic" ng-hide="thumbnailUrlHide">
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-6 mypage_padding_3">
+                    <p class="mypage_span_1">{{formData.nickname}}</p>
+                    <a href="/point/1/"><div>
+                        <button class="mypage_cirle" disabled="disabled"><p>P</p></button>
+                        <span class="mypage_span_3">{{formData.coin}}</span>
+                        <span class="mypage_span_2">ポイント</span>
+                    </div></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9 col-sm-9 col-xs-12 BuyHistoryRight">
+          <div class="col-md-12 col-sm-12 col-xs-12 BuyHistoryBorderTop">
+          	<div class="col-md-12 col-sm-12 col-xs-12 BuyHistoryRightTitle">
+                  <span class="display"><i class="fa fa-shopping-cart"></i>&nbsp;購入履歴</span>
+                  <span class="displayPc"><i class="fa fa-shopping-cart"></i>&nbsp;購入履歴</span>
+              </div>
+              <div class="col-md-12 col-sm-12 col-xs-12 BuyHistoryRightContent" ng-repeat="historyList in results.historyList">
+                  <div class="col-md-12 col-sm-12 col-xs-12 BuyHistoryRightInfo">
+                      <span class="BuyHistoryRightDate"><span>購入日：</span><span>{{historyList.date}}</span></span>
+                      <span style="float: right;"><span>合計：</span><span>{{historyList.totalPrice*1.08|number:0}}円</span></span>
+                      <p class="displayPc" style="margin: 0;letter-spacing: 1px;">発送済み</p>
+                  </div>
+                  <div class="col-md-12 col-sm-12 col-xs-12 padding_zero" style="margin-top: 20px;" ng-repeat="goodsList in historyList.goodsList">
+                      <div class="col-md-3 col-sm-5 col-xs-5 BuyHistory_imgdiv">
+                          <img ng-src="{{goodsList.picUrl}}" style="width: 100%;height: 100%">
+                      </div>
+                      <div class="col-md-7 col-sm-7 col-xs-7 BuyHistoryFont lineStyle lineHid2">
+                          <label><span>{{goodsList.goodsName}}</span></label>
+                          <p class="displayPc" style="font-weight: bold;position: absolute;right: 0px;bottom: 0px;margin: 0;"><span>{{goodsList.price*1.08|number:0}}円</span></p>
+                      </div>
+                      <div class="col-md-2 col-sm-2 col-xs-2 display" style="padding: 55px 0 0 0;height: 150px;text-align: right;">
+                          <span>{{goodsList.price*1.08|number:0}}円</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+</section><!--/#My page-->
+<div ng-include="'views/footer.html'" ng-hide="hideFooter"></div>

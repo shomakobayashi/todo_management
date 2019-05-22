@@ -1,0 +1,205 @@
+<ng-map zoom="16" center="[34.666254,133.920669]" class="now_mapSize" id="map">
+      <marker position="{{marker.location}}" ng-repeat="marker in markers"
+              icon="{{marker.icon}}" id="mapMark{{$index}}"
+              on-click="markClick(marker.location[0],marker.location[1])">
+              <!-- on-mouseover="markMouseover(contentList.coordinate1,contentList.coordinate2)" -->
+              <!-- on-mouseout="markMouseout(contentList.coordinate1,contentList.coordinate2)" -->
+     </marker>
+</ng-map>
+<section style="position: relative;">
+    <div class="container nowFor_top">
+        <div class="goodsSelectDiv" ng-hide="selectHide0" ng-click="shopCloseAllSelect()"></div>
+        <div class="container padding_zero">
+      	    <div class="col-md-2 col-sm-2 col-xs-12 padding_zero" id="svg_div_now5" style="height: 50px;">
+        				<img src="images/0501.svg">
+        		</div>
+            <div class="col-md-10 col-sm-10 col-xs-12 nowFor_input">
+                <div class="nowFor_textinput">
+                    <input type="text" placeholder="フリーワード" ng-model="shopSearchR.keyWord">
+                </div>
+        				<div class="now_selectinput now_selectShort" ng-click="shopSelect2()">
+                    <span class="selectListSpan">{{selectDesc2}}</span>
+        				</div>
+                <div class="now_selectList now_selectShort now_selectPosition1" ng-hide="selectHide2" ng-click="shopCloseSelect2()" style="z-index: 500;">
+                    <div class="selectListShop" ng-click="shopSelectValue2('価格帯を選択',0)"><span class="selectListSpan">価格帯を選択</span></div>
+                    <div class="selectListShop" ng-click="shopSelectValue2('1,000-2,000円',1)"><span class="selectListSpan">1,000-2,000円</span></div>
+                    <div class="selectListShop" ng-click="shopSelectValue2('2,000-5,000円',2)"><span class="selectListSpan">2,000-5,000円</span></div>
+                    <div class="selectListShop" ng-click="shopSelectValue2('5,000-10,000円',3)"><span class="selectListSpan">5,000-10,000円</span></div>
+                    <div class="selectListShop" ng-click="shopSelectValue2('10,000-20,000円',4)"><span class="selectListSpan">10,000-20,000円</span></div>
+                    <div class="selectListShop" ng-click="shopSelectValue2('20,000-30,000円',5)"><span class="selectListSpan">20,000-30,000円</span></div>
+                    <div class="selectListShop" ng-click="shopSelectValue2('30,000-50,000円',6)"><span class="selectListSpan">30,000-50,000円</span></div>
+                </div>
+        				<div class="now_selectinput now_selectShort" ng-click="shopSelect3()">
+                    <span class="selectListSpan">{{selectDesc3}}</span>
+        				</div>
+                <div class="now_selectList now_selectShort now_selectPosition2" ng-hide="selectHide3" ng-click="shopCloseSelect3()" style="z-index: 500;">
+                    <div class="selectListShop" ng-click="shopSelectValue3('エリアを選択',0)"><span class="selectListSpan">エリアを選択</span></div>
+                    <div class="selectListShop" ng-click="shopSelectValue3('岡山市',1)"><span class="selectListSpan">岡山市</span></div>
+                    <div class="selectListShop" ng-click="shopSelectValue3('福山市',2)"><span class="selectListSpan">福山市</span></div>
+                    <div class="selectListShop" ng-click="shopSelectValue3('玉野市',3)"><span class="selectListSpan">玉野市</span></div>
+                    <div class="selectListShop" ng-click="shopSelectValue3('井原市',4)"><span class="selectListSpan">井原市</span></div>
+                    <div class="selectListShop" ng-click="shopSelectValue3('倉敷市',5)"><span class="selectListSpan">倉敷市</span></div>
+                    <div class="selectListShop" ng-click="shopSelectValue3('新見市',6)"><span class="selectListSpan">新見市</span></div>
+                    <div class="selectListShop" ng-click="shopSelectValue3('美咲町',7)"><span class="selectListSpan">美咲町</span></div>
+                    <div class="selectListShop" ng-click="shopSelectValue3('瀬戸内市',8)"><span class="selectListSpan">瀬戸内市</span></div>
+                    <div class="selectListShop" ng-click="shopSelectValue3('津山市',9)"><span class="selectListSpan">津山市</span></div>
+                    <div class="selectListShop" ng-click="shopSelectValue3('笠岡市',10)"><span class="selectListSpan">笠岡市</span></div>
+                    <div class="selectListShop" ng-click="shopSelectValue3('総社市',11)"><span class="selectListSpan">総社市</span></div>
+                    <div class="selectListShop" ng-click="shopSelectValue3('高梁市',12)"><span class="selectListSpan">高梁市</span></div>
+                    <div class="selectListShop" ng-click="shopSelectValue3('備前市',13)"><span class="selectListSpan">備前市</span></div>
+                    <div class="selectListShop" ng-click="shopSelectValue3('赤磐市',14)"><span class="selectListSpan">赤磐市</span></div>
+                    <div class="selectListShop" ng-click="shopSelectValue3('真庭市',15)"><span class="selectListSpan">真庭市</span></div>
+                    <div class="selectListShop" ng-click="shopSelectValue3('美作市',16)"><span class="selectListSpan">美作市</span></div>
+                    <div class="selectListShop" ng-click="shopSelectValue3('浅口市',17)"><span class="selectListSpan">浅口市</span></div>
+                </div>
+                <div class="now_selectinput now_selectNormal" ng-click="shopSelect1()">
+                    <span class="selectListSpan">{{selectDesc1}}</span>
+        				</div>
+                <div class="now_selectList now_selectNormal now_selectPosition3" ng-hide="selectHide1" ng-click="shopCloseSelect1()" style="z-index: 500;">
+                    <div class="selectListShop" ng-click="shopSelectValue1('カテゴリー選択',0)"><span class="selectListSpan">カテゴリー選択</span></div>
+                    <div class="selectListShop" ng-click="shopSelectValue1('食べる',1)"><span class="selectListSpan">食べる</span></div>
+                    <div class="selectListShop" ng-click="shopSelectValue1('ファッション',12)"><span class="selectListSpan">ファッション</span></div>
+                    <div class="selectListShop" ng-click="shopSelectValue1('健康ビューティー',3)"><span class="selectListSpan">健康ビューティー</span></div>
+                    <div class="selectListShop" ng-click="shopSelectValue1('遊ぶ',4)"><span class="selectListSpan">遊ぶ</span></div>
+                    <div class="selectListShop" ng-click="shopSelectValue1('乗る',6)"><span class="selectListSpan">乗る</span></div>
+                    <div class="selectListShop" ng-click="shopSelectValue1('ライフスタイル',11)"><span class="selectListSpan">ライフスタイル</span></div>
+                    <div class="selectListShop" ng-click="shopSelectValue1('ブライダル',5)"><span class="selectListSpan">ブライダル</span></div>
+                    <div class="selectListShop" ng-click="shopSelectValue1('学ぶ',9)"><span class="selectListSpan">学ぶ</span></div>
+                    <div class="selectListShop" ng-click="shopSelectValue1('プレイス',7)"><span class="selectListSpan">プレイス</span></div>
+                    <div class="selectListShop" ng-click="shopSelectValue1('施設',10)"><span class="selectListSpan">施設</span></div>
+                    <div class="selectListShop" ng-click="shopSelectValue1('リクルート',2)"><span class="selectListSpan">リクルート</span></div>
+                    <div class="selectListShop" ng-click="shopSelectValue1('コーポレートインフォ',8)"><span class="selectListSpan">コーポレートインフォ</span></div>
+                </div>
+                <div class="now_selectinput now_selectLong" ng-click="shopSelect4()">
+                    <span class="selectListSpan">{{selectDesc4}}</span>
+        				</div>
+                <div class="now_selectList now_selectLong now_selectPosition4" ng-hide="selectHide4" ng-click="shopCloseSelect4()" style="z-index: 500;">
+                    <div class="selectListShop" ng-click="shopSelectValue4('ジャンル選択',0)"><span class="selectListSpan">ジャンル選択</span></div>
+                    <div ng-repeat="janruL in janruList">
+                      <div class="selectListShop" ng-click="shopSelectValue4(janruL.desc,janruL.content)"><span class="selectListSpan">{{janruL.desc}}</span></div>
+                    </div>
+                </div>
+                <div class="nowFor_btn display" align="left">
+                    <div type="button" class="shop_btnStyle" ng-click="searchR(shopSearchR)" align="center"><i class="fa fa-search display">&nbsp;検索</i></div>
+                </div>
+                <div class="nowFor_btn displayPc" align="left">
+                    <div type="button" class="shop_btnStyle" ng-click="searchR(shopSearchR)" align="center">検索</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section style="overflow:hidden;">
+    <div class="container padding_zero">
+        <div class="col-md-3 col-sm-3 col-xs-3 now_leftPdB display">
+            <div class="col-md-12 col-sm-12 col-xs-12 nowFor_title padding_zero display">
+              	<div class="col-md-6 col-sm-6 col-xs-6 nowFor_left_img">
+              		<img src="{{headerUrl}}">
+              	</div>
+              	<div class="col-md-6 col-sm-6 col-xs-6 nowFor_left_p">
+                  <p>今日のマイページ</p>
+                  <p>今すぐ行ける情報</p>
+              	</div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 display" style="margin-top: 30px;"></div>
+            <div class="col-md-12 col-sm-12 col-xs-12 shopDetail_msg">
+              <div class="col-md-12 col-sm-12 col-xs-12 shopDetail_now padding_zero display">
+                <div class="col-md-4 col-sm-4 padding_zero"><img src="images/0501.svg"></div>
+                <div class="col-md-8 col-sm-8 padding_zero"><p>今すぐ行ける情報</p></div>
+              </div>
+              <div class="marginBottom3 displayPc">
+                <b class="shopDetail_nowSP">店舗情報</b>
+              </div>
+              <div class="col-md-12 col-sm-12 col-xs-12 padding_zero shopDetail_overhiddenDIV" >
+                  <div class="shopDetail_pre-scrollable">
+                      <div ng-repeat="now5 in results[0].nowGoList" class="col-md-12 col-sm-12 col-xs-12 shopDetail_nowContent shopDetail_expaddingR">
+                        <div class="col-md-12 col-sm-12 col-xs-12 padding_zero"><b>{{now5.time}}</b></div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 padding_zero"><label class="shopDetail_nowGoLabel">{{now5.name}}</label></div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 dashedDiv padding_zero">
+                          <span>{{now5.now5}}</span>
+                        </div>
+    			        		</div>
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 display" style="margin-top: 30px;"></div>
+            <div class="col-md-12 col-sm-12 col-xs-12 shopDetail_msg">
+              <div class="col-md-12 col-sm-12 col-xs-12 shopDetail_now padding_zero display">
+          			<div class="col-md-4 col-sm-4 padding_zero"><img src="images/0401.svg"></div>
+                <div class="col-md-8 col-sm-8 padding_zero"><p>今日のおトク情報</p></div>
+          		</div>
+          		<div class="marginBottom3 displayPc">
+          			<b class="shopDetail_nowSP">おトク情報</b>
+          		</div>
+              <div class="col-md-12 col-sm-12 col-xs-12 padding_zero shopDetail_overhiddenDIV" >
+                  <div class="shopDetail_pre-scrollable">
+                      <div ng-repeat="coupon in results[0].couponList" class="col-md-12 col-sm-12 col-xs-12 shopDetail_nowContent">
+    			        			<div class="col-md-12 col-sm-12 col-xs-12 padding_zero"><b>{{coupon.time}}<b></div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 padding_zero"><label class="shopDetail_nowGoLabel">{{coupon.name}}</label></div>
+    			        			<div class="col-md-12 col-sm-12 col-xs-12 padding_zero">
+                          <span>{{coupon.title}}</span>
+                        </div>
+    			        			<div class="col-md-12 col-sm-12 col-xs-12 shopDetail_scroll_img">
+    			        				<img ng-src="{{coupon.picUrl}}" class="shopDetail_IMG">
+    			        			</div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 dashedDiv padding_zero">
+                            <span>{{coupon.desc}}</span>
+                        </div>
+    			        		</div>
+                  </div>
+              </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-9 col-sm-9 col-xs-12 shop_right nowFor_pdg">
+        	  <div class="add_rightDiv display"></div>
+            <div class="col-md-12 col-sm-12 col-xs-12 nowFor_right_title" align="left">
+                <label style="color: black;font-family: LettrGoth12 BT">
+                    <b>今すぐ行ける</b><span>お店{{results[0].shopCount}}件</span>
+                </label>
+            </div>
+            <div ng-repeat="contentList in results[0].contentList">
+              <a href="/shop/detail/{{contentList.uuid}}/">
+              	<div class="col-md-6 col-sm-6 col-xs-12 shop_sptop">
+                    <div class="col-md-12 col-sm-12 col-xs-12 shop_goods" id="shop_goods{{$index}}">
+                        <div class="shop_goods_title" align="left">
+                            <span class="lineStyle lineHid1">{{contentList.name}}</span>
+                        </div>
+                        <div class="col-md-5 col-sm-5 col-xs-4 shop_goods_pic">
+                            <img ng-src="{{contentList.picUrl}}">
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-xs-8 shop_goods_content">
+                            <label class="lineStyle lineHid6">{{contentList.excerpt}}</label>
+                        </div>
+                        <div class="col-md-7 col-sm-7 shop_address_div display">
+                            <div class="col-md-2 col-sm-2 col-xs-2 shop_address_icon">
+                                <i class="fa fa-home shop_address_i"></i>
+                            </div>
+                            <div class="col-md-10 col-sm-10 col-xs-10 shop_address_content padding_zero" align="left">
+                                <span class="lineStyle lineHid1">{{contentList.address}}</span>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 padding_zero displayPc">
+                          	<div class="col-md-1 col-sm-1 col-xs-1 padding_zero">
+                                <i class="fa fa-home shop_address_i"></i>
+                            </div>
+                            <div class="col-md-11 col-sm-11 col-xs-11 shop_address_content" align="left">
+                                <span class="lineStyle lineHid1">{{contentList.address}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </a>
+            </div>
+            <div pagination class="col-md-12 col-sm-12 col-xs-12 change_page event_padding2" align="center">
+                <ul>
+                    <a href="javascript:void(0);"><li ng-click="upPageClick(pageObject.currentPage-1)">&lt;</li></a>
+                    <div id="pagesChange"></div>
+                    <a href="javascript:void(0);"><li ng-click="downPageClick(pageObject.currentPage+1)">&gt;</li></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<div ng-include="'views/footer.html'" ng-hide="hideFooter" style="position: relative;z-index:999;"></div>

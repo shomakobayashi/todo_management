@@ -1,0 +1,161 @@
+.Application_padding{
+  padding-bottom: 200px;
+}
+.Application_tag{
+    width: 35%;
+    background-color: #EEEEEE;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+.Application_title{
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    padding: 15px 20px;
+}
+.Application_TopP{
+    font-size: 24px;
+    margin-top: 110px;
+    font-weight: bold;
+    color: black;
+}
+.Application_span{
+    padding: 15px 20px;
+}
+.Application_span label{
+    margin-bottom: 0;
+}
+.Application_span span{
+    font-weight: bold;
+    color: rgb(12,12,12);
+}
+.Application_confirmBtn{
+    color: white;
+    background-color: rgb(0,73,132);
+    border: none;
+    font-size: 15px;
+    padding: 0 70px;
+    height: 55px;
+    margin: 40px 0;
+    font-weight: bold;
+    /* letter-spacing: 4px; */
+}
+.Application_retrnBtn{
+    color: white;
+    background-color: #E5E5E5;
+    border: none;
+    font-size: 15px;
+    padding: 0 100px;
+    height: 55px;
+    margin: 40px 0;
+    font-weight: bold;
+    /* letter-spacing: 4px; */
+}
+.ApplicationOver_title{
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: black;
+}
+.ApplicationOver_title2{
+    margin-top: 100px;
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: black;
+}
+.ApplicationOver_content{
+    margin-top: 80px;
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: rgb(250,4,3);
+}
+.application_btn_padding{
+    padding: 0 48px;
+}
+.ApplicationOver_btn_submit{
+    border: 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+    width: auto;
+    outline: none;
+    padding: 0 2em;
+}
+.ApplicationOver_btn_confirm{
+    font-size: 1em;
+    height: 3.2em;
+    background: #004984;
+    color: white;
+}
+.ApplicationOver_btn_return{
+    margin-top: 30px;
+    font-size: 1em;
+    height: 3.2em;
+    background: #E5E5E5;
+    color: black;
+    margin-right: 1.2em;
+}
+.ApplicationOver_content2 span{
+  color: red;
+  font-weight: bold;
+}
+@media (max-width: 736px) {
+.ApplicationOver_title2{
+  margin-top:30px;
+}
+.ApplicationOver_content{
+  margin-top:20px;
+}
+}
+@media (max-width: 414px) {
+.application_btn_padding{
+    padding: 0;
+}
+.Application_confirmBtn{
+    margin: 20px 0;
+}
+.Application_padding{
+  padding-bottom: 80px;
+}
+.ApplicationOver_title{
+  font-size:24px;
+}
+.ApplicationOver_title2{
+  font-size:16px;
+}
+.ApplicationOver_content{
+  font-size:13px;
+  letter-spacing:1px;
+  line-height: 22px;
+}
+.ApplicationOver_btn_submit{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+    width: auto;
+    outline: none;
+    padding: 0 2em;
+}
+}
+@media (max-width: 375px) {
+.ApplicationOver_title{
+  font-size:20px;
+}
+.ApplicationOver_title2{
+  margin-top:30px;
+  font-size:15px;
+}
+.ApplicationOver_content{
+  font-size:11px;
+  letter-spacing:1px;
+  line-height: 20px;
+}
+.ApplicationOver_btn_return{
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+}

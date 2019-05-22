@@ -1,0 +1,381 @@
+<div ng-repeat="recruit in results">
+<section>
+    <div class="container body_containerPadding">
+        <div class="col-md-12 col-sm-12 col-xs-12 displayPc">
+            <div class="col-md-12 col-sm-5 col-xs-12 padding_zero_sp736 recruit_result_title">{{recruit.title1}}</div>
+            <div class="col-md-12 col-sm-7 col-xs-12 padding_zero_sp736">
+                <span ng-repeat="modeList in recruit.modeList" class="recruit_result_icon">{{modeList}}</span>
+            </div>
+            <div class="col-md-11 col-sm-12 col-xs-12 padding_zero_sp736 recruit_padding_4 recruit_result_taglist">
+                <ul><li ng-repeat="detailList in recruit.detailList"><span class="recruit_result_tag">{{detailList}}</span></li></ul>
+            </div>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 recruitDetail_header_1">
+            <span>{{recruit.title2}}</span>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 display recruitDetail_cutoff"><hr></div>
+        <div class="col-md-12 col-sm-12 col-xs-12  recruitDetail_header_2">
+          <div class="col-md-6 col-sm-6 col-xs-12 shopDetail_info padding_zero display" align="left">
+              <div class="col-md-12 col-sm-12 col-xs-12 padding_zero_sp736">
+                  <p>{{recruit.shopName}}</p>
+              </div>
+              <div class="col-md-12 col-sm-12 col-xs-12 display">
+                  <span ng-if ="recruit.station != undefined && recruit.station != ''">
+                    <i class="fa fa-map-marker" style="color: rgba(214,202,190);"></i><span style="margin-right: 50px;">{{recruit.station}}</span>
+                  </span>
+              </div>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-12 shopDetail_phone padding_zero margin_tel">
+              <div class="col-md-8 col-sm-8 col-xs-8 padding_zero display">
+                <i class="fa fa-phone"></i><span style="margin: 0 10px;">{{recruit.tel}}</span>
+              </div>
+              <div class="col-md-8 col-sm-8 col-xs-8 padding_zero displayPc" ng-click="">
+                <a class="sp_phone" href="tel:{{tel}}" >
+                  <i class="fa fa-phone"></i><span style="margin: 0 10px;">{{recruit.tel}}</span>
+                </a>
+              </div>
+              <div class="col-md-4 col-sm-4 col-xs-4 padding_zero">
+                <button type="button" class="eventDetail_login_btn" ng-click="addMyPage()"  ng-if="recruit.favorite == false">お気に入り <i class="fa fa-star-o"></i></button>
+                <button type="button" class="eventDetail_login_btn" style="background-color:#A9A9A9;" ng-click="RemoveMyPage()" ng-if="recruit.favorite == true">お気に入り済み <i class="fa fa-star"></i></button>
+              </div>
+          </div>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 display recruitDetail_cutoff"><hr></div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <img ng-src="{{recruit.picUrl1}}" alt="" class="recruitDetail_header_pic">
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 displayPc recruit_padding_4">
+            <div class="recruit_result_header_2">
+                <span>{{recruit.recruitName}}</span>
+            </div>
+            <div class="recruit_result_border_bottom"></div>
+            <div class="recruit_padding_4">
+                <table class="recruit_result_table">
+                    <tr>
+                        <td class="recruit_result_catagoli" style="font-weight:bold">給料</td>
+                        <td>{{recruit.salary}}</td>
+                    </tr>
+                    <tr>
+                        <td class="recruit_result_catagoli" style="font-weight:bold">勤務地</td>
+                        <td>{{recruit.address}}</td>
+                    </tr>
+                    <tr>
+                        <td class="recruit_result_catagoli" style="font-weight:bold">最寄駅</td>
+                        <td>{{recruit.station}}</td>
+                    </tr>
+                    <tr>
+                        <td class="recruit_result_catagoli" style="font-weight:bold">勤務時間</td>
+                        <td>{{recruit.workingTimeStart}}～{{recruit.workingTimeEnd}}
+                          <br>{{recruit.workingTime}}</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="recruit_padding_4"></div>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 displayPc recruit_padding_4"></div>
+        <div class="col-md-12 col-sm-12 col-xs-12 displayPc recruitDetail_shop_video">
+            <!-- <img ng-src="{{recruit.videoUrl1}}" alt=""> -->
+            <div ng-if="videoUrl1 != undefined && videoUrl1 !=''">
+              <iframe class="shopDetail_IMG2" ng-src="{{videoUrl1}}" allow="autoplay; encrypted-media" frameborder="0" allowfullscreen="" scrolling="no"></iframe>
+            </div>
+            <div ng-if="picUrl11 != undefined && picUrl11 !=''">
+              <img src="{{picUrl11}}" class="shopDetail_IMG2">
+            </div>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 recruit_padding_2"></div>
+        <div class="col-md-12 col-sm-12 col-xs-12 displayPc recruitDetail_shop_pic">
+            <ul>
+                <li ng-if="recruit.picUrl2 != undefined && recruit.picUrl2 !=''"><img ng-src="{{recruit.picUrl2}}" alt=""></li>
+                <li ng-if="recruit.picUrl3 != undefined && recruit.picUrl3 !=''"><img ng-src="{{recruit.picUrl3}}" alt=""></li>
+                <li ng-if="recruit.picUrl4 != undefined && recruit.picUrl4 !=''"><img ng-src="{{recruit.picUrl4}}" alt=""></li>
+                <li ng-if="recruit.picUrl5 != undefined && recruit.picUrl5 !=''"><img ng-src="{{recruit.picUrl5}}" alt=""></li>
+                <li ng-if="recruit.picUrl7 != undefined && recruit.picUrl7 !=''"><img ng-src="{{recruit.picUrl7}}" alt=""></li>
+                <li ng-if="recruit.picUrl8 != undefined && recruit.picUrl8 !=''"><img ng-src="{{recruit.picUrl8}}" alt=""></li>
+                <li ng-if="recruit.picUrl9 != undefined && recruit.picUrl9 !=''"><img ng-src="{{recruit.picUrl9}}" alt=""></li>
+                <li ng-if="recruit.picUrl10 != undefined && recruit.picUrl10 !=''"><img ng-src="{{recruit.picUrl10}}" alt=""></li>
+            </ul>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 displayPc recruit_padding_2">
+            <div class="col-md-12 col-sm-12 col-xs-12 displayPc recruitDetail_info_border">
+                <div class="recruitDetail_info_header">
+                    <span class="recruitDetail_info_treatment">ア</span>
+                    <span class="recruitDetail_info_catagoli">サービス・ホール</span>
+                </div>
+                <table class="recruitDetail_info_table_xs">
+                    <tr ng-if="(recruit.featureList != undefined && recruit.featureList.length>0) || (recruit.workPeriodList != undefined && recruit.workPeriodList.length>0) || (recruit.workTimeList != undefined && recruit.workTimeList.length>0)
+                      || (recruit.capacityList != undefined && recruit.capacityList.length>0) || (recruit.workWayList != undefined && recruit.workWayList.length>0) || (recruit.specialList != undefined && recruit.specialList.length>0)
+                      || (recruit.environmentList != undefined && recruit.environmentList.length>0) || (recruit.treatmentNewList != undefined && recruit.treatmentNewList.length>0)">
+                        <td class="recruitDetail_info_catagoli" style="text-align: center;">特徴</td>
+                        <td>
+                          <p ng-repeat="featureList in recruit.featureList" class="recruitDetail_features">{{featureList}}</p>
+                          <p ng-repeat="workPeriodList in recruit.workPeriodList" class="recruitDetail_features">{{workPeriodList}}</p>
+                          <p ng-repeat="workTimeList in recruit.workTimeList" class="recruitDetail_features">{{workTimeList}}</p>
+                          <p ng-repeat="capacityList in recruit.capacityList" class="recruitDetail_features">{{capacityList}}</p>
+                          <p ng-repeat="workWayList in recruit.workWayList" class="recruitDetail_features">{{workWayList}}</p>
+                          <p ng-repeat="specialList in recruit.specialList" class="recruitDetail_features">{{specialList}}</p>
+                          <p ng-repeat="environmentList in recruit.environmentList" class="recruitDetail_features">{{environmentList}}</p>
+                          <p ng-repeat="treatmentNewList in recruit.treatmentNewList" class="recruitDetail_features">{{treatmentNewList}}</p>
+                        </td>
+                    </tr>
+                    <tr ng-if="capacity != undefined && capacity !=''">
+                        <td class="recruitDetail_info_catagoli" style="text-align: center;">応募資格</td>
+                        <td><span class="recruitDetail_tag_content" ng-bind-html="recruit.capacity"></span></td>
+                    </tr>
+                    <!-- <tr>
+                        <td class="recruitDetail_info_catagoli" style="text-align: center;">応募電話</td>
+                        <td><span class="recruitDetail_tag_content">{{recruit.tel}}</span></td>
+                    </tr> -->
+                    <tr ng-if="vacation != undefined && vacation !=''">
+                        <td class="recruitDetail_info_catagoli" style="text-align: center;">休日・休暇</td>
+                        <td><span class="recruitDetail_tag_content" ng-bind-html="recruit.vacation"></span></td>
+                    </tr>
+                    <tr ng-if="treatment != undefined && treatmen !=''">
+                        <td class="recruitDetail_info_catagoli" style="text-align: center;">福利厚生</td>
+                        <td>
+                          <span class="recruitDetail_tag_content" ng-bind-html="treatment"></span>
+                        </td>
+                    </tr>
+                    <tr ng-if="(salary != undefined && salary !='') && (modeList != undefined && modeList.length>0 )">
+                        <td class="recruitDetail_info_catagoli" style="text-align: center;">
+                          <p>雇用形態・</p><p>給与</p></td>
+                        <td>
+                          <span ng-repeat="modes in modeList" class="recruit_result_icon" style="background-color: rgb(243,151,1);">{{modes}}</span><br>
+                          <span class="recruitDetail_tag_content" >{{recruit.salary}}</span><br>
+                          <span class="recruitDetail_tag_content" ng-bind-html="recruit.salaryFull"></span>
+                        </td>
+                    </tr>
+                    <tr ng-if="recruit.executive != undefined && recruit.executive !=''">
+                        <td class="recruitDetail_info_catagoli" style="text-align: center;">担当者</td>
+                        <td><span class="recruitDetail_tag_content">{{recruit.executive}}</span></td>
+                    </tr>
+                    <tr ng-if="recruit.acceptance != undefined && recruit.acceptance !=''">
+                        <td class="recruitDetail_info_catagoli" style="text-align: center;"><p>応募</p><p>締め切り日</p></td>
+                        <td><span class="recruitDetail_tag_content">{{recruit.acceptance}}</span></td>
+                    </tr>
+                    <tr ng-if="recruit.spot != undefined && recruit.spot !=''">
+                        <td class="recruitDetail_info_catagoli" style="text-align: center;">拠点名</td>
+                        <td><span class="recruitDetail_tag_content">{{recruit.spot}}</span></td>
+                    </tr>
+                </table>
+                <table class="recruitDetail_info_table_xs">
+                    <tr ng-if="desc != undefined && desc !=''">
+                        <td class="recruitDetail_info_catagoli" style="text-align: center;">
+                              <p>仕事内容・</p><p>求める人物</p>
+                        </td>
+                        <td><span class="recruitDetail_tag_content" ng-bind-html="recruit.desc"></span></td>
+                    </tr>
+                    <tr ng-if="recruit.workingDate != undefined && recruit.workingDate !=''">
+                        <td class="recruitDetail_info_catagoli" style="text-align: center;">
+                          <p>関連、系列</p><p>グループ店舗</p>
+                        </td>
+                        <td><span class="recruitDetail_info_workingDate" ng-bind-html="recruit.workingDate"></span></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-12 display">
+            <div ng-if="recruit.shopType != 0">
+                <div class="col-md-12 col-sm-12 col-xs-12 padding_zero display" style="margin-bottom: 20px;border: 1px solid rgb(238,238,238);cursor: pointer;">
+                    <div ng-if="recruit.shopType!=7 && recruit.shopType!=8">
+                      <a href="/shop/detail/{{recruit.uuid2}}/">
+                        <div class="recruitDetail_left_title" align="center">
+                          <p>こちらのお店の</p>
+                          <p><b>店舗情報</b>はこちら</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div ng-if="recruit.shopType==7">
+                      <a href="/place/detail/{{recruit.uuid2}}/">
+                        <div class="recruitDetail_left_title" align="center">
+                          <p>こちらのお店の</p>
+                          <p><b>店舗情報</b>はこちら</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div ng-if="recruit.shopType==8">
+                      <a href="/shop/corporateinfo/detail/{{recruit.uuid2}}/">
+                        <div class="recruitDetail_left_title" align="center">
+                          <p>こちらのお店の</p>
+                          <p><b>店舗情報</b>はこちら</p>
+                        </div>
+                      </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 padding_zero recruitDetail_recommend">
+                <div class="col-md-12 col-sm-12 col-xs-12 padding_zero recruitDetail_recommend_label">
+                    <i class="fa fa-home recruitDetail_color_5"></i>
+                    <span class="recruitDetail_span_3">おススメの求人情報</span>
+                </div>
+                <div ng-repeat="recruitList in recruit.recruitList">
+                  <a href="/recruitDetail/{{recruitList.uuid}}/">
+                    <div class="col-md-12 col-sm-12 col-xs-12 padding_zero">
+                        <div class="col-md-4 col-sm-4 col-xs-12 recruitDetail_recommend_padding">
+                            <img src="{{recruitList.picUrl1}}" alt="" class="recruitDetail_recommend_pic">
+                        </div>
+                        <div class="col-md-8 col-sm-8 col-xs-12 recruitDetail_recommend_padding">
+                            <div class="recruitDetail_recommend_shopnm">{{recruitList.recruitName}}</div>
+                            <div class="recruitDetail_recommend_tags lineStyle lineHid2">{{recruitList.title1}}</div>
+                        </div>
+                    </div>
+                  </a>
+                </div>
+            </div>
+        </div>
+      <div class="col-md-9 col-sm-9 col-xs-12 display">
+          <div class="col-md-12 col-sm-12 col-xs-12 padding_zero recruitDetail_shop_info">
+              <div class="col-md-12 col-sm-12 col-xs-12 padding_zero recruitDetail_shop_welcome">
+                  <span>{{recruit.title2}}</span>
+              </div>
+              <div class="col-md-12 col-sm-12 col-xs-12 recruitDetail_shop_intro" ng-bind-html="recruit.content">
+                <!-- {{recruit.content}} -->
+              </div>
+              <div class="col-md-12 col-sm-12 col-xs-12 recruitDetail_shop_pic">
+          			<div class="col-md-3 col-sm-6 col-xs-6" ng-repeat="image in starPic" ng-hide="$index > 3 && hideMoreButtons">
+                  <img ng-src="{{image}}" class="shopDetail_IMG"/>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12" ng-hide="btnViewMore" align="center" style="margin-top: 15px;">
+                  <button class="top_button" ng-click="appearPic()">VIEW MORE</button>
+                </div>
+              </div>
+              <div class="col-md-12 col-sm-12 col-xs-12 recruit_padding_4"></div>
+                <div ng-if="videoUrl1 != undefined && videoUrl1 !=''" class="col-md-5 col-sm-12 col-xs-12 display recruitDetail_shop_video">
+                 <iframe class="shopDetail_IMG2" ng-src="{{videoUrl1}}" allow="autoplay; encrypted-media" width="355px" height="226px" frameborder="0" allowfullscreen="" scrolling="no"></iframe>
+                </div>
+                <div ng-if="picUrl11 != undefined && picUrl11 !=''" class="col-md-5 col-sm-12 col-xs-12 display recruitDetail_shop_video">
+                  <img src="{{picUrl11}}" class="" width="355px" height="226px">
+                </div>
+              <div class="col-md-7 col-sm-12 col-xs-12">
+                  <div class="recruit_result_header_2">
+                      <span>{{recruit.recruitName}}</span>
+                  </div>
+                  <div class="recruit_result_border_bottom"></div>
+                  <div class="recruit_padding_4">
+                      <table class="recruit_result_table">
+                          <tr ng-if="recruit.salary != undefined && recruit.salary !=''">
+                              <td class="recruit_result_catagoli" style="font-weight:bold">給料</td>
+                              <td>{{recruit.salary}}</td>
+                          </tr>
+                          <tr ng-if="recruit.address != undefined && recruit.address !=''">
+                              <td class="recruit_result_catagoli" style="font-weight:bold">勤務地</td>
+                              <td>{{recruit.address}}</td>
+                          </tr>
+                          <tr ng-if="recruit.station != undefined && recruit.station !=''">
+                              <td class="recruit_result_catagoli" style="font-weight:bold">最寄駅</td>
+                              <td>{{recruit.station}}</td>
+                          </tr>
+                          <tr ng-if="(recruit.workingTime != undefined && recruit.workingTime !='') ||
+                           (recruit.workingTimeStart!= undefined && recruit.workingTimeStart !='') || (recruit.workingTimeEnd!= undefined && recruit.workingTimeEnd !='')">
+                              <td class="recruit_result_catagoli" style="font-weight:bold">勤務時間</td>
+                              <td>{{recruit.workingTimeStart}}～{{recruit.workingTimeEnd}}
+                              <br>{{recruit.workingTime}}</td>
+                          </tr>
+                          <tr ng-if="recruit.workDay != undefined && recruit.workDay !=''">
+                              <td class="recruit_result_catagoli" style="font-weight:bold">勤務日数</td>
+                              <td>{{recruit.workDay}}</td>
+                          </tr>
+
+                      </table>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-12 col-sm-12 col-xs-12 padding_zero recruit_padding_2">
+              <table class="recruitDetail_info_table_lg">
+                  <tr ng-if="(recruit.featureList != undefined && recruit.featureList.length>0) || (recruit.workPeriodList != undefined && recruit.workPeriodList.length>0) || (recruit.workTimeList != undefined && recruit.workTimeList.length>0)
+                    || (recruit.capacityList != undefined && recruit.capacityList.length>0) || (recruit.workWayList != undefined && recruit.workWayList.length>0) || (recruit.specialList != undefined && recruit.specialList.length>0)
+                    || (recruit.environmentList != undefined && recruit.environmentList.length>0) || (recruit.treatmentNewList != undefined && recruit.treatmentNewList.length>0)">
+                      <td class="recruitDetail_info_catagoli" style="text-align: center;">特徴</td>
+                      <td>
+                        <p ng-repeat="featureList in recruit.featureList" class="recruitDetail_features">{{featureList}}</p>
+                        <p ng-repeat="workPeriodList in recruit.workPeriodList" class="recruitDetail_features">{{workPeriodList}}</p>
+                        <p ng-repeat="workTimeList in recruit.workTimeList" class="recruitDetail_features">{{workTimeList}}</p>
+                        <p ng-repeat="capacityList in recruit.capacityList" class="recruitDetail_features">{{capacityList}}</p>
+                        <p ng-repeat="workWayList in recruit.workWayList" class="recruitDetail_features">{{workWayList}}</p>
+                        <p ng-repeat="specialList in recruit.specialList" class="recruitDetail_features">{{specialList}}</p>
+                        <p ng-repeat="environmentList in recruit.environmentList" class="recruitDetail_features">{{environmentList}}</p>
+                        <p ng-repeat="treatmentNewList in recruit.treatmentNewList" class="recruitDetail_features">{{treatmentNewList}}</p>
+                      </td>
+                  </tr>
+                  <tr ng-if="(salary != undefined && salary !='') && (modeList != undefined && modeList.length>0 )">
+                      <td class="recruitDetail_info_catagoli" style="text-align: center;">
+                        雇用形態・給与
+                      </td>
+                      <td>
+                        <!-- <span class="recruit_result_icon">{{recruit.modeList}}</span> -->
+                        <span ng-repeat="modes in modeList" class="recruit_result_icon" style="background-color: rgb(243,151,1);">{{modes}}</span><br>
+                        <span class="recruitDetail_tag_content" >{{recruit.salary}}</span><br>
+                        <span class="recruitDetail_tag_content" ng-bind-html="recruit.salaryFull"></span>
+                      </td>
+                  </tr>
+                  <tr ng-if="capacity != undefined && capacity !=''">
+                      <td class="recruitDetail_info_catagoli" style="text-align: center;">応募資格</td>
+                      <td><span class="recruitDetail_tag_content" ng-bind-html="recruit.capacity"></span></td>
+                  </tr>
+                  <!-- <tr>
+                      <td class="recruitDetail_info_catagoli" style="text-align: center;">応募電話</td>
+                      <td><span class="recruitDetail_tag_content">{{recruit.tel}}</span></td>
+                  </tr> -->
+                  <tr ng-if="vacation != undefined && vacation !=''">
+                      <td class="recruitDetail_info_catagoli" style="text-align: center;">休日・休暇</td>
+                      <td><span class="recruitDetail_tag_content" ng-bind-html="recruit.vacation"></span></td>
+                  </tr>
+                  <tr ng-if="treatment != undefined && treatment !=''">
+                      <td class="recruitDetail_info_catagoli" style="text-align: center;">福利厚生</td>
+                      <td>
+                        <!-- <span ng-repeat="treatmentList in recruit.treatmentList" class="recruitDetail_treatment">{{treatmentList}}</span></br> -->
+                        <span class="recruitDetail_tag_content" ng-bind-html="recruit.treatment"></span>
+                      </td>
+                  </tr>
+                  <tr ng-if="desc != undefined && desc !=''">
+                      <td class="recruitDetail_info_catagoli" style="text-align: center;"><p>仕事内容・</p><p>求める人物</p></td>
+                      <td><span class="" ng-bind-html="recruit.desc"></span></td>
+                  </tr>
+                  <tr ng-if="recruit.executive != undefined && recruit.executive !=''">
+                      <td class="recruitDetail_info_catagoli" style="text-align: center;">担当者</td>
+                      <td><span class="recruitDetail_tag_content">{{recruit.executive}}</span></td>
+                  </tr>
+                  <tr ng-if="recruit.acceptance != undefined && recruit.acceptance !=''">
+                      <td class="recruitDetail_info_catagoli" style="text-align: center;">応募締め切り日</td>
+                      <td><span class="recruitDetail_tag_content">{{recruit.acceptance}}</span></td>
+                  </tr>
+                  <tr ng-if="recruit.spot != undefined && recruit.spot !=''">
+                      <td class="recruitDetail_info_catagoli" style="text-align: center;">拠点名</td>
+                      <td><span class="recruitDetail_tag_content">{{recruit.spot}}</span></td>
+                  </tr>
+                  <tr ng-if="recruit.workingDate != undefined && recruit.workingDate !=''">
+                      <td class="recruitDetail_info_catagoli" style="text-align: center;"><p>関連、系列</p><p>グループ店舗</p></td>
+                      <td><span class="recruitDetail_info_workingDate" ng-bind-html="recruit.workingDate"></span></td>
+                  </tr>
+              </table>
+          </div>
+      </div>
+      <div class="col-md-12 col-sm-12 col-xs-12 displayPc recruit_padding_2" ng-if="recruit.shopType != 0">
+          <div class="col-md-6 col-sm-6 col-xs-6">
+            <div ng-if="recruit.shopType!=7 && recruit.shopType!=8">
+              <a href="/shop/detail/{{recruit.uuid2}}/">
+                <button type="submit" class="recruitDetail_btn_submit recruitDetail_btn_show">店舗情報</button>
+              </a>
+            </div>
+            <div ng-if="recruit.shopType==7">
+              <a href="/place/detail/{{recruit.uuid2}}/">
+                <button type="submit" class="recruitDetail_btn_submit recruitDetail_btn_show">店舗情報</button>
+              </a>
+            </div>
+            <div ng-if="recruit.shopType==8">
+              <a href="/shop/corporateinfo/detail/{{recruit.uuid2}}/">
+                <button type="submit" class="recruitDetail_btn_submit recruitDetail_btn_show">店舗情報</button>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-6">
+              <button type="submit" class="recruitDetail_btn_submit recruitDetail_btn_call">
+                <a class="sp_phone" href="tel:{{tel}}" >
+                  <span>お問い合わせ<br>{{recruit.tel}}</span>
+                </a>
+              </button>
+          </div>
+      </div>
+    </div>
+</section><!--/#Recruit-->
+</div>
+<div ng-include="'views/footer.html'" ng-hide="hideFooter"></div>

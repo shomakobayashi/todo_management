@@ -1,0 +1,99 @@
+<section>
+  <div class="container goods_top display">
+    <div class="goodsSelectDiv" ng-hide="selectHide0" ng-click="shopCloseAllSelect()"></div>
+    <div class="container goodsSelectPdg">
+        <div class="col-md-12 col-sm-12 col-xs-12 padding_zero">
+            <div class="shop_textinput">
+                <input type="text" placeholder="フリーワード">
+            </div>
+            <div class="shop_selectinput shop_selectWidth" ng-click="shopSelect1()">
+                <span class="selectListSpan">{{selectDesc1}}</span>
+            </div>
+            <div class="shop_selectList shop_selectWidth shop_selectPosition1" ng-hide="selectHide1" ng-click="shopCloseSelect1()" style="z-index: 500;">
+                <div class="selectListShop" ng-click="shopSelectValue1('カテゴリー選択',0)"><span class="selectListSpan">カテゴリー選択</span></div>
+                <div class="selectListShop" ng-click="shopSelectValue1('Tシャツ',1)"><span class="selectListSpan">Tシャツ</span></div>
+                <div class="selectListShop" ng-click="shopSelectValue1('フリーペーパー',2)"><span class="selectListSpan">フリーペーパー</span></div>
+            </div>
+            <div class="shop_selectinput shop_selectWidth" ng-click="shopSelect2()">
+                <span class="selectListSpan">{{selectDesc2}}</span>
+            </div>
+            <div class="shop_selectList shop_selectWidth shop_selectPosition2_old" ng-hide="selectHide2" ng-click="shopCloseSelect2()" style="z-index: 500;">
+                <div class="selectListShop" ng-click="shopSelectValue2('価格帯を選択',0)"><span class="selectListSpan">価格帯を選択</span></div>
+                <div class="selectListShop" ng-click="shopSelectValue2('1,000-2,000円',1)"><span class="selectListSpan">1,000-2,000円</span></div>
+                <div class="selectListShop" ng-click="shopSelectValue2('2,000-5,000円',2)"><span class="selectListSpan">2,000-5,000円</span></div>
+                <div class="selectListShop" ng-click="shopSelectValue2('5,000-10,000円',3)"><span class="selectListSpan">5,000-10,000円</span></div>
+                <div class="selectListShop" ng-click="shopSelectValue2('10,000-20,000円',4)"><span class="selectListSpan">10,000-20,000円</span></div>
+                <div class="selectListShop" ng-click="shopSelectValue2('20,000-30,000円',5)"><span class="selectListSpan">20,000-30,000円</span></div>
+                <div class="selectListShop" ng-click="shopSelectValue2('30,000-50,000円',6)"><span class="selectListSpan">30,000-50,000円</span></div>
+            </div>
+            <div class="goods_btn display" align="left">
+                <div class="shop_btnStyle" align="center"><i class="fa fa-search display">&nbsp;検索</i></div>
+            </div>
+            <div class="goods_btn displayPc" align="left">
+                <div class="shop_btnStyle" align="center">検索</div>
+            </div>
+            <a href="/purchaseCart" style="color:black;">
+              <div class="fa fa-shopping-cart goods_shopcar">
+                  <div ng-hide="expression" class="goods_shopcardiv">{{resultsCart.count}}</div>
+              </div>
+            </a>
+        </div>
+    </div>
+  </div>
+	<div class="container goodsDetail_main goodsDetail_backImg">
+      <div class="ol-md-1 col-sm-1 display" style="height: 100%;"></div>
+			<div class="ol-md-5 col-sm-5 col-xs-12 goodsDetail_left">
+          <div class="component">
+					    <div id="carousel-goods" class="owl-carousel main-carousel" >
+					        <div ng-repeat="colorPicUrl1 in results[0].colorPicUrl track by $index" class="item">
+					      		<img ng-src="{{colorPicUrl1}}" alt="" class="goodsDetail_img"/>
+					        </div>
+					    </div>
+					    <div class="thumbnails-wrapper display" style="margin-top: 15px;" align="left">
+					      	<div id="thumbnails-goods" class="owl-carousel" style="width:509px">
+						        <div ng-repeat="colorPicUrl2 in results[0].colorPicUrl track by $index" class="item" style="padding: 0 3px; ">
+					        		<img ng-src="{{colorPicUrl2}}" alt="" class="goodsDetail_image"/>
+						        </div>
+					        </div>
+					    </div>
+					</div>
+			</div>
+			<div class="ol-md-6 col-sm-6 col-xs-12 goodsDetail_right">
+				<div class="goodsDetail_right_content">
+					<span class="display" style="border-bottom: 1px solid rgb(138,138,138);color: rgb(150,150,150)">{{results[0].brand}}</span>
+					<div class="col-md-12 col-sm-12 col-xs-12 goodsDetail_right_title">
+						<span>{{results[0].title}}</span>
+					</div>
+					<div class="col-md-12 col-sm-12 col-xs-12 goodsDetail_right_price">
+              <span>￥ {{price}} <span style="font-size:15px;">- 税抜き</span></span>
+              <button type="button" class="eventDetail_login_btn" ng-click="addMyPage()" ng-hide="hideAddMypageButtons">お気に入り <i class="fa fa-star-o"></i></button>
+              <button type="button" class="eventDetail_login_btn" style="background-color:#A9A9A9" ng-click="RemoveMyPage()" ng-hide="hideRemoveMypageButtons">お気に入り済み <i class="fa fa-star"></i></button>
+					</div>
+					<div class="col-md-12 col-sm-12 col-xs-12 goodsDetail_right_btn">
+						<a href="javascript:void(0);" ng-click="postAddCart()">
+              <button type="button">カートに入れる</button>
+            </a>
+					</div>
+					<div class="col-md-12 col-sm-12 col-xs-12 goodsDetail_right_info" ng-bind-html="results[0].desc1">
+					</div>
+				</div>
+			</div>
+	</div>
+  <div style="background-color: rgb(245,247,246);height: 100px;"></div>
+	<div class="container goodsDetail_footPdg" align="center">
+		<div class="row">
+			<div class="goodsDetail_bottom">
+				<div class="col-md-12 col-sm-12 col-xs-12" align="left" style="padding: 0;margin-top: 30px;" ng-bind-html="results[0].desc2">
+				</div>
+				<div class="col-md-12 col-sm-12 col-xs-12 goodsDetail_bottom_img" align="left">
+        	<img ng-repeat="descPicUrl in results[0].descPicUrl track by $index" ng-src="{{descPicUrl}}">
+				</div>
+				<div class="col-md-12 col-sm-12 col-xs-12 goodsDetail_bottom_info" align="left" >
+					<p class="goodsDetail_mTop"><span style="font-size: 20px;">■</span>{{results[0].brand}}</p>
+          <div ng-bind-html="results[0].desc3"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<div ng-include="'views/footer.html'" ng-hide="hideFooter"></div>

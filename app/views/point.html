@@ -1,0 +1,59 @@
+<section class="minHeightVh100">
+    <div class="container body_containerPadding">
+        <div class="col-md-12 col-sm-12 col-xs-12 display">
+            <a href="/"><span class="mypage_route">トップ</span></a>
+            <span class="mypage_route">&gt;</span>
+            <a href="/myPage"><span class="mypage_route">マイページ</span></a>
+            <span class="mypage_route">&gt;</span>
+            <span class="mypage_route">ポイント履歴</span>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-12 padding_zero_sp736">
+            <div class="col-md-12 col-sm-12 col-xs-12 mypage_box padding_zero">
+                <div class="col-md-12 col-sm-12 col-xs-6 text-center mypage_padding_3">
+                    <img ng-src="{{thumbnailUrl}}" alt="" class="img-circle mypage_nickpic" ng-hide="thumbnailUrlHide">
+                </div>
+
+                <div class="col-md-12 col-sm-12 col-xs-6 mypage_padding_3">
+                    <div>
+                        <span class="mypage_span_1">{{formData.nickname}}</span>
+                    </div>
+                    <div>
+                        <button class="mypage_cirle" disabled="disabled"><p>P</p></button>
+                        <span class="mypage_span_3">{{formData.coin}}</span>
+                        <span class="mypage_span_2">ポイント</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9 col-sm-9 col-xs-12 mypage_xs_padding2">
+            <div class="col-md-12 col-sm-12 col-xs-12 mypage_box">
+              <div class="col-md-12 col-sm-12 col-xs-12 mypagentf_div">
+                <div class="col-md-12 col-sm-12 col-xs-12 mypagentf_pdg">
+                  <span style="font-weight:bold;">{{formData.nickname}}</span>
+                  <span style="margin-left:8px;">さんへのポイント履歴</span>
+                </div>
+              </div>
+              <div class="col-md-12 col-sm-12 col-xs-12 mypagentf_div" style="color:black;" ng-repeat="coin in results.cionList">
+                  <div class="col-md-6 col-sm-5 col-xs-5 mypagentf_pdg" >
+                    <p class="mypagentf_delMgB">{{coin.desc}}</p>
+                  </div>
+                  <div class="col-md-2 col-sm-2 col-xs-2 mypagentf_pdg">
+                    <p class="mypagentf_delMgB" ng-if="coin.coinType==1">+{{coin.coinChanged}}P</p>
+                    <p class="mypagentf_delMgB" ng-if="coin.coinType==2">-{{coin.coinChanged}}P</p>
+                  </div>
+                  <div class="col-md-4 col-sm-5 col-xs-5 mypagentf_pdg">
+                    <p class="mypagentf_delMgB">{{coin.create_datetime}}</p>
+                  </div>
+              </div>
+              <div pagination class="col-md-12 col-sm-12 col-xs-12 change_page event_padding2" ng-hide="hidePages" align="center">
+                  <ul>
+                      <a href="javascript:void(0);"><li ng-click="upPageClick(pageObject.currentPage-1)">&lt;</li></a>
+                      <div id="pagesChange"></div>
+                      <a href="javascript:void(0);"><li ng-click="downPageClick(pageObject.currentPage+1)">&gt;</li></a>
+                  </ul>
+              </div>
+            </div>
+        </div>
+    </div>
+</section><!--/#My page-->
+<div ng-include="'views/footer.html'" ng-hide="hideFooter"></div>

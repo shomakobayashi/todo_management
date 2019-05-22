@@ -1,0 +1,379 @@
+.studio_container_padding{
+  padding: 0 20px;
+}
+#studio_Top{
+  margin-top: 18px;
+}
+#studio_news{
+  padding: 30px 0 80px;
+  background-color: rgb(238, 238, 238);
+}
+#studio_news p{
+  color: black;
+}
+.studio_instagram_title{
+  margin-top: 85px;
+  margin-bottom: 60px;
+  padding: 0;
+}
+.studio_instagram_title p{
+  color: black;
+  font-size: 35px;
+  font-style:italic;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+.studio_instagram_title span{
+  font-size: 15px;
+  margin-left: 20px;
+}
+.studio_instagram_title i{
+  font-style:normal;
+  font-size: 35px;
+  color: rgb(250,15,20);
+}
+.studio_button{
+    font-size: 15px;
+    font-style:italic;
+    color: white;
+    border: none;
+    background-color: black;
+    width: 100%;
+    height: 35px;
+    outline: none;
+    letter-spacing: 3px;
+}
+.studio_news_img{
+  width:20%;
+  float:left;
+  padding:0 5px;
+}
+.studio_news_img img{
+  width:100%;
+  height:141px;
+}
+.studio_news_p1{
+  margin: 10px 0 0 0;
+}
+.studio_news_p2{
+  margin: 0;
+  font-weight: bold;
+  font-size: 12px;
+}
+#studio_info{
+  padding: 30px 0 80px;
+}
+#studio_info p{
+  color: black;
+  line-height: 20px;
+}
+.studio_info_p{
+  letter-spacing: 2px;
+  font-size: 18px;
+  font-weight: bold;
+  border-left: 8px solid;
+  border-color: red;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+.studio_info_title{
+  margin-top: 30px;
+}
+.studio_info_title p{
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+.studio_info_list{
+  margin-top: 30px;
+}
+.studio_info_list p{
+  letter-spacing: 2px;
+}
+.studio_info_pic{
+  padding: 0;
+  margin-top: 15px;
+}
+.studio_info_pic img{
+  width:110%;height: 110%;
+  float: right;
+}
+.studio_info_pdLeft{
+  padding: 0 10px 0 0;
+}
+.studio_info_pdRight{
+  padding: 10px 0 0 50px;
+}
+#studio_photoGallery{
+  padding: 30px 0 80px;
+}
+.photoGallery_imgPdg{
+  padding: 10px 5px;
+}
+.photoGallery_imgPdg img{
+  width:100%;
+  height:100%;
+}
+#studio_moveup{
+  padding: 30px 0 80px;
+}
+.studio_moveup_info{
+  padding:0 0 10px 0;
+}
+.studio_moveup_info p{
+  font-size: 16px;
+  color: black;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin: 0;
+}
+.studio_moveup_infoPdg{
+  padding:15px 0 0 0;
+}
+.studio_moveup_PdgL{
+  padding:0 20px 0 0;
+}
+.studio_moveup_PdgM{
+  padding:0 10px;
+}
+.studio_moveup_PdgL img{
+  width:100%;height:240px;margin-top: 30px;
+}
+.studio_moveup_PdgM img{
+  width:100%;height:240px;margin-top: 30px;
+}
+.studio_moveup_PdgR{
+  padding:30px 0 0 20px;
+}
+.studio_moveup_PdgR p{
+  color: rgb(0,44,92);
+  margin: 0 0 5px 0;
+}
+.studio_moveup_PdgR span{
+  font-size: 18px;
+  line-height: 0;
+}
+#studio_contact{
+  background-image: url("../images/contact_bg.jpg");
+  background-repeat: no-repeat;
+  height: auto;
+  width: auto;
+}
+#studio_contact p{
+  color: white;
+}
+.studio_contact_p1{
+  font-size: 40px;
+  margin-top: 140px;
+  letter-spacing: 5px;
+}
+.studio_contact_p2{
+  font-size: 15px;
+  margin-top: 40px;
+  letter-spacing: 3px;
+}
+.studio_contact_p3{
+  font-size: 30px;
+  background-color: rgb(254,6,6);
+  margin-top: 40px;
+  margin-bottom: 90px;
+  padding-top: 20px;
+  height: 65px;
+  letter-spacing: 3px;
+}
+.studio_contact_p3 span{
+  font-size: 10px;
+}
+#studio_instagram{
+  margin-bottom: 400px;
+}
+.studio_mpaicon{
+  width: 5%;
+  margin-top: -5px;
+}
+.studio_info_img{
+  width:100%;
+  height: 274px;
+}
+@media(max-width: 736px) {
+.studio_info_img{
+  width:100%;
+  height: 204px;
+}
+.studio_mpaicon{
+  width: 4%;
+}
+#studio_Top{
+  margin-top: 65px;
+}
+.studio_container_padding{
+  padding: 0;
+}
+.studio_instagram_title{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.studio_instagram_title p{
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.studio_instagram_title span{
+  font-size: 11px;
+  margin-left: 15px;
+  letter-spacing: 2px;
+}
+.studio_instagram_title i{
+  font-size: 15px;
+}
+#studio_news{
+  padding: 30px 0 20px;
+}
+.studio_button{
+  height: 25px;
+}
+.studio_news_img{
+  width: 50%;
+}
+.studio_news_img img{
+  margin-top: 15px;
+  height: 137px;
+}
+#studio_info{
+  padding: 30px 0 0;
+}
+.studio_info_pdLeft{
+  padding: 0;
+}
+.studio_info_pdRight{
+  padding: 0;
+  margin-top: 15px;
+}
+.studio_info_title{
+  margin-top: 15px;
+  font-size: 11px;
+  padding-left: 10px !important;
+}
+.studio_info_list{
+  font-size: 12px;
+  margin-top: 15px;
+}
+.studio_info_pic img{
+  width: 100%;
+  height: 100%;
+}
+#studio_photoGallery{
+  padding: 30px 0 0;
+}
+.photoGalleryPdg0{
+  padding: 0;
+}
+.photoGallery_imgPdg{
+  padding: 5px;
+}
+.photoGallery_imgPdg img{
+  height:100%;
+}
+#studio_moveup {
+  padding: 30px 0;
+}
+.studio_moveup_info p{
+  font-size:11px;
+  letter-spacing: 1px;
+}
+.studio_moveup_infoPdg{
+  padding: 0;
+}
+.studio_moveup_PdgL{
+  padding:0 4px 0 0;
+}
+.studio_moveup_PdgM{
+  padding:0 2px;
+}
+.studio_moveup_PdgL img{
+  height: 125px;
+}
+.studio_moveup_PdgM img{
+  height: 125px;
+}
+.studio_moveup_PdgR{
+  padding:10px 0 0;
+}
+.studio_moveup_PdgR p{
+  margin: 0;
+}
+.studio_contact_p1{
+  font-size: 25px;
+  margin-top: 30px;
+  letter-spacing: 3px;
+}
+.studio_contact_p2{
+  font-size: 15px;
+  margin-top: 40px;
+  letter-spacing: 1px;
+}
+.studio_contact_p3 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+#studio_instagram{
+  margin-bottom: 100px;
+}
+}
+@media(max-width: 414px) {
+.studio_mpaicon{
+  width: 7%;
+}
+}
+@media(max-width: 375px) {
+.studio_instagram_title{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.studio_instagram_title p{
+  font-size: 15px;
+}
+.studio_instagram_title span{
+  font-size: 10px;
+  margin-left: 9px;
+  letter-spacing: 1px;
+}
+.studio_news_img img{
+  height: 123px;
+}
+.studio_info_title{
+  font-size: 10px;
+}
+.studio_info_list{
+  margin-top: 15px;
+  font-size: 10px;
+}
+.studio_info_list p{
+  margin: 0 0 0 5px;
+}
+.studio_moveup_info p{
+  font-size: 10px;
+  line-height: 20px;
+}
+.studio_moveup_infoPdg{
+  padding: 0;
+}
+.studio_contact_p1{
+  font-size: 22px;
+  margin-top: 30px;
+  letter-spacing: 3px;
+}
+.studio_contact_p2{
+  font-size: 12px;
+  margin-top: 40px;
+  letter-spacing: 1px;
+}
+.studio_contact_p3 {
+  height: 55px;
+  padding-top: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.photoGallery_imgPdg img{
+  height: 100%;
+}
+}

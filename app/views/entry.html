@@ -1,0 +1,210 @@
+<style>
+nav{
+  display: none;
+}
+li.arrowW1{
+background-color: rgb(46,167,224);
+color: white;
+padding: 0 60px 0 70px;
+}
+li.arrowW1:after {
+border-color: transparent rgb(46,167,224);
+}
+li.arrowW2{
+background-color: rgb(238,238,238);
+padding: 0 60px;
+}
+li.arrowW2:before {
+border-color: rgb(238,238,238) transparent;
+}
+li.arrowW2:after {
+border-color: transparent rgb(238,238,238);
+}
+li.arrowW3{
+background-color: rgb(220,220,220);
+padding: 0 50px;
+}
+li.arrowW3:before {
+border-color: rgb(220,220,220) transparent;
+}
+li.arrowW3:after {
+border-color: transparent rgb(220,220,220);
+}
+</style>
+<section>
+    <div class="container carry_pdgTop">
+        <div class="col-lg-12 col-xs-12" align="center">
+            <img class="img-responsive" src="images/logo01.svg" style="width: 50%;">
+        </div>
+        <div class="col-lg-12 col-xs-12 carry_MgnTop-200" align="center">
+            <p class="table_Title">会員登録フォーム</p>
+            <div class="display" style="margin-left: -20px;">
+              <li class='arrowW arrowW1'><span style="color: white;">会員登録入力<span></li>
+              <li class='arrowW arrowW2'><span style="color: black;">登録内容確認<span></li>
+              <li class='arrowW arrowW3'><span style="color: black;">会員登録完了<span></li>
+            </div>
+        </div>
+        <div class="col-lg-12 col-xs-12" align="center">
+            <table border="1" class="buy_table_List">
+              <tbody>
+                <tr>
+                    <td class="buy_table_left">氏名（漢字）<span class="table_icon">必須</span><span class="table_icon_small">*</span></td>
+                    <td class="buy_table_right">
+                        <div class="col-lg-4 col-xs-6 padding_zero" style="font-weight: bold;">
+                            <input id="firstName" name="firstName" placeholder="姓" class="inputStyle" type="text" ng-model="formData.firstName">
+                        </div>
+                        <div class="col-lg-4 col-xs-6 padding_zero" style="font-weight: bold;">
+                            <input id="secondName" name="secondName" placeholder="名" class="inputStyle" type="text" ng-model="formData.secondName">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="buy_table_left">氏名（カナ）<span class="table_icon">必須</span><span class="table_icon_small">*</span></td>
+                    <td class="buy_table_right">
+                        <div class="col-lg-4 col-xs-6 padding_zero" style="font-weight: bold;">
+                            <input id="firstNameKana" name="firstNameKana" placeholder="セイ" class="inputStyle" type="text" ng-model="formData.firstNameKana">
+                        </div>
+                        <div class="col-lg-4 col-xs-6 padding_zero" style="font-weight: bold;">
+                            <input id="secondNameKana" name="secondNameKana" placeholder="メイ" class="inputStyle" type="text" ng-model="formData.secondNameKana">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="buy_table_left">性別<span class="table_icon">必須</span><span class="table_icon_small">*</span></td>
+                    <td class="buy_table_right">
+                        <div>
+                            <input id="gender1" name="gender" checked="checked" type="radio" ng-value="1" ng-model="formData.gender"><label for="gender1">
+                            <span style="margin: 0 20px 0 10px;">男性</span>
+                            <input id="gender2" name="gender" type="radio" ng-value="2" ng-model="formData.gender"><label for="gender2">
+                            <span style="margin-left: 10px;">女性</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="buy_table_left">生年月日<span class="table_icon">必須</span><span class="table_icon_small">*</span></td>
+                    <td class="buy_table_right">
+                      <div class="col-md-3 col-sm-3 col-xs-3 padding_zero">
+                          <div class="year_select" ng-click="yearSelect()">
+                              <span class="selAccountListSpan">{{selectYearDesc}}</span>
+                          </div>
+                          <div class="year_list year_list_position" ng-hide="selectYearHide" ng-click="yearSelectClose()" style="z-index: 500;">
+                              <div ng-repeat="year in yearList">
+                                  <div class="selListAccount" ng-click="yearSelectValue(year.desc)"><span class="selAccountListSpan">{{year.desc}}</span></div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-1 col-sm-1 col-xs-1 padding_zero" align="center">
+                          <span>年</span>
+                      </div>
+                      <div class="col-md-2 col-sm-2 col-xs-2 padding_zero">
+                          <div class="year_select" ng-click="monthSelect()">
+                              <span class="selAccountListSpan">{{selectMonthDesc}}</span>
+                          </div>
+                          <div class="year_list year_list_position" ng-hide="selectMonthHide" ng-click="monthSelectClose()" style="z-index: 500;">
+                              <div ng-repeat="month in monthList">
+                                  <div class="selListAccount" ng-click="monthSelectValue(month.desc)"><span class="selAccountListSpan">{{month.desc}}</span></div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-1 col-sm-1 col-xs-1 padding_zero" align="center">
+                          <span>月</span>
+                      </div>
+                      <div class="col-md-2 col-sm-2 col-xs-2 padding_zero">
+                          <div class="year_select" ng-click="daySelect()">
+                              <span class="selAccountListSpan">{{selectDayDesc}}</span>
+                          </div>
+                          <div class="year_list year_list_position" ng-hide="selectDayHide" ng-click="daySelectClose()" style="z-index: 500;">
+                              <div ng-repeat="day in dayList">
+                                <div class="selListAccount" ng-click="daySelectValue(day.desc)"><span class="selAccountListSpan">{{day.desc}}</span></div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-1 col-sm-1 col-xs-1 padding_zero" align="center">
+                          <span>日</span>
+                      </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="buy_table_left">職業<span class="table_icon">必須</span><span class="table_icon_small">*</span></td>
+                    <td class="buy_table_right">
+                        <div class="col-md-12 col-sm-12 col-xs-12 padding_zero">
+                            <div class="account_selInput" ng-click="shopSel1()">
+                                <span class="selAccountListSpan">{{selDesc1}}</span>
+                            </div>
+                            <div class="account_selList account_selPosition1" ng-hide="selHide1" ng-click="shopCloseSel1()" style="z-index: 500;">
+                                <div class="selListAccount" ng-click="shopSelValue1('職業を選択',0)"><span class="selAccountListSpan">職業を選択</span></div>
+                                <div class="selListAccount" ng-click="shopSelValue1('中学生',1)"><span class="selAccountListSpan">中学生</span></div>
+                                <div class="selListAccount" ng-click="shopSelValue1('高校生',2)"><span class="selAccountListSpan">高校生</span></div>
+                                <div class="selListAccount" ng-click="shopSelValue1('専門学生',3)"><span class="selAccountListSpan">専門学生</span></div>
+                                <div class="selListAccount" ng-click="shopSelValue1('大学生',4)"><span class="selAccountListSpan">大学生</span></div>
+                                <div class="selListAccount" ng-click="shopSelValue1('公務員',5)"><span class="selAccountListSpan">公務員</span></div>
+                                <div class="selListAccount" ng-click="shopSelValue1('自営業',6)"><span class="selAccountListSpan">自営業</span></div>
+                                <div class="selListAccount" ng-click="shopSelValue1('会社役員',7)"><span class="selAccountListSpan">会社役員</span></div>
+                                <div class="selListAccount" ng-click="shopSelValue1('会社員',8)"><span class="selAccountListSpan">会社員</span></div>
+                                <div class="selListAccount" ng-click="shopSelValue1('派遣社員',9)"><span class="selAccountListSpan">派遣社員</span></div>
+                                <div class="selListAccount" ng-click="shopSelValue1('契約社員',10)"><span class="selAccountListSpan">契約社員</span></div>
+                                <div class="selListAccount" ng-click="shopSelValue1('専業主婦',11)"><span class="selAccountListSpan">専業主婦</span></div>
+                                <div class="selListAccount" ng-click="shopSelValue1('専業主夫',12)"><span class="selAccountListSpan">専業主夫</span></div>
+                                <div class="selListAccount" ng-click="shopSelValue1('パート・アルバイト',13)"><span class="selAccountListSpan">パート・アルバイト</span></div>
+                                <div class="selListAccount" ng-click="shopSelValue1('その他',14)"><span class="selAccountListSpan">その他</span></div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="buy_table_left">住所<span class="table_icon">必須</span><span class="table_icon_small">*</span></td>
+                    <td class="buy_table_right">
+                        <div style="margin-bottom: 10px;">
+                            <span class="CodeBtn">〒</span>
+                            <input id="zipcode1" name="zipcode1" placeholder="1010001" class="carry_postNo" type="text" ng-change="onzipcodeChanged()" ng-model="formData.zipcode">
+                        </div>
+                        <div style="margin-bottom: 10px">
+                            <input id="address" name="address" placeholder="○○県△△市123 　☐☐マンション１０１" class="inputStyle" type="text" ng-model="formData.address">
+                        </div>
+                        <div>
+                            <input id="address2" name="address2" class="inputStyle" type="text" ng-model="formData.address2">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="buy_table_left">
+                        <span class="phone_mail_Label">メール(ID)</span>
+                        <span class="pc_mail_Label">メールアドレス(ID)</span>
+                        <span class="table_icon1">必須</span>
+                        <span class="table_icon_small">*</span></td>
+                    <td class="buy_table_right">
+                        <input id="mail" name="mail" class="inputStyle" type="text" ng-model="formData.mail" ng-disabled="mailDisabled">
+                    </td>
+                </tr>
+                <tr ng-hide="passwordHide">
+                    <td class="buy_table_left">パスワード<span class="table_icon">必須</span><span class="table_icon_small">*</span></td>
+                    <td class="buy_table_right">
+                        <input id="password" name="password" placeholder="6 ~16桁の英数字" class="inputStyle" type="password" ng-model="formData.password">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="buy_table_left">ニックネーム<span class="table_icon" style="background-color: #00a7dd">任意</span></td>
+                    <td class="buy_table_right">
+                        <input id="nickname" name="nickname" placeholder="16桁以下の英数字" class="inputStyle" type="text" ng-model="formData.nickname">
+                    </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="error" id="errContainer">
+            </div>
+            <div class="form-check" style="float: unset;font-weight: normal;">
+                <input id="isTerms1" name="isTerms" type="checkbox" ng-model="checked"><label for="isTerms1"></label><input type="hidden" name="_isTerms" value="on">
+                <a href="/terms" style="color: rgb(69,182,226);">&nbsp;利用規約&nbsp;</a>&amp;
+                <a href="/privacy" style="color: rgb(69,182,226);">プライバシーポリシー</a>に同意する
+            </div>
+            <a href="javascript:void(0);" ng-click="gotoConfirm()">
+            <button type="button" class="confirmBtn" name="confirm" value="Confirm">登録する</button>
+            </a>
+        </div>
+    </div>
+</section>
+<section id="footer_mv">
+    <div class="footer_font">Copyright HEADLINE WEST All Rights Reserved.</div>
+</section>
+<div id="mark_mask" style="display:none;position:fixed;top:40px;left:0;z-index:99999999;height:1000px;width:100%;background:rgba(0,0,0,0.4);"></div>
+<div id="mark_list" style="display:none;z-index:999999;background:#fff;color:#999;box-shadow: 1px 1px 10px 0 #b8b8b9;position:fixed;top:45px;right:200px;width:230px;max-height:250px;padding:2px 0"><a id="manger_mark" style="font-size:12px;display:block;padding-left:10px;color:#999;height:28px;line-height:28px;border-bottom:1px solid #ccc;cursor:pointer">管理所有书签</a><ul id="mark_list_li" style="padding:0;,margin:0;text-align:left;max-height:220px;overflow-y:auto"></ul></div>

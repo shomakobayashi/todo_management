@@ -1,0 +1,354 @@
+.rise_padding_1{
+    padding: 120px 0 30px 0;
+}
+.rise_padding_2{
+    padding-top: 100px;
+}
+.rise_padding_3{
+    padding-top: 30px;
+}
+.rise_title{
+    font-size: 60px;
+    font-weight: bold;
+    color: black;
+    letter-spacing: 12px;
+}
+.rise_btn_padding{
+    padding: 30px 0 0 0;
+}
+.rise_banner_table{
+    table-layout: fixed;
+}
+.rise_btn_submit{
+    font-size: 16px;
+    font-style: oblique;
+    font-weight: bold;
+    width: 100%;
+    border-style: none;
+    text-align: center;
+    color: white;
+    outline: none;
+}
+.rise_list{
+    background-color: #F5F5F5;
+    padding-top: 30px;
+    padding-bottom: 200px;
+}
+.rise_pic{
+    width: 100%;
+    height: 340px;
+}
+.rise_name_text{
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.rise_name1{
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+.rise_name2{
+    font-size: 15px;
+    font-weight: bold;
+    color: #C0C0C0;
+}
+.rise_page_title{
+  font-weight: bold;
+  font-size: 8px;
+}
+.rise_page_excerpt{
+  font-size: 8px;
+}
+.rise_detail_bgimg{
+    background-image: url(../images/rise_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+}
+.rise_detail_title{
+    font-size: 60px;
+    font-weight: bold;
+    color: black;
+    letter-spacing: 6px;
+}
+.rise_detail_header_1{
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    letter-spacing: 2px;
+}
+.rise_detail_header_2{
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+    letter-spacing: 1px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+.rise_detail_info{
+    font-size: 15px;
+    color: black;
+}
+.rise_detail_exp_note{
+    background-color: white;
+    border: 6px solid red;
+}
+.rise_detail_exp_trapezoid{
+    border-top: 32px solid red;
+    border-right: 24px solid transparent;
+}
+.rise_detail_exp_trapezoid span{
+    font-size: 18px;
+    font-style: oblique;
+    font-weight: bold;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    color: white;
+    position: relative;
+    top: -32px;
+}
+.rise_detail_exp_name1{
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+.rise_detail_exp_name2{
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: red;
+}
+.rise_detail_exp_header{
+    padding-top: 16px;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #9C9C9C;
+}
+.rise_detail_exp_content{
+    padding-bottom: 16px;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+.rise_detail_pic_1{
+    width: 100%;
+    height: 480px;
+}
+.rise_detail_pic_2{
+    height: 120px;
+}
+.rise_detail_video{
+    width: 100%;
+    height: 360px;
+}
+.rise_detail_list{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.rise_detail_list ul{
+    text-align: center;
+}
+.rise_detail_list ul li{
+    display: inline;
+    margin-right: 6px;
+}
+.rise_detail_list ul li a{
+    display: inline-block;
+    padding: 4px 10px;
+}
+.rise_detail_btn_submit{
+    color: black;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+}
+.rise_detail_diary_trapezoid{
+    border-bottom: 26px solid red;
+    border-right: 10px solid transparent;
+}
+.rise_detail_diary_label1{
+    height: 50px;
+    font-size: 24px;
+    font-family: 'RobotoCondensed-custom';
+    text-align: center;
+    color: #F72323;
+    font-weight: bold;
+}
+.rise_detail_diary_label2{
+    height: 50px;
+    font-family: 'RobotoCondensed-custom';
+    font-size: 24px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+.rise_detail_diary_pic{
+    height: 80px;
+    width: 80px;
+}
+.rise_detail_diary_note{
+    background-color: white;
+    border: none;
+}
+.rise_detail_diary_note ul{
+    list-style: none;
+}
+.rise_detail_diary_time{
+    font-weight: bolder;
+    font-size: 12px;
+    color: #B9B9B9;
+    letter-spacing: 1px;
+}
+.rise_detail_diary_content{
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    letter-spacing: 1px;
+}
+.rise_detail_diary_photo{
+    height: 300px;
+    width: 48%;
+    padding-bottom: 30px;
+}
+@media (max-width: 1200px) {
+
+}
+@media (max-width: 736px) {
+
+}
+@media (max-width: 667px) {
+
+}
+@media (max-width: 414px) {
+.rise_xs_display{
+    display: none;
+}
+.rise_xs_padding{
+  padding-left: 0;
+  padding-right: 0;
+}
+.rise_padding_1{
+    padding-bottom: 0;
+}
+.rise_padding_2{
+    padding-top: 30px;
+}
+.rise_padding_3{
+    padding-top: 10px;
+}
+.rise_title{
+    font-size: 50px;
+    text-align: center;
+}
+.rise_list{
+    padding-top: 10px;
+}
+.rise_btn_submit{
+    font-size: 18px;
+    height: 30px;
+}
+.rise_pic{
+    height: 177px;
+}
+.rise_name_text{
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.rise_name1{
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+}
+.rise_detail_exp_bgcolor{
+    background-color: white;
+}
+.rise_detail_diary_bgcolor{
+    background-color: #F5F5F5;
+}
+.rise_detail_pic_1{
+    width: 100%;
+    height: 240px;
+    padding-bottom: 20px;
+}
+.rise_detail_catagoli{
+    font-size: 16px;
+    font-style: oblique;
+    font-weight: bold;
+    height: 30px;
+    text-align: center;
+    color: white;
+}
+.rise_detail_catagoli span{
+    padding: 2px 6px;
+}
+.rise_detail_title{
+    font-size: 24px;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+}
+.rise_detail_header_1{
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+.rise_detail_header_2{
+    font-size: 16px;
+}
+.rise_detail_info{
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+    letter-spacing: 0px;
+}
+.rise_detail_xs_border{
+    border-top-width: 2px;
+    border-top-style: solid;
+    border-top-color: #D5D5D5;
+}
+.rise_detail_diary_time{
+    font-size: 10px;
+    letter-spacing: 0px;
+}
+.rise_detail_diary_content{
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+    letter-spacing: 0px;
+}
+.rise_detail_diary_photo{
+    height: 150px;
+}
+}
+@media (max-width: 375px) {
+.rise_xs_display{
+    display: none;
+}
+.rise_xs_padding{
+  padding-left: 0;
+  padding-right: 0;
+}
+.rise_padding_2{
+    padding-top: 30px;
+}
+.rise_padding_3{
+    padding-top: 10px;
+}
+.rise_title{
+    font-size: 50px;
+    text-align: center;
+}
+.rise_pic{
+    height: 158px;
+}
+.rise_name_text{
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.rise_name1{
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+}
+}

@@ -1,0 +1,181 @@
+<style type="text/css">
+li.arrowW1{
+  background-color: rgb(220,220,220);
+  color: white;
+  padding: 0 25px 0 15px;
+}
+li.arrowW1:after {
+  border-color: transparent  rgb(220,220,220);
+}
+li.arrowW2{
+  background-color: rgb(238,238,238);
+  padding: 0 40px 0 20px;
+}
+li.arrowW2:before {
+  border-color: rgb(238,238,238) transparent;
+}
+li.arrowW2:after {
+  border-color: transparent rgb(238,238,238);
+}
+li.arrowW3{
+  background-color: rgb(46,167,224);
+  padding: 0 45px 0 35px;
+}
+li.arrowW3:before {
+  border-color: rgb(46,167,224) transparent;
+}
+li.arrowW3:after {
+  border-color: transparent rgb(46,167,224);
+}
+li.arrowW4{
+  background-color: rgb(204,204,204);
+  padding: 0 45px 0 35px;
+}
+li.arrowW4:before {
+  border-color: rgb(204,204,204) transparent;
+}
+li.arrowW4:after {
+  border-color: transparent rgb(204,204,204);
+}
+</style>
+<section class="minHeightVh100">
+<div class="container body_containerPadding">
+    <div class="shopSelectDiv" ng-hide="selectHide0" ng-click="shopCloseAllSelect()"></div>
+    <div class="col-lg-12 col-xs-12" align="center">
+        <img src="../images/login_logo.png" class="buy_TopImg">
+        <p class="buy_TopP">支払い情報を入力</p>
+        <div class="display">
+          <li class='arrowW arrowW1'><span style="color: black;">お届け先．支払い方法の選択<span></li>
+          <li class='arrowW arrowW2'><span style="color: black;">ご注文内容の確認<span></li>
+          <li class='arrowW arrowW3'><span style="color: white;">支払い情報を入力<span></li>
+          <li class='arrowW arrowW4'><span style="color: black;">ご注文完了<span></li>
+        </div>
+    </div>
+    <div class="col-lg-12 col-xs-12 buy_title" align="center">
+        <div class="buyInfoSubTitle" align="left">
+            <p style="font-weight: normal;">支払い情報を入力</p>
+        </div>
+    </div>
+    <div class="col-lg-12 col-xs-12" align="center">
+        <table border="1" class="buy_table_List">
+            <tbody>
+            <tr>
+                <td class="buy_table_left"><span>カード番号</span><span class="buy_table_icon">必須</span></td>
+                <td class="buy_table_right"><input id="cardNo" name="cardNo" ng-model="payment.cardNo" type="text" class="inputStyle"></td>
+            </tr>
+            <tr>
+                <td class="buy_table_left">
+                    <span>有効期限</span>
+                    <span class="buy_table_icon">必須</span>
+                </td>
+                <td class="buy_table_right">
+                    <div class="col-lg-4 col-xs-4 padding_zero">
+                      <div class="date_selectinput" ng-click="shopSelect1()">
+                          <span class="selectListSpan">{{selectDesc1}}</span>
+                      </div>
+                      <div class="date_selectList date_selectPosition1" ng-hide="selectHide1" ng-click="shopCloseSelect1()" style="z-index: 500;">
+                        <div class="selectListDate" ng-click="shopSelectValue1('01','01')"><span class="selectListSpan">01</span></div>
+                        <div class="selectListDate" ng-click="shopSelectValue1('02','02')"><span class="selectListSpan">02</span></div>
+                        <div class="selectListDate" ng-click="shopSelectValue1('03','03')"><span class="selectListSpan">03</span></div>
+                        <div class="selectListDate" ng-click="shopSelectValue1('04','04')"><span class="selectListSpan">04</span></div>
+                        <div class="selectListDate" ng-click="shopSelectValue1('05','05')"><span class="selectListSpan">05</span></div>
+                        <div class="selectListDate" ng-click="shopSelectValue1('06','06')"><span class="selectListSpan">06</span></div>
+                        <div class="selectListDate" ng-click="shopSelectValue1('07','07')"><span class="selectListSpan">07</span></div>
+                        <div class="selectListDate" ng-click="shopSelectValue1('08','08')"><span class="selectListSpan">08</span></div>
+                        <div class="selectListDate" ng-click="shopSelectValue1('09','09')"><span class="selectListSpan">09</span></div>
+                        <div class="selectListDate" ng-click="shopSelectValue1('10','10')"><span class="selectListSpan">10</span></div>
+                        <div class="selectListDate" ng-click="shopSelectValue1('11','11')"><span class="selectListSpan">11</span></div>
+                        <div class="selectListDate" ng-click="shopSelectValue1('12','12')"><span class="selectListSpan">12</span></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-xs-2 payment_month"><span>月</span></div>
+                    <div class="col-lg-4 col-xs-4 padding_zero">
+                        <div class="date_selectinput" ng-click="shopSelect2()">
+                            <span class="selectListSpan">{{selectDesc2}}</span>
+                        </div>
+                        <div class="date_selectList date_selectPosition2" ng-hide="selectHide2" ng-click="shopCloseSelect2()" style="z-index: 500;">
+                            <div class="selectListDate" ng-click="shopSelectValue2('18','18')"><span class="selectListSpan">18</span></div>
+                            <div class="selectListDate" ng-click="shopSelectValue2('19','19')"><span class="selectListSpan">19</span></div>
+                            <div class="selectListDate" ng-click="shopSelectValue2('20','20')"><span class="selectListSpan">20</span></div>
+                            <div class="selectListDate" ng-click="shopSelectValue2('21','21')"><span class="selectListSpan">21</span></div>
+                            <div class="selectListDate" ng-click="shopSelectValue2('22','22')"><span class="selectListSpan">22</span></div>
+                            <div class="selectListDate" ng-click="shopSelectValue2('23','23')"><span class="selectListSpan">23</span></div>
+                            <div class="selectListDate" ng-click="shopSelectValue2('24','24')"><span class="selectListSpan">24</span></div>
+                            <div class="selectListDate" ng-click="shopSelectValue2('25','25')"><span class="selectListSpan">25</span></div>
+                            <div class="selectListDate" ng-click="shopSelectValue2('26','26')"><span class="selectListSpan">26</span></div>
+                            <div class="selectListDate" ng-click="shopSelectValue2('27','27')"><span class="selectListSpan">27</span></div>
+                            <div class="selectListDate" ng-click="shopSelectValue2('28','28')"><span class="selectListSpan">28</span></div>
+                            <div class="selectListDate" ng-click="shopSelectValue2('29','29')"><span class="selectListSpan">29</span></div>
+                            <div class="selectListDate" ng-click="shopSelectValue2('30','30')"><span class="selectListSpan">30</span></div>
+                            <div class="selectListDate" ng-click="shopSelectValue2('31','31')"><span class="selectListSpan">31</span></div>
+                            <div class="selectListDate" ng-click="shopSelectValue2('32','32')"><span class="selectListSpan">32</span></div>
+                            <div class="selectListDate" ng-click="shopSelectValue2('33','33')"><span class="selectListSpan">33</span></div>
+                            <div class="selectListDate" ng-click="shopSelectValue2('34','34')"><span class="selectListSpan">34</span></div>
+                            <div class="selectListDate" ng-click="shopSelectValue2('35','35')"><span class="selectListSpan">35</span></div>
+                            <div class="selectListDate" ng-click="shopSelectValue2('36','36')"><span class="selectListSpan">36</span></div>
+                            <div class="selectListDate" ng-click="shopSelectValue2('37','37')"><span class="selectListSpan">37</span></div>
+                            <div class="selectListDate" ng-click="shopSelectValue2('38','38')"><span class="selectListSpan">38</span></div>
+                            <div class="selectListDate" ng-click="shopSelectValue2('39','39')"><span class="selectListSpan">39</span></div>
+                            <div class="selectListDate" ng-click="shopSelectValue2('40','40')"><span class="selectListSpan">40</span></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-xs-2 payment_month"><span>年</span></div>
+                </td>
+            </tr>
+            <tr>
+                <td class="buy_table_left">
+                    <span>氏名</span>
+                    <span class="buy_table_icon">必須</span>
+                </td>
+                <td class="buy_table_right"><input id="name" name="name" type="text" class="inputStyle" ng-model="payment.name"></td>
+            </tr>
+            <tr>
+                <td class="buy_table_left">
+                    <span>セキュリティーコード</span>
+                    <span class="buy_table_icon">必須</span>
+                </td>
+                <td class="buy_table_right"><input id="securityCode" name="securityCode" type="password" class="inputStyle" ng-model="payment.securityCode"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-lg-12 col-xs-12" align="center">
+      <div class="col-md-2 col-sm-2"></div>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <a href="javascript:window.history.back(-1);"><button type="button" class="buy_confirmBtn buy_confirmBtn_color1" name="confirm" value="Confirm">ショッピングに戻る</button></a>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <button type="button" class="buy_confirmBtn buy_confirmBtn_color2" name="confirm" value="Confirm" ng-click="postPayment()">&nbsp;&nbsp;&nbsp; 支払いをする&nbsp;&nbsp;&nbsp;</button>
+      </div>
+    </div>
+   </div>
+</section>
+<div ng-include="'views/footer.html'" ng-hide="hideFooter"></div>
+
+<!-- <script>
+    var $ = function(id){
+        return document.getElementById(id);
+    };
+    var $t = function(tag, cot){
+        cot = cot || document;
+        return cot.getElementsByTagName(tag);
+    };
+    $t('a')[0].onmouseover = function(){
+        $t('div', this.parentNode)[0].style.display = 'block';
+    }
+    $t('a')[0].onmouseout = function(){
+        $t('div', this.parentNode)[0].style.display = 'none';
+    }
+    var date=new Date;
+    var year=date.getFullYear();
+    var month=date.getMonth()+1;
+    month =(month<10 ? "0"+month:month);
+    var mydate = (year.toString()+month.toString());
+    var yearBefore = year.toString().substring(0,2);
+    var yearLast = year.toString().substring(2,4);
+    document.getElementById("yearBefore").innerHTML = yearBefore;
+    var select = document.getElementById("year");
+    for (var i = yearLast; i <= 99; i++) {
+        select.options.add(new Option(i,i));
+    }
+</script> -->

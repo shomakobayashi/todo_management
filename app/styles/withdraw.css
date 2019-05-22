@@ -1,0 +1,214 @@
+.withdraw_selInput{
+    width: 70%;
+    height: 40px;
+    padding-top: 3px;
+    border: 1px solid #A9A9A9;
+    background-color: white;
+    float: left;
+    position: relative;
+}
+.withdraw_selList{
+  background-color: white;
+  border: 1px solid #A9A9A9;
+  width: 70%;
+}
+.selListWithdraw{
+  height: 40px;
+}
+.selListWithdraw:hover{
+  border: 2px solid rgb(139,193,253);
+}
+.withdraw_selPosition{
+    position:absolute;top: 40px;left: 0;
+}
+.withdrawSelectDiv{
+    background-color: rgb(0,0,0,0.0);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 499;
+}
+.quit_padding_1{
+    padding-bottom: 1em;
+}
+.quit_padding_2{
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+.quit_padding_3{
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+.quit_padding_4{
+    padding-top: 4em;
+    padding-bottom: 2em;
+}
+.quit_span_red{
+    color: red;
+}
+.quit_entrance_title{
+    color: black;
+    font-size: 1.8em;
+    letter-spacing: 2px;
+    font-weight: bolder;
+}
+.quit_entrance_warning_1{
+    color: red;
+    vertical-align: middle;
+}
+.quit_entrance_warning_2{
+    font-size: 1.2em;
+    color: red;
+    font-weight: bold;
+    line-height: 3em;
+    vertical-align: middle;
+    letter-spacing: 2px;
+}
+.quit_entrance_notice{
+    font-size: 1em;
+    color: red;
+    letter-spacing: 1px;
+}
+.quit_entrance_box{
+    border: 1px solid #A2A2A2;
+    font-size: 1em;
+    letter-spacing: 1px;
+    padding: 1em 2em;
+}
+.quit_btn_submit{
+    border: none;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    height: 3em;
+    width: 100%;
+    outline: none;
+    color: black;
+    background: #E5E5E5;
+}
+.quit_reason_title{
+    color: black;
+    font-size: 2em;
+    letter-spacing: 4px;
+}
+.quit_reason_notice{
+    color: black;
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+.quit_reason_table{
+    font-size: 1em;
+    color: black;
+    width: 100%;
+}
+.quit_reason_table tr td{
+    vertical-align: top;
+    padding: 15px 0;
+    border: 1px solid #DCDCDC;
+}
+.quit_reason_tag{
+    width: 30%;
+    background-color: #EEEEEE;
+}
+.quit_reason_tag_1{
+    color: black;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+}
+.quit_reason_tag_2{
+    text-align: right;
+    letter-spacing: 2px;
+}
+.quit_reason_tag_icon{
+    font-size: 0.8em;
+    padding: 4px 8px;
+    border: 1px solid red;
+    text-align: center;
+    color: white;
+    background-color: red;
+}
+.quit_reason_select{
+    padding-left: 1em;
+    width: 70%;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+}
+.quit_end_title{
+    font-weight: bold;
+    color: black;
+    font-size: 1.4em;
+    letter-spacing: 2px;
+}
+.quit_end_notice{
+    color: black;
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+.quit_btn_toppage{
+    border: 2px solid red;
+    font-size: 1.2em;
+    height: 3em;
+    width: 100%;
+    outline: none;
+    color: red;
+    background: white;
+}
+@media (max-width: 414px) {
+.withdraw_selInput{
+  width: 100%;
+}
+.withdraw_selList{
+  width: 100%;
+}
+.withdrawSelectDiv{
+    height: 150%;
+}
+.quit_end_title{
+    font-size: 1.0em;
+}
+.quit_xs_padding{
+    padding-left: 0;
+    padding-right: 0;
+}
+.quit_entrance_title{
+    font-weight: bold;
+}
+.quit_entrance_box{
+    font-size: 0.8em;
+}
+.quit_btn_submit{
+    font-size: 0.8em;
+}
+.quit_reason_title{
+    font-weight: bold;
+}
+.quit_reason_tag_1{
+    font-size: 0.8em;
+}
+.quit_btn_toppage{
+    font-size: 1em;
+}
+.quit_table_xs_padding{
+    padding: 0 10px;
+}
+.quit_reason_select{
+    width: 100%;
+}
+}
+@media (max-width: 375px) {
+.quit_entrance_notice{
+    letter-spacing: 0;
+}
+.quit_entrance_box{
+    letter-spacing: 0;
+}
+.quit_reason_notice{
+    font-size: 0.8em;
+}
+.quit_reason_tag_1{
+    letter-spacing: 0;
+}
+}

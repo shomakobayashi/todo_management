@@ -1,0 +1,346 @@
+<section style="overflow:hidden;">
+    <div class="container shop_bodyrow">
+        <div class="shopSelectDiv" ng-hide="selectHide0" ng-click="shopCloseAllSelect()"></div>
+        <div class="col-md-3 col-sm-3 col-xs-3 shop_left display">
+            <div class="col-md-12 col-sm-12 col-xs-12 shop_bor">
+                <i class="shop_icon-user fa fa-university"></i>
+                <div class="shop_selectinput" ng-click="shopSelect3()" style="width: 100%;">
+                    <span class="selectListSpan3">{{selectDesc3}}</span>
+                </div>
+                <div class="shop_selectList shop_selectWidth shop_selectPosition3" ng-hide="selectHide3" ng-click="shopCloseSelect3()" style="z-index: 500;width: 100%;">
+                  <div class="selectListShop" ng-click="shopSelectValue1('業種から探す',0)"><span class="selectListSpan3">業種から探す</span></div>
+                  <div ng-repeat="careerList in results.careerList">
+                    <div class="selectListShop" ng-click="shopSelectValue1(careerList.desc,careerList.content)"><span class="selectListSpan3">{{careerList.desc}}</span></div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 shop_left_div" align="left">
+                <i class="fa fa-map-marker shop_iTitle"></i><p>エリアから探す</p>
+                <div class="btn-group" data-toggle="buttons">
+                    <label for="area{{$index}}" ng-repeat="area in results.areaList" class="btn btn-info recruit_btn_select" ng-hide="$index > 7 && hideMoerCheckBox" >
+                        <!-- <input type="checkbox" ng-model="shopSearch.areaModel[$index]">{{area.desc}} -->
+                        <input id="area{{$index}}" type="checkbox" ng-model="recruitSearch.areaModel[$index]" name="area" value="{{area.content}}" disabled >{{area.desc}}
+                    </label>
+                </div>
+                <div align="right" class="shop_orangeA" ng-hide="MoreCheckBox" ng-click="appearMoerCheckBox()">
+                	<a>さらに詳しく&nbsp;&nbsp;<span>▼</span></a>
+                </div>
+                <div align="right" class="shop_orangeA" ng-hide="!MoreCheckBox" ng-click="moerCheckBoxHide()">
+                	<a>閉じる&nbsp;&nbsp;<span>▲</span></a>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 shop_left_div" align="left">
+                <i class="fa fa-user shop_iTitle"></i><p>雇用形態</p>
+                <div ng-repeat="modeList in results.modeList">
+                  <div class="col-md-6 col-sm-12 col-xs-12 padding_zero">
+                    <div class="col-md-3 col-sm-3 col-xs-3 shop_checkboxGroup">
+                        <input type="checkbox" name="{{modeList.content}}" value="{{modeList.content}}" ng-model="recruitSearch.modesModel[$index]"/>
+                    </div>
+                    <div class="col-md-9 col-sm-9 col-xs-9 shop_checkboxTitle">
+                        <span>{{modeList.desc}}</span>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 shop_left_div">
+                <i class="fa fa-clock-o shop_iTitle"></i><p>就業時間</p>
+                <div class="col-md-12 col-sm-12 col-xs-12 shop_appoint">
+                    <div class="shop_selInput" ng-click="shopSel1()">
+                        <span class="selListSpan">{{selDesc1}}</span>
+                    </div>
+                    <div class="shop_selList shop_selPosition1" ng-hide="selHide1" ng-click="shopCloseSel1()" style="z-index: 500;">
+                      <div class="selListShop" ng-click="shopSelValue1('指定なし',0)"><span class="selListSpan">指定なし</span></div>
+                      <div ng-repeat="timeList in results.timeList">
+                        <div class="selListShop" ng-click="shopSelValue1(timeList.desc,timeList.content)"><span class="selListSpan">{{timeList.desc}}</span></div>
+                      </div>
+                    </div>
+                    <div class="shop_selListMiddle">～</div>
+                    <div class="shop_selInput" ng-click="shopSel2()">
+                        <span class="selListSpan">{{selDesc2}}</span>
+                    </div>
+                    <div class="shop_selList shop_selPosition2" ng-hide="selHide2" ng-click="shopCloseSel2()" style="z-index: 500;">
+                      <div class="selListShop" ng-click="shopSelValue2('指定なし',0)"><span class="selListSpan">指定なし</span></div>
+                      <div ng-repeat="timeList in results.timeList">
+                        <div class="selListShop" ng-click="shopSelValue2(timeList.desc,timeList.content)"><span class="selListSpan">{{timeList.desc}}</span></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 shop_left_div" align="left">
+                <i class="fa fa-arrows-h shop_iTitle"></i><p>勤務時間</p>
+                <div ng-repeat="workTimeList in results.workTimeList">
+                  <div class="col-md-6 col-sm-12 col-xs-12 padding_zero">
+                    <div class="col-md-3 col-sm-3 col-xs-3 shop_checkboxGroup">
+                        <input type="checkbox" name="{{workTimeList.content}}" value="{{workTimeList.content}}" ng-model="recruitSearch.workTimeModel[$index]"/>
+                    </div>
+                    <div class="col-md-9 col-sm-9 col-xs-9 shop_checkboxTitle">
+                        <span>{{workTimeList.desc}}</span>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 shop_left_div" align="left">
+                <i class="fa fa-arrows-v shop_iTitle"></i><p>勤務期間</p>
+                <div ng-repeat="workPeriodList in results.workPeriodList">
+                  <div class="col-md-6 col-sm-12 col-xs-12 padding_zero">
+                    <div class="col-md-3 col-sm-3 col-xs-3 shop_checkboxGroup">
+                        <input type="checkbox" name="{{workPeriodList.content}}" value="{{workPeriodList.content}}" ng-model="recruitSearch.workPeriodModel[$index]"/>
+                    </div>
+                    <div class="col-md-9 col-sm-9 col-xs-9 shop_checkboxTitle">
+                        <span>{{workPeriodList.desc}}</span>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 shop_left_div" align="left">
+                <i class="fa fa-users shop_iTitle"></i><p>経験・資格（歓迎情報）</p>
+                <div ng-repeat="capacityList in results.capacityList">
+                  <div class="col-md-6 col-sm-12 col-xs-12 padding_zero">
+                    <div class="col-md-3 col-sm-3 col-xs-3 shop_checkboxGroup">
+                        <input type="checkbox" name="{{capacityList.content}}" value="{{capacityList.content}}" ng-model="recruitSearch.capacityModel[$index]"/>
+                    </div>
+                    <div class="col-md-9 col-sm-9 col-xs-9 shop_checkboxTitle">
+                        <span>{{capacityList.desc}}</span>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 shop_left_div" align="left">
+                <i class="fa fa-desktop shop_iTitle"></i><p>働き方</p>
+                <div ng-repeat="workWayList in results.workWayList">
+                  <div class="col-md-6 col-sm-12 col-xs-12 padding_zero">
+                    <div class="col-md-3 col-sm-3 col-xs-3 shop_checkboxGroup">
+                        <input type="checkbox" name="{{workWayList.content}}" value="{{workWayList.content}}" ng-model="recruitSearch.workWayModel[$index]"/>
+                    </div>
+                    <div class="col-md-9 col-sm-9 col-xs-9 shop_checkboxTitle">
+                        <span>{{workWayList.desc}}</span>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 shop_left_div" align="left">
+                <i class="fa fa-database shop_iTitle"></i><p>給与の特徴</p>
+                <div ng-repeat="specialList in results.specialList">
+                  <div class="col-md-6 col-sm-12 col-xs-12 padding_zero">
+                    <div class="col-md-3 col-sm-3 col-xs-3 shop_checkboxGroup">
+                        <input type="checkbox" name="{{specialList.content}}" value="{{specialList.content}}" ng-model="recruitSearch.specialModel[$index]"/>
+                    </div>
+                    <div class="col-md-9 col-sm-9 col-xs-9 shop_checkboxTitle">
+                        <span>{{specialList.desc}}</span>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 shop_left_div" align="left">
+                <i class="fa fa-briefcase shop_iTitle"></i><p>職場環境</p>
+                <div ng-repeat="environmentList in results.environmentList">
+                  <div class="col-md-6 col-sm-12 col-xs-12 padding_zero">
+                    <div class="col-md-3 col-sm-3 col-xs-3 shop_checkboxGroup">
+                        <input type="checkbox" name="{{environmentList.content}}" value="{{environmentList.content}}" ng-model="recruitSearch.environmentModel[$index]"/>
+                    </div>
+                    <div class="col-md-9 col-sm-9 col-xs-9 shop_checkboxTitle">
+                        <span>{{environmentList.desc}}</span>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 shop_left_div" align="left">
+                <i class="fa fa-heart shop_iTitle"></i><p>待遇</p>
+                <div ng-repeat="treatmentNewList in results.treatmentNewList">
+                  <div class="col-md-6 col-sm-12 col-xs-12 padding_zero">
+                    <div class="col-md-3 col-sm-3 col-xs-3 shop_checkboxGroup">
+                        <input type="checkbox" name="{{treatmentNewList.content}}" value="{{treatmentNewList.content}}" ng-model="recruitSearch.treatmentNewModel[$index]"/>
+                    </div>
+                    <div class="col-md-9 col-sm-9 col-xs-9 shop_checkboxTitle">
+                        <span>{{treatmentNewList.desc}}</span>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="shop_btn" style="width: 100%;margin-top: 15px;">
+                <div class="shop_btnStyle" ng-click="search(recruitSearch)" align="center"><i class="fa fa-search display">&nbsp;絞り込み検索</i></div>
+            </div>
+        </div>
+        <div class="col-md-9 col-sm-9 col-xs-12 shop_right">
+	          <div class="add_rightDiv display"></div>
+            <div class="shop_right_title">
+                <div class="col-md-12 col-sm-12 col-xs-12 display">
+                    <label><b>{{area}}</b><span>見つかった求人情報{{results.count}}件</span></label>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12 displayPc recruit_header_3">求人情報</div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="col-md-12 col-sm-12 col-xs-12 padding_zero" style="margin-top: 20px;">
+                <a href="/shop/list/1/1/0/">
+                  <div class="col-md-2 col-sm-2 col-xs-3 shopPaddingLR2" style=""><p class="tab tab_food"><img src="images/icon01.svg" class="tab_icon">food</p></div>
+                </a>
+                <a href="/shop/list/12/1/0/">
+                  <div class="col-md-2 col-sm-2 col-xs-3 shopPaddingLR2"><p class="tab tab_fashion"><img src="images/icon02.svg" class="tab_icon">fashion</p></div>
+                </a>
+                <a href="/shop/list/3/1/0/">
+                  <div class="col-md-2 col-sm-2 col-xs-3 shopPaddingLR2"><p class="tab tab_health"><img src="images/icon03.svg" class="tab_icon">health care</p></div>
+                </a>
+                <a href="/shop/list/4/1/0/">
+                  <div class="col-md-2 col-sm-2 col-xs-3 shopPaddingLR2"><p class="tab tab_play"><img src="images/icon04.svg" class="tab_icon">play</p></div>
+                </a>
+                <a href="/shop/list/6/1/0/">
+                  <div class="col-md-2 col-sm-2 col-xs-3 shopPaddingLR2"><p class="tab tab_drive"><img src="images/icon05.svg" class="tab_icon">drive</p></div>
+                </a>
+                <a href="/shop/list/11/1/0/">
+                  <div class="col-md-2 col-sm-2 col-xs-3 shopPaddingLR2"><p class="tab tab_life"><img src="images/icon06.svg" class="tab_icon">life style</p></div>
+                  </a>
+                <a href="/shop/list/5/1/0/">
+                  <div class="col-md-2 col-sm-2 col-xs-3 shopPaddingLR2"><p class="tab tab_bridal"><img src="images/icon07.svg" class="tab_icon">bridal</p></div>
+                </a>
+                <a href="/shop/list/9/1/0/">
+                  <div class="col-md-2 col-sm-2 col-xs-3 shopPaddingLR2"><p class="tab tab_learning"><img src="images/icon08.svg" class="tab_icon">learning</p></div>
+                </a>
+                <a href="/place/1/">
+                  <div class="col-md-2 col-sm-2 col-xs-3 shopPaddingLR2"><p class="tab tab_place"><img src="images/icon09.svg" class="tab_icon">place</p></div>
+                </a>
+                <a href="/shop/list/10/1/0/">
+                  <div class="col-md-2 col-sm-2 col-xs-3 shopPaddingLR2"><p class="tab tab_facilities"><img src="images/icon10.svg" class="tab_icon">facilities</p></div>
+                </a>
+                <a href="/recruit/0/1/0/">
+                  <div class="col-md-2 col-sm-2 col-xs-3 shopPaddingLR2"><p class="tab tab_recruit"><img src="images/icon11.svg" class="tab_icon">recruit</p></div>
+                </a>
+                <a href="/shop/corporateinfo/list/8/1/">
+                  <div class="col-md-2 col-sm-2 col-xs-3 shopPaddingLR2"><p class="tab tab_corporate"><img src="images/icon12.svg" class="tab_icon">corporate info</p></div>
+                </a>
+              </div>
+                <div class="col-md-12 col-sm-12 col-xs-12 shop_right_input padding_zero">
+                    <div class="shop_textinput">
+                        <input ng-model="recruitSearchR.keyWord" type="text" placeholder="キーワードを入力">
+                    </div>
+                    <div class="shop_selectinput shop_selectWidth1" ng-click="shopSelect1()">
+                        <span class="selectListSpan">{{selectDesc1}}</span>
+                    </div>
+                    <div class="shop_selectList shop_selectWidth1 shop_selectPosition1" ng-hide="selectHide1" ng-click="shopCloseSelect1()" style="z-index: 500;">
+                      <div class="selectListShop" ng-click="shopSelectValue3('業種を選択',0)"><span class="selectListSpan">業種を選択</span></div>
+                      <div ng-repeat="careerList in results.careerList">
+                        <div class="selectListShop" ng-click="shopSelectValue3(careerList.desc,careerList.content)"><span class="selectListSpan">{{careerList.desc}}</span></div>
+                      </div>
+                    </div>
+                    <div class="shop_selectinput shop_selectWidth2" ng-click="shopSelect2()">
+                        <span class="selectListSpan" >{{selectDesc2}}</span>
+                    </div>
+                    <div class="shop_selectList shop_selectWidth2 shop_selectPosition2" ng-hide="selectHide2" ng-click="shopCloseSelect2()" style="z-index: 500;">
+                      <div class="selectListShop" ng-click="shopSelectValue2('エリアを選択','')"><span class="selectListSpan">エリアを選択</span></div>
+                      <div ng-repeat="area in results.areaList">
+                        <div class="selectListShop" ng-click="shopSelectValue2(area.desc,area.content)"><span class="selectListSpan">{{area.desc}}</span></div>
+                      </div>
+                    </div>
+                    <div class="shop_btn display">
+                        <div type="button" class="shop_btnStyle" ng-click="searchR()" align="center"><i class="fa fa-search display">&nbsp;検索</i></div>
+                    </div>
+                    <div class="shop_btn displayPc">
+                        <div type="button" class="shop_btnStyle" ng-click="searchR()" align="center">検索</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 recruit_padding_2"></div>
+            <div class="col-md-12 col-sm-12 col-xs-12 displayPc">
+                <span class="recruit_header_4">件数</span>
+                <span class="recruit_header_5">{{results.count}}</span>
+                <span class="recruit_header_4">件</span>
+                <span class="recruit_header_6">&nbsp;&nbsp;(1～100件を表示)</span>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 displayPc recruit_padding_2"></div>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div ng-repeat="data in results.data" class="col-md-12 col-sm-12 col-xs-12 padding_zero_sp736 recruit_result">
+                    <div class="col-md-9 col-sm-8 col-xs-12">
+                        <div class="col-md-12 col-sm-12 col-xs-12 padding_zero recruit_result_title">{{data.shopName}}</div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 padding_zero">
+                            <span ng-repeat="modes in data.modes" class="recruit_result_icon" style="background-color: rgb(243,151,1);">{{modes}}</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-xs-12 display">
+                        <button type="button" class="recruit_btn_transfer recruit_btn_signin" ng-click="addMyPage($index)" ng-if="data.favorite==false">
+                            お気に入り <i class="fa fa-star-o"></i>
+                        </button>
+                        <button type="button" style="background-color:#A9A9A9" class="recruit_btn_transfer recruit_btn_signin" ng-click="RemoveMyPage($index)" ng-if="data.favorite==true">
+                            お気に入り済み <i class="fa fa-star"></i>
+                        </button>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 recruit_padding_4 recruit_result_header_1">
+                        <span>{{data.title}}</span>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 recruit_padding_4"></div>
+                    <a href="/recruitDetail/{{data.uuid}}/">
+                    <div class="col-md-5 col-sm-5 col-xs-12">
+                        <img ng-src="{{data.picUrl1}}" alt="" class="recruit_pic">
+                    </div>
+                    <div class="col-md-7 col-sm-7 col-xs-12">
+                        <div class="displayPc recruit_padding_2"></div>
+                        <div class="recruit_result_header_2">
+                            <span>{{data.recruitName}}</span>
+                        </div>
+                        <div class="displayPc recruit_result_border_bottom"></div>
+                        <div class="recruit_padding_4">
+                            <table class="recruit_result_table">
+                                <tr>
+                                    <td class="recruit_result_catagoli" style="font-weight:bold">給料</td>
+                                    <td>{{data.salary}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="recruit_result_catagoli"style="font-weight:bold">勤務地</td>
+                                    <td>{{data.address}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="recruit_result_catagoli"style="font-weight:bold">最寄駅</td>
+                                    <td>{{data.station}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="recruit_result_catagoli"style="font-weight:bold">勤務時間</td>
+                                    <td>{{data.workingTimeStart}}～{{data.workingTimeEnd}}
+                                    <br>{{data.workingTime}}</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="recruit_padding_4 recruit_result_taglist">
+                            <ul>
+                              <!-- <li ng-repeat="details in data.details"><span class="recruit_result_tag">{{details}}</span></li> -->
+                              <li ng-repeat="career in data.career"><span class="recruit_result_tag">{{career}}</span></li>
+                              <li ng-repeat="workPeriod in data.workPeriod"><span class="recruit_result_tag">{{workPeriod}}</span></li>
+                              <li ng-repeat="workTime in data.workTime"><span class="recruit_result_tag">{{workTime}}</span></li>
+                              <li ng-repeat="capacity in data.capacity"><span class="recruit_result_tag">{{capacity}}</span></li>
+                              <li ng-repeat="workWay in data.workWay"><span class="recruit_result_tag">{{workWay}}</span></li>
+                              <li ng-repeat="special in data.special"><span class="recruit_result_tag">{{special}}</span></li>
+                              <li ng-repeat="environment in data.environment"><span class="recruit_result_tag">{{environment}}</span></li>
+                              <li ng-repeat="treatmentNew in data.treatmentNew"><span class="recruit_result_tag">{{treatmentNew}}</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    </a>
+                    <div class="col-md-12 col-sm-12 col-xs-12 displayPc recruit_padding_2"></div>
+                    <div class="col-md-12 col-sm-6 col-xs-6 displayPc">
+                      <button type="button" class="recruit_btn_transfer recruit_btn_signin" ng-click="addMyPage($index)" ng-if="data.favorite==false">
+                          <span>お気に入り</span>
+                          <span>&nbsp;☆</span>
+                      </button>
+                      <button type="button" style="background-color:#A9A9A9" class="recruit_btn_transfer recruit_btn_signin" ng-click="RemoveMyPage($index)" ng-if="data.favorite==true">
+                          <span>お気に入り済み</span>
+                          <span>&nbsp;☆</span>
+                      </button>
+                    </div>
+                    <div class="col-md-12 col-sm-6 col-xs-6 displayPc">
+                        <a href="/recruitDetail/detail/{{data.uuid}}/">
+                            <button type="submit" class="recruit_btn_transfer recruit_btn_showdetail">
+                                <span>詳しくはこちら</span>
+                                <span class="fa fa-arrow-circle-right"></span>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div pagination class="col-md-12 col-sm-12 col-xs-12 change_page event_padding2" ng-hide="hidePages" align="center">
+                <ul>
+                    <a href="javascript:void(0);"><li ng-click="upPageClick()">&lt;</li></a>
+                    <div id="pagesChange"></div>
+                    <a href="javascript:void(0);"><li ng-click="downPageClick()">&gt;</li></a>
+                </ul>
+            </div>
+          </div>
+        </div>
+</section><!--/#Recruit-->
+<div ng-include="'views/footer.html'" ng-hide="hideFooter" style="position: relative;z-index:999;"></div>

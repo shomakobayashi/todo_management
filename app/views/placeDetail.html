@@ -1,0 +1,154 @@
+<div ng-repeat="place in results">
+<section>
+<div class="container body_containerPadding">
+    <div class="col-md-6 col-sm-6 col-xs-12 shopDetail_info padding_zero" align="left">
+        <div class="col-md-12 col-sm-12 col-xs-12 padding_zero_sp736">
+            <p>{{place.name}}</p>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 display">
+            <span ng-if ="place.station != undefined && place.station != ''">
+              <i class="fa fa-map-marker" style="color: rgba(214,202,190);"></i><span style="margin-right: 50px;">{{place.walk}}</span>
+            </span>
+        </div>
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12 shopDetail_phone padding_zero">
+        <div class="col-md-8 col-sm-8 col-xs-8 padding_zero display">
+            <i class="fa fa-phone"></i><span style="margin: 0 10px;">{{place.tel}}</span>
+        </div>
+        <div class="col-md-8 col-sm-8 col-xs-8 padding_zero displayPc" ng-click="">
+            <a class="sp_phone" href="tel:{{place.tel}}" >
+          <i class="fa fa-phone"></i><span style="margin: 0 10px;">{{place.tel}}</span>
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-4 padding_zero">
+          <button type="button" class="eventDetail_login_btn" ng-click="addMyPage()" ng-if="place.favorite == false">お気に入り <i class="fa fa-star-o"></i></button>
+          <button type="button" class="eventDetail_login_btn" style="background-color:#A9A9A9;" ng-click="RemoveMyPage()" ng-if="place.favorite == true">お気に入り済み <i class="fa fa-star"></i></button>
+        </div>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12 shopDetail_boedertop">
+      <div class="col-md-8 col-sm-8 col-xs-12 padding_zero">
+          <img ng-src="{{place.picUrl1}}" class="shopDetail_IMG1">
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12 padding_zero">
+          <div class="col-md-12 col-sm-12 col-xs-12 shopPaddingLeft20">
+            <div ng-if="videoUrl != undefined && videoUrl !=''">
+              <iframe class=" shopDetail_IMG2" src="{{videoUrl}}" allow="autoplay; encrypted-media" frameborder="0" allowfullscreen="" scrolling="no"></iframe>
+            </div>
+            <div ng-if="videoUrl == undefined || videoUrl ==''">
+              <img src="{{picUrl11}}" class="shopDetail_IMG2">
+            </div>
+          </div>
+          <div class="col-md-12 col-sm-12 col-xs-12 shopDetail_f360">
+            <div ng-if="flicUrl != undefined && flicUrl != ''">
+              <iframe src="{{flicUrl}}" frameborder="0" scrolling="no" allowfullscreen></iframe>
+          	</div>
+            <div ng-if="picUrl12 != undefined && picUrl12 != ''">
+              <img src="{{picUrl12}}" class="shopDetail_IMG2">
+          	</div>
+        	</div>
+      </div>
+    </div>
+    <div class="container padding_zero">
+        <div class="col-md-3 col-sm-3 col-xs-12 padding_zero">
+            <div ng-if="results[0].uuid2 != null ">
+              <a href="/recruitDetail/{{results[0].uuid2}}/">
+            		<div class="col-md-12 col-sm-12 col-xs-12 shopDetail_hidTitle padding_zero display" style="margin-bottom: 20px;border: 1px solid rgb(238,238,238);cursor: pointer;">
+              		<div class="shopDetail_left_title" align="center">
+              				<p>こちらのお店の</p><p><b>求人情報</b>はこちら</p>
+              		</div>
+              	</div>
+              </a>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 padding_zero recruitDetail_recommend">
+                <div class="col-md-12 col-sm-12 col-xs-12 recruitDetail_recommend_label">
+                    <i class="fa fa-home recruitDetail_color_5"></i>
+                    <span class="recruitDetail_span_3">{{place.location}}のおすすめプレイス</span>
+                </div>
+                <div ng-repeat="placeList in place.placeList2" class="col-md-12 col-sm-12 col-xs-12 padding_zero">
+                  <a href="/place/detail/{{placeList.uuid}}">
+                    <div class="col-md-4 col-sm-4 col-xs-12 recruitDetail_recommend_padding">
+                        <img ng-src="{{placeList.picUrl}}" alt="" class="recruitDetail_recommend_pic">
+                    </div>
+                    <div class="col-md-8 col-sm-8 col-xs-12 recruitDetail_recommend_padding">
+                        <div class="recruitDetail_recommend_shopnm">{{placeList.name}}</div>
+                        <div class="recruitDetail_recommend_tags lineStyle lineHid2">{{placeList.introduce}}</div>
+                    </div>
+                  </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9 col-sm-9 col-xs-12 placeDetail_pdgSp">
+            <div class="col-md-12 col-sm-12 col-xs-12 place_detail_info padding_zero">
+                <div class="col-md-12 col-sm-12 col-xs-12 place_detail_info_header">
+                    <span>{{place.title1}}</span>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12 place_detail_intro" ng-bind-html="place.desc1"></div>
+                <!-- <div class="col-md-12 col-sm-12 col-xs-12 place_detail_pic">
+                    <ul>
+                        <li><img ng-src="{{place.picUrl1}}" alt=""></li>
+                        <li><img ng-src="{{place.picUrl2}}" alt=""></li>
+                        <li><img ng-src="{{place.picUrl3}}" alt=""></li>
+                        <li><img ng-src="{{place.picUrl4}}" alt=""></li>
+                    </ul>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12 place_padding_2"></div> -->
+                <div class="shopDetail_fourIMG">
+            			<div class="col-md-3 col-sm-3 col-xs-6" ng-repeat="image in starPic" ng-hide="$index > 3 && hideMoreButtons">
+                    <img ng-src="{{image}}" class="shopDetail_IMG"/>
+                  </div>
+                  <div class="col-md-12 col-sm-12 col-xs-12" ng-hide="btnViewMore" align="center" style="margin-top: 15px;">
+                    <button class="top_button" ng-click="appearPic()">VIEW MORE</button>
+                  </div>
+            		</div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 place_padding_2"></div>
+            <div class="col-md-12 col-sm-12 col-xs-12 padding_zero place_detail_info">
+                <div class="col-md-12 col-sm-12 col-xs-12 place_detail_info_header">
+                    <span>プレイス情報</span>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="col-md-12 col-sm-12 col-xs-12 shopDetail_table_div">
+                        <div class="col-md-12 col-sm-12 col-xs-12 shopDetail_table_tr">
+                            <div class="col-md-3 col-sm-3 col-xs-3"><span class="shopDetail_paddingTitle">名称</span></div>
+                            <div class="col-md-9 col-sm-9 col-xs-9">{{place.name}}</div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 shopDetail_table_tr">
+                            <div class="col-md-3 col-sm-3 col-xs-3"><span class="shopDetail_paddingTitle">TEL</span></div>
+                            <div class="col-md-9 col-sm-9 col-xs-9">{{place.tel}}</div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 shopDetail_table_tr">
+                            <div class="col-md-3 col-sm-3 col-xs-3"><span class="shopDetail_paddingTitle">最寄駅</span></div>
+                            <div class="col-md-9 col-sm-9 col-xs-9">{{place.station}}</div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 shopDetail_table_tr">
+                            <div class="col-md-3 col-sm-3 col-xs-3"><span class="shopDetail_paddingTitle">アクセス</span></div>
+                            <div class="col-md-9 col-sm-9 col-xs-9">{{place.walk}}</div>
+                        </div>
+                        <div  class="col-md-12 col-sm-12 col-xs-12 shopDetail_table_tr">
+                          <div class="col-md-3 col-sm-3 col-xs-3"><span class="shopDetail_paddingTitle">住所</span></div>
+                          <div class="col-md-9 col-sm-9 col-xs-9">
+                            <a href="https://www.google.cn/maps/dir//{{shop.coord1}},{{shop.coord2}}/@{{shop.coord1}},{{shop.coord2}},16z">
+                              <div class="col-md-9 col-sm-9 col-xs-9" style="padding: 0;"><img src="images/mapicon.svg" class="shopDetail_mpaicon"><span>{{place.address}}</span></div>
+                            </a>
+                            <div class="col-md-3 col-sm-3 col-xs-3" style="padding: 0;">
+                              <button type="button" class="displayPc"><i class="fa fa-map-marker"></i>MAP</button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 shopDetail_table_tr">
+                            <div class="col-md-3 col-sm-3 col-xs-3 shopDetail_paddingNone"><span class="shopDetail_paddingTitle">観覧時間</span></div>
+                            <div class="col-md-9 col-sm-9 col-xs-9  shopDetail_paddingNone">{{place.time}}</div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 shopDetail_table_tr">
+                            <div class="col-md-3 col-sm-3 col-xs-3 shopDetail_paddingNone"><span class="shopDetail_paddingTitle">定休日</span></div>
+                            <div class="col-md-9 col-sm-9 col-xs-9  shopDetail_paddingNone">{{place.holiday}}</div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+</section><!--/#Place_detail-->
+</div>
+<div ng-include="'views/footer.html'" ng-hide="hideFooter"></div>

@@ -1,0 +1,106 @@
+<section class="minHeightVh100">
+    <div class="container body_containerPadding">
+        <div class="withdrawSelectDiv" ng-hide="selectHide0" ng-click="shopCloseAllSelect()"></div>
+        <div class="col-md-12 col-sm-12 col-xs-12 text-center quit_padding_1 quit_reason_title">
+            <span>退会する</span>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 text-center quit_padding_4 quit_reason_notice">
+            <span>退会理由とその詳細をお聞かせください。今後のサービス改善の参考にさせていただきます。</span>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 display quit_padding_2">
+            <table class="quit_reason_table">
+                <tr>
+                    <td class="quit_reason_tag">
+                        <div class="col-md-8 col-sm-8 col-xs-8 quit_reason_tag_1">退会理由を選択してください。</div>
+                        <div class="col-md-4 col-sm-4 col-xs-4 quit_reason_tag_2">
+                            <span class="quit_reason_tag_icon">必須</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="col-md-12 col-sm-12 col-xs-12 padding_zero">
+                                <div class="withdraw_selInput" ng-click="shopSelect1()">
+                                    <span class="selectListSpan">{{selectDesc1}}</span>
+                                </div>
+                                <div class="withdraw_selList withdraw_selPosition" ng-hide="selectHide1" ng-click="shopCloseSelect1()" style="z-index: 500;">
+                                  <div class="selListWithdraw" ng-click="shopSelectValue1('選択してください',0)"><span class="selectListSpan">選択してください</span></div>
+                                  <div class="selListWithdraw" ng-click="shopSelectValue1('利用したいサービスがなかったため',1)"><span class="selectListSpan">利用したいサービスがなかったため</span></div>
+                                  <div class="selListWithdraw" ng-click="shopSelectValue1('他のサービスの方が良いため',2)"><span class="selectListSpan">他のサービスの方が良いため</span></div>
+                                  <div class="selListWithdraw" ng-click="shopSelectValue1('サイトが使いにくいわかりにくいため',3)"><span class="selectListSpan">サイトが使いにくいわかりにくいため</span></div>
+                                  <div class="selListWithdraw" ng-click="shopSelectValue1('サポートの対応が良くなかったため',4)"><span class="selectListSpan">サポートの対応が良くなかったため</span></div>
+                                  <div class="selListWithdraw" ng-click="shopSelectValue1('重複アカウントを作成してしまったため',5)"><span class="selectListSpan">重複アカウントを作成してしまったため</span></div>
+                                </div>
+                              </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="quit_reason_tag">
+                        <div class="col-md-12 col-sm-12 col-xs-12 quit_reason_tag_1">よろしければ退会理由の詳細をお書きください</div>
+                    </td>
+                    <td>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <textarea style="width: 100%;" rows="12" ng-model="data.detail"></textarea>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="col-md-12 col-sm-12 col-xs-12 displayPc quit_padding_2">
+            <table class="quit_reason_table">
+                <tr>
+                    <td class="quit_reason_tag">
+                        <div class="col-md-8 col-sm-8 col-xs-8 quit_table_xs_padding quit_reason_tag_1">退会理由を選択してください。</div>
+                        <div class="col-md-4 col-sm-4 col-xs-4 quit_table_xs_padding quit_reason_tag_2">
+                            <span class="quit_reason_tag_icon">必須</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="col-md-12 col-sm-12 col-xs-12 quit_table_xs_padding">
+                            <div class="col-md-12 col-sm-12 col-xs-12 padding_zero">
+                              <div class="withdraw_selInput" ng-click="shopSelect1()">
+                                  <span class="selectListSpan">{{selectDesc1}}</span>
+                              </div>
+                              <div class="withdraw_selList withdraw_selPosition" ng-hide="selectHide1" ng-click="shopCloseSelect1()" style="z-index: 500;">
+                                <div class="selListWithdraw" ng-click="shopSelectValue1('選択してください',0)"><span class="selectListSpan">選択してください</span></div>
+                                <div class="selListWithdraw" ng-click="shopSelectValue1('利用したいサービスがなかったため',1)"><span class="selectListSpan">利用したいサービスがなかったため</span></div>
+                                <div class="selListWithdraw" ng-click="shopSelectValue1('他のサービスの方が良いため',2)"><span class="selectListSpan">他のサービスの方が良いため</span></div>
+                                <div class="selListWithdraw" ng-click="shopSelectValue1('サイトが使いにくいわかりにくいため',3)"><span class="selectListSpan">サイトが使いにくいわかりにくいため</span></div>
+                                <div class="selListWithdraw" ng-click="shopSelectValue1('サポートの対応が良くなかったため',4)"><span class="selectListSpan">サポートの対応が良くなかったため</span></div>
+                                <div class="selListWithdraw" ng-click="shopSelectValue1('重複アカウントを作成してしまったため',5)"><span class="selectListSpan">重複アカウントを作成してしまったため</span></div>
+                              </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="quit_reason_tag">
+                        <div class="col-md-12 col-sm-12 col-xs-12 quit_table_xs_padding quit_reason_tag_1">よろしければ退会理由の詳細をお書きください</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="col-md-12 col-sm-12 col-xs-12 quit_table_xs_padding">
+                            <textarea style="width: 100%;" rows="12" ng-model="data.detail"></textarea>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="col-md-12 col-sm-12 col-xs-12 quit_padding_3">
+            <div class="col-md-3 col-sm-12 col-xs-12"></div>
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <a href="javascript:void(0);" ng-click="withdrawEnd()"><button type="submit" class="quit_btn_submit">退会する</button></a>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <a href="javascript:void(0);" ng-click="goTop()"><button type="submit" class="quit_btn_submit">退会しない</button></a>
+            </div>
+            <div class="col-md-3 col-sm-12 col-xs-12"></div>
+        </div>
+    </div>
+</section><!--/#Quit_reason-->
+<div ng-include="'views/footer.html'" ng-hide="hideFooter"></div>

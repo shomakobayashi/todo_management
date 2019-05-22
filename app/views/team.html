@@ -1,0 +1,26 @@
+<style>
+figcaption{
+  display: none;
+}
+</style>
+<section class="minHeightVh100">
+  	<div class="container body_containerPadding">
+        <div class="col-md-12 col-sm-12 col-xs-12 padding_zero"><span class="list_title">TEAM2020</span></div>
+      	<div class="col-md-4 col-sm-4 col-xs-12 team_content" ng-repeat="team in results.team2020List">
+        		<div class="col-md-6 col-sm-12 col-xs-12 team_div">
+          			<p>{{team.name}}</p>
+                <div class="col-md-9 col-sm-6 col-xs-12" style="padding: 0;text-align: center;" ng-repeat="pic in team.pic" ng-click="getTeamPic(team.pic)">
+  				          <img ng-src="{{pic}}" class="team_img">
+          			</div>
+        		</div>
+      	</div>
+        <div pagination class="col-md-12 col-sm-12 col-xs-12 change_page event_padding2" ng-hide="hidePages" align="center">
+            <ul>
+                <a href="javascript:void(0);"><li ng-click="upPageClick()">&lt;</li></a>
+                <div id="pagesChange"></div>
+                <a href="javascript:void(0);"><li ng-click="downPageClick()">&gt;</li></a>
+            </ul>
+        </div>
+    </div>
+</section>
+<div ng-include="'views/footer.html'" ng-hide="hideFooter"></div>

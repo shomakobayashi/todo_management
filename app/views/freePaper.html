@@ -1,0 +1,37 @@
+<style>
+figcaption{
+  display: none;
+}
+</style>
+<section class="minHeightVh100">
+	<div class="container body_containerPadding">
+    <div class="col-md-12 col-sm-12 col-xs-12 list_title padding_zero">FREE PAPER</div>
+		<div class="col-md-12 col-sm-12 col-xs-12 free_content row">
+			<div ng-repeat="freePaper in results.fpjpList" class="free_goods" >
+        <div ng-click="getDetail(freePaper.uuid)">
+		     <img ng-src="{{freePaper.picUrl}}" ondragstart="return false;" >
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0 5px">
+          <div class="col-md-6 col-sm-12 col-xs-12" style="padding: 0;">
+            <p class="freePaper_ranking">Vol.{{freePaper.ranking}}</p>
+          </div>
+          <div class="col-md-6 col-sm-12 col-xs-12" style="padding: 0;">
+            <button type="button" class="freePaper_favorite_btn" ng-click="addMyPage($index)" ng-if="freePaper.favorite==false">お気に入り <i class="fa fa-star-o"></i></button>
+            <button type="button" class="freePaper_favorite_btn" style="background-color:#A9A9A9" ng-click="RemoveMyPage($index)" ng-if="freePaper.favorite==true">お気に入り済み <i class="fa fa-star"></i></button>
+          </div>
+        </div>
+      </div>
+		</div>
+    <div id="ad" class="ad displayPc" style="" align="center"></div>
+    <div pagination class="col-md-12 col-sm-12 col-xs-12 change_page event_padding2" ng-hide="hidePages" align="center">
+        <ul>
+            <a href="javascript:void(0);"><li ng-click="upPageClick()">&lt;</li></a>
+            <div id="pagesChange"></div>
+            <a href="javascript:void(0);"><li ng-click="downPageClick()">&gt;</li></a>
+        </ul>
+    </div>
+	</div>
+</section>
+<div ng-include="'views/footer.html'" ng-hide="hideFooter"></div>
+<!-- <script type="text/javascript" src="//ad-api-v01.uliza.jp/player.php?player_type=1&campaign=1387&pc_width=600"></script>
+<script type="text/javascript" src="https://ad-api-v01.uliza.jp/player.php?player_type=1&campaign=1387&pc_width=600"></script> -->

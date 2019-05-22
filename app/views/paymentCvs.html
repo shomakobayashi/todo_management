@@ -1,0 +1,105 @@
+<style type="text/css">
+li.arrowW1{
+  background-color: rgb(220,220,220);
+  color: white;
+  padding: 0 25px 0 15px;
+}
+li.arrowW1:after {
+  border-color: transparent  rgb(220,220,220);
+}
+li.arrowW2{
+  background-color: rgb(238,238,238);
+  padding: 0 40px 0 20px;
+}
+li.arrowW2:before {
+  border-color: rgb(238,238,238) transparent;
+}
+li.arrowW2:after {
+  border-color: transparent rgb(238,238,238);
+}
+li.arrowW3{
+  background-color: rgb(46,167,224);
+  padding: 0 45px 0 35px;
+}
+li.arrowW3:before {
+  border-color: rgb(46,167,224) transparent;
+}
+li.arrowW3:after {
+  border-color: transparent rgb(46,167,224);
+}
+li.arrowW4{
+  background-color: rgb(204,204,204);
+  padding: 0 45px 0 35px;
+}
+li.arrowW4:before {
+  border-color: rgb(204,204,204) transparent;
+}
+li.arrowW4:after {
+  border-color: transparent rgb(204,204,204);
+}
+</style>
+<section class="minHeightVh100">
+<div class="container body_containerPadding">
+    <div class="col-lg-12 col-xs-12" align="center">
+        <img src="../images/login_logo.png" class="buy_TopImg">
+        <p class="buy_TopP">支払い情報を入力</p>
+        <div class="display">
+          <li class='arrowW arrowW1'><span style="color: black;">お届け先．支払い方法の選択<span></li>
+          <li class='arrowW arrowW2'><span style="color: black;">ご注文内容の確認<span></li>
+          <li class='arrowW arrowW3'><span style="color: white;">支払い情報を入力<span></li>
+          <li class='arrowW arrowW4'><span style="color: black;">ご注文完了<span></li>
+        </div>
+    </div>
+    <div class="col-lg-12 col-xs-12 buy_title" align="center">
+        <div class="buyInfoSubTitle" align="left">
+            <p style="font-weight: normal;">支払い情報を入力</p>
+        </div>
+    </div>
+    <div class="col-lg-12 col-xs-12" align="center">
+      <table border="1" class="buy_table_List">
+        <tbody>
+          <tr>
+              <td class="buy_table_left">氏名（漢字）<span class="table_icon">必須</span><span class="table_icon_small">*</span></td>
+              <td class="buy_table_right">
+                  <div class="col-md-4 col-sm-4 col-xs-5 padding_zero" style="font-weight: bold;">
+                      <input id="firstName" name="firstName" placeholder="姓" class="inputStyle" type="text" ng-model="formData.firstName">
+                  </div>
+                  <div class="col-md-1 col-sm-1 col-xs-1"></div>
+                  <div class="col-md-4 col-sm-4 col-xs-5 padding_zero" style="font-weight: bold;">
+                      <input id="secondName" name="secondName" placeholder="名" class="inputStyle" type="text" ng-model="formData.secondName">
+                  </div>
+              </td>
+          </tr>
+          <tr>
+              <td class="buy_table_left">氏名（カナ）<span class="table_icon">必須</span><span class="table_icon_small">*</span></td>
+              <td class="buy_table_right">
+                  <div class="col-md-4 col-sm-4 col-xs-5 padding_zero" style="font-weight: bold;">
+                      <input id="firstNameKana" name="firstNameKana" placeholder="セイ" class="inputStyle" type="text" ng-model="formData.firstNameKana">
+                  </div>
+                  <div class="col-md-1 col-sm-1 col-xs-1"></div>
+                  <div class="col-md-4 col-sm-4 col-xs-5 padding_zero" style="font-weight: bold;">
+                      <input id="secondNameKana" name="secondNameKana" placeholder="メイ" class="inputStyle" type="text" ng-model="formData.secondNameKana">
+                  </div>
+              </td>
+          </tr>
+          <tr>
+              <td class="buy_table_left">電話番号<span class="table_icon">必須</span><span class="table_icon_small">*</span></td>
+              <td class="buy_table_right">
+                  <input name="tel" class="inputStyle" type="text" ng-model="formData.tel">
+              </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-lg-12 col-xs-12" align="center">
+      <div class="col-md-2 col-sm-2"></div>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <a href="#"><button type="button" class="buy_confirmBtn buy_confirmBtn_color1" name="confirm" value="Confirm">ショッピングに戻る</button></a>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <button type="button" class="buy_confirmBtn buy_confirmBtn_color2" name="confirm" value="Confirm" ng-click="postPaymentCvs()">&nbsp;&nbsp;&nbsp; 支払いをする&nbsp;&nbsp;&nbsp;</button>
+      </div>
+    </div>
+   </div>
+</section>
+<div ng-include="'views/footer.html'" ng-hide="hideFooter"></div>

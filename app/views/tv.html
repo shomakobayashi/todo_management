@@ -1,0 +1,53 @@
+<div style="position: relative;">
+<section class="minHeightVh100">
+    <div class="container body_containerPadding">
+        <div class="col-md-12 col-sm-12 col-xs-12 padding_zero display"><span class="list_title">MOVE UP TV</span></div>
+        <div class="col-md-12 col-sm-12 col-xs-12 padding_zero displayPc"><span class="list_title">TV</span></div>
+        <div class="col-md-12 col-sm-12 col-xs-12 event_padding4">
+            <div class="col-md-6 col-sm-12 display"></div>
+            <a href="/tv/0/1/"><div class="col-md-1 col-sm-2 col-xs-4 event_paddingLR5"><button type="button" class="rise_btn_submit" style="background-color: black">ALL</button></div></a>
+            <a href="/tv/1/1/"><div class="col-md-1 col-sm-2 col-xs-4 event_paddingLR5"><button type="button" class="rise_btn_submit" style="background-color: #F40104">SPECIAL</button></div></a>
+            <a href="/tv/5/1/"><div class="col-md-1 col-sm-2 col-xs-4 event_paddingLR5"><button type="button" class="rise_btn_submit" style="background-color: #174981">OKAYAMA</button></div></a>
+            <a href="/tv/4/1/"><div class="col-md-1 col-sm-2 col-xs-4 event_paddingLR5"><button type="button" class="rise_btn_submit" style="background-color: #2F9A51">LIFE</button></div></a>
+            <a href="/tv/3/1/"><div class="col-md-1 col-sm-2 col-xs-4 event_paddingLR5"><button type="button" class="rise_btn_submit" style="background-color: #F41992">BEAUTY</button></div></a>
+            <a href="/tv/2/1/"><div class="col-md-1 col-sm-2 col-xs-4 event_paddingLR5"><button type="button" class="rise_btn_submit" style="background-color: #F68028">KIDS</button></div></a>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 padding_zero">
+          <div ng-repeat="tv in results.tvList">
+            <div class="col-md-4 col-sm-4 col-xs-12 tv_img_padding">
+                <a href="/tvDetail/{{tv.uuid}}/">
+                    <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms">
+                        <div class="col-md-12 col-sm-12 col-xs-12 padding_zero" style="overflow: hidden;">
+                            <div class="tv_imgLogo" style="{{tv.color}}"><span>{{tv.status}}</span></div>
+                            <img ng-src="{{tv.url}}" alt="" class="tv_pic">
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 tv_name_text">
+                            <label class="lineStyle lineHid1">{{tv.title}}</label>
+                            <span class="rise_name2">{{tv.date}}</span>
+                            <span ng-if="tv.favorite==false" class="rise_name2"><br>{{tv.office}}</span>
+                            <span ng-if="tv.favorite==true" class="rise_name2"><br>{{tv.office}}</span>
+                        </div>
+                    </div>
+                </a>
+                <div class="col-md-12 col-sm-12 col-xs-12 tv_star">
+                    <span ng-if="tv.favorite==true"><i class="fa fa-star tv_i"></i></span>
+                    <span ng-if="tv.favorite==false"><i class="fa fa-star tv_true"></i></span>
+                </div>
+                <div ng-if="$index == 1">
+                    <div id="ad" class="ad displayPc" style="" align="center"></div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div ng-bind-html="ad"></div>
+        <div pagination class="col-md-12 col-sm-12 col-xs-12 change_page event_padding2" ng-hide="hidePages" align="center">
+            <ul>
+                <a href="javascript:void(0);"><li ng-click="upPageClick()">&lt;</li></a>
+                <div id="pagesChange"></div>
+                <a href="javascript:void(0);"><li ng-click="downPageClick()">&gt;</li></a>
+            </ul>
+        </div>
+    </div>
+</section><!--/#Store-->
+</div>
+<div ng-include="'views/footer.html'" ng-hide="hideFooter" style="position: relative;z-index:999;"></div>

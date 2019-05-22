@@ -1,0 +1,100 @@
+<section class="minHeightVh100">
+    <div class="container body_containerPadding">
+            <div class="col-md-12 col-sm-12 col-xs-12 account_box account_table">
+                <div class="col-md-3 col-sm-3 col-xs-4 account_tag">氏名（漢字）</div>
+                <div class="col-md-7 col-sm-7 col-xs-7">
+                    <div class="col-md-12 col-sm-12 col-xs-12 padding_zero_sp736">
+                      <span>{{formData.firstName}}&nbsp;&nbsp;{{formData.secondName}}</span>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-12"></div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 account_table">
+                <div class="col-md-3 col-sm-3 col-xs-4 account_tag">氏名（カナ）</div>
+                <div class="col-md-7 col-sm-7 col-xs-7">
+                    <div class="col-md-12 col-sm-12 col-xs-12 padding_zero_sp736">
+                      <span>{{formData.firstNameKana}}&nbsp;&nbsp;{{formData.secondNameKana}}</span>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-12"></div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 account_table">
+                <div class="col-md-3 col-sm-3 col-xs-4 account_tag">ニックネーム</div>
+                <div class="col-md-7 col-sm-7 col-xs-7">
+                    <div class="col-md-12 col-sm-12 col-xs-12 padding_zero_sp736">
+                        <span>{{formData.nickname}}</span>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-12"></div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 account_table">
+                <div class="col-md-3 col-sm-3 col-xs-4 account_tag">性別</div>
+                <div class="col-md-7 col-sm-7 col-xs-7">
+                  <div class="col-md-12 col-sm-12 col-xs-12 padding_zero_sp736">
+                    <span>{{formData.gender}}</span>
+                  </div>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-12"></div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 account_table">
+                <div class="col-md-3 col-sm-3 col-xs-4 account_tag">生年月日</div>
+                <div class="col-md-7 col-sm-7 col-xs-7">
+                    <div class="col-md-12 col-sm-12 col-xs-12 padding_zero_sp736">
+                        <span>{{formData.birthyear}}</span>
+                        <span class="account_span_5">年</span>
+                        <span>{{formData.birthmonth}}</span>
+                        <span class="account_span_5">月</span>
+                        <span>{{formData.birthday}}</span>
+                        <span class="account_span_5">日</span>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-12"></div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 account_table">
+                <div class="col-md-3 col-sm-3 col-xs-4 account_tag">職業</div>
+                <div class="col-md-7 col-sm-7 col-xs-7">
+                    <div class="col-md-12 col-sm-12 col-xs-12 padding_zero_sp736">
+                        <span>{{formData.career}}</span>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-12"></div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 account_table">
+                <div class="col-md-3 col-sm-3 col-xs-4 account_tag">メール</div>
+                <div class="col-md-7 col-sm-7 col-xs-7">
+                    <div class="col-md-12 col-sm-12 col-xs-12 padding_zero_sp736">
+                        <span>{{formData.mail}}</span>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-12"></div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 account_table">
+                <div class="col-md-3 col-sm-3 col-xs-4 account_tag">住所</div>
+                <div class="col-md-7 col-sm-7 col-xs-7">
+                    <div class="col-md-12 col-sm-12 col-xs-12 padding_zero_sp736">
+                        <span class="account_span_5">〒</span>
+                        <span>{{formData.zipcode}}</span>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 padding_zero_sp736 account_padding_3"></div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 padding_zero_sp736">
+                        <span>{{formData.address}}</span>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 padding_zero_sp736 account_padding_3"></div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 padding_zero_sp736">
+                        <span>{{formData.address2}}</span>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-12"></div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12" align="center">
+              <a href="javascript :;" onClick="javascript :history.back(-1);" class="application_btn_padding">
+                <button type="submit" class="Application_confirmBtn" style="background: #E5E5E5;padding:0 48px;color:black;">入力画面に戻る</button>
+              </a>
+              <a ng-click="onApplication()">
+                <button type="button" class="Application_confirmBtn" name="confirm" value="Confirm">応募する</button>
+              </a>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 account_padding_2"></div>
+    </div>
+</section>
+<div ng-include="'views/footer.html'" ng-hide="hideFooter"></div>

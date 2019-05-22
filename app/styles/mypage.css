@@ -1,0 +1,285 @@
+.mypage_padding_3{
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+.mypage_route{
+    font-size: 0.8em;
+    color: black;
+    letter-spacing: 2px;
+}
+.mypage_box{
+    border-top: 4px solid red;
+    background-color: white;
+}
+.mypage_nickpic{
+    height: 100%;
+    width: 100%;
+    -moz-box-shadow:4px 4px 10px #333333;
+    -webkit-box-shadow:4px 4px 10px #333333;
+    box-shadow:4px 4px 10px #333333;
+}
+.mypage_cirle{
+    height: 1.6em;
+    width: 1.6em;
+    border-radius: 100%;
+    border: 1px solid #EAB543;
+    background-color: white;
+    color: #EAB543;
+}
+.mypage_cirle p{
+  margin:-2px 0 0 2px;
+}
+.mypage_span_1{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.mypage_span_2{
+    color: black;
+    font-weight: bold;
+    font-size: 0.8em;
+}
+.mypage_span_3{
+    color: black;
+    font-weight: bold;
+    font-size: 0.8em;
+    letter-spacing: 2px;
+}
+.mypage_notify_p{
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+.mypage_notify_a{
+  color: black;
+  font-weight: bold;
+}
+.mypage_notify p{
+  font-size: 11px;
+  color: red;
+  line-height:18px;
+}
+.mypage_notify span{
+  float:right;color: red;
+  font-size: 12px;
+}
+.mypage_notify_label{
+  font-weight: normal;
+  font-size: 12px;
+  margin-bottom: 0;
+}
+.mypage_notify_label1{
+  font-weight: normal;
+  font-size: 10px;
+  margin-bottom: 0;
+}
+.mypage_notify{
+  border-bottom: 1px solid #E4E4E4;
+  padding: 10px 0;
+}
+.mypage_notify p{
+  margin: 0;
+}
+.mypage_favor_list{
+    padding: 0.8em 12px 0.8em 0;
+}
+.mypage_pic{
+   width: 100%;
+   height: 9em;
+   line-height: 9em;
+   text-align: center;
+}
+.mypage_favor_pic{
+   width:auto;
+   height:auto;
+   max-width:100%;
+   max-height:100%;
+}
+.mypage_favor_name{
+    line-height:20px;
+    font-weight: 900;
+}
+.SHOP{
+    font-size: 1em;
+    text-align: center;
+    color: white;
+    line-height: 1.6em;
+    width: 50%;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-color: red;
+}
+.EVENT{
+    font-size: 1em;
+    text-align: center;
+    color: white;
+    line-height: 1.6em;
+    width: 50%;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-color: #004984;
+}
+.GOODS{
+    font-size: 1em;
+    text-align: center;
+    color: white;
+    line-height: 1.6em;
+    width: 50%;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-color: #004984;
+}
+.RECRUIT{
+    font-size: 1em;
+    text-align: center;
+    color: white;
+    line-height: 1.6em;
+    width: 50%;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-color: #009a4c;
+}
+.TV{
+    font-size: 1em;
+    text-align: center;
+    color: white;
+    line-height: 1.6em;
+    width: 50%;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-color: red;
+}
+.FREEPAPER{
+    font-size: 0.8em;
+    text-align: center;
+    color: white;
+    line-height: 2.0em;
+    width: 50%;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-color: #009a4c;
+}
+.mypage_record_date{
+    font-size: 0.8em;
+    position: absolute;bottom: 10px;right: 20px;
+}
+.mypage_favor_border_bottom{
+    border-bottom: 1px solid #979797;
+}
+.mypage_pagination_lg li a{
+    margin: 0 2px;
+    color: red;
+    font-weight: bold;
+    border: 2px solid red;
+}
+.mypage_pagination_lg li:first-child a{
+    margin: 0 10px;
+    border-radius: 0;
+}
+.mypage_pagination_lg li:last-child a{
+    margin: 0 10px;
+    border-radius: 0;
+}
+.mypage_pagination_lg li a:hover{
+   border: 2px solid #F20821;
+   color: #FFF;
+   background-color: #F20821;
+}
+.mypage_page_title{
+  font-weight: bold;
+  font-size: 0.8em;
+}
+.mypage_page_excerpt{
+  font-size: 0.8em;
+}
+.mypagentf_div{
+  border-bottom:1px solid #CCC;
+  padding:0;
+  color: black;
+}
+.mypagentf_pdg{
+  padding: 15px 0;
+}
+.mypagentf_pdg1{
+  padding: 5px 0 15px;
+}
+.mypagentf_delMgB{
+  margin: 0;
+}
+.mypagentf_mgl{
+  margin: 0 0 0 50px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+@media (max-width: 1024px) {
+.SHOP{
+    width: 60%;
+}
+.EVENT{
+    width: 60%;
+}
+.GOODS{
+    width: 60%;
+}
+.FREEPAPER{
+    width: 60%;
+}
+.RECRUIT{
+    width: 60%;
+}
+}
+@media (max-width: 736px) {
+.mypage_padding_3{
+  padding-top: 0;
+}
+.mypagentf_div{
+  margin-bottom: 20px;
+}
+.mypage_box{
+    border: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+.mypage_favor_name{
+    font-size: 0.8em;
+    line-height:18px;
+}
+.mypage_record_date{
+    font-size: 0.5em;
+}
+.mypage_favor_pic{
+    width: 100%;
+    height: 8em;
+}
+.mypage_favor_pic{
+   width:auto;
+   height:auto;
+   max-width:100%;
+   max-height:100%;
+}
+.mypage_listtype{
+  font-size: 0.5em;
+  text-align: center;
+  color: white;
+  line-height: 2.0em;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.SHOP{
+    width: 70%;
+}
+.EVENT{
+    width: 70%;
+}
+.GOODS{
+    width: 70%;
+}
+.RECRUIT{
+    width: 70%;
+}
+.TV{
+    width: 70%;
+}
+.FREEPAPER{
+    width: 70%;
+}
+}

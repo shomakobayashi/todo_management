@@ -1,0 +1,240 @@
+<section class="minHeightVh100 account_section">
+    <div class="container body_containerPadding">
+        <div class="accountSelectDiv" ng-hide="selectHide0" ng-click="shopCloseAllSelect()"></div>
+        <div class="col-md-12 col-sm-12 col-xs-12 display">
+            <a href="/"><span class="account_route">トップ</span></a>
+            <span class="account_route">&gt;</span>
+            <a href="/myPage"><span class="account_route">マイページ</span></a>
+            <span class="account_route">&gt;</span>
+            <span class="account_route">アカウント設定</span>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-12 display padding_zero_sp736">
+            <div class="col-md-12 col-sm-12 col-xs-12 account_box padding_zero">
+                <div class="col-md-12 col-sm-12 col-xs-6 text-center account_padding_2">
+                    <img ng-src="{{thumbnailUrl}}" alt="" class="img-circle mypage_nickpic" ng-hide="thumbnailUrlHide">
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-6 account_padding_2" ng-hide="formData.nickname == null || formData.nickname.length==0">
+                    <span class="account_span_1">{{formData.nickname}}</span>
+                    <span class="account_span_2">さん</span>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12 account_padding_2">
+                    <div class="col-md-12 col-sm-6 col-xs-6 account_padding_none" style="display: none;">
+                        <a href="#"><span class="fa fa-shopping-cart account_span_4">&nbsp;&nbsp;購入履歴</span></a>
+                    </div>
+                    <div class="col-md-12 col-sm-6 col-xs-6 account_padding_none" style="display: none;">
+                        <a href="#"><span class="fa fa-cog account_span_4">&nbsp;&nbsp;アカウント設定</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9 col-sm-9 col-xs-12 padding_zero_sp736">
+            <div class="col-md-12 col-sm-12 col-xs-12 account_box">
+                <div class="col-md-12 col-sm-12 col-xs-12 display account_padding_2 account_title">アカウント設定</div>
+                <div class="col-md-12 col-sm-12 col-xs-12 displayPc account_padding_2">
+                    <span class="fa fa-cog account_title">&nbsp;&nbsp;アカウント設定</span>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12 account_table">
+                    <div class="col-md-3 col-sm-3 col-xs-12 account_tag">プロフィール画像</div>
+                    <div class="col-md-9 col-sm-9 col-xs-12 display">
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <img ngf-src="formData.thumbnail || thumbnailUrl" alt="" class="img-circle account_nickpic" id="account_preview" ng-hide="thumbnailUrlHide">
+                        </div>
+                        <div class="col-md-8 col-sm-8 col-xs-12">
+                            <button href="#" class="account_input_upload" ngf-select="" ngf-pattern="'image/*'" ngf-multiple="false" style="padding: 0 20px;width: auto;"
+                            ngf-resize="{width: 200, height: 200, quality: .9, centerCrop: true}" ng-model="formData.thumbnail">ファイルを選択</button>
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-sm-9 col-xs-12 displayPc padding_zero_sp736">
+                        <div class="col-md-3 col-sm-3 col-xs-3 padding_zero_sp736">
+                            <img ngf-src="formData.thumbnail || thumbnailUrl" alt="" class="img-circle account_nickpic" id="account_preview">
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 padding_zero_sp736">
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <button href="#" class="account_input_upload" ngf-select="" ngf-pattern="'image/*'" ngf-multiple="false"
+                                ngf-resize="{width: 200, height: 200, quality: .9, centerCrop: true}" ng-model="formData.thumbnail">ファイルを選択</button>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12" ng-hide="resetHide">
+                                <button type="button" class="account_btn_confirm" ng-click="gotoChangeMail()">
+                                    <span>メールアドレス変更</span>
+                                </button>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12" ng-hide="resetHide">
+                                <button type="button" class="account_btn_confirm" ng-click="gotoReset()">
+                                    <span>パスワード変更</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 col-sm-9 col-xs-12 padding_zero_sp736">
+                  <div class="col-md-12 col-sm-12 col-xs-12 account_table padding_zero">
+                      <div class="col-md-4 col-sm-4 col-xs-12 account_tag">メール</div>
+                      <div class="col-md-8 col-sm-12 col-xs-12 account_xs_padding" ng-if="formData.loginType != 3">
+                          <input type="text" id="mail" name="mail" ng-model="formData.mail" class="inputStyle"></input>
+                      </div>
+                      <div class="col-md-8 col-sm-12 col-xs-12 account_xs_padding" ng-if="formData.loginType == 3">
+                          <span>{{formData.mail}}</span>
+                      </div>
+                  </div>
+                  <div class="col-md-12 col-sm-12 col-xs-12 account_table padding_zero">
+                    <div class="col-md-4 col-sm-4 col-xs-12 account_tag">氏名（漢字）</div>
+                    <div class="col-md-8 col-sm-8 col-xs-12 padding_zero">
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <span>姓&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            <input type="text" id="firstNameKanji" name="firstNameKanji" value="" class="account_form_input account_input_size" ng-model="formData.firstName"/>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <span>名&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            <input type="text" id="secondNameKanji" name="secondNameKanji" value="" class="account_form_input account_input_size" ng-model="formData.secondName"/>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12 col-sm-12 col-xs-12 account_table padding_zero">
+                      <div class="col-md-4 col-sm-4 col-xs-12 account_tag">氏名（カナ）</div>
+                      <div class="col-md-8 col-sm-8 col-xs-12 padding_zero">
+                          <div class="col-md-6 col-sm-6 col-xs-6">
+                              <span>セイ</span>
+                              <input type="text" id="firstNameKana" name="firstNameKana" value="" class="account_form_input account_input_size" ng-model="formData.firstNameKana">
+                          </div>
+                          <div class="col-md-6 col-sm-6 col-xs-6">
+                              <span>メイ</span>
+                              <input type="text" id="secondNameKana" name="secondNameKana" value="" class="account_form_input account_input_size" ng-model="formData.secondNameKana">
+                          </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 padding_zero display">
+                    <button type="button" class="account_btn_confirm" style="margin-top: 20px;" ng-hide="resetHide" ng-click="gotoChangeMail()">
+                        <span>メールアドレス変更</span>
+                    </button>
+                    <button type="button" class="account_btn_confirm" style="margin-top: 20px;" ng-hide="resetHide" ng-click="gotoReset()">
+                        <span>パスワード変更</span>
+                    </button>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12 account_table">
+                    <div class="col-md-3 col-sm-3 col-xs-12 account_tag">ニックネーム</div>
+                    <div class="col-md-6 col-sm-6 col-xs-12 padding_zero">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <input type="text" id="nickName" name="nickName" value="" class="inputStyle" ng-model="formData.nickname">
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <span>※&nbsp;&nbsp;全半角問わず2～16字以内</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12 account_table">
+                    <div class="col-md-3 col-sm-3 col-xs-12 account_tag">性別</div>
+                    <div class="col-md-9 col-sm-9 col-xs-12 padding_zero">
+                        <div class="col-md-1 col-sm-1 col-xs-1 account_radio">
+                            <input type="radio" id="gender1" name="gender" checked="checked" ng-value="1" ng-model="formData.gender"/>
+                        </div>
+                        <div class="col-md-2 col-sm-2 col-xs-4 padding_zero">
+                            男性
+                        </div>
+                        <div class="col-md-1 col-sm-1 col-xs-1 account_radio">
+                            <input type="radio" id="gender2" name="gender" ng-value="2" ng-model="formData.gender"/>
+                        </div>
+                        <div class="col-md-2 col-sm-2 col-xs-4 padding_zero">
+                            女性
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12 account_table">
+                    <div class="col-md-3 col-sm-3 col-xs-12 account_tag">生年月日</div>
+                    <div class="col-md-8 col-sm-8 col-xs-12">
+                        <div class="col-md-3 col-sm-3 col-xs-3 padding_zero">
+                            <div class="year_select" ng-click="yearSelect()">
+                                <span class="selAccountListSpan">{{selectYearDesc}}</span>
+                            </div>
+                            <div class="year_list year_list_position" ng-hide="selectYearHide" ng-click="yearSelectClose()" style="z-index: 500;">
+                                <div ng-repeat="year in yearList">
+                                    <div class="selListAccount" ng-click="yearSelectValue(year.desc)"><span class="selAccountListSpan">{{year.desc}}</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-1 col-sm-1 col-xs-1 padding_zero" align="center">
+                            <span>年</span>
+                        </div>
+                        <div class="col-md-2 col-sm-2 col-xs-2 padding_zero">
+                            <div class="year_select" ng-click="monthSelect()">
+                                <span class="selAccountListSpan">{{selectMonthDesc}}</span>
+                            </div>
+                            <div class="year_list year_list_position" ng-hide="selectMonthHide" ng-click="monthSelectClose()" style="z-index: 500;">
+                                <div ng-repeat="month in monthList">
+                                    <div class="selListAccount" ng-click="monthSelectValue(month.desc)"><span class="selAccountListSpan">{{month.desc}}</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-1 col-sm-1 col-xs-1 padding_zero" align="center">
+                            <span>月</span>
+                        </div>
+                        <div class="col-md-2 col-sm-2 col-xs-2 padding_zero">
+                            <div class="year_select" ng-click="daySelect()">
+                                <span class="selAccountListSpan">{{selectDayDesc}}</span>
+                            </div>
+                            <div class="year_list year_list_position" ng-hide="selectDayHide" ng-click="daySelectClose()" style="z-index: 500;">
+                                <div ng-repeat="day in dayList">
+                                  <div class="selListAccount" ng-click="daySelectValue(day.desc)"><span class="selAccountListSpan">{{day.desc}}</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-1 col-sm-1 col-xs-1 padding_zero" align="center">
+                            <span>日</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12 account_table">
+                    <div class="col-md-3 col-sm-3 col-xs-12 account_tag">職業</div>
+                    <div class="col-md-7 col-sm-7 col-xs-12">
+                        <div class="col-md-12 col-sm-12 col-xs-12 padding_zero">
+                            <div class="account_selInput" ng-click="shopSel1()">
+                                <span class="selAccountListSpan">{{selDesc1}}</span>
+                            </div>
+                            <div class="account_selList account_selPosition1" ng-hide="selHide1" ng-click="shopCloseSel1()" style="z-index: 500;">
+                                <div class="selListAccount" ng-click="shopSelValue1('職業を選択',0)"><span class="selAccountListSpan">職業を選択</span></div>
+                                <div class="selListAccount" ng-click="shopSelValue1('中学生',1)"><span class="selAccountListSpan">中学生</span></div>
+                                <div class="selListAccount" ng-click="shopSelValue1('高校生',2)"><span class="selAccountListSpan">高校生</span></div>
+                                <div class="selListAccount" ng-click="shopSelValue1('専門学生',3)"><span class="selAccountListSpan">専門学生</span></div>
+                                <div class="selListAccount" ng-click="shopSelValue1('大学生',4)"><span class="selAccountListSpan">大学生</span></div>
+                                <div class="selListAccount" ng-click="shopSelValue1('公務員',5)"><span class="selAccountListSpan">公務員</span></div>
+                                <div class="selListAccount" ng-click="shopSelValue1('自営業',6)"><span class="selAccountListSpan">自営業</span></div>
+                                <div class="selListAccount" ng-click="shopSelValue1('会社役員',7)"><span class="selAccountListSpan">会社役員</span></div>
+                                <div class="selListAccount" ng-click="shopSelValue1('会社員',8)"><span class="selAccountListSpan">会社員</span></div>
+                                <div class="selListAccount" ng-click="shopSelValue1('派遣社員',9)"><span class="selAccountListSpan">派遣社員</span></div>
+                                <div class="selListAccount" ng-click="shopSelValue1('契約社員',10)"><span class="selAccountListSpan">契約社員</span></div>
+                                <div class="selListAccount" ng-click="shopSelValue1('専業主婦',11)"><span class="selAccountListSpan">専業主婦</span></div>
+                                <div class="selListAccount" ng-click="shopSelValue1('専業主夫',12)"><span class="selAccountListSpan">専業主夫</span></div>
+                                <div class="selListAccount" ng-click="shopSelValue1('パート・アルバイト',13)"><span class="selAccountListSpan">パート・アルバイト</span></div>
+                                <div class="selListAccount" ng-click="shopSelValue1('その他',14)"><span class="selAccountListSpan">その他</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12 account_table">
+                    <div class="col-md-3 col-sm-3 col-xs-12 account_tag">住所</div>
+                    <div class="col-md-6 col-sm-6 col-xs-12 padding_zero">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <span class="account_span_5">〒</span>
+                            <input type="text" id="zipCode" name="zipCode" value="" class="account_form_input" onKeyUp="AjaxZip3.zip2addr(this,&#39;&#39;,&#39;address&#39;,&#39;address&#39;);" ng-model="formData.zipcode">
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 account_padding_3">
+                            <input type="text" id="address" name="address" value="" class="inputStyle" ng-model="formData.address">
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 account_padding_3">
+                            <input type="text" id="address2" name="address" value="" class="inputStyle" ng-model="formData.address2">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12 error" id="errContainer"></div>
+                <div class="col-md-3 col-sm-3 col-xs-12 display"></div>
+                <div class="col-md-6 col-sm-6 col-xs-12 account_btnSaveDiv">
+                    <button type="button" class="account_btn_save" ng-click="updatePerson()">
+                        <span>設定を保存</span>
+                    </button>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-12 display"></div>
+            </div>
+        </div>
+    </div>
+</section><!--/#Account-->
+<div ng-include="'views/footer.html'" ng-hide="hideFooter"></div>

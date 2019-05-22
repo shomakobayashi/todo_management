@@ -1,0 +1,69 @@
+<section class="minHeightVh100">
+    <div class="container body_containerPadding">
+        <div class="col-md-1 col-sm-12 col-xs-12 display"></div>
+        <div class="col-md-10 col-sm-12 col-xs-12 padding_zero_sp736">
+            <div class="col-md-12 col-sm-12 col-xs-12 contact_title">お問い合わせフォーム（確認画面）</div>
+            <div class="col-md-12 col-sm-12 col-xs-12 contact_message contact_message_style_1">以下のお問い合わせ内容で送信します。よろしいですか？</div>
+            <div class="col-md-12 col-sm-12 col-xs-12 contact_message contact_message_style_2">※ブラウザの戻りボタンは書き込み内容がクリアされる場合があります。書き直す場合は必ず画面の「入力画面へ戻る」ボタンをクリックしてください。</div>
+
+            <div class="col-md-12 col-sm-12 col-xs-12 contact_padding_2 display">
+                <table class="contact_input_table">
+                    <tr>
+                        <td class="buy_table_left">
+                            <span>メールアドレス</span>
+                        </td>
+                        <td class="buy_table_right">
+                            <span>{{result.mail}}</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="buy_table_left">
+                            <span>お問い合わせ内容</span>
+                        </td>
+                        <td class="buy_table_right">
+                            <span ng-bind-html="result.contents"></span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 contact_padding_2 displayPc">
+                <table class="contact_input_table">
+                    <tr>
+                        <td class="buy_table_left">
+                            <span>メールアドレス</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="buy_table_right">
+                            <span>{{result.mail}}</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="buy_table_left">
+                            <span>お問い合わせ内容</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="buy_table_right">
+                            <span ng-bind-html="result.contents"></span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 display contact_padding_2" align="center">
+                <a href="javascript :;" onClick="javascript :history.back(-1);"><button type="submit" class="contact_btn_submit2 contact_btn_return">入力画面に戻る</button></a>
+                <a href="javascript:void(0)" ng-click="contactConfirmEntry()"><button type="submit" class="contact_btn_submit2 contact_btn_confirm2">送信</button></a>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 displayPc contact_padding_2 padding_zero_sp736">
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <a href="javascript :;" onClick="javascript :history.back(-1);"><button type="submit" class="contact_btn_submit2 contact_btn_return">入力画面に戻る</button></a>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <a href="javascript:void(0)" ng-click="contactConfirmEntry()"><button type="submit" class="contact_btn_submit2 contact_btn_confirm2">送信</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1 col-sm-12 col-xs-12 display"></div>
+    </div>
+</section>
+<div ng-include="'views/footer.html'" ng-hide="hideFooter"></div>

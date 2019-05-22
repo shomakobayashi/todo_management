@@ -1,0 +1,106 @@
+<section class="minHeightVh100">
+    <div class="container body_containerPadding">
+        <div class="col-md-12 col-sm-12 col-xs-12 display">
+            <a href="/"><span class="mypage_route">トップ</span></a>
+            <span class="mypage_route">&gt;</span>
+            <span class="mypage_route">マイページ</span>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-12 padding_zero_sp736">
+            <div class="col-md-12 col-sm-12 col-xs-12 mypage_box padding_zero">
+                <div class="col-md-12 col-sm-12 col-xs-6 text-center mypage_padding_3">
+                    <img ng-src="{{thumbnailUrl}}" alt="" class="img-circle mypage_nickpic" ng-hide="thumbnailUrlHide">
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-6 mypage_padding_3">
+                    <p class="mypage_span_1">{{formData.nickname}}</p>
+                    <!-- <a href="/settings/"  class="mypage_notify_a">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;settings</a> -->
+                    <a href="/myPageNotify"><div class="displayPc" style="font-size: 12px;color: red;">新着お知らせ{{NotifyCount}}件</div></a>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12 table_boeder mypage_padding_3 display" align="center">
+                    <p class="mypage_notify_p">お知らせ</p>
+                    <div class="col-md-12 col-sm-12 col-xs-12 mypage_notify" align="left" ng-repeat="ntlist in notifyList">
+                      <a href="javascript:void(0)" ng-click="showNotifyContent(ntlist.id, $index)" style="color:black;">
+                        <p>{{ntlist.date}}</p>
+                        <div class="col-md-10 col-sm-11 col-xs-11 padding_zero">
+                          <label class="mypage_notify_label lineStyle lineHid1">{{ntlist.title}}</label>
+                        </div>
+                        <div class="col-md-2 col-sm-1 col-xs-1 padding_zero" ng-hide="ntlist.newHide">
+                          <span style="color:red;">new</span>
+                        </div>
+                      </a>
+                      <div class="col-md-12 col-sm-12 col-xs-12 padding_zero" ng-hide="ntlist.notifyContentHide">
+                        <label class="mypage_notify_label1">{{ntlist.content}}</label>
+                      </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 padding_zero" align="right">
+                      <a href="/myPageNotify/1/" class="mypage_notify_a">MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-9 col-sm-9 col-xs-12 padding_zero_sp736">
+            <div class="col-md-12 col-sm-12 col-xs-12 mypage_box">
+                    <div class="col-md-12 col-sm-12 col-xs-12 padding_zero" style="margin-top: 20px;">
+                        <span class="fa fa-star fa-lg">お気に入り {{results.count}} 件</span>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 30px 0 0 0;">
+                        <a href="javascript:void(0);" type="submit" ng-click="showAll()">
+                          <div class="col-md-1 col-sm-3 col-xs-3 shopPaddingLR2"><p class="tab tab_all">ALL</p></div>
+                        </a>
+                        <a href="javascript:void(0);" type="submit" ng-click="showShop()">
+                          <div class="col-md-2 col-sm-3 col-xs-3 shopPaddingLR2"><p class="tab tab_moveup">SHOP</p></div>
+                        </a>
+                        <a href="javascript:void(0);" type="submit" ng-click="showEvent()">
+                          <div class="col-md-2 col-sm-3 col-xs-3 shopPaddingLR2"><p class="tab tab_event">EVENT</p></div>
+                        </a>
+                        <a href="javascript:void(0)" type="submit" ng-click="showTV()">
+                          <div class="col-md-1 col-sm-3 col-xs-3 shopPaddingLR2"><p class="tab tab_moveup">TV</p></div>
+                        </a>
+                        <a href="javascript:void(0);" type="submit" ng-click="showRecruit()">
+                          <div class="col-md-2 col-sm-4 col-xs-4 shopPaddingLR2"><p class="tab tab_news">RECRUIT</p></div>
+                        </a>
+                        <a href="javascript:void(0);" type="submit" ng-click="showGoods()">
+                          <div class="col-md-2 col-sm-4 col-xs-4 shopPaddingLR2"><p class="tab tab_event">GOODS</p></div>
+                          </a>
+                        <a href="javascript:void(0)" type="submit" ng-click="showFreepaper()">
+                          <div class="col-md-2 col-sm-4 col-xs-4 shopPaddingLR2"><p class="tab tab_news">FREEPAPER</p></div>
+                        </a>
+                    </div>
+                <div class="col-md-12 col-sm-12 col-xs-12 padding_zero">
+                    <div class="col-md-6 col-sm-6 col-xs-12 mypage_content padding_zero" ng-repeat="list in results.shopList" >
+                        <div class="col-md-6 col-sm-6 col-xs-7 mypage_favor_list" ng-click="goToLink(list.shopType,list.status,list.type,list.uuid)">
+                          <div class="mypage_pic">
+                            <img ng-src="{{list.picUrl}}" alt="" class="mypage_favor_pic">
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-5 mypage_favor_list">
+                            <div class="mypage_favor_name lineStyle lineHid2" ng-click="goToLink(list.shopType,list.status,list.type,list.uuid)"><span>{{list.name}}</span></div>
+                            <div ng-class="list.type" class="mypage_listtype" ng-click="goToLink(list.shopType,list.status,list.type,list.uuid)">{{list.status}}</div>
+                            <div ng-if ="list.type == 'SHOP'" >
+                              <span class="notify_switch_btn">
+                                <div class="switch white">
+                                  <input type="radio" name="switch{{$index}}" id="switch-off{{$index}}" ng-checked="!notifyChecked{{$index}}" ng-click="notifyClick(14,list.uuid,7,0) ">
+                                  <input type="radio" name="switch{{$index}}" id="switch-on{{$index}}" ng-checked="notifyChecked{{$index}}" ng-click="notifyClick(14,list.uuid,7,1) ">
+                                  <label for="switch-off{{$index}}">Off</label>
+                                  <label for="switch-on{{$index}}">On</label>
+                                  <span class="toggle"></span>
+                                </div>
+                              </span>
+                            </div>
+                        </div>
+
+                        <div class="mypage_record_date" style="font-weight: 900;"><span>登録日：{{list.createDatetime}}</span></div>
+                    </div>
+                </div>
+                <div pagination class="col-md-12 col-sm-12 col-xs-12 change_page event_padding2" ng-hide="hidePages" align="center">
+                    <ul>
+                        <a href="javascript:void(0);"><li ng-click="upPageClick()">&lt;</li></a>
+                        <div id="pagesChange"></div>
+                        <a href="javascript:void(0);"><li ng-click="downPageClick()">&gt;</li></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!--/#My page-->
+<div ng-include="'views/footer.html'" ng-hide="hideFooter"></div>

@@ -1,0 +1,51 @@
+<section class="minHeightVh100">
+  <div class="container Application_padding">
+    <div class="row col-lg-12 col-xs-12" align="center">
+      <p class="Application_TopP">イベントに応募する</p>
+    </div>
+  <div class="row col-lg-12 col-xs-12 buy_title" align="center">
+    <div align="left">
+      <p>イベント概要</p>
+    </div>
+  </div>
+  <div class="row col-lg-12 col-xs-12" align="center">
+    <table border="1" class="buy_table_List">
+      <tbody>
+        <tr>
+          <td class="buy_table_left col-lg-4 col-xs-6">
+            <span>イベント名</span>
+          </td>
+          <td>
+            <div class="col-md-12 col-sm-12 col-xs-12 Application_title">
+            <span>{{result[0].title}}</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="buy_table_left col-lg-4 col-xs-6">
+            <div style="width: 100%;height: 100%;padding-top: 15px;">
+              <span>イベント内容</span>
+            </div>
+          </td>
+          <td>
+            <div class="col-md-12 col-sm-12 col-xs-12 Application_span">
+              <label>
+                <span ng-bind-html="result[0].detail"></span>
+              </label>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="row col-lg-12 col-xs-12" align="center">
+    <a href="javascript :;" onClick="javascript :history.back(-1);">
+      <button type="submit" class="ApplicationOver_btn_submit ApplicationOver_btn_return">入力画面に戻る</button>
+    </a>
+    <a href="javascript:void(0)" ng-click="onApplication()">
+      <button type="button" class="ApplicationOver_btn_submit ApplicationOver_btn_confirm" name="confirm" value="Confirm">応募する</button>
+    </a>
+  </div>
+  </div>
+</section>
+<div ng-include="'views/footer.html'" ng-hide="hideFooter"></div>

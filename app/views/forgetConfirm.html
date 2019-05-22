@@ -1,0 +1,44 @@
+<section>
+    <div class="container body_containerPadding">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12 PwdForget_title" align="center">
+                <span>パスワード変更</span>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 PwdForget3_body">
+                <div class="col-md-12 col-sm-１2 col-xs-12 PwdForget3_body_div">
+                    <div class="col-md-12 col-sm-１2 col-xs-12 PwdForget3_subtitle">
+                        <span style="">新しいパスワードを入力し、変更してください。</span>
+                    </div>
+                    <div class="col-md-12 col-sm-１2 col-xs-12 PwdForget3_newPwd PwdForget3_margin1">
+                        <div class="col-md-5 col-sm-12 col-xs-12" style="padding: 0;">
+                            <span>新しいパスワード</span>
+                        </div>
+                        <div class="col-md-6 col-sm-１2 col-xs-12">
+                            <input type="password" name="" ng-model="formData.new_password" style="padding-left:15px;">
+                        </div>
+                        <div class="col-md-1 col-sm-1 col-xs-1" style="padding: 0;"></div>
+                    </div>
+                    <div class="col-md-12 col-sm-１2 col-xs-12 PwdForget3_newPwd">
+                        <div class="col-md-5 col-sm-12 col-xs-12" style="padding: 0;">
+                            <span>新しいパスワード(確認用)</span>
+                        </div>
+                        <div class="col-md-6 col-sm-１2 col-xs-12">
+                            <input type="password" name="" ng-model="formData.new_password_repeat" style="padding-left:15px;">
+                        </div>
+                        <div class="col-md-1 col-sm-1 col-xs-1" style="padding: 0;"></div>
+                    </div>
+                    <div class="col-md-12 col-sm-１2 col-xs-12" style="margin-top: 50px;">
+                        <div class="col-md-8 col-sm-12 col-xs-12 display" style="padding: 0;"></div>
+                        <div class="col-md-3 col-sm-12 col-xs-12" style="padding: 0;">
+                            <button type="button" ng-click="postReset()">変更する</button>
+                        </div>
+                        <div class="col-md-1 col-sm-1 col-xs-1 display" style="padding: 0;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12" align="center">
+            </div>
+        </div>
+    </div>
+</section>
+<div ng-include="'views/footer.html'" ng-hide="hideFooter"></div>

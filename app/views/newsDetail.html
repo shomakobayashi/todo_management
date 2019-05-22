@@ -1,0 +1,67 @@
+<div ng-repeat="news in results">
+<section>
+  <div class="container body_containerPadding">
+      <div class="col-md-4 col-sm-4 col-xs-12 list_title padding_zero">NEWS</div>
+        <div class="col-md-12 col-sm-12 col-xs-12 newsDetail_div padding_zero">
+            <div class="col-md-12 col-sm-12 col-xs-12 display newsDetail_cutoff"></div>
+            <div class="col-md-1 col-sm-3 col-xs-3 news_catagoli"><div style="{{news.color}}">{{news.typeStr}}</div></div>
+            <div class="col-md-11 col-sm-9 col-xs-9 newsDetail_date">{{news.date}}</div>
+            <div class="col-md-12 col-sm-12 col-xs-12 newsDetail_title">{{news.title}}</div>
+            <div class="col-md-3 col-sm-6 col-xs-6" ng-repeat="topPic in news.topPic">
+              <img class="news_img" ng-src="{{topPic}}"/>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 newsDetail_text" ng-bind-html="news.detail"></div>
+            <div class="col-md-3 col-sm-6 col-xs-6" ng-repeat="footPic in news.footPic">
+              <img class="news_img" ng-src="{{footPic}}"/>
+            </div>
+              <div id="ad" class="ad displayPc" style="" align="center"></div>
+            <div class="col-md-12 col-sm-12 col-xs-12 newsDetail_btn">
+              <div class="col-md-2 col-sm-2 display" ng-hide="!applicationHide"></div>
+              <div class="col-md-4 col-sm-4 col-xs-6 newsDetail_twitter" ng-hide="!applicationHide">
+                  <a class="btn btn-default btn-block" ng-click="onTwitterShare()"><i class="fa fa-twitter"></i>&nbsp;ツイート</a>
+              </div>
+              <div class="col-md-4 col-sm-4 col-xs-4 newsDetail_twitter" ng-hide="applicationHide">
+                  <a class="btn btn-default btn-block" ng-click="onTwitterShare()"><i class="fa fa-twitter"></i>&nbsp;ツイート</a>
+              </div>
+              <div class="col-md-4 col-sm-4 col-xs-4 newsDetail_google" ng-hide="applicationHide">
+                  <a class="btn btn-default btn-block" ng-click="onApplication()">応募する</a>
+              </div>
+              <div class="col-md-4 col-sm-4 col-xs-4 newsDetail_facebook" ng-hide="applicationHide">
+                  <a class="btn btn-default btn-block" ng-click="onFacebookShare()"><i class="fa fa-facebook"></i>&nbsp;シェア</a>
+              </div>
+              <div class="col-md-4 col-sm-4 col-xs-6 newsDetail_facebook" ng-hide="!applicationHide">
+                  <a class="btn btn-default btn-block" ng-click="onFacebookShare()"><i class="fa fa-facebook"></i>&nbsp;シェア</a>
+              </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 display newsDetail_underBox">
+            <div class="col-md-1 col-sm-12 col-xs-12"></div>
+            <div class="col-md-4 col-sm-12 col-xs-12">
+              <div ng-repeat="newsPre in news.newsPre">
+                <a href="/newsDetail/{{newsPre.uuid}}/"><div class="newsDetail_left_box">
+                  <div class="col-md-2 col-sm-2 col-xs-2 newsDetail_box1_left">&lsaquo;</div>
+                  <div class="col-md-10 col-sm-10 col-xs-10 newsDetail_box1_right">
+                      <div class="newsDetail_box1_catagoli" style="{{newsPre.color}}">{{newsPre.type}}</div>
+                      <div class="newsDetail_box1_title newsDetail_left_title lineStyle lineHid3">{{newsPre.title}}</div>
+                  </div>
+                </div></a>
+              </div>
+            </div>
+            <div class="col-md-2 col-sm-12 col-xs-12"></div>
+            <div class="col-md-4 col-sm-12 col-xs-12">
+              <div ng-repeat="newsNext in news.newsNext">
+                <a href="/newsDetail/{{newsNext.uuid}}/"><div class="newsDetail_right_box">
+                    <div class="col-md-10 col-sm-10 col-xs-10 newsDetail_box2_left">
+                        <div class="newsDetail_box2_catagoli" style="{{newsNext.color}}">{{newsNext.type}}</div>
+                        <div class="newsDetail_box2_title newsDetail_right_title lineStyle lineHid3">{{newsNext.title}}</div>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-2 newsDetail_box2_right">&rsaquo;</div>
+                </div></a>
+              </div>
+            </div>
+            <div class="col-md-1 col-sm-12 col-xs-12"></div>
+        </div>
+    </div>
+</section><!--/#news detail-->
+</div>
+<div ng-include="'views/footer.html'" ng-hide="hideFooter"></div>

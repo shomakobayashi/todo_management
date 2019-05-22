@@ -1,0 +1,195 @@
+<script type="text/javascript">
+        $(function(){
+            $('input:radio').click(function(){
+                var domName = $(this).attr('name');
+                var $radio = $(this);
+                if ($radio.data('waschecked') == true){
+                    $radio.prop('checked', false);
+                    $("input:radio[name='" + domName + "']").data('waschecked',false);
+                } else {
+                    $radio.prop('checked', true);
+                    $("input:radio[name='" + domName + "']").data('waschecked',false);
+                    $radio.data('waschecked', true);
+                }
+            });
+        });
+    </script>
+<div style="position: relative;">
+<section style="overflow:hidden;">
+    <div class="container shop_bodyrow">
+        <div class="shopSelectDiv" ng-hide="selectHide0" ng-click="shopCloseAllSelect()"></div>
+        <div class="col-md-3 col-sm-3 col-xs-3 shop_left display">
+            <div class="col-md-12 col-sm-12 col-xs-12 padding_zero shop_radioAreaMgn">
+                <div class="col-md-1 col-sm-1 col-xs-1 shop_radioArea">
+                  <input id="item1" type="radio" name="shopNow5"/>
+                  <label for="item1" ng-click="changeNow5()"></label>
+                </div>
+                <div class="col-md-4 col-sm-4 padding_zero shop_nowSvg">
+                  <img src="../images/04.svg" class="width100">
+                </div>
+                <div class="shop_nowMiddleDiv"></div>
+                <div class="col-md-1 col-sm-1 col-xs-1 shop_radioArea">
+                  <input id="item2" type="radio" name="shopNow4"/>
+                  <label for="item2" ng-click="changeNow4()"></label>
+                </div>
+                <div class="col-md-4 col-sm-4 padding_zero shop_nowSvg">
+                  <img src="../images/05.svg" class="width100">
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 shop_bor">
+                <i class="shop_icon-user fa fa-university"></i>
+                <div class="shop_selectinput width100" ng-click="shopSelect3()">
+                    <span class="selectListSpan3">{{selectDesc3}}</span>
+                </div>
+                <div class="shop_selectList width100 shop_selectPosition3" ng-hide="selectHide3" ng-click="shopCloseSelect3()" style="z-index: 500;">
+                  <div class="selectListShop" ng-click="shopSelectValue3('ジャンルから探す',0)"><span class="selectListSpan3">ジャンルから探す</span></div>
+                  <div ng-repeat="mainMenu in results[0].mainMenu">
+                    <div class="selectListShop" ng-click="shopSelectValue3(mainMenu.desc,mainMenu.content)"><span class="selectListSpan3">{{mainMenu.desc}}</span></div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 shop_left_div" align="left">
+                <i class="fa fa-map-marker shop_iTitle"></i><p>エリアから探す</p>
+                <div class="btn-group" data-toggle="buttons">
+                    <label for="area{{$index}}" ng-repeat="area in results[0].areaList" class="btn btn-info recruit_btn_select" ng-hide="$index > 7 && hideMoerCheckBox">
+                        <!-- <input type="checkbox" ng-model="shopSearch.areaModel[$index]">{{area.desc}} -->
+                        <input id="area{{$index}}" type="checkbox" ng-model="shopSearch.areaModel[$index]" name="area" value="{{area.content}}" disabled>{{area.desc}}
+                        <!-- <input type="checkbox" ng-model="shopSearch.areaModel[$index]" value="{{area.content}}" disabled>{{area.desc}} -->
+                    </label>
+                </div>
+                <div align="right" class="shop_orangeA" ng-hide="MoreCheckBox" ng-click="appearMoerCheckBox()">
+                	<a>さらに詳しく&nbsp;&nbsp;<span>▼</span></a>
+                </div>
+                <div align="right" class="shop_orangeA" ng-hide="!MoreCheckBox" ng-click="moerCheckBoxHide()">
+                	<a>閉じる&nbsp;&nbsp;<span>▲</span></a>
+                </div>
+            </div>
+            <div class="shop_btn" style="width: 100%;margin-top: 15px;">
+                <div class="shop_btnStyle" ng-click="search(shopSearch)"  align="center"><i class="fa fa-search display">&nbsp;絞込み検索</i></div>
+            </div>
+        </div>
+        <div class="col-md-9 col-sm-9 col-xs-12 shop_right padding_zero">
+	          <div class="add_rightDiv display"></div>
+            <div class="col-md-12 col-sm-12 col-xs-12 shop_right_title" align="left">
+                <label style="font-family: LettrGoth12 BT">
+                    <b>{{area}}</b><span>見つかったお店{{results[0].shopCount}}件</span>
+                </label>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="col-md-12 col-sm-12 col-xs-12 padding_zero" style="margin-top: 20px;">
+                <a href="/shop/list/1/1/0/" type="submit">
+                  <div class="col-md-2 col-sm-2 col-xs-3 shopPaddingLR2"><p class="tab tab_food"><img src="images/icon01.svg" class="tab_icon">food</p></div>
+                </a>
+                <a href="/shop/list/12/1/0/" type="submit">
+                  <div class="col-md-2 col-sm-2 col-xs-3 shopPaddingLR2"><p class="tab tab_fashion"><img src="images/icon02.svg" class="tab_icon">fashion</p></div>
+                </a>
+                <a href="/shop/list/3/1/0/" type="submit">
+                  <div class="col-md-2 col-sm-2 col-xs-3 shopPaddingLR2"><p class="tab tab_health"><img src="images/icon03.svg" class="tab_icon">health care</p></div>
+                </a>
+                <a href="/shop/list/4/1/0/" type="submit">
+                  <div class="col-md-2 col-sm-2 col-xs-3 shopPaddingLR2"><p class="tab tab_play"><img src="images/icon04.svg" class="tab_icon">play</p></div>
+                </a>
+                <a href="/shop/list/6/1/0/" type="submit">
+                  <div class="col-md-2 col-sm-2 col-xs-3 shopPaddingLR2"><p class="tab tab_drive"><img src="images/icon05.svg" class="tab_icon">drive</p></div>
+                </a>
+                <a href="/shop/list/11/1/0/" type="submit">
+                  <div class="col-md-2 col-sm-2 col-xs-3 shopPaddingLR2"><p class="tab tab_life"><img src="images/icon06.svg" class="tab_icon">life style</p></div>
+                  </a>
+                <a href="/shop/list/5/1/0/" type="submit">
+                  <div class="col-md-2 col-sm-2 col-xs-3 shopPaddingLR2"><p class="tab tab_bridal"><img src="images/icon07.svg" class="tab_icon">bridal</p></div>
+                </a>
+                <a href="/shop/list/9/1/0/" type="submit">
+                  <div class="col-md-2 col-sm-2 col-xs-3 shopPaddingLR2"><p class="tab tab_learning"><img src="images/icon08.svg" class="tab_icon">learning</p></div>
+                </a>
+                <a href="/place/1/" type="submit">
+                  <div class="col-md-2 col-sm-2 col-xs-3 shopPaddingLR2"><p class="tab tab_place"><img src="images/icon09.svg" class="tab_icon">place</p></div>
+                </a>
+                <a href="/shop/list/10/1/0/" type="submit">
+                  <div class="col-md-2 col-sm-2 col-xs-3 shopPaddingLR2"><p class="tab tab_facilities"><img src="images/icon10.svg" class="tab_icon">facilities</p></div>
+                </a>
+                <a href="/recruit/0/1/0/" type="submit">
+                  <div class="col-md-2 col-sm-2 col-xs-3 shopPaddingLR2"><p class="tab tab_recruit"><img src="images/icon11.svg" class="tab_icon">recruit</p></div>
+                </a>
+                <a href="/shop/corporateinfo/list/8/1/" type="submit">
+                  <div class="col-md-2 col-sm-2 col-xs-3 shopPaddingLR2"><p class="tab tab_corporate"><img src="images/icon12.svg" class="tab_icon">corporate info</p></div>
+                </a>
+              </div>
+                <div class="col-md-12 col-sm-12 col-xs-12 shop_right_input padding_zero">
+                    <div class="shop_textinput">
+                        <input ng-model="shopSearchR.keyWord" type="text" placeholder="キーワードを入力">
+                    </div>
+                    <div class="shop_selectinput shop_selectWidth1" ng-click="shopSelect1()">
+                        <span class="selectListSpan">{{selectDesc1}}</span>
+                    </div>
+                    <div class="shop_selectList shop_selectWidth1 shop_selectPosition1" ng-hide="selectHide1" ng-click="shopCloseSelect1()" style="z-index: 500;">
+                      <div class="selectListShop" ng-click="shopSelectValue1('ジャンル選択',0)"><span class="selectListSpan">ジャンル選択</span></div>
+                      <div ng-repeat="mainMenu in results[0].mainMenu">
+                        <div class="selectListShop" ng-click="shopSelectValue1(mainMenu.desc,mainMenu.content)"><span class="selectListSpan">{{mainMenu.desc}}</span></div>
+                      </div>
+                    </div>
+                    <div class="shop_selectinput shop_selectWidth2" ng-click="shopSelect2()">
+                        <span class="selectListSpan">{{selectDesc2}}</span>
+                    </div>
+                    <div class="shop_selectList shop_selectWidth2 shop_selectPosition2" ng-hide="selectHide2" ng-click="shopCloseSelect2()" style="z-index: 500;">
+                      <div class="selectListShop" ng-click="shopSelectValue2('エリアを選択','')"><span class="selectListSpan">エリアを選択</span></div>
+                      <div ng-repeat="area in results[0].areaList">
+                        <div class="selectListShop" ng-click="shopSelectValue2(area.desc,area.content)"><span class="selectListSpan">{{area.desc}}</span></div>
+                      </div>
+                    </div>
+                    <div class="shop_btn display">
+                        <div type="button" class="shop_btnStyle" ng-click="searchR()" align="center"><i class="fa fa-search display">&nbsp;検索</i></div>
+                    </div>
+                    <div class="shop_btn displayPc">
+                        <div type="button" class="shop_btnStyle" ng-click="searchR()" align="center">検索</div>
+                    </div>
+                </div>
+            </div>
+          	<div class="col-md-12 col-sm-12 col-xs-12 shop_hidbtn displayPc">
+          		<!-- <button type="button" ng-click="search(shopSearch)">絞込み検索</button> -->
+          	</div>
+            <div ng-repeat="content in results[0].contentList">
+              <a href="/shop/corporateinfo/detail/{{content.uuid}}/">
+              	<div class="col-md-6 col-sm-6 col-xs-12 shop_sptop">
+                    <div class="col-md-12 col-sm-12 col-xs-12 shop_goods">
+                        <div class="shop_goods_title" align="left">
+                            <span class="lineStyle lineHid1">{{content.name}}</span>
+                        </div>
+                          <div class="col-md-5 col-sm-5 col-xs-4 shop_goods_pic">
+                              <img ng-src="{{content.picUrl}}">
+                          </div>
+                          <div class="col-md-7 col-sm-7 col-xs-8 shop_goods_content">
+                              <label class="lineStyle lineHid6">{{content.excerpt}}</label>
+                          </div>
+                          <div class="col-md-7 col-sm-7 shop_address_div display">
+                              <div class="col-md-2 col-sm-2 col-xs-2 shop_address_icon">
+                                  <i class="fa fa-home shop_address_i"></i>
+                              </div>
+                              <div class="col-md-10 col-sm-10 col-xs-10 shop_address_content padding_zero" align="left">
+                                  <span class="lineStyle lineHid1">{{content.address}}</span>
+                              </div>
+                          </div>
+                          <div class="col-md-12 col-sm-12 col-xs-12 padding_zero displayPc">
+                            	<div class="col-md-1 col-sm-1 col-xs-1 padding_zero">
+                                  <i class="fa fa-home shop_address_i"></i>
+                              </div>
+                              <div class="col-md-11 col-sm-11 col-xs-11 shop_address_content" align="left">
+                                  <span class="lineStyle lineHid1">{{content.address}}</span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </a>
+              </div>
+              <div pagination class="col-md-12 col-sm-12 col-xs-12 change_page event_padding2" ng-hide="hidePages" align="center">
+                  <ul>
+                      <a href="javascript:void(0);"><li ng-click="upPageClick(pageObject.currentPage-1)">&lt;</li></a>
+                      <div id="pagesChange"></div>
+                      <a href="javascript:void(0);"><li ng-click="downPageClick(pageObject.currentPage+1)">&gt;</li></a>
+                  </ul>
+              </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+<div ng-include="'views/footer.html'" ng-hide="hideFooter" style="position: relative;z-index:999;"></div>

@@ -1,0 +1,347 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>JAPAN MOVE UP WEST WEB</title>
+  <meta name="viewport" content="width=device-width"/>
+  <meta name="description" content="エンタテインメントと社会的活動で、『岡山を元気に！』、『岡山から日本を元気に！』をコンセプトに活動を行う、JAPAN MOVE UP WESTのWEBサイト。
+                                    『このまちに、もっと＋（プラス）なことを。』をテーマに、岡山のまち、企業・お店、そして人を“つなげる”情報を提供していきます。"/>
+  <meta name="author" content=""/>
+  <meta property="og:site_name"     content="Japan Move Up West"/>
+  <meta property="og:url"           content="" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="" />
+  <meta property="og:description"   content="" />
+  <meta property="og:image"         content="" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:description" content="" />
+  <meta name="twitter:title" content="" />
+  <meta name="twitter:site" content="" />
+  <meta name="twitter:image" content="" />
+  <meta name="twitter:creator" content="@MoveupWest" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+  <meta name="format-detection" content="telephone=yes" />
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src https://www.japanmoveupwest.website; "> -->
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://* 'unsafe-eval'; style-src * 'unsafe-inline';child-src *;media-src *;script-src * 'unsafe-inline'; connect-src *"/> -->
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'"> -->
+  <link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link rel="bookmark"  type="image/x-icon"  href="favicon.ico"/>
+  <link rel="shortcut icon" href="favicon.ico"/>
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link rel="apple-touch-icon" href="images/logo54.jpg"/>
+  <link rel="apple-touch-icon" sizes="152x152" href="images/logo54.jpg"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="images/logo54.jpg"/>
+  <link rel="apple-touch-icon" sizes="167x167" href="images/logo54.jpg"/>
+  <!-- build:css(.) /styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/ng-dialog/css/ngDialog.css" />
+  <link rel="stylesheet" href="bower_components/ng-dialog/css/ngDialog-theme-default.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) /styles/main.css -->
+  <link href="/styles/bootstrap/bootstrap.min.css" rel="stylesheet"/>
+  <link href="/styles/font-awesome.min.css" rel="stylesheet"/>
+  <link href="/styles/animate.min.css" rel="stylesheet"/>
+  <link href="/styles/owl.carousel.css" rel="stylesheet"/>
+  <link href="/styles/owl.transitions.css" rel="stylesheet"/>
+  <link href="/styles/owl.carousel.min.css" rel="stylesheet"/>
+  <link href="/styles/owl.theme.default.min.css" rel="stylesheet"/>
+  <link href="/styles/main.css" rel="stylesheet"/>
+  <link href="/styles/top.css" rel="stylesheet"/>
+  <link href="/styles/login.css" rel="stylesheet"/>
+  <link href="/styles/entry.css" rel="stylesheet"/>
+  <link href="/styles/carry.css" rel="stylesheet"/>
+  <link href="/styles/entryEnd.css" rel="stylesheet"/>
+  <link href="/styles/event.css" rel="stylesheet"/>
+  <link href="/styles/shop.css" rel="stylesheet"/>
+  <link href="/styles/news.css" rel="stylesheet"/>
+  <link href="/styles/recruit.css" rel="stylesheet"/>
+  <link href="/styles/place.css" rel="stylesheet"/>
+  <link href="/styles/goods.css" rel="stylesheet"/>
+  <link href="/styles/payment.css" rel="stylesheet"/>
+  <link href="/styles/buyInfo.css" rel="stylesheet"/>
+  <link href="/styles/freePaper.css" rel="stylesheet"/>
+  <link href="/styles/rise.css" rel="stylesheet"/>
+  <link href="/styles/tv.css" rel="stylesheet"/>
+  <link href="/styles/nowForAndGo.css" rel="stylesheet"/>
+  <link href="/styles/jkresponsivegallery.css" rel="stylesheet"/>
+  <link href="/styles/passwordForget.css" rel="stylesheet"/>
+  <link href="/styles/application.css" rel="stylesheet"/>
+  <link href="/styles/account.css" rel="stylesheet"/>
+  <link href="/styles/contact.css" rel="stylesheet"/>
+  <link href="/styles/mypage.css" rel="stylesheet"/>
+  <link href="/styles/notify.css" rel="stylesheet"/>
+  <link href="/styles/withdraw.css" rel="stylesheet"/>
+  <link href="/styles/team.css" rel="stylesheet"/>
+  <link href="/styles/studioMoveup.css" rel="stylesheet"/>
+  <link href="/styles/personalProtection.css" rel="stylesheet"/>
+  <link href="/styles/terms.css" rel="stylesheet"/>
+  <link href="/styles/privacy.css" rel="stylesheet"/>
+  <link href="/styles/switchery.min.css" rel="stylesheet"/>
+  <link href="/styles/bootstrap/bootstrap-switch.min.css" rel="stylesheet"/>
+  <!-- endbuild -->
+  <base href="/">
+</head>
+<body id="home" class="homepage" ng-app="moveupApp" oncontextmenu=self.event.returnValue=false
+      onselectstart="return false" ng-controller="BaseCtrl">
+
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container padding_zero display">
+      <div class="col-md-8 col-sm-8 col-xs-12" style="padding:30px 0 10px;cursor:pointer;" ng-click="jumpTop()">
+        <img class="" src="images/top_logo.svg" style="width: 10%;height: 10%;margin-top:-30px;margin-right:3%;">
+        <span style="color:white;font-size:32px;font-family:FE11004;">JAPAN MOVE UP</span><span style="color:red;font-size:32px;font-family:FE11004;"> WEST</span>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12 person-info" ng-hide="hasLogin">
+          <a href="/signup">
+              <div class="loginImgPC login2">
+                  <div>
+                    <img src="images/entry.svg">
+                  </div>
+                  <span>会員登録</span>
+              </div>
+          </a>
+          <a href="/login">
+              <div class="loginImgPC login1">
+                  <div>
+                    <img src="images/login1.svg">
+                  </div>
+                  <span>ログイン</span>
+              </div>
+          </a>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12 person-info" style="display: none;height:85px;" ng-hide="!hasLogin">
+        <div class="col-md-12 col-sm-12 col-xs-12" style="height:30px;"></div>
+        <div class="col-md-4 col-sm-6 col-xs-6"></div>
+        <div class="col-md-8 col-sm-6 col-xs-6 padding_zero" ng-click="onHeadClick()" align="left">
+          <img ng-src="{{headerUrl}}" class="indexHeadImgPC" ng-hide="thumbnailUrlHide"/>
+          <a>{{headerName}}</a>
+          <div class="index_redIcon" ng-hide="NotifyNavHide"></div>
+        </div>
+        <div class="dropdownMask" ng-click="onDropDownClose()" ng-hide="dropdownMenuHide"></div>
+        <div class="col-md-4 col-sm-12 col-xs-12 dropdownMenu" ng-hide="dropdownMenuHide" style="text-align: left;">
+          <ul>
+            <li><a href="javascript:void(0);" ng-click="checkLoginGoto('/myPage/0/1/')" style="color:black;">マイページ</a></li>
+            <li ng-click="gotoMyPageNotifySetting()" style="position: relative;">
+              お知らせ<button ng-hide="NotifyNavHide"><p style="margin:-3px 0 0 0;">{{NotifyCount}}</p></button>
+            </li>
+            <li ng-click="gotoProfileSetting()">アカウント設定</li>
+            <li ng-click="checkLoginGoto('/purchaseHistory')">購入履歴</li>
+            <li ng-click="logout()">ログアウト</li>
+          </ul>
+        </div>
+      </div>
+  </div>
+  <div class="container index_header_pdg">
+      <div class="col-xs-9 topSpLogo padding_zero displayPc" ng-click="jumpTop()">
+        <div class="col-xs-2 padding_zero">
+        <img src="images/top_logo.svg">
+        </div>
+        <div class="col-xs-10 topSpLogo_font">
+          <span style="color:white;font-family:FE11004;">JAPAN MOVE UP</span><span style="color:red;font-family:FE11004;"> WEST</span>
+        </div>
+      </div>
+    <div class="col-xs-3 padding_zero displayPc" style="position: relative;">
+        <div class="person-infosp" style="display:none;">
+          <div class="col-xs-6 padding_zero" data-toggle="collapse" data-target="#bs-example-navbar-collapse-3" id="indexbs-example-navbar-collapse-3">
+            <button type="button" class="top_headImgSp displayPc" style="background-image: url('{{headerUrl}}'); background-repeat:no-repeat;background-size: 100% 100%;border:none;" ng-hide="!hasLogin">
+            <img ng-src="{{headerUrl}}" class="top_headImgSp displayPc"/>
+            <div class="index_redIconSp" ng-hide="NotifyNavHide"></div>
+            </button>
+          </div>
+          <div class="col-xs-6 padding_zero" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" id="indexbs-example-navbar-collapse-2">
+            <button type="button" class="navbar-toggle collapsed">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+            </button>
+          </div>
+        </div>
+    </div>
+    <div class="collapse navbar-collapse navbar_collapse_items display">
+      <ul class="nav">
+        <li role="presentation" class=""><a href="/" style="padding-left: 0;">TOP</a></li>
+        <li role="presentation" class=""><a href="/shop/list/1/1/0/">SHOP</a></li>
+        <li role="presentation" class=""><a href="javascript:void(0);" ng-click="checkLoginGoto('/event/0/1')">EVENT</a></li>
+        <li role="presentation" class=""><a href="/news/0/1/">NEWS</a></li>
+        <li role="presentation" class=""><a href="/tv/0/1/">TV</a></li>
+        <li role="presentation" class=""><a href="/goods/1/">GOODS</a></li>
+        <li role="presentation" class=""><a href="javascript:void(0);" ng-click="checkLoginGoto('/freePaper/1/')">FREE PAPER</a></li>
+      </ul>
+    </div>
+    <div class="collapse navbar-collapse navbar_collapse_items" id="bs-example-navbar-collapse-2" style="max-height: 100vh;">
+      <ul class="nav displayPc">
+        <li data-toggle="collapse" data-target="#bs-example-navbar-collapse-2"><a href="/">TOP</a></li>
+        <li data-toggle="collapse" data-target="#bs-example-navbar-collapse-2"><a href="javascript:void(0);" ng-click="checkLoginGoto('/myPage/0/1/')">MYPAGE</a></li>
+        <li data-toggle="collapse" data-target="#bs-example-navbar-collapse-2"><a href="/nowGo/0/">NOW GO</a></li>
+        <li data-toggle="collapse" data-target="#bs-example-navbar-collapse-2"><a href="/nowFor/0/">NOW FOR</a></li>
+        <li>
+          <a class="active-menu" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">SHOP SEARCH<span class="fa arrow"></span></a>
+          <ul id="collapseTwo" class="nav nav-second-level collapse">
+            <li data-toggle="collapse" data-target="#bs-example-navbar-collapse-2"><a href="/shop/list/1/1/0/">食べる</a></li>
+            <li data-toggle="collapse" data-target="#bs-example-navbar-collapse-2"><a href="/shop/list/12/1/0/">ファッション</a></li>
+            <li data-toggle="collapse" data-target="#bs-example-navbar-collapse-2"><a href="/shop/list/3/1/0/">健康ビューティー</a></li>
+            <li data-toggle="collapse" data-target="#bs-example-navbar-collapse-2"><a href="/shop/list/4/1/0/">遊ぶ</a></li>
+            <li data-toggle="collapse" data-target="#bs-example-navbar-collapse-2"><a href="/shop/list/6/1/0/">乗る</a></li>
+            <li data-toggle="collapse" data-target="#bs-example-navbar-collapse-2"><a href="/shop/list/11/1/0/">ライフスタイル</a></li>
+            <li data-toggle="collapse" data-target="#bs-example-navbar-collapse-2"><a href="/shop/list/5/1/0/">ブライダル</a></li>
+            <li data-toggle="collapse" data-target="#bs-example-navbar-collapse-2"><a href="/shop/list/9/1/0/">学ぶ</a></li>
+            <li data-toggle="collapse" data-target="#bs-example-navbar-collapse-2"><a href="/place/1/">プレイス</a></li>
+            <li data-toggle="collapse" data-target="#bs-example-navbar-collapse-2"><a href="/shop/list/10/1/0/">施設</a></li>
+            <li data-toggle="collapse" data-target="#bs-example-navbar-collapse-2"><a href="/recruit/0/1/0/">リクルート</a></li>
+            <li data-toggle="collapse" data-target="#bs-example-navbar-collapse-2"><a href="/shopCorporateinfo/list/8/1/">コーポレートインフォ</a></li>
+          </ul>
+        </li>
+        <li data-toggle="collapse" data-target="#bs-example-navbar-collapse-2"><a href="javascript:void(0);" ng-click="checkLoginGoto('/event/0/')">EVENT REPORT</a></li>
+        <li data-toggle="collapse" data-target="#bs-example-navbar-collapse-2"><a href="/news/0/">MOVE UP WEST NEWS</a></li>
+        <li data-toggle="collapse" data-target="#bs-example-navbar-collapse-2"><a href="/goods">MOVE UP GOODS</a></li>
+        <li data-toggle="collapse" data-target="#bs-example-navbar-collapse-2"><a href="javascript:void(0);" ng-click="checkLoginGoto('/freePaper')" >FREE PAPER</a></li>
+        <li ng-hide="hasLogin">
+          <a class="active-menu" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">LOGIN<span class="fa arrow"></span></a>
+          <ul id="collapseThree" class="nav nav-second-level collapse">
+            <li data-toggle="collapse" data-target="#bs-example-navbar-collapse-2"><a href="/login">LOGIN</a></li>
+            <li data-toggle="collapse" data-target="#bs-example-navbar-collapse-2"><a href="/signup">新規会員登録</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" class="navbar-collapse2-bottom"></div>
+    </div>
+    <div class="collapse navbar-collapse navbar_collapse_items" id="bs-example-navbar-collapse-3" style="max-height: 100vh;">
+      <ul class="nav displayPc">
+        <li data-toggle="collapse" data-target="#bs-example-navbar-collapse-3"><a href="javascript:void(0);" ng-click="checkLoginGoto('/myPage/0/1/')">マイページ</a></li>
+        <li data-toggle="collapse" data-target="#bs-example-navbar-collapse-3">
+          <a ng-click="gotoMyPageNotifySetting()">お知らせ
+            <div class="radiusBtn" ng-hide="NotifyNavHide"><p>{{NotifyCount}}</p></div>
+          </a>
+        </li>
+        <li data-toggle="collapse" data-target="#bs-example-navbar-collapse-3"><a ng-click="gotoProfileSetting()">アカウント設定</a></li>
+        <li data-toggle="collapse" data-target="#bs-example-navbar-collapse-3"><a href="javascript:void(0);" ng-click="checkLoginGoto('/purchaseHistory')">購入履歴</a></li>
+        <li data-toggle="collapse" data-target="#bs-example-navbar-collapse-3"><a ng-click="logout()">ログアウト</a></li>
+      </ul>
+      <div data-toggle="collapse" data-target="#bs-example-navbar-collapse-3" class="navbar-collapse3-bottom"></div>
+    </div>
+  </div>
+</nav><!--/#NavBar-->
+
+<div ng-view=""></div>
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-touch/angular-touch.js"></script>
+<script src="bower_components/ng-dialog/js/ngDialog.js"></script>
+<script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="scripts/app.js"></script>
+<script src="scripts/controllers/base.js"></script>
+<script src="scripts/controllers/main.js"></script>
+<script src="scripts/controllers/about.js"></script>
+<script src="scripts/controllers/rise.js"></script>
+<script src="scripts/controllers/event.js"></script>
+<script src="scripts/controllers/eventDetail.js"></script>
+<script src="scripts/controllers/news.js"></script>
+<script src="scripts/controllers/newsDetail.js"></script>
+<script src="scripts/controllers/shop.js"></script>
+<script src="scripts/controllers/shopCorporateinfo.js"></script>
+<script src="scripts/controllers/shopCorporateinfoDetail.js"></script>
+<script src="scripts/controllers/nowFor.js"></script>
+<script src="scripts/controllers/nowGo.js"></script>
+<script src="scripts/controllers/shopDetail.js"></script>
+<script src="scripts/controllers/recruit.js"></script>
+<script src="scripts/controllers/recruitDetail.js"></script>
+<script src="scripts/controllers/goods.js"></script>
+<script src="scripts/controllers/goodsDetail.js"></script>
+<script src="scripts/controllers/place.js"></script>
+<script src="scripts/controllers/placeDetail.js"></script>
+<script src="scripts/controllers/purchaseCart.js"></script>
+<script src="scripts/controllers/purchaseInfoConfirm.js"></script>
+<script src="scripts/controllers/purchaseInfoMation.js"></script>
+<script src="scripts/controllers/purchaseInfoOver.js"></script>
+<script src="scripts/controllers/login.js"></script>
+<script src="scripts/controllers/freePaper.js"></script>
+<script src="scripts/controllers/signup.js"></script>
+<script src="scripts/controllers/forget.js"></script>
+<script src="scripts/controllers/forgetConfirm.js"></script>
+<script src="scripts/controllers/forgetEnd.js"></script>
+<script src="scripts/controllers/entry.js"></script>
+<script src="scripts/controllers/entryConfirm.js"></script>
+<script src="scripts/controllers/entryEnd.js"></script>
+<script src="scripts/controllers/application.js"></script>
+<script src="scripts/controllers/applicationOver.js"></script>
+<script src="scripts/controllers/forgetSend.js"></script>
+<script src="scripts/controllers/signupSend.js"></script>
+<script src="scripts/controllers/jmuw.js"></script>
+<script src="scripts/controllers/jmuwweb.js"></script>
+<script src="scripts/controllers/account.js"></script>
+<script src="scripts/controllers/profile.js"></script>
+<script src="scripts/controllers/profileConfirm.js"></script>
+<script src="scripts/controllers/privacy.js"></script>
+<script src="scripts/controllers/personalProtection.js"></script>
+<script src="scripts/controllers/terms.js"></script>
+<script src="scripts/controllers/contact.js"></script>
+<script src="scripts/controllers/contactConfirm.js"></script>
+<script src="scripts/controllers/contactEnd.js"></script>
+<script src="scripts/controllers/resetConfirm.js"></script>
+<script src="scripts/controllers/resetEnd.js"></script>
+<script src="scripts/controllers/carry.js"></script>
+<script src="scripts/controllers/carryOver.js"></script>
+<script src="scripts/controllers/myPage.js"></script>
+<script src="scripts/controllers/myPageNotify.js"></script>
+<script src="scripts/controllers/withdraw.js"></script>
+<script src="scripts/controllers/withdrawReason.js"></script>
+<script src="scripts/controllers/withdrawEnd.js"></script>
+<script src="scripts/controllers/team.js"></script>
+<script src="scripts/controllers/studioMoveup.js"></script>
+<script src="scripts/controllers/viewer.js"></script>
+<script src="scripts/controllers/point.js"></script>
+<script src="scripts/controllers/payment.js"></script>
+<script src="scripts/controllers/paymentCvs.js"></script>
+<script src="scripts/controllers/purchaseHistory.js"></script>
+<script src="scripts/controllers/tv.js"></script>
+<script src="scripts/controllers/tvDetail.js"></script>
+<script src="scripts/controllers/changeMail.js"></script>
+<script src="scripts/controllers/changeMailSend.js"></script>
+<script src="scripts/controllers/changeMailEnd.js"></script>
+<script src="scripts/controllers/myPageSettings.js"></script>
+<script src="scripts/services/api.service.js"></script>
+<script src="scripts/js/wow.min.js"></script>
+<script src="scripts/js/owl.carousel.min.js"></script>
+<script src="scripts/js/scrolling-nav.js"></script>
+<script src="scripts/js/footer-menu.js"></script>
+<script src="scripts/js/top.js"></script>
+<script src="scripts/js/jquery.metisMenu.js"></script>
+<script src="scripts/js/ng-map.min.js"></script>
+<script src="scripts/js/jkresponsivegallery.js"></script>
+<script src="scripts/js/pdfobject.js"></script>
+<script src="scripts/js/ajaxzip3.js"></script>
+<script src="scripts/js/pdf.js"></script>
+<script src="scripts/js/pdf.worker.js"></script>
+<script src="scripts/js/switchery.min.js"></script>
+<script src="scripts/js/bootstrap-switch.js"></script>
+<!-- endbuild -->
+
+<script src="https://maps.google.com/maps/api/js?key=AIzaSyANEJ9nfWokFA6CNQtBoz3uXhZMc7vyCoI"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113626104-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-113626104-1');
+</script>
+
+<!-- <script src="scripts/js/jquery.prettyPhoto.js"></script>
+<script src="scripts/js/jquery.isotope.min.js"></script>
+<script src="scripts/js/jquery.inview.min.js"></script> -->
+
+</body>
+</html>

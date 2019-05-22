@@ -1,0 +1,76 @@
+<section>
+    <div class="container cartPM">
+        <div class="col-md-12 col-sm-12 col-xs-12 goodsCart_title" align="left">
+        	<p><i class="fa fa-shopping-cart"></i>&nbsp;ショッピングカート</p>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 goodsCart_form display" align="center">
+            <div class="col-md-7 col-sm-6 col-xs-6"><p>商品情報</p></div>
+            <div class="col-md-2 col-sm-2 col-xs-2"><p>数量</p></div>
+            <div class="col-md-2 col-sm-3 col-xs-3"><p>小計（税込）</p></div>
+            <div class="col-md-1 col-sm-1 col-xs-1"></div>
+        </div>
+        <div ng-repeat="goods in results.goodsList" class="col-md-12 col-sm-12 col-xs-12 goodsCart_goods">
+            <div class="col-md-7 col-sm-7 col-xs-12 goodsCart_div goodsCart_info">
+                <input type="hidden" value="{{goods.id}}" ng-model="goods.id"/>
+                <div class="col-md-7 col-sm-5 col-xs-5 goodsCart_img">
+                    <img ng-src="{{goods.picUrl}}">
+                </div>
+                <div class="col-md-5 col-sm-7 col-xs-7 goodsCart_name">
+                    <div class="col-md-12 col-sm-12 col-xs-12 cartHeight display"></div>
+                    <label>{{goods.goodsName}}<span>{{goods.brand}}</span></label>
+                    <div class="col-md-12 col-sm-12 col-xs-12 padding_zero displayPc">
+                    	<span id="singlePricesp{{goods.number}}" style="display: none;">{{goods.price}}</span>
+                      <span style="color: black"><span id="cartTotalsp{{goods.number}}">{{goods.price|number:0}}</span>円</span><span>&nbsp;(税込)</span>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 padding_zero displayPc" style="margin-top: 15px;">
+                        <div class="col-md-12 col-sm-6 col-xs-6 goodsCartsp_num">
+                            <button id="cartsp_sub{{goods.number}}" style="position: absolute;left: 0%;" ng-click="onSub(goods)">-</button>
+                            <input id="cartsp_box{{goods.number}}" type="text" ng-model="goods.quantity"/>
+                            <button id="cartsp_add{{goods.number}}" style="position: absolute;right: 18%;" ng-click="onAdd(goods)">+</button>
+                        </div>
+                        <div class="col-md-12 col-sm-6 col-xs-6 goodsCartsp_del">
+                            <button type="button" ng-click="postOutCart(goods.id)">削除</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-6 goodsCart_div goodsCart_num display" align="center">
+                <div class="col-md-12 col-sm-12 col-xs-12 cartHeight"></div>
+                <div class="col-md-12 col-sm-12 col-xs-12 padding_zero" style="position: relative;">
+                    <button id="cart_sub{{goods.number}}" style="position: absolute;left: 25%;" ng-click="onSub(goods)">-</button>
+                    <input id="cart_box{{goods.number}}" type="text" ng-model="goods.quantity"/>
+                    <button id="cart_add{{goods.number}}" style="position: absolute;right: 25%;" ng-click="onAdd(goods)">+</button>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-6 goodsCart_div goodsCart_total display">
+                <div class="col-md-12 col-sm-12 col-xs-12 cartHeight display"></div>
+                <label><span id="singlePrice{{goods.number}}" style="display: none;">{{goods.price}}</span><span id="cartTotal{{goods.number}}">{{goods.price|number:0}}</span>円</label>
+            </div>
+            <div class="col-md-1 col-sm-1 col-xs-6 goodsCart_del display">
+                <div class="col-md-12 col-sm-12 col-xs-12 cartHeight"></div>
+                <button type="button" id="cart_delbtn" ng-click="postOutCart(goods.id)">削除</button>
+            </div>
+        </div>
+
+        <div class="col-md-12 col-sm-12 col-xs-12 goodsCart_goods_total">
+            <div class="col-md-8 col-sm-7 display"></div>
+            <div class="col-md-3 col-sm-3 col-xs-6 goodsCart_total_title display">
+                <span>商品金額合計（税込）</span>
+            </div>
+            <div class="col-md-1 col-sm-2 goodsCart_total_price display">
+                <span><span id="totalPrice">{{results.totalPrice|number:0}}</span>円</span>
+            </div>
+            <div class="col-sm-12 col-xs-12 goodsCart_total_title displayPc">
+                <span>商品金額合計（税込）</span>
+                <span style="float: right;"><span id="totalPricesp">{{results.totalPrice|number:0}}</span>円</span>
+            </div>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 goodsCart_btn">
+            <div class="col-md-6 col-sm-12 col-xs-12 goodsCart_rightbtn displayPc padding_zero" ng-hide="hideBtn"><a href="javascript:void(0)" ng-click="postEditCart()"><button type="button">ご購入手続きへ</button></a></div>
+            <div class="col-md-6 col-sm-6 col-xs-12 goodsCart_leftbtn padding_zero"><a href="javascript:window.history.back(-1);"><button type="button" style="color:black;">ショッピングに戻る</button></a></div>
+            <div class="col-md-6 col-sm-6 col-xs-12 goodsCart_rightbtn display padding_zero" ng-hide="hideBtn"><a href="javascript:void(0)" ng-click="postEditCart()"><button type="button">ご購入手続きへ</button></a></div>
+        </div>
+        </div>
+    </div>
+</section>
+<div ng-include="'views/footer.html'" ng-hide="hideFooter"></div>

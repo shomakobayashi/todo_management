@@ -1,0 +1,809 @@
+<div ng-repeat="top in results">
+<section>
+    <div class="banner_container">
+        <div class="col-md-7 col-sm-7 col-xs-12 padding_zero">
+            <div class="component">
+                <div id="carousel-top" class="owl-carousel main-carousel">
+                    <a href="{{bannerLeftUrl}}">
+                        <div class="item">
+                            <img ng-src="{{top.picUrlLeft}}" alt="" class="banner_pic1"/>
+                        </div>
+                    </a>
+                    <a href="{{bannerRightUrl1}}">
+                        <div class="item">
+                            <img ng-src="{{top.picUrlRight1}}" alt="" class="banner_pic1"/>
+                        </div>
+                    </a>
+                    <a href="{{bannerRightUrl2}}">
+                        <div class="item">
+                            <img ng-src="{{top.picUrlRight2}}" alt="" class="banner_pic1"/>
+                        </div>
+                    </a>
+                    <a href="{{bannerRightUrl3}}">
+                        <div class="item">
+                            <img ng-src="{{top.picUrlRight3}}" alt="" class="banner_pic1"/>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5 col-sm-5 col-xs-12 top_right display">
+            <div class="col-md-12 col-xs-12 top_vodeo">
+                <iframe class="video" ng-src="{{videoUrl}}" allow="autoplay; encrypted-media" frameborder="0" allowfullscreen="" scrolling="no"></iframe>
+            </div>
+            <div class="col-md-12 col-xs-12 padding_zero">
+                <div id="thumbnails-top" class="owl-carousel">
+                    <a href="{{bannerRightUrl1}}">
+                        <div class="item item_ms">
+                            <img ng-src="{{top.picUrlRight1}}" alt="" class="banner_pic2"/>
+                        </div>
+                    </a>
+                    <a href="{{bannerRightUrl2}}">
+                        <div class="item item_ms">
+                            <img ng-src="{{top.picUrlRight2}}" alt="" class="banner_pic2"/>
+                        </div>
+                    </a>
+                    <a href="{{bannerRightUrl3}}">
+                        <div class="item item_ms">
+                            <img ng-src="{{top.picUrlRight3}}" alt="" class="banner_pic2"/>
+                        </div>
+                    </a>
+                    <a href="{{bannerLeftUrl}}">
+                        <div class="item item_ms">
+                            <img ng-src="{{top.picUrlLeft}}" alt="" class="banner_pic2"/>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container top_newPidLeft">
+      <div class="col-md-12 col-sm-12 col-xs-12 text-center padding_zero display">
+          <a href="/nowGo/0/1/">
+              <div class="col-md-4 col-sm-4 col-xs-4 text-center" style="padding:0 30px 0 0;">
+                  <div class="flip-container2" ontouchstart="this.classList.toggle('hover');">
+                      <div class="flipper">
+                          <div class="front2 font_left"><img src="images/04.svg"/></div>
+                      </div>
+                  </div>
+              </div>
+          </a>
+          <a href="/nowFor/0/0/">
+              <div class="col-md-4 col-sm-4 col-xs-4 text-center">
+                  <div class="flip-container2" ontouchstart="this.classList.toggle('hover');">
+                      <div class="flipper">
+                          <div class="front2 font_middle"><img src="images/05.svg"/></div>
+                      </div>
+                  </div>
+              </div>
+          </a>
+          <a href="javascript:void(0);" ng-click="checkLoginGoto('/myPage/0/1/')">
+              <div class="col-md-4 col-sm-4 col-xs-4 text-right" style="padding:0 0 0 30px;">
+                  <div class="flip-container2" ontouchstart="this.classList.toggle('hover');">
+                      <div class="flipper">
+                          <div class="front2 font_right"><img src="images/01.svg"/></div>
+                      </div>
+                  </div>
+              </div>
+          </a>
+      </div>
+      <div class="col-md-12 col-sm-12 col-xs-12 padding_zero displayPc">
+          <a href="/nowGo/0/1/">
+              <div class="col-md-4 col-sm-4 col-xs-4 padding_zero text-center">
+                  <img src="images/04.svg" class="membersMenu_Btn">
+              </div>
+          </a>
+          <a href="/nowFor/0/0/">
+              <div class="col-md-4 col-sm-4 col-xs-4 padding_zero text-center">
+               <img src="images/05.svg" class="membersMenu_Btn">
+              </div>
+          </a>
+          <div class="col-md-4 col-sm-4 col-xs-4 padding_zero text-center" ng-click="checkLoginGoto('/myPage/0/1/')">
+              <img src="images/01.svg" class="membersMenu_Btn">
+          </div>
+      </div>
+    </div>
+</section>
+<section>
+    <div class="top_container_backgroundNone">
+        <div class="slanted-div">
+            <p class="top_slanted-div_marginLeft">SHOP SEARCH</p>
+        </div>
+        <div class="container top_content_top padding_15_sp736">
+            <div class="row display">
+                <div class="col-md-2 col-sm-2 col-xs-2 service_Btn">
+                    <a href="/shop/list/1/1/0/">
+                        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                            <div class="flipper">
+                                <div class="front front_borderTop1">
+                                    <div class="shop_triangle front_transparent1"></div>
+                                    <img src="images/icon01.svg"/>
+                                    <p class="top_shopAP1">食べる</p>
+                                    <p class="top_shopAP2 front_color1">food</p>
+                                </div>
+                                <div class="back front_backgroundColor1">
+                                    <img src="images/icon01-w.svg"/>
+                                    <p class="top_shopBP1">食べる</p>
+                                    <p class="top_shopBP2">food</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-2 service_Btn">
+                    <a href="/shop/list/12/1/0/">
+                        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                            <div class="flipper">
+                                <div class="front front_borderTop2">
+                                    <div class="shop_triangle front_transparent2"></div>
+                                    <img src="images/icon02.svg"/>
+                                    <p class="top_shopAP1">ファッション</p>
+                                    <p class="top_shopAP2 front_color2">fashion</p>
+                                </div>
+                                <div class="back front_backgroundColor2">
+                                    <img src="images/icon02-w.svg"/>
+                                    <p class="top_shopBP1">ファッション</p>
+                                    <p class="top_shopBP2">fashion</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-2 service_Btn">
+                    <a href="/shop/list/3/1/0/">
+                        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                            <div class="flipper">
+                                <div class="front front_borderTop3">
+                                    <div class="shop_triangle front_transparent3"></div>
+                                    <img src="images/icon03.svg"/>
+                                    <p class="top_shopCP1 fontColor1">健康ビューティー</p>
+                                    <p class="top_shopAP2 front_color3">health care</p>
+                                </div>
+                                <div class="back front_backgroundColor3">
+                                    <img src="images/icon03-w.svg"/>
+                                    <p class="top_shopCP1 color_white">健康ビューティー</p>
+                                    <p class="top_shopBP2">health care</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-2 service_Btn">
+                    <a href="/shop/list/4/1/0/">
+                        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                            <div class="flipper">
+                                <div class="front front_borderTop4">
+                                    <div class="shop_triangle front_transparent4"></div>
+                                    <img src="images/icon04.svg"/>
+                                    <p class="top_shopAP1">遊ぶ</p>
+                                    <p class="top_shopAP2 front_color4">play</p>
+                                </div>
+                                <div class="back front_backgroundColor4">
+                                    <img src="images/icon04-w.svg"/>
+                                    <p class="top_shopBP1">遊ぶ</p>
+                                    <p class="top_shopBP2">play</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-2 service_Btn">
+                    <a href="/shop/list/6/1/0/">
+                        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                            <div class="flipper">
+                                <div class="front front_borderTop5">
+                                    <div class="shop_triangle front_transparent5"></div>
+                                    <img src="images/icon05.svg"/>
+                                    <p class="top_shopAP1">乗る</p>
+                                    <p class="top_shopAP2 front_color5">drive</p>
+                                </div>
+                                <div class="back front_backgroundColor5">
+                                    <img src="images/icon05-w.svg"/>
+                                    <p class="top_shopBP1">乗る</p>
+                                    <p class="top_shopBP2">drive</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-2 service_Btn">
+                    <a href="/shop/list/11/1/0/">
+                        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                            <div class="flipper">
+                                <div class="front front_borderTop6">
+                                    <div class="shop_triangle front_transparent6"></div>
+                                    <img src="images/icon06.svg"/>
+                                    <p class="top_shopAP1">ライフスタイル</p>
+                                    <p class="top_shopAP2 front_color6">life style</p>
+                                </div>
+                                <div class="back front_backgroundColor6">
+                                    <img src="images/icon06-w.svg"/>
+                                    <p class="top_shopBP1">ライフスタイル</p>
+                                    <p class="top_shopBP2">life style</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-2 service_Btn">
+                    <a href="/shop/list/5/1/0/">
+                        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                            <div class="flipper">
+                                <div class="front front_borderTop7">
+                                    <div class="shop_triangle front_transparent7"></div>
+                                    <img src="images/icon07.svg"/>
+                                    <p class="top_shopAP1">ブライダル</p>
+                                    <p class="top_shopAP2 front_color7">bridal</p>
+                                </div>
+                                <div class="back front_backgroundColor7">
+                                    <img src="images/icon07-w.svg"/>
+                                    <p class="top_shopBP1">ブライダル</p>
+                                    <p class="top_shopBP2">bridal</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-2 service_Btn">
+                    <a href="/shop/list/9/1/0/">
+                        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                            <div class="flipper">
+                                <div class="front front_borderTop8">
+                                    <div class="shop_triangle front_transparent8"></div>
+                                    <img src="images/icon08.svg"/>
+                                    <p class="top_shopAP1">学ぶ</p>
+                                    <p class="top_shopAP2 front_color8">learning</p>
+                                </div>
+                                <div class="back front_backgroundColor8">
+                                    <img src="images/icon08-w.svg"/>
+                                    <p class="top_shopBP1">学ぶ</p>
+                                    <p class="top_shopBP2">learning</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-2 service_Btn">
+                    <a href="/place/1/">
+                        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                            <div class="flipper">
+                                <div class="front front_borderTop9">
+                                    <div class="shop_triangle front_transparent9"></div>
+                                    <img src="images/icon09.svg"/>
+                                    <p class="top_shopAP1">プレイス</p>
+                                    <p class="top_shopAP2 front_color9">place</p>
+                                </div>
+                                <div class="back front_backgroundColor9">
+                                    <img src="images/icon09-w.svg"/>
+                                    <p class="top_shopBP1">プレイス</p>
+                                    <p class="top_shopBP2">place</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-2 service_Btn">
+                    <a href="/shop/list/10/1/0/">
+                        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                            <div class="flipper">
+                                <div class="front front_borderTop10">
+                                    <div class="shop_triangle front_transparent10"></div>
+                                    <img src="images/icon10.svg"/>
+                                    <p class="top_shopAP1">施設</p>
+                                    <p class="top_shopAP2 front_color10">facilities</p>
+                                </div>
+                                <div class="back front_backgroundColor10">
+                                    <img src="images/icon10-w.svg"/>
+                                    <p class="top_shopBP1">施設</p>
+                                    <p class="top_shopBP2">facilities</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-2 service_Btn">
+                    <a href="/recruit/0/1/0/">
+                        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                            <div class="flipper">
+                                <div class="front front_borderTop11">
+                                    <div class="shop_triangle front_transparent11"></div>
+                                    <img src="images/icon11.svg"/>
+                                    <p class="top_shopAP1">リクルート</p>
+                                    <p class="top_shopAP2 front_color11">recruit</p>
+                                </div>
+                                <div class="back front_backgroundColor11">
+                                    <img src="images/icon11-w.svg"/>
+                                    <p class="top_shopBP1">リクルート</p>
+                                    <p class="top_shopBP2">recruit</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-2 service_Btn">
+                    <a href="/shop/corporateinfo/list/8/1/">
+                        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                            <div class="flipper">
+                                <div class="front front_borderTop12">
+                                    <div class="shop_triangle front_transparent12"></div>
+                                    <img src="images/icon12.svg"/>
+                                    <p class="top_shopCP1 infoLineheight fontColor1">コーポレートインフォ</p>
+                                    <p class="top_shopAP2 front_color12">corporate info</p>
+                                </div>
+                                <div class="back front_backgroundColor12">
+                                    <img src="images/icon12-w.svg"/>
+                                    <p class="top_shopCP1 infoLineheight color_white">コーポレートインフォ</p>
+                                    <p class="top_shopBP2">corporate info</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="displayPc">
+                <a href="/shop/list/1/1/0/">
+                    <div class="col-md-2 col-xs-3 frontSp" ng-click="gotoShop(1)">
+                        <div class="col-xs-12 frontSp_div front_borderTop1">
+                            <div class="shop_triangleSp front_transparent1"></div>
+                            <img src="images/icon01.svg"/>
+                            <p class="spCorporateTiele fontColor1">食べる</p>
+                            <p class="spCorporateEgs front_color1">food</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="shop/list/12/1/0/">
+                    <div class="col-md-2 col-xs-3 frontSp" ng-click="gotoShop(12)">
+                        <div class="col-xs-12 frontSp_div front_borderTop2">
+                            <div class="shop_triangleSp front_transparent2"></div>
+                            <img src="images/icon02.svg"/>
+                            <p class="spCorporateTiele fontColor1">ファッション</p>
+                            <p class="spCorporateEgs front_color2">fashion</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="/shop/list/3/1/0/">
+                    <div class="col-md-2 col-xs-3 frontSp" ng-click="gotoShop(3)">
+                        <div class="col-xs-12 frontSp_div front_borderTop3">
+                            <div class="shop_triangleSp front_transparent3"></div>
+                            <img src="images/icon03.svg"/>
+                            <p class="spCorporateTieleExcept fontColor1">健康</p>
+                            <p class="spCorporateTieleExcept fontColor1">ビューティー</p>
+                            <p class="spCorporateEgs front_color3">health care</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="/shop/list/4/1/0/">
+                    <div class="col-md-2 col-xs-3 frontSp" ng-click="gotoShop(4)">
+                        <div class="col-xs-12 frontSp_div front_borderTop4">
+                            <div class="shop_triangleSp front_transparent4"></div>
+                            <img src="images/icon04.svg"/>
+                            <p class="spCorporateTiele fontColor1">遊ぶ</p>
+                            <p class="spCorporateEgs front_color4">play</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="/shop/list/6/1/0/">
+                    <div class="col-md-2 col-xs-3 frontSp" ng-click="gotoShop(6)">
+                        <div class="col-xs-12 frontSp_div front_borderTop5">
+                            <div class="shop_triangleSp front_transparent5"></div>
+                            <img src="images/icon05.svg"/>
+                            <p class="spCorporateTiele fontColor1">乗る</p>
+                            <p class="spCorporateEgs front_color5">drive</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="/shop/list/11/1/0/">
+                    <div class="col-md-2 col-xs-3 frontSp" ng-click="gotoShop(11)">
+                        <div class="col-xs-12 frontSp_div front_borderTop6">
+                            <div class="shop_triangleSp front_transparent6"></div>
+                            <img src="images/icon06.svg"/>
+                            <p class="spCorporateTiele fontColor1">ライフスタイル</p>
+                            <p class="spCorporateEgs front_color6">life style</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="/shop/list/5/1/0/">
+                    <div class="col-md-2 col-xs-3 frontSp" ng-click="gotoShop(5)">
+                        <div class="col-xs-12 frontSp_div front_borderTop7">
+                            <div class="shop_triangleSp front_transparent7"></div>
+                            <img src="images/icon07.svg"/>
+                            <p class="spCorporateTiele fontColor1">ブライダル</p>
+                            <p class="spCorporateEgs front_color7">bridal</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="/shop/list/9/1/0/">
+                    <div class="col-md-2 col-xs-3 frontSp" ng-click="gotoShop(9)">
+                        <div class="col-xs-12 frontSp_div front_borderTop8">
+                            <div class="shop_triangleSp front_transparent8"></div>
+                            <img src="images/icon08.svg"/>
+                            <p class="spCorporateTiele fontColor1">学ぶ</p>
+                            <p class="spCorporateEgs front_color8">learning</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="/place/1/">
+                    <div class="col-md-2 col-xs-3 frontSp" ng-click="gotoPlace()">
+                        <div class="col-xs-12 frontSp_div front_borderTop9">
+                            <div class="shop_triangleSp front_transparent9"></div>
+                            <img src="images/icon09.svg"/>
+                            <p class="spCorporateTiele fontColor1">プレイス</p>
+                            <p class="spCorporateEgs front_color9">place</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="/shop/list/10/1/0/">
+                    <div class="col-md-2 col-xs-3 frontSp" ng-click="gotoShop(10)">
+                        <div class="col-xs-12 frontSp_div front_borderTop10">
+                            <div class="shop_triangleSp front_transparent10"></div>
+                            <img src="images/icon10.svg"/>
+                            <p class="spCorporateTiele fontColor1">施設</p>
+                            <p class="spCorporateEgs front_color10">facilities</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="/recruit/0/1/0/">
+                    <div class="col-md-2 col-xs-3 frontSp" ng-click="gotoRecruit()">
+                        <div class="col-xs-12 frontSp_div front_borderTop11">
+                            <div class="shop_triangleSp front_transparent11"></div>
+                            <img src="images/icon11.svg"/>
+                            <p class="spCorporateTiele fontColor1">リクルート</p>
+                            <p class="spCorporateEgs front_color11">recruit</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="/shop/corporateinfo/list/8/1/">
+                    <div class="col-md-2 col-xs-3 frontSp" ng-click="gotoCorporateinfo()">
+                        <div class="col-xs-12 frontSp_div front_borderTop12">
+                            <div class="shop_triangleSp front_transparent12"></div>
+                            <img src="images/icon12.svg"/>
+                            <p class="spCorporateTieleExcept fontColor1">コーポレート</p>
+                            <p class="spCorporateTieleExcept fontColor1">インフォ</p>
+                            <p class="spCorporateEgs front_color12">corporate info</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section><!--/#ServiceCategory-->
+<section>
+    <div class="top_container">
+        <div class="slanted-div">
+            <p class="top_slanted-div_marginLeft">EVENT REPORT</p>
+        </div>
+        <div class="container top_content_top padding_zero">
+            <a href="javascript:void(0);" ng-click="checkLoginGoto('/eventDetail/'+top.event[0].uuid+'/')">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <img ng-src="{{top.event[0].picUrl}}" class="event_pic1">
+                    <div class="event_title1">
+                        <span>{{top.event[0].holdDate}}</span><br/>
+                    </div>
+                    <div class="event_title2">
+                        <span>{{top.event[0].title}}</span>
+                    </div>
+                    <div class="event_title3">
+                        <span>{{top.event[0].excerpt}}</span>
+                    </div>
+                </div>
+            </a>
+            <div class="col-md-6 col-sm-6 col-xs-12 top_event_mgnTp padding_zero">
+                <a href="javascript:void(0);" ng-click="checkLoginGoto('/eventDetail/'+top.event[1].uuid+'/')">
+                    <div class="col-md-12 col-xs-12 padding_zero">
+                        <div class="col-md-6 col-xs-6 top_event_right_img">
+                            <img ng-src="{{top.event[1].picUrl}}" class="event_pic2">
+                        </div>
+                        <div class="col-md-6 col-xs-6 event_title_padding">
+                            <span class="event_title1">{{top.event[1].holdDate}}</span><br/>
+                            <span class="event_title2">{{top.event[1].title}}</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="javascript:void(0);" ng-click="checkLoginGoto('/eventDetail/'+top.event[2].uuid+'/')">
+                    <div class="col-md-12 col-xs-12 padding_zero" style="margin-top:15px;">
+                        <div class="col-md-6 col-sm-6 col-xs-6 top_event_right_img">
+                            <img ng-src="{{top.event[2].picUrl}}" class="event_pic2">
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6 event_title_padding">
+                            <span class="event_title1">{{top.event[2].holdDate}}</span><br/>
+                            <span class="event_title2">{{top.event[2].title}}</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="javascript:void(0);" ng-click="checkLoginGoto('/eventDetail/'+top.event[3].uuid+'/')">
+                    <div class="col-md-12 col-xs-12 padding_zero" style="margin-top:15px;">
+                        <div class="col-md-6 col-sm-6 col-xs-6 top_event_right_img">
+                            <img ng-src="{{top.event[3].picUrl}}" class="event_pic2">
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6 event_title_padding">
+                            <span class="event_title1">{{top.event[3].holdDate}}</span><br/>
+                            <span class="event_title2">{{top.event[3].title}}</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="top_button_padding" align="center">
+            <a href="javascript:void(0);" ng-click="checkLoginGoto('/event/0/1/')"><button type="submit" class="top_button">MORE</button></a>
+        </div>
+    </div>
+</section><!--/#EventDairy-->
+<section>
+        <div class="top_container">
+            <div class="slanted-div">
+                <p class="top_slanted-div_marginLeft">MOVE UP WEST NEWS</p>
+            </div>
+            <div class="top_news_btngroup">
+                <a href="/news/0/"><div class="col-md-2 col-xs-3 top_news_pd1"><button type="submit" class="top_news_btn" style="background-color: black">ALL</button></div></a>
+                <a href="/news/2/"><div class="col-md-4 col-xs-3 top_news_pd2"><button type="submit" class="top_news_btn" style="background-color: red">MOVEUP</button></div></a>
+                <a href="/news/1/"><div class="col-md-3 col-xs-3 top_news_pd3"><button type="submit" class="top_news_btn" style="background-color: #004984">EVENT</button></div></a>
+                <a href="/news/3/"><div class="col-md-3 col-xs-3 top_news_pd4"><button type="submit" class="top_news_btn" style="background-color: #009a4c">NEWS</button></div></a>
+            </div>
+            <div class="container top_content_top padding_zero">
+                <div ng-repeat="news in top.news">
+                  <div class="Time_label col-md-12 col-xs-12 padding_zero">
+                    <a href="/newsDetail/{{news.uuid}}/">
+                      <div class="col-md-2 col-sm-3 col-xs-3 top_news_date">
+                        <span>{{news.date}}</span>
+                      </div>
+                      <div class="col-md-1 col-sm-2 col-xs-4 detail_xs">
+                        <button class="Time_label_detail" style="{{news.typeColor}}">{{news.type}}</button></div>
+                      <div class="col-md-9 col-sm-6 col-xs-12">
+                          <span class="Time_label_news" style="color:#222222;">{{news.title}}</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+            </div>
+            <div class="top_button_padding" align="center">
+                <a href="/news/0/1/"><button type="submit" class="top_button">MORE</button></a>
+            </div>
+        </div>
+</section><!--/#News-->
+<section>
+    <div class="tv_container">
+        <div class="container top_tv_title" align="center"><span>MOVE UP TV</span></div>
+        <div class="container padding_zero tv_content">
+            <div ng-repeat="tv in top.tv">
+                <a href="/tvDetail/{{tv.uuid}}/">
+                    <div class="col-md-6 col-sm-6 col-xs-6 padding_zero" style="padding-top: 30px;">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <img ng-src="{{tv.tvPic}}" class="top_tv_pic">
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <p class="tv_label">{{tv.date}}</p>
+                            <label class="tv_label lineStyle lineHid2 lineHeight">{{tv.title}}</label>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-12 col-xs-12 top_button_padding" align="center">
+                <a href="/tv/0/1/"><button type="submit" class="top_tv_button">MORE</button></a>
+            </div>
+        </div>
+    </div>
+</section><!--/#tv-->
+<!--<section id="Rise">
+    <div class="Rise_Container">
+        <div class="container">
+            <div class="Rise_title_Big text-center">R
+                <span class="Rise_title_Small">i</span>
+                <span class="Rise_title_Big">s</span>
+                <span class="Rise_title_Big">e</span>
+                <span class="Rise_title_Big">!</span>
+            </div>
+            <div class="row rise_padding">
+                <div class="col-md-2 col-md-offset-1 col-xs-2">
+                    <a href="/rise">
+                    <button type="submit" class="top_rise_btn" style="background-image:url(images/Rise1.jpg)"></button>
+                    </a>
+                </div>
+                <div class="col-md-2 col-xs-2 rise_btn_margin">
+                    <a href="/rise">
+                    <button type="submit" class="top_rise_btn" style="background-image:url(images/Rise2.jpg)"></button>
+                    </a>
+                </div>
+                <div class="col-md-2 col-xs-2 rise_btn_margin">
+                    <a href="/rise">
+                    <button type="submit" class="top_rise_btn" style="background-image:url(images/Rise3.jpg)"></button>
+                    </a>
+                </div>
+                <div class="col-md-2 col-xs-2 rise_btn_margin">
+                    <a href="/rise">
+                    <button type="submit" class="top_rise_btn" style="background-image:url(images/Rise4.jpg)"></button>
+                    </a>
+                </div>
+                <div class="col-md-2 col-xs-2 rise_btn_margin">
+                    <a href="/rise">
+                    <button type="submit" class="top_rise_btn" style="background-image:url(images/Rise5.jpg)"></button>
+                    </a>
+                </div>
+            </div>
+            <a href="/rise">
+            <div class="row">
+              <div class="col-md-6">
+                  <div style="position: relative" style="padding-top: 0;">
+                      <img src="images/Rise_icon.jpg" class="Rise_iamge " alt="Responsive image">
+                      <img src="images/Rise_icon1.jpg" class="Rise_icon_iamge" alt="Responsive image">
+                      <img src="images/Rise_icon2.jpg" class="Rise_icon_iamge Rise_icon_iamge_margin" alt="Responsive image">
+                      <img src="images/Rise_icon3.jpg" class="Rise_icon_iamge Rise_icon_iamge_margin" alt="Responsive image">
+                      <span class="Rise_icon_title">TAKAHIRO</span>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="Riseinfo_bg">
+                      <p class="Rise_info_title">Rise info.</p>
+                      <span class="Rise_info_time">2018.01.20</span>
+                      <p class="Rise_info_detail">川村にて最大級のダンスアーティスト
+                          によるライブイベントを開催いたします！チケットはネットましくはコンビニにてチケットはネットましくはコンビニにて</p>
+                      <p class="Rise_info_line">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                           <span class="rise_info_line_xs" >- - - - - - - - - - - - - - - - - - - - - - - - - - -</span></p>
+                      <span class="Rise_info_time">2018.01.20</span>
+                      <p class="Rise_info_detail">川村にて最大級のダンスアーティスト
+                          によるライブイベントを開催いたします！チケットはネットましくはコンビニにてチケットはネットましくはコンビニにて</p>
+                      <p class="Rise_info_line">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                           <span class="rise_info_line_xs">- - - - - - - - - - - - - - - - - - - - - - - - - - -</span></p>
+                      <span class="Rise_info_time">2018.01.20</span>
+                      <p class="Rise_info_detail">川村にて最大級のダンスアーティスト
+                          によるライブイベントを開催いたします！チケットはネットましくはコンビニにてチケットはネットましくはコンビニにて</p>
+                      <p class="Rise_info_line">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                           <span class="rise_info_line_xs">- - - - - - - - - - - - - - - - - - - - - - - - - - -</span></p>
+                      <span class="Rise_info_time">2018.01.20</span>
+                      <p class="Rise_info_detail">川村にて最大級のダンスアーティスト
+                          によるライブイベントを開催いたします！チケットはネットましくはコンビニにてチケットはネットましくはコンビニにて</p>
+                      <p class="Rise_info_line">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                           <span class="rise_info_line_xs">- - - - - - - - - - - - - - - - - - - - - - - - - - -</span></p>
+                      <div class="rise_info_line_xs">
+                        <span class="Rise_info_time">2018.01.20</span>
+                        <p class="Rise_info_detail">川村にて最大級のダンスアーティスト
+                            によるライブイベントを開催いたします！チケットはネットましくはコンビニにてチケットはネットましくはコンビニにて</p>
+                            <p>&nbsp;</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            </a>
+        </div>
+    </div>
+</section>/#Rise-->
+<section>
+    <div class="top_container">
+        <div class="slanted-div">
+            <p class="top_slanted-div_marginLeft">MOVE UP GOODS</p>
+        </div>
+        <div class="container top_content_top padding_zero">
+            <div class="row display">
+                <div ng-repeat="goods in top.goods">
+                    <a href="/goodsDetail/{{goods.uuid}}/">
+                        <div class="top_store_div">
+                            <img ng-src="{{goods.picUrl}}" alt="" class="store_pic">
+                            <div class="top_store_font"><span>{{goods.title}}</span></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-xs-12 padding_zero displayPc">
+                <div class="col-md-3 col-xs-6" ng-if="top.goods[0].picUrl != null">
+                    <a href="/goodsDetail/{{top.goods[0].uuid}}/">
+                        <img ng-src="{{top.goods[0].picUrl}}" class="store_pic">
+                        <div class="top_store_font"><span>{{top.goods[0].title}}</span></div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-xs-6" ng-if="top.goods[1].picUrl != null">
+                    <a href="/goodsDetail/{{top.goods[1].uuid}}/">
+                        <div class="col-md-12 col-xs-12 padding_zero">
+                            <img ng-src="{{top.goods[1].picUrl}}" class="store_pic">
+                            <div class="top_store_font">
+                                <span>{{top.goods[1].title}}</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-xs-6" ng-if="top.goods[2].picUrl != null">
+                    <a href="/goodsDetail/{{top.goods[2].uuid}}/">
+                        <div class="col-md-12 col-xs-12 padding_zero">
+                            <div class="team-img">
+                                <img ng-src="{{top.goods[2].picUrl}}" class="store_pic">
+                            </div>
+                            <div class="top_store_font">
+                                <span>{{top.goods[2].title}}</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-xs-6" ng-if="top.goods[3].picUrl != null">
+                    <a href="/goodsDetail/{{top.goods[3].uuid}}/">
+                        <div class="col-md-12 col-xs-12 padding_zero">
+                            <div class="team-img">
+                                <img ng-src="{{top.goods[3].picUrl}}" class="store_pic">
+                            </div>
+                            <div class="top_store_font">
+                                <span>{{top.goods[3].title}}</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 top_button_padding " align="center">
+                <a href="/goods/1/"><button type="submit" class="top_button">MORE</button></a>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="top_container">
+        <div class="slanted-div">
+            <p class="top_slanted-div_marginLeft">FREE PAPER</p>
+        </div>
+        <div class="container top_content_top padding_zero">
+            <div class="col-md-12 col-sm-12 col-xs-12 padding_zero display">
+                <div id="owl-demo" class="owl-carousel">
+                    <div ng-repeat="freePaper in top.freePaper">
+                        <div class="item" ng-click="checkLoginGoto('/freePaper/'+freePaper.uuid+'/')">
+                            <img ng-src="{{freePaper.picUrl}}">
+                            <div class="top_fp_p">
+                                <p ng-if="freePaper.title != ''">{{freePaper.title}}</p>
+                                <p>vol.{{freePaper.ranking}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 padding_zero displayPc">
+                <div class="col-md-6 col-sm-6 col-xs-6 top_spFpDiv" ng-if="top.freePaper[0].picUrl != ''" ng-click="checkLoginGoto('/freePaper/'+top.freePaper[0].uuid+'/')">
+                    <img ng-src="{{top.freePaper[0].picUrl}}" class="top_spFpImg">
+                    <div class="top_spFp_p">
+                        <p ng-if="top.freePaper[0].title != ''">{{top.freePaper[0].title}}</p>
+                        <p>vol.{{top.freePaper[0].ranking}}</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6 top_spFpDiv" ng-if="top.freePaper[1].picUrl != ''" ng-click="checkLoginGoto('/freePaper/'+top.freePaper[1].uuid+'/')">
+                    <img ng-src="{{top.freePaper[1].picUrl}}" class="top_spFpImg">
+                    <div class="top_spFp_p">
+                        <p ng-if="top.freePaper[1].title != ''">{{top.freePaper[1].title}}</p>
+                        <p>vol.{{top.freePaper[1].ranking}}</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6 top_spFpDiv" ng-if="top.freePaper[2].picUrl != ''" ng-click="checkLoginGoto('/freePaper/'+top.freePaper[2].uuid+'/')">
+                    <img ng-src="{{top.freePaper[2].picUrl}}" class="top_spFpImg">
+                    <div class="top_spFp_p">
+                        <p ng-if="top.freePaper[2].title != ''">{{top.freePaper[2].title}}</p>
+                        <p>vol.{{top.freePaper[2].ranking}}</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6 top_spFpDiv" ng-if="top.freePaper[3].picUrl != ''" ng-click="checkLoginGoto('/freePaper/'+top.freePaper[3].uuid+'/')">
+                    <img ng-src="{{top.freePaper[3].picUrl}}" class="top_spFpImg">
+                    <div class="top_spFp_p">
+                        <p ng-if="top.freePaper[3].title != ''">{{top.freePaper[3].title}}</p>
+                        <p>vol.{{top.freePaper[3].ranking}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 top_button_padding" align="center">
+                <button type="submit" class="top_button" ng-click="checkLoginGoto('/freePaper/1/')">MORE</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="top_container">
+        <div class="container studio_container padding_zero">
+            <div class="col-md-12 col-sm-12 col-xs-12 padding_zero">
+                <a href="/studioMoveup">
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <img src="images/smu_bnr.jpg" class="ad_images" ondragstart="return false;">
+                    </div>
+                </a>
+                <a href="/team/1/">
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <img src="images/tema2020_bnr.svg" class="ad_images" ondragstart="return false;">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+</div><!-- repeat -->
+<div ng-include="'views/footer.html'" ng-hide="hideFooter"></div>

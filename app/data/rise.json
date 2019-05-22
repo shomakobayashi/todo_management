@@ -1,0 +1,51 @@
+{
+  "message": "SUCCESS",
+  "statusCode": "S00000",
+  "resultList": [
+    {
+      "name1" : "林田 寿明",
+      "name2" : "TOSHIAKI HAYASHIDA",
+      "picUrl": "images/rise_1.png"
+    },
+    {
+      "name1" : "林田 寿明",
+      "name2" : "TOSHIAKI HAYASHIDA",
+      "picUrl": "images/rise_2.png"
+    },
+    {
+      "name1" : "林田 寿明",
+      "name2" : "TOSHIAKI HAYASHIDA",
+      "picUrl": "images/rise_3.png"
+    },
+    {
+      "name1" : "林田 寿明",
+      "name2" : "TOSHIAKI HAYASHIDA",
+      "picUrl": "images/rise_1.png"
+    },
+    {
+      "name1" : "林田 寿明",
+      "name2" : "TOSHIAKI HAYASHIDA",
+      "picUrl": "images/rise_2.png"
+    },
+    {
+      "name1" : "林田 寿明",
+      "name2" : "TOSHIAKI HAYASHIDA",
+      "picUrl": "images/rise_3.png"
+    },
+    {
+      "name1" : "林田 寿明",
+      "name2" : "TOSHIAKI HAYASHIDA",
+      "picUrl": "images/rise_1.png"
+    },
+    {
+      "name1" : "林田 寿明",
+      "name2" : "TOSHIAKI HAYASHIDA",
+      "picUrl": "images/rise_2.png"
+    },
+    {
+      "name1" : "林田 寿明",
+      "name2" : "TOSHIAKI HAYASHIDA",
+      "picUrl": "images/rise_3.png"
+    }
+  ]
+}

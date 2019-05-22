@@ -1,0 +1,100 @@
+<style>
+  nav{
+    display: none;
+  }
+</style>
+<section>
+    <div class="container carry_pdgTop">
+        <div class="shopSelectDiv" ng-hide="selectHide0" ng-click="shopCloseAllSelect()"></div>
+        <div class="col-lg-12 col-xs-12" align="center">
+            <img class="img-responsive" src="images/logo01.svg" style="width: 50%;">
+        </div>
+        <div class="col-lg-12 col-xs-12 carry_MgnTop-200" align="center"><p class="table_Title">掲載依頼フォーム</p></div>
+        <div class="col-lg-12 col-xs-12 carry_MgnTop-140" align="center">
+            <table border="1" class="buy_table_List">
+                <tbody>
+                  <tr>
+                    <td class="buy_table_left">貴店名<span class="table_icon">必須</span><span class="table_icon_small">*</span></td>
+                    <td class="buy_table_right">
+                        <input id="shopName" name="shopName" class="inputStyle" type="text" ng-model="formData.shopName">
+                    </td>
+                  </tr>
+                <tr>
+                    <td class="buy_table_left">ご担当者名<span class="table_icon">必須</span><span class="table_icon_small">*</span></td>
+                    <td class="buy_table_right">
+                        <input id="companyName" name="companyName" placeholder="" class="inputStyle" type="text" ng-model="formData.companyName">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="buy_table_left">貴店の業種<span class="table_icon">必須</span><span class="table_icon_small">*</span></td>
+                    <td class="buy_table_right">
+                        <div class="col-lg-4 col-xs-8 padding_zero">
+                            <div class="date_selectinput" ng-click="shopSelect1()">
+                                <span class="selectListSpan">{{selectDesc1}}</span>
+                            </div>
+                            <div class="date_selectList date_selectPosition1" ng-hide="selectHide1" ng-click="shopCloseSelect1()" style="z-index: 500;">
+                              <div class="selectListDate" ng-click="shopSelectValue1('貴店の業種','')"><span class="selectListSpan">貴店の業種</span></div>
+                              <div class="selectListDate" ng-click="shopSelectValue1('食べる','食べる')"><span class="selectListSpan">食べる</span></div>
+                              <div class="selectListDate" ng-click="shopSelectValue1('ファッション','ファッション')"><span class="selectListSpan">ファッション</span></div>
+                              <div class="selectListDate" ng-click="shopSelectValue1('健康ビューティー','健康ビューティー')"><span class="selectListSpan">健康ビューティー</span></div>
+                              <div class="selectListDate" ng-click="shopSelectValue1('遊ぶ','遊ぶ')"><span class="selectListSpan">遊ぶ</span></div>
+                              <div class="selectListDate" ng-click="shopSelectValue1('ブライダル','ブライダル')"><span class="selectListSpan">ブライダル</span></div>
+                              <div class="selectListDate" ng-click="shopSelectValue1('乗る','乗る')"><span class="selectListSpan">乗る</span></div>
+                              <div class="selectListDate" ng-click="shopSelectValue1('プレイス','プレイス')"><span class="selectListSpan">プレイス</span></div>
+                              <div class="selectListDate" ng-click="shopSelectValue1('コーポレートインフォ','コーポレートインフォ')"><span class="selectListSpan">コーポレートインフォ</span></div>
+                              <div class="selectListDate" ng-click="shopSelectValue1('学ぶ','学ぶ')"><span class="selectListSpan">学ぶ</span></div>
+                              <div class="selectListDate" ng-click="shopSelectValue1('ライフスタイル','ライフスタイル')"><span class="selectListSpan">ライフスタイル</span></div>
+                              <div class="selectListDate" ng-click="shopSelectValue1('リクルート','リクルート')"><span class="selectListSpan">リクルート</span></div>
+                              <div class="selectListDate" ng-click="shopSelectValue1('その他','0')"><span class="selectListSpan">その他</span></div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="buy_table_left">貴店ご住所<span class="table_icon">必須</span><span class="table_icon_small">*</span></td>
+                    <td class="buy_table_right">
+                        <div style="margin-bottom: 10px;">
+                            <span class="CodeBtn">〒</span>
+                            <input id="zipcode1" name="zipcode1" placeholder="1010001" class="carry_postNo" type="text" ng-change="onzipcodeChanged()" ng-model="formData.zipcode">
+                        </div>
+                        <div>
+                            <input id="address" name="address" placeholder="○○県△△市123 　☐☐マンション１０１" class="inputStyle" type="text" ng-model="formData.address">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="buy_table_left">連絡先電話番号<span class="table_icon">必須</span><span class="table_icon_small">*</span></td>
+                    <td class="buy_table_right">
+                        <input id="tel" name="tel" placeholder="" class="inputStyle" type="text" ng-model="formData.tel">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="buy_table_left">メールアドレス<span class="table_icon">必須</span><span class="table_icon_small">*</span></td>
+                    <td class="buy_table_right">
+                        <input id="mail" name="mail" class="inputStyle" type="text" ng-model="formData.mail" ng-disabled="mailDisabled">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="buy_table_left">貴店のURL<span class="table_icon" style="background-color: #00a7dd">任意</span></td>
+                    <td class="buy_table_right">
+                        <input id="url" name="url" placeholder="" class="inputStyle" type="text" ng-model="formData.url">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="buy_table_left">お問合せ内容<span class="table_icon">必須</span><span class="table_icon_small">*</span></td>
+                    <td class="buy_table_right">
+                        <textarea class="inputStyle" rows="5" ng-model="formData.content"></textarea>
+                    </td>
+                </tr>
+            </tbody></table>
+            <div class="error" id="errContainer">
+            </div>
+            <a href="javascript:void(0);" ng-click="gotoConfirm()">
+            <button type="button" class="confirmBtn" name="confirm" value="Confirm">送信する</button>
+            </a>
+        </div>
+    </div>
+</section>
+<section id="footer_mv">
+    <div class="carry_footer_font">Copyright HEADLINE WEST All Rights Reserved.</div>
+</section>

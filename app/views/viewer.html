@@ -1,0 +1,54 @@
+
+<style>
+nav{
+  display: none;
+}
+#zoomoutbutton{
+	position: absolute;
+	left: 40%;
+	width: 50px;
+	height: 50px;
+	color: black;
+	background: white;
+	border-radius: 50px;
+	text-align: center;
+	line-height: 55px;
+	margin-top: 0px;
+	cursor: pointer;
+	z-index: 1000;
+	opacity: 0.5;
+	font-size: 30px;
+}
+#zoominbutton{
+	position: absolute;
+	left: 58%;
+	width: 50px;
+	height: 50px;
+	color: black;
+	background: white;
+	border-radius: 50px;
+	text-align: center;
+	line-height: 55px;
+	margin-top: 0px;
+	cursor: pointer;
+	z-index: 1000;
+	opacity: 0.5;
+	font-size: 30px;
+}
+@media screen and (max-width: 480px){ /* CSS when screen width is 480px or less */
+  #zoomoutbutton{
+  	left: 35%;
+  }
+  #zoominbutton{
+  	left: 55%;
+  }
+}
+.xf{ width:100%; height:5em; margin:0 auto; overflow:hidden; position: fixed; bottom:5%;}
+</style>
+
+<canvas id="the-canvas" class="div_viewer"></canvas>
+<div class="xf" >
+<div id="zoominbutton"><span class="fa fa-plus"></span></div><div id="zoomoutbutton"><span class="fa fa-minus"></span></div>
+</div>
+<!-- <button id="zoominbutton" type="button">zoom in</button>
+<button id="zoomoutbutton" type="button">zoom out</button> -->

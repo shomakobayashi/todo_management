@@ -1,0 +1,43 @@
+<section>
+    <div class="container body_containerPadding">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12 PwdForget_title" align="center">
+                <span>{{title}}</span>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 PwdForget_body">
+                <div class="col-md-12 col-sm-12 col-xs-12 PwdForget_body_div">
+                    <div class="col-md-12 col-sm-12 col-xs-12 PwdForget_body_font">
+                    	<div class="col-md-1 col-sm-1 col-xs-1 display"></div>
+                    	<div class="col-md-10 col-sm-12 col-xs-12">
+	                        <label>
+	                            <span>{{content}}</span>
+	                        </label>
+                    	</div>
+                    	<div class="col-md-1 col-sm-1 col-xs-1 display"></div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 PwdForget_body_input">
+                    	<div class="col-md-1 col-sm-1 col-xs-1 display"></div>
+                    	<div class="col-md-7 col-sm-12 col-xs-12">
+                    		<input type="text" name="" style="padding-left:15px;" ng-model="mail">
+                    	</div>
+                    	<div class="col-md-3 col-sm-12 col-xs-12">
+                        	<button type="button" ng-click="postChangeMail()">送信</button>
+                    	</div>
+                    	<div class="col-md-1 col-sm-１ col-xs-1 display"></div>
+                    </div>
+                    <!-- <div class="col-md-12 col-sm-12 col-xs-12 PwdForget_body_input2">
+                    	<div class="col-md-1 col-sm-1 col-xs-1 display"></div>
+                    	<div class="col-md-7 col-sm-12 col-xs-12" align="right">
+                        <div class="g-recaptcha" data-sitekey="6LeXqlcUAAAAAH5FLedo86VCb0CCnIXa99lC8TXx"></div>
+                    	</div>
+                    </div> -->
+                    <div class="col-md-1 col-sm-1 col-xs-1"></div>
+                    <div class="col-md-10 col-sm-12 col-xs-12 ApplicationOver_content2" align="left" ng-bind-html="content2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- <script src='https://www.google.com/recaptcha/api.js?hl=ja'></script> -->
+<div ng-include="'views/footer.html'" ng-hide="hideFooter"></div>

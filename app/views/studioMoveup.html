@@ -1,0 +1,161 @@
+<section id="studio_Top">
+  <div class="container" style="width:100%;padding: 0;">
+    <img src="images/studioTopImg.jpg" style="width:100%;" class="display">
+    <img src="images/main01.jpg" style="width:100%;" class="displayPc">
+  </div>
+</section>
+<section id="studio_news">
+    <div class="container studio_container_padding">
+      <div class="col-md-12 col-sm-12 col-xs-12 studio_instagram_title">
+        <div class="col-md-11 col-sm-10 col-xs-10 padding_zero">
+          <p><i class="studio_icon">&gt;&gt;&gt;</i>Studio Move Up News<span>ニュース</span></p>
+        </div>
+        <div class="col-md-1 col-sm-2 col-xs-2 padding_zero"><button type="button" class="studio_button">MORE</button></div>
+      </div>
+      <div class="studio_news_img" ng-repeat="studio in results.studioNewsList">
+        <img ng-src="{{studio.picUrl.picUrl}}">
+        <p class="studio_news_p1">{{studio.date}}</p>
+        <p class="studio_news_p2">{{studio.title}}</p>
+     </div>
+    </div>
+</section>
+<section id="studio_info">
+    <div class="container studio_container_padding">
+      <div class="col-md-12 col-sm-12 col-xs-12 studio_instagram_title">
+        <div class="col-md-10 col-sm-10 col-xs-10 padding_zero">
+          <p><i class="studio_icon">&gt;&gt;&gt;</i>Studio Info<span>スタジオ紹介</span></p>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12 studio_info_pdLeft">
+        <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0;">
+          <p class="studio_info_p">ダンスクラス</p>
+          <img src="images/img01.jpg" class="studio_info_img" style="">
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12 studio_info_pdRight">
+        <div class="col-md-4 col-sm-4 col-xs-4 studio_info_title" style="padding: 0;">
+          <p>HIPHOPクラス</p>
+          <p>キッズクラス</p>
+          <p>一般クラス</p>
+          <p>JAZZクラス</p>
+          <p>入門クラス</p>
+          <p>初級クラス</p>
+          <p>各クラス</p>
+        </div>
+        <div class="col-md-8 col-sm-8 col-xs-8 studio_info_list" style="padding: 0;">
+          <p>毎週水曜日（月4回）月謝5,000円</p>
+          <p>18：00～19：00</p>
+          <p>19：15～20：15</p>
+          <p>毎週水曜日（月4回）月謝5,000円</p>
+          <p>17：00～18：00</p>
+          <p>18：45～19：45</p>
+          <p style="font-weight: bold;">体験無料</p>
+        </div>
+      </div>
+      <!-- <div class="col-md-6 col-sm-12 col-xs-12 studio_info_pdRight">
+        <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0;">
+          <p class="studio_info_p">トランポリン</p>
+          <img src="images/img02.jpg" style="width:100%;height: 234px;">
+        </div>
+        <div class="col-md-9 col-sm-9 col-xs-9 studio_info_title" style="padding: 0;">
+          <p>毎週火·金11：00～12：00(2名より実施)</p>
+          <p>料金：<span style="font-weight: normal;">単発2,500円月 ４回8,000円<span></p>
+          <p class="display"><span style="font-weight: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通い放題13,000円<span></p>
+          <p class="display"><span style="font-weight: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;体験１,000円<span></p>
+          <p class="displayPc"><span style="font-weight: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通い放題13,000円<span></p>
+          <p class="displayPc"><span style="font-weight: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;体験１,000円<span></p>
+          <p>インストラクター：<span style="font-weight: normal;">CHINA<span></p>
+          <p>スタジオ<span style="color:red;">&nbsp;要相談</span></p>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-3 studio_info_pic"><img src="images/chika.jpg"></div>
+      </div> -->
+    </div>
+</section>
+<section id="studio_photoGallery">
+    <div class="container photoGalleryPdg0">
+      <div class="col-md-12 col-sm-12 col-xs-12 studio_instagram_title">
+        <div class="col-md-10 col-sm-10 col-xs-10 padding_zero">
+          <p><i class="studio_icon">&gt;&gt;&gt;</i>Photo Gallery<span>フォトギャラリ</span></p>
+        </div>
+      </div>
+      <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0;">
+        <div class="col-md-3 col-sm-6 col-xs-6" style="padding: 0;" ng-repeat="gallery in results.galleryList">
+          <div class="col-md-12 col-sm-12 col-xs-12 photoGallery_imgPdg"><img ng-src={{gallery.url}}></div>
+        </div>
+      </div>
+  </div>
+</section>
+<section id="studio_moveup">
+    <div class="container studio_container_padding">
+      <div class="col-md-12 col-sm-12 col-xs-12 studio_instagram_title">
+        <div class="col-md-10 col-sm-12 col-xs-12 padding_zero">
+          <p><i class="studio_icon">&gt;&gt;&gt;</i>About Studio Move Up<span>スタジオ概要·設備紹介</span></p>
+        </div>
+      </div>
+      <div class="col-md-12 col-sm-12 col-xs-12 studio_moveup_info">
+        <div class="col-md-5 col-sm-5 col-xs-5" style="padding:0 10px 0 0;">
+          <div class="col-md-2 col-sm-12 col-xs-12 studio_moveup_infoPdg"><p>名称</p></div>
+          <div class="col-md-10 col-sm-12 col-xs-12 studio_moveup_infoPdg"><p>STUDIO MOVE UP</p></div>
+        </div>
+        <div class="col-md-7 col-sm-7 col-xs-7" style="padding:0 0 0 10px;">
+          <div class="col-md-2 col-sm-12 col-xs-12 studio_moveup_infoPdg"><p>住所</p></div>
+          <div class="col-md-10 col-sm-12 col-xs-12 padding_zero">
+            <p>〒 700-0027</p>
+            <a href="https://www.google.co.jp/maps/dir//34.6748491000,133.9196331000/@34.6748491000,133.9196331000,16z">
+              <p><img src="images/mapicon.svg" class="studio_mpaicon">岡山市北区清心町 16-31 フェアレーン岡山 1F</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12 col-sm-12 col-xs-12 padding_zero">
+        <div class="col-md-5 col-sm-5 col-xs-5" style="padding:0 10px 0 0;">
+          <div class="col-md-12 col-sm-12 col-xs-12" style="padding:0;border-bottom: 1px solid;border-color: black;"></div>
+        </div>
+        <div class="col-md-7 col-sm-7 col-xs-7" style="padding:0 0 0 10px;">
+          <div class="col-md-12 col-sm-12 col-xs-12" style="padding:0;border-bottom: 1px solid;border-color: black;"></div>
+        </div>
+      </div>
+      <!-- <div class="col-md-4 col-sm-6 col-xs-6 studio_moveup_PdgL">
+        <img src="images/img03.jpg">
+      </div>
+      <div class="col-md-4 col-sm-6 col-xs-6 studio_moveup_PdgM">
+        <img src="images/img03.jpg">
+      </div>
+      <div class="col-md-4 col-sm-12 col-xs-12 studio_moveup_PdgR">
+        <p><span>■</span>収容人数 10~15 人程度</p>
+        <p><span>■</span>テレビモニター　1台</p>
+        <p><span>■</span>テレビモニター　1台</p>
+        <p><span>■</span>テレビモニター　1台</p>
+        <p><span>■</span>テレビモニター　1台</p>
+        <p><span>■</span>テレビモニター　1台</p>
+        <p><span>■</span>テレビモニター　1台</p>
+      </div> -->
+    </div>
+</section>
+<section id="studio_contact">
+    <div class="container">
+      <div class="col-md-3 col-sm-3 col-xs-3 display"></div>
+      <div class="col-md-6 col-sm-12 col-xs-12 padding_zero">
+          <div class="col-md-12 col-sm-12 col-xs-12 padding_zero" align="center">
+            <p class="studio_contact_p1 display">086-250-8089</p>
+            <p class="studio_contact_p1 displayPc" ng-click="makePhone()">086-250-8089</p>
+            <p class="studio_contact_p2">お電話受付時間：月～金　10：00～17：00</p>
+            <a href="/contact"><p class="studio_contact_p3">CONTACT<span>メールでのお問合わせはこちら</span></p></a>
+          </div>
+      </div>
+      <div class="col-md-3 col-sm-3 col-xs-3 display"></div>
+    </div>
+</section>
+<section id="studio_instagram">
+    <div class="container studio_container_padding">
+      <!-- <div class="col-md-12 col-sm-12 col-xs-12 studio_instagram_title" align="center">
+          <p><i class="fa fa-instagram"></i>Instagram</p>
+      </div>
+      <div class="studio_news_img"><img src="images/img03.jpg"></div>
+      <div class="studio_news_img"><img src="images/img03.jpg"></div>
+      <div class="studio_news_img"><img src="images/img03.jpg"></div>
+      <div class="studio_news_img"><img src="images/img03.jpg"></div>
+      <div class="studio_news_img"><img src="images/img03.jpg"></div> -->
+    </div>
+</section>
+<div ng-include="'views/footer.html'" ng-hide="hideFooter"></div>

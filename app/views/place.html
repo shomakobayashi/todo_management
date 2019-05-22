@@ -1,0 +1,72 @@
+<section>
+    <div class="container" style="padding: 18px 0 0;width: 100%;">
+        <iframe src="https://linkru360.com/tour/e4b6bc97c020ef1" class="place_carousel" frameborder="0" width="100%" height="1000" scrolling="no" allowfullscreen></iframe>
+    </div>
+</section>
+<section class="place_background_1">
+    <div class="container place_selectpadding">
+        <div class="placeSelectDiv" ng-hide="selectHide0" ng-click="shopCloseAllSelect()"></div>
+        <div class="col-md-3 col-sm-3 col-xs-3"></div>
+        <div class="col-md-6 col-sm-6 col-xs-6 padding_zero" style="z-index: 500;position:relative;">
+          <div class="place_selectinput" ng-click="shopSelect1()"><span class="selectListSpan">{{selectDesc1}}</span></div>
+          <div class="place_selectList" ng-hide="selectHide1" ng-click="shopCloseSelect1()">
+              <div class="selListShop" ng-click="shopSelectValue1('エリアを選択',0)"><span class="selectListSpan" ng-model="location">エリアを選択</span></div>
+              <div ng-repeat="areaList in results.areaList">
+                <div class="selectListShop" ng-click="shopSelectValue1(areaList.location,areaList.area)"><span class="selectListSpan" >{{areaList.location}}</span></div>
+              </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-3"></div>
+    </div>
+</section>
+
+<section class="place_background_2">
+    <div class="container place_xs_padding padding_zero place_xs_background">
+        <div class="col-md-12 col-sm-12 col-xs-12 place_header">
+            <span class="place_header_span_1" ng-hide="selectHide2">{{selectDesc1}}の</span>
+            <span class="place_header_span_2">オススメプレイス</span>
+        </div>
+        <div ng-repeat="place in results.placeList">
+            <a href="/place/detail/{{place.uuid}}/">
+                <div class="col-md-4 col-sm-4 col-xs-12 shop_sptop">
+                    <div class="col-md-12 col-sm-12 col-xs-12 shop_goods">
+                        <div class="shop_goods_title" align="left">
+                            <div class="col-md-1 col-sm-1 col-xs-1 place_info_header"><p>{{$index+1}}</p></div>
+                            <span style="color:#454545">{{place.name}}</span>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-5 shop_goods_pic">
+                            <img ng-src="{{place.picUrl}}">
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-7 shop_goods_content">
+                            <label class="lineStyle lineHid6">{{place.introduce}}</label>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-7 shop_address_div display">
+                            <div class="col-md-2 col-sm-2 col-xs-2 shop_address_icon">
+                                <i class="fa fa-home shop_address_i"></i>
+                            </div>
+                            <div class="col-md-10 col-sm-10 col-xs-10 shop_address_content padding_zero" align="left">
+                                <span class="lineStyle lineHid1">{{place.address}}</span>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 padding_zero displayPc">
+                            <div class="col-md-1 col-sm-1 col-xs-1 padding_zero">
+                                <i class="fa fa-home shop_address_i"></i>
+                            </div>
+                            <div class="col-md-11 col-sm-11 col-xs-11 shop_address_content" align="left">
+                                <span class="lineStyle lineHid1">{{place.address}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div pagination class="col-md-12 col-sm-12 col-xs-12 change_page event_padding2" ng-hide="hidePages" align="center">
+            <ul>
+                <a href="javascript:void(0);"><li ng-click="upPageClick(pageObject.currentPage-1)">&lt;</li></a>
+                <div id="pagesChange"></div>
+                <a href="javascript:void(0);"><li ng-click="downPageClick(pageObject.currentPage+1)">&gt;</li></a>
+            </ul>
+        </div>
+    </div>
+</section><!--/#place-->
+<div ng-include="'views/footer.html'" ng-hide="hideFooter"></div>

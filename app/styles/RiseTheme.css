@@ -1,0 +1,287 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+
+.rise_btn{
+    font-size: 16px;
+    font-style: oblique;
+    font-weight: bold;
+    width: 80px;
+    height: 30px;
+    border-style: none;
+    text-align: center;
+    color: white;
+    outline: none;
+}
+.rise_title{
+    font-size: 90px;
+    font-weight: bold;
+    color: black;
+    letter-spacing: 12px;
+    padding-bottom: 30px;
+}
+.rise_name1{
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+.rise_name2{
+    font-size: 15px;
+    font-weight: bold;
+    color: #C0C0C0;
+}
+.container_padding1{
+    padding-top: 200px;
+}
+.container_padding2{
+    padding-top: 100px;
+}
+.rise_pic{
+    padding-top: 30px;
+}
+.logo_images{
+    width: 120px;
+    height: 120px;
+    margin-top: 25px;
+}
+@media (max-width: 1024px) {
+.container_padding1{
+    padding-top: 25px;
+}
+.container_padding2{
+    padding-top: 30px;
+}
+.rise_title{
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+    letter-spacing: 12px;
+    padding-bottom: 30px;
+}
+.rise_btn{
+    font-size: 16px;
+    font-style: oblique;
+    font-weight: bold;
+    width: 80px;
+    height: 30px;
+    border-style: none;
+    text-align: center;
+    color: white;
+    outline: none;
+}
+.header_pic_xs{
+    background-image: url(images/nav_header_bg1.png);
+}
+.container_xs_display{
+    display: none;
+}
+.xs_display{
+    display: none;
+}
+.xs_display1024{
+    display: none;
+}
+.rise_name1{
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+}
+.rise_btn_xs{
+    padding-left: 3px;
+    padding-top: 30px;
+}
+.Rise_pic{
+    padding-top: 10px;
+}
+}
+@media (max-width: 768px) {
+.container_padding1{
+    padding-top: 25px;
+}
+.container_padding2{
+    padding-top: 30px;
+}
+.rise_title{
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+    letter-spacing: 12px;
+    padding-bottom: 30px;
+}
+.rise_btn{
+    font-size: 8px;
+    font-style: oblique;
+    font-weight: bold;
+    width: 60px;
+    height: 25px;
+    border-style: none;
+    text-align: center;
+    color: white;
+    outline: none;
+}
+.header_pic_xs{
+    background-image: url(images/nav_header_bg1.png);
+}
+.container_xs_display{
+    display: none;
+}
+.xs_display{
+    display: none;
+}
+.rise_name1{
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+}
+.rise_btn_xs{
+    padding-left: 160px;
+    padding-top: 30px;
+}
+.Rise_pic{
+    padding-top: 10px;
+}
+}
+@media (max-width: 414px) {
+.container_padding1{
+    padding-top: 25px;
+}
+.container_padding2{
+    padding-top: 30px;
+}
+.rise_title{
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+    letter-spacing: 12px;
+    padding-bottom: 30px;
+}
+.rise_btn{
+    font-size: 4px;
+    font-style: oblique;
+    font-weight: bold;
+    width: 50px;
+    height: 20px;
+    border-style: none;
+    text-align: center;
+    color: white;
+    outline: none;
+}
+.header_pic_xs{
+    background-image: url(images/nav_header_bg1.png);
+}
+.container_xs_display{
+    display: none;
+}
+.xs_display{
+    display: none;
+}
+.rise_name1{
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+}
+.rise_btn_xs{
+    padding-left: 15px;
+    padding-top: 30px;
+}
+.Rise_pic{
+    padding-top: 10px;
+}
+}
+
+@media (max-width: 375px) {
+.container_padding1{
+    padding-top: 25px;
+}
+.container_padding2{
+    padding-top: 30px;
+}
+.rise_title{
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+    letter-spacing: 12px;
+    padding-bottom: 30px;
+}
+.rise_btn{
+    font-size: 4px;
+    font-style: oblique;
+    font-weight: bold;
+    width: 45px;
+    height: 20px;
+    border-style: none;
+    text-align: center;
+    color: white;
+    outline: none;
+}
+.header_pic_xs{
+    background-image: url(images/nav_header_bg1.png);
+}
+.container_xs_display{
+    display: none;
+}
+.xs_display{
+    display: none;
+}
+.rise_name1{
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+}
+.rise_btn_xs{
+    padding-left: 8px;
+    padding-top: 30px;
+}
+.Rise_pic{
+    padding-top: 10px;
+}
+}
+@media (max-width: 360px) {
+.container_padding1{
+    padding-top: 25px;
+}
+.container_padding2{
+    padding-top: 30px;
+}
+.rise_title{
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+    letter-spacing: 12px;
+    padding-bottom: 30px;
+}
+.rise_btn{
+    font-size: 4px;
+    font-style: oblique;
+    font-weight: bold;
+    width: 45px;
+    height: 20px;
+    border-style: none;
+    text-align: center;
+    color: white;
+    outline: none;
+}
+.header_pic_xs{
+    background-image: url(images/nav_header_bg1.png);
+}
+.container_xs_display{
+    display: none;
+}
+.xs_display{
+    display: none;
+}
+.rise_name1{
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+}
+.rise_btn_xs{
+    padding-left: 3px;
+    padding-top: 30px;
+}
+.Rise_pic{
+    padding-top: 10px;
+}
+}

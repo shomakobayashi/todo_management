@@ -1,0 +1,191 @@
+.contact_padding_2{
+    padding-top: 2em;
+}
+.contact_padding_3{
+    padding-left: 0;
+    padding-right: 0;
+}
+.contact_padding_4{
+    padding-top: 3.2em;
+}
+.contact_title{
+    font-size: 1.6em;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding-bottom: 1em;
+}
+.contact_header_1{
+    font-size: 1.2em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    padding-top: 2em;
+    color: black;
+}
+.contact_message{
+    font-size: 1em;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding-top: 0.8em;
+}
+.contact_message_style_1{
+    color: black;
+}
+.contact_message_style_2{
+    color: red;
+}
+.contact_message_style_3{
+    color: black;
+    text-align: center;
+    padding-top: 1.2em;
+    padding-bottom: 3.2em;
+}
+.contact_input_table{
+    font-size: 1em;
+    color: black;
+    width: 100%;
+    border-style: solid;
+    border-color: #ACACAC;
+}
+.contact_input_table tr td{
+    vertical-align: top;
+    line-height: 2em;
+    border: 1px solid #DCDCDC;
+}
+.contact_width_70p{
+    width: 100%;
+}
+.contact_images_square{
+    width: 1em;
+    height: 1em;
+}
+.contact_warning_header{
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.contact_warning_detail{
+    font-size: 1em;
+    font-weight: 500;
+    color: black;
+    padding-top: 1.6em;
+    padding-bottom: 2em;
+    padding-left: 3em;
+}
+.contact_warning_detail li{
+    padding-left: 0.8em;
+}
+.contact_form_select{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+}
+.contact_btn_submit{
+    border: 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+    width: auto;
+    outline: none;
+    padding: 0 2em;
+}
+.contact_btn_submit2{
+    border: 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+    width: auto;
+    outline: none;
+    padding: 0 2em;
+}
+.contact_btn_confirm{
+    font-size: 1em;
+    height: 4em;
+    background: #2EA7E0;
+    color: white;
+}
+.contact_btn_confirm2{
+    font-size: 1em;
+    height: 3.2em;
+    background: #2EA7E0;
+    color: white;
+}
+.contact_btn_return{
+    font-size: 1em;
+    height: 3.2em;
+    background: #E5E5E5;
+    color: black;
+    margin-right: 1.2em;
+}
+.contact_btn_search{
+    background: linear-gradient(to right,#FF7F00 0,red 100%);
+    font-size: 1.2em;
+    height: 2.4em;
+    color: white;
+    width: 100%;
+}
+@media (max-width: 736px) {
+.contact_padding_2{
+    padding: 2em 0 0;
+}
+.contact_xs_display{
+    display: none;
+}
+.contact_padding_3{
+    padding: 0.4em;
+}
+.contact_title{
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+}
+.contact_message{
+    font-size: 0.8em;
+}
+.contact_header_1{
+    font-size: 1em;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    padding-top: 1.2em;
+}
+.contact_message_style_3{
+    text-align: left;
+    padding-bottom: 1.2em;
+}
+.contact_warning_header{
+    font-size: 0.8em;
+    font-weight: bold;
+    letter-spacing: 0px;
+}
+.contact_warning_detail{
+    font-size: 0.8em;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    padding-left: 0;
+}
+.contact_btn_submit{
+    width: 90%;
+    padding: 5px 0 45px;
+}
+.contact_btn_submit2{
+    width: 90%;
+}
+.contact_btn_confirm{
+    padding-bottom: 55px;
+    font-size: 0.8em;
+    height: 5em;
+}
+.contact_btn_confirm2{
+    font-size: 0.8em;
+    height: 3em;
+}
+.contact_btn_return{
+    font-size: 0.8em;
+    height: 3em;
+}
+}
+@media (max-width: 375px) {
+  .contact_btn_submit2{
+      padding: 0;
+  }
+}

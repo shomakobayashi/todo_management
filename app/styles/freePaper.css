@@ -1,0 +1,136 @@
+.transparent{
+position:absolute;
+display:block;
+width:645px;
+height:930px;
+background: url("../images/transparent.png");
+z-index: 2147483647;
+}
+.free_content{
+	padding: 0;
+	margin-top: 80px;
+}
+.free_goods{
+	width: 25%;
+	float: left;
+	padding: 0 15px;
+	margin-bottom: 30px;
+}
+.free_goods img{
+	width: 100%;
+	height: 390px;
+}
+.free_goods iframe{
+	width: 100%;
+	height: 360px;
+}
+.free_goods p{
+	color: rgb(47,47,47);
+	font-size: 18px;
+	font-weight: bold;
+	margin-top: 5px;
+}
+.free_changPage{
+	padding: 0;
+}
+.free_changPage ul{
+    list-style: none;
+}
+.free_changPage ul li{
+    float: left;
+    border: 2px solid;
+    padding: 2px 10px;
+}
+.free_changPage a{
+    color: #F20821;
+}
+.free_changPage ul li:hover{
+    border: 2px solid #F20821;
+    color: #FFF;
+    background-color: #F20821;
+}
+.freePaper_favorite_btn{
+	  padding: 0;
+    background-color: #F93;
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    border-style: none;
+    color: #FFF;
+    font-size: 10px;
+    letter-spacing:1px;
+}
+#toolbar{
+	display: none;
+}
+@media (max-width: 1200px) {
+.free_goods img{
+	height: 316px;
+}
+}
+@media (max-width: 991px) {
+.free_goods img{
+	height: 234px;
+}
+}
+@media (max-width: 736px) {
+.freePaper_ranking{
+	text-align: center;
+}
+.free_content{
+	margin-top: 30px;
+}
+.free_goods{
+	width: 33%;
+	padding: 0 5px;
+}
+.free_goods img{
+	height: 355px;
+}
+.free_goods p{
+	font-size: 16px;
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.transparent{
+width:414px;
+height:670px;
+}
+.freePaper_favorite_btn{
+  height: 30px;
+  border-style: none;
+}
+}
+@media (max-width: 667px) {
+.free_goods{
+	width: 33%;
+	padding: 0 5px;
+}
+.free_goods img{
+	height: 335px;
+}
+}
+@media (max-width: 414px) {
+.free_goods img{
+	height: 186px;
+}
+}
+@media (max-width: 375px) {
+.free_goods{
+	width: 33%;
+	padding: 0 5px;
+}
+.free_goods img{
+	height: 165px;
+}
+.free_goods p{
+	font-size: 16px;
+	font-weight: bold;
+	margin-top: 5px;
+}
+.transparent{
+width:375px;
+height:600px;
+}
+}

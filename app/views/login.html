@@ -1,0 +1,54 @@
+<section ng-controller="LoginCtrl">
+    <div class="container body_containerPadding">
+            <div class="col-md-12 col-sm-12 col-xs-12 login_title" align="center">
+                <span>ログイン</span>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 login_body">
+                <div class="col-md-12 col-sm-１2 col-xs-12 login_body_div">
+                    <div class="col-md-12 col-sm-12 col-xs-12 login_input_div">
+                        <div class="col-md-3 col-sm-3 col-xs-12 login_span">
+                        		<span>ログインID</span>
+                        </div>
+                        <div class="col-md-9 col-sm-9 col-xs-12 login_input">
+                        		<input type="text" name="username" ng-model="username">
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 login_input_div">
+                        <div class="col-md-3 col-sm-3 col-xs-12 login_span">
+                        		<span>パスワード</span>
+                        </div>
+                        <div class="col-md-9 col-sm-9 col-xs-12 login_input">
+                        		<input type="password" name="password" ng-model="password">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12" align="center">
+                <div class="login_button"><button type="button" ng-click="login()"><i class="fa fa-lock"></i><p>ログイン</p></button></div>
+                <div class="login_button_pding">
+                  <a style="color: red" href="/signup">新規会員登録</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a style="color: red" href="/forget">パスワードを忘れた方</a>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 login_under_title display" style="color: #454545" align="center">
+                <label><span>他サービスのIDをお持ちの方はこちら</span></label>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 login_under_button" align="center">
+              <div class="col-md-1 col-sm-12 col-xs-12"></div>
+                <div class="col-md-5 col-sm-6 col-xs-12 padding_zero">
+                    <button type="button" style="background-color: rgb(69,172,239);" ng-click="gotoTwitter()"><i class="fa fa-twitter"></i><p>Twitterでログイン</p></button>
+                </div>
+                <div class="col-md-5 col-sm-6 col-xs-12 padding_zero">
+                    <button type="button" style="background-color: rgb(31,106,187);" ng-click="gotoFacebook()"><i class="fa fa-facebook"></i><p>facebookでログイン</p></button>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 login_new_user displayPc" align="center">
+            	<label style="text-align: center;">
+            		<div align="center"><span>会員になると、オトクな情報や新着商品のお知らせ、</span></div>
+            		<div align="center"><span>ポイントの利用が可能です。</span></div>
+            		<div align="center"><span>お手続きは2〜3分程度で完了します。</span></div>
+            	</label>
+            </div>
+    </div>
+</section><!--/#banner-->
+<div ng-include="'views/footer.html'" ng-hide="hideFooter"></div>

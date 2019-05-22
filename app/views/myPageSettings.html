@@ -1,0 +1,114 @@
+  <section class="minHeightVh100">
+      <div class="container body_containerPadding">
+          <div class="col-md-12 col-sm-12 col-xs-12 display">
+              <a href="/"><span class="mypage_route">トップ</span></a>
+              <span class="mypage_route">&gt;</span>
+              <span class="mypage_route">お知らせ</span>
+          </div>
+
+          <div class="col-md-3 col-sm-12 col-xs-12 mypage_xs_padding">
+              <div class="col-md-12 col-sm-12 col-xs-12 mypage_box">
+                  <div class="col-md-12 col-sm-6 col-xs-6 text-center mypage_padding_3">
+                      <img ng-src="{{thumbnailUrl}}" alt="" class="img-circle mypage_nickpic" ng-hide="thumbnailUrlHide">
+                  </div>
+
+                  <div class="col-md-12 col-sm-6 col-xs-6 mypage_padding_3">
+                      <div>
+                          <span class="mypage_span_1">{{formData.nickname}}</span>
+                          <!-- <span class="mypage_span_2">さん</span> -->
+
+                      </div>
+
+                      <!-- <a href="/point"><div>
+                          <button class="mypage_cirle" disabled="disabled">P</button>
+                          <span class="mypage_span_3">{{formData.coin}}</span>
+                          <span class="mypage_span_2">ポイント</span>
+                      </div></a> -->
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-9 col-sm-12 col-xs-12 mypage_xs_padding2">
+              <div class="col-md-12 col-sm-12 col-xs-12 mypage_box">
+                <div class="col-md-12 col-sm-12 col-xs-12 mypagentf_div">
+                  <div class="col-md-12 col-sm-12 col-xs-12 mypagentf_pdg">
+                    <span style="font-weight:bold;">{{formData.nickname}}</span>
+                    <span style="margin-left:8px;">さんへのお知らせ</span>
+                  </div>
+                </div>
+
+
+
+
+
+                <div class="col-xs-3 shopPaddingLR2">
+                  <div ng-if = "results.settingShopKey == null && results.settingEventKey == null && results.settingTvKey == null && results.settingRecruitKey == null && results.settingGoodsKey == null && results.settingFreepapaerKey == null ">
+                    <button type="button" class="eventDetail_login_btn" ng-click="sett(1,0)" >SHOP <i class="fa fa-star-o"></i></button>
+                    <button type="button" class="eventDetail_login_btn" ng-click="sett(2,0)" >EVENT <i class="fa fa-star-o"></i></button>
+                    <button type="button" class="eventDetail_login_btn" ng-click="sett(3,0)" >TV <i class="fa fa-star-o"></i></button>
+                    <button type="button" class="eventDetail_login_btn" ng-click="sett(4,0)" >RECRUIT <i class="fa fa-star-o"></i></button>
+                    <button type="button" class="eventDetail_login_btn" ng-click="sett(5,0)" >GOODS <i class="fa fa-star-o"></i></button>
+                    <button type="button" class="eventDetail_login_btn" ng-click="sett(6,0)" >FREEPAPER <i class="fa fa-star-o"></i></button>
+                  </div>
+
+                  <div ng-if = "results.settingShopKey != null || results.settingEventKey != null || results.settingTvKey != null || results.settingRecruitKey != null || results.settingGoodsKey != null || results.settingFreepapaerKey != null ">
+                    <button ng-click="sett(results.settingShopKey,results.settingShopValue)">
+                      <div ng-if = "results.settingShopKey == 1 && results.settingShopValue == 0 || results.settingShopKey == null">
+                        <div type="button" class="eventDetail_login_btn"  >SHOP <i class="fa fa-star-o"></i></div>
+                      </div>
+                      <div ng-if = "results.settingShopKey == 1 && results.settingShopValue == 1">
+                        <div type="button" class="eventDetail_login_btn" style="background-color:#A9A9A9;"  >SHOP <i class="fa fa-star"></i></div>
+                      </div>
+                    </button>
+
+                    <button ng-click="sett(results.settingEventKey,results.settingEventValue)">
+                      <div ng-if = "results.settingEventKey == 2 && results.settingEventValue == 0 || results.settingEventKey == null">
+                        <div type="button" class="eventDetail_login_btn"  >EVENT <i class="fa fa-star-o"></i></div>
+                      </div>
+                      <div ng-if = "results.settingEventKey == 2 && results.settingEventValue == 1">
+                        <div type="button" class="eventDetail_login_btn" style="background-color:#A9A9A9;"  >EVENT <i class="fa fa-star"></i></div>
+                      </div>
+                    </button>
+
+                    <button ng-click="sett(results.settingTvKey,results.settingTvValue)">
+                      <div ng-if = "results.settingTvKey == 3 && results.settingTvValue == 0 || results.settingTvKey == null">
+                        <div type="button" class="eventDetail_login_btn"  >TV <i class="fa fa-star-o"></i></div>
+                      </div>
+                      <div ng-if = "results.settingTvKey == 3 && results.settingTvValue == 1">
+                        <div type="button" class="eventDetail_login_btn" style="background-color:#A9A9A9;"  >TV <i class="fa fa-star"></i></div>
+                      </div>
+                    </button>
+
+                      <button ng-click="sett(results.settingRecruitKey,results.settingRecruitValue)">
+                        <div ng-if = "results.settingRecruitKey == 4 && results.settingRecruitValue == 0 || results.settingRecruitKey == null">
+                          <div type="button" class="eventDetail_login_btn"  >RECRUIT <i class="fa fa-star-o"></i></div>
+                        </div>
+                        <div ng-if = "results.settingRecruitKey == 4 && results.settingRecruitValue == 1">
+                          <div type="button" class="eventDetail_login_btn" style="background-color:#A9A9A9;"  >RECRUIT <i class="fa fa-star"></i></div>
+                        </div>
+                      </button>
+
+                      <button ng-click="sett(results.settingGoodsKey,results.settingGoodsValue)">
+                        <div ng-if = "results.settingGoodsKey == 5 && results.settingGoodsValue == 0 || results.settingGoodsKey == null">
+                          <div type="button" class="eventDetail_login_btn"  >GOODS <i class="fa fa-star-o"></i></div>
+                        </div>
+                        <div ng-if = "results.settingGoodsKey == 5 && results.settingGoodsValue == 1">
+                          <div type="button" class="eventDetail_login_btn" style="background-color:#A9A9A9;"  >GOODS <i class="fa fa-star"></i></div>
+                        </div>
+                      </button>
+
+                      <button ng-click="sett(results.settingFreepapaerKey,results.settingFreepapaerValue)">
+                        <div ng-if = "results.settingFreepapaerKey == 6 && results.settingFreepapaerValue == 0 || results.settingFreepapaerKey == null">
+                          <div type="button" class="eventDetail_login_btn" ng-click="sett(6,0)" >FREEPAPER <i class="fa fa-star-o"></i></div>
+                        </div>
+                        <div ng-if = "results.settingFreepapaerKey == 6 && results.settingFreepapaerValue == 1">
+                          <div type="button" class="eventDetail_login_btn" style="background-color:#A9A9A9;"  >FREEPAPER <i class="fa fa-star"></i></div>
+                        </div>
+                      </button>
+                    </div>
+
+              </div>
+          </div>
+      </div>
+    </div>
+  </section><!--/#My page-->
+  <div ng-include="'views/footer.html'" ng-hide="hideFooter"></div>
