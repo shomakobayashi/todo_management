@@ -19,7 +19,7 @@
        }
        $scope.getSettings = function () {
          apiService.getSettings(function onSuccess(resultList) {
-           $scope.result = resultList
+           $scope.result = resultList;
 
          },function onError(message){
 

@@ -12,10 +12,10 @@ angular.module('moveupApp')
     function($http, $httpParamSerializer, $location, $cookies){
         // URLルート
         // Grunt build automatic replace start
-        var API_BASE = 'https://www.japanmoveupwest.website';
+        //var API_BASE = 'https://www.japanmoveupwest.website';
         // Grunt build automatic replace end
         // var API_BASE = 'http://54.95.211.232'; // for prod2 test
-        // var API_BASE = 'http://localhost:8080';
+         var API_BASE = 'http://3.20.225.251';
         // すべてのAPIの定義
         var API_PATH = {
             AUTH_FACEBOOK: '/api/auth/facebook/',
@@ -140,8 +140,8 @@ angular.module('moveupApp')
        };
 
        var getHeaders = function(){
-    
-         
+
+
          var result = {};
          // var uid = $cookies.get('jsuid');
          // var sid = $cookies.get('jssid');
@@ -212,11 +212,11 @@ angular.module('moveupApp')
 
         this.getApiBase = function () {
           return API_BASE;
-        }
+        };
 
         this.getApiPath = function () {
           return API_PATH;
-        }
+        };
 
         // 請求登録メール
         this.postLogin = function(username, password, success, error) {
@@ -315,7 +315,7 @@ angular.module('moveupApp')
        this.getReportList = function(type, limit, offset, success, error) {
          httpGet(API_BASE+stringFormat(API_PATH.REPORT_LIST, {type:type,limit:limit,offset:offset}), success, error);
        };
-       
+
        this.getReportDetail = function(uuid, success, error) {
          httpGet(API_BASE+stringFormat(API_PATH.REPORT_DETAIL, {uuid:uuid}), success, error);
        };
