@@ -145,16 +145,6 @@ angular
         controller: 'NewsDetailCtrl',
         controllerAs: 'newsDetail',
       })
-	  .when('/report/:type/:page/', {
-	    templateUrl: 'views/report.html',
-	    controller: 'ReportCtrl',
-	    controllerAs: 'report'
-	  })
-	  .when('/reportDetail/:uuid/', {
-	    templateUrl: 'views/reportDetail.html',
-	    controller: 'ReportDetailCtrl',
-	    controllerAs: 'reportDetail',
-	  })
       .when('/shop/list/:type/:page/:timestamp/', {
         templateUrl: 'views/shop.html',
         controller: 'ShopCtrl',
