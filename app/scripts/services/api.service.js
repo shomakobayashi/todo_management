@@ -37,8 +37,6 @@ angular.module('moveupApp')
             TOP_LIST: '/api/top/',
             EVENT_LIST: '/api/event/list/{year}/{limit}/{offset}/',
             EVENT_DETAIL:'/api/event/{uuid}/',
-            REPORT_LIST: '/api/report/list/{type}/{limit}/{offset}/',
-            REPORT_DETAIL:'/api/report/detail/{uuid}/',
             NEWS_LIST: '/api/news/list/{type}/{limit}/{offset}/',
             NEWS_DETAIL:'/api/news/detail/{uuid}/',
             SHOP_LIST: '/api/shop/list/{type}/{limit}/{offset}/',
