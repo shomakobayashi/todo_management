@@ -7,7 +7,7 @@ version 0.16.0.
 
 1.Install `node`  `git`  `ruby`
 
-2.Add    `環境変数`    `NODE_PATH` `X:\xx\nodejs\npm-global`     fill in your nodejs npm-global folder
+2.Add    `環境変数`    `NODE_PATH`  `x:\x\x\nodejs` to environment variable
 
 3.In the `コマンド` get into `moveup-front` folder
 
