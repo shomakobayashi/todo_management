@@ -15,7 +15,8 @@ angular.module('moveupApp')
         //var API_BASE = 'https://www.japanmoveupwest.website';
         // Grunt build automatic replace end
         // var API_BASE = 'http://54.95.211.232'; // for prod2 test
-         var API_BASE = 'http://3.20.225.251';
+      // var API_BASE = 'http://3.20.225.251';
+      var API_BASE = 'http://localhost:8081';
         // すべてのAPIの定義
         var API_PATH = {
             AUTH_FACEBOOK: '/api/auth/facebook/',
@@ -48,6 +49,8 @@ angular.module('moveupApp')
             RECRUIT_LIST: '/api/recruit/list/{limit}/{offset}/',
             RECRUIT_DETAIL: '/api/recruit/{uuid}/',
             RECRUIT_SEARCH: '/api/recruit/search/',
+            REPORT_LIST: '/api/report/list/{type}/{limit}/{offset}/',
+            REPORT_DETAIL:'/api/report/detail/{uuid}/',
             PLACE_LIST: '/api/place/list/area/{area}/{limit}/{offset}/',
             PLACE_DETAIL: '/api/place/{uuid}/',
             FREEPAPER_LIST: '/api/freePaper/list/{limit}/{offset}/',

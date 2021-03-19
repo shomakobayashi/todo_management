@@ -145,6 +145,18 @@ angular
         controller: 'NewsDetailCtrl',
         controllerAs: 'newsDetail',
       })
+      //20210318　楊追加
+      .when('/report/:type/:page/', {
+        templateUrl: 'views/report.html',
+        controller: 'ReportCtrl',
+        controllerAs: 'report'
+      })
+      //20210318　楊追加
+      .when('/reportDetail/:uuid/', {
+        templateUrl: 'views/reportDetail.html',
+        controller: 'ReportDetailCtrl',
+        controllerAs: 'reportDetail',
+      })
       .when('/shop/list/:type/:page/:timestamp/', {
         templateUrl: 'views/shop.html',
         controller: 'ShopCtrl',

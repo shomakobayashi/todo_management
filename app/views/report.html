@@ -1,0 +1,57 @@
+<section class="minHeightVh100">
+  <div class="container body_containerPadding">
+    <div class="col-md-4 col-sm-4 col-xs-12 list_title padding_zero">REPORT</div>
+    <div class="col-md-8 col-sm-8 col-xs-12 padding_zero display">
+      <div class="col-md-4 col-sm-4 col-xs-0"></div>
+      <a href="/report/0/1/">
+        <div class="col-md-2 col-sm-2" style="padding: 0 5px;"><p class="tab tab_all">ALL</p></div>
+      </a>
+      <a href="/report/2/1/">
+        <div class="col-md-2 col-sm-2" style="padding: 0 5px;"><p class="tab tab_moveup">MOVEUP</p></div>
+      </a>
+      <a href="/report/1/1/">
+        <div class="col-md-2 col-sm-2" style="padding: 0 5px;"><p class="tab tab_event">EVENT</p></div>
+      </a>
+      <a href="/report/3/1/">
+        <div class="col-md-2 col-sm-2" style="padding: 0 5px;"><p class="tab tab_report">REPORT</p></div>
+      </a>
+    </div>
+    <div class="col-md-8 col-sm-12 col-xs-12 report_selectDiv displayPc">
+      <div id="selectInput" class="report_catagoli_select" ng-click="menuClick()"><span>{{typeValue}}</span></div>
+      <div id="div1" ng-hide="menuHide">
+        <a href="/report/0/1/"><div class="selectDIV">ALL</div></a>
+        <a href="/report/2/1/"><div class="selectDIV">MOVEUP</div></a>
+        <a href="/report/1/1/"><div class="selectDIV">EVENT</div></a>
+        <a href="/report/3/1/"><div class="selectDIV">REPORT</div></a>
+      </div>
+      <div id="div2" ng-click="menuClick2()" ng-hide="menuHide"></div>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12 report_body_margin padding_zero">
+      <div ng-repeat="reportList in results.reportList">
+        <a href="/reportDetail/{{reportList.uuid}}/">
+          <div class="col-md-12 col-sm-12 reportList_div padding_zero display">
+            <div class="col-md-2 col-sm-3 report_date padding_zero">{{reportList.date}}</div>
+            <div class="col-md-10 col-sm-9 report_newMgL">
+              <div class="col-md-2 col-sm-2 report_catagoli"><div style="{{reportList.color}}">{{reportList.type}}</div></div>
+              <div class="col-md-10 col-sm-10 report_title">{{reportList.title}}</div>
+              <div class="col-md-12 col-sm-12 report_excerpt lineStyle lineHid2">{{reportList.excerpt}}</div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-xs-12 reportList_div padding_zero displayPc">
+            <div class="col-sm-12 col-xs-12 report_title">{{reportList.title}}</div>
+            <div class="col-sm-3 col-xs-3 report_catagoli"><div style="{{reportList.color}}">{{reportList.type}}</div></div>
+            <div class="col-sm-9 col-xs-9 report_date">{{reportList.date}}</div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div pagination class="col-md-12 col-sm-12 col-xs-12 change_page event_padding2" ng-hide="hidePages" align="center">
+      <ul>
+        <a href="javascript:void(0);"><li ng-click="upPageClick()">&lt;</li></a>
+        <div id="pagesChange"></div>
+        <a href="javascript:void(0);"><li ng-click="downPageClick()">&gt;</li></a>
+      </ul>
+    </div>
+  </div>
+</section><!--/#report-->
+<div ng-include="'views/footer.html'" ng-hide="hideFooter"></div>
