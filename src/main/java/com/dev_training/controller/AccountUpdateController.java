@@ -140,6 +140,7 @@ public class AccountUpdateController {
      */
     @RequestMapping(value = "/do", params = "back", method = RequestMethod.POST)
     public String back(@ModelAttribute AccountUpdateForm accountUpdateForm) {
+
         return "account/accountUpdateForm";
     }
 
