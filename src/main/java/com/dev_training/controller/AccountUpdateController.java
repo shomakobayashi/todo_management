@@ -33,30 +33,18 @@ public class AccountUpdateController {
         this.service = accountUpdateService;
         this.session = session;
     }
-    /** アカウント情報更新-初期表示。　...*/
+
+    /** アカウント情報更新-初期表示。 */
     @RequestMapping(value = "/init")
-    public String updateInit(Model model){}
-
-    /**　アカウント情報更新　確認画面表示。 ...*/
-    @RequestMapping(value ="/confirm" , method = RequestMethod.POST)
-    public String confirm(@ModelAttribute @Validated AccountUpdateForm accountUpdateForm, BindingResult bindingResult){
-        // BeanValidation　のエラー確認
-        if(bindingResult.hasErrors()){
-            return "account/accountUpdateForm";
-        }
-        //Todo TechAdv session セッションに格納されているアカウント情報を取得してください。
+    public String updateInit(Model model){
+        //sessionに格納されているアカウントをもとに、DBから最新のアカウントを取得してModelに格納する。
+        //具体的には、session.getAttribute(SESSION_FORM_ID) はセッションから指定されたキーである
+        // SESSION_FORM_ID の値を取得するために使用されます。取得されたオブジェクトが Account クラスの
+        // インスタンスである場合、それを変数 account にキャストして代入します。
         Account account = (Account) session.getAttribute(SESSION_FORM_ID);
-
-        //Todo TechAdv session　取得したアカウント情報のIDを使用し、アカウント情報を検索してください。
+        //.getIDはセッションクラスのメソッド。セッションIDを取得する。
         Account targetAccount = service.getAccountById(account.getId());
-
-        return "redirect:/account/accountUpdateForm";
-    }
-    @RequestMapping(value = "/init")
-    public String antUpdateInit(Model model){
-        Account account = (Account) session.getAttribute(SESSION_FORM_ID);
-        Account targetAccount = service.getAccountById(account.getId());
-        model.addAttribute("accountUpdateForm", targetAccount);
+        model.addAttribute("accountUpdateForm" , targetAccount);
         return "account/accountUpdateForm";
     }
 
@@ -65,18 +53,18 @@ public class AccountUpdateController {
      *
      * @param accountUpdateForm 精査済みフォーム
      * @param bindingResult     精査結果
-     * @param model             モデル
-     * @return Path
+     * * @return Path
      */
-    
-
-    @RequestMapping(value = "/confirm", method = RequestMethod.POST)
-    public String confirm(@ModelAttribute @Validated AccountUpdateForm accountUpdateForm, BindingResult bindingResult, Model model) {
-        // BeanValidationのエラー確認
+    @RequestMapping(value ="/confirm" , method = RequestMethod.POST)
+    public String confirm(@ModelAttribute @Validated AccountUpdateForm accountUpdateForm, BindingResult bindingResult) {
+        // BeanValidation　のエラー確認
         if (bindingResult.hasErrors()) {
             return "account/accountUpdateForm";
         }
+        //Todo TechAdv session セッションに格納されているアカウント情報を取得してください。
         Account account = (Account) session.getAttribute(SESSION_FORM_ID);
+
+        //Todo TechAdv session　取得したアカウント情報のIDを使用し、アカウント情報を検索してください。
         Account targetAccount = service.getAccountById(account.getId());
 
         // 更新有無チェック。何も更新されていなければエラーとする。
@@ -85,14 +73,14 @@ public class AccountUpdateController {
             return "account/accountUpdateForm";
         }
         // アカウントIDの重複精査
-       String accountId = accountUpdateForm.getAccountId();
+        String accountId = accountUpdateForm.getAccountId();
         if (!accountId.equals(targetAccount.getAccountId())) {
             if (service.isExistsAccountId(accountId)) {
                 bindingResult.rejectValue("accountId", "validation.duplicate", new String[]{"アカウントID"}, "default message");
-                return "account/accountUpdateForm";
+                return "/account/accountUpdateForm";
             }
         }
-        return "account/accountUpdateConfirmForm";
+        return "account/accountUpdateForm";
     }
 
     /**
@@ -108,7 +96,10 @@ public class AccountUpdateController {
         if (bindingResult.hasErrors()) {
             return "account/accountUpdateForm";
         }
+        //Todo TechAdv session セッションに格納されているアカウント情報を取得してください。
         Account account = (Account) session.getAttribute(SESSION_FORM_ID);
+
+        //Todo TechAdv session　取得したアカウント情報のIDを使用し、アカウント情報を検索してください。
         Account targetAccount = service.getAccountById(account.getId());
 
         // 更新有無チェック。何も更新されていなければエラーとする。
@@ -133,7 +124,10 @@ public class AccountUpdateController {
         // 更新処理
         service.updateAccountById(targetAccount);
         // セッション情報の更新
+        //Todo TechAdv session 更新処理後のアカウントのIDを使用し、アカウント情報を検索してください。
         Account sessionAccount = service.getAccountById(targetAccount.getId());
+
+        //Todo TechAdv session 検索したアカウント情報をセッションに格納してください。
         session.setAttribute(SESSION_FORM_ID, sessionAccount);
         return "account/accountUpdateCompleteForm";
     }
