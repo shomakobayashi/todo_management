@@ -80,7 +80,7 @@ public class AccountUpdateController {
                 return "/account/accountUpdateForm";
             }
         }
-        return "account/accountUpdateForm";
+        return "account/accountUpdateConfirmForm";
     }
 
     /**

@@ -1,0 +1,29 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.dev_training.common.Priority",
+      "name": "todo",
+      "type": "com.dev_training.common.Priority"
+    },
+    {
+      "sourceType": "com.dev_training.common.Status",
+      "name": "todo",
+      "type": "com.dev_training.common.Status"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.dev_training.common.Priority",
+      "name": "todo.priority",
+      "description": "優先度管理用Map",
+      "type": "java.util.Map<java.lang.String,java.lang.String>"
+    },
+    {
+      "sourceType": "com.dev_training.common.Status",
+      "name": "todo.status",
+      "description": "ステータス管理用Map",
+      "type": "java.util.Map<java.lang.String,java.lang.String>"
+    }
+  ]
+}

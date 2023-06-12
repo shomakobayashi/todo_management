@@ -27,6 +27,9 @@ class TodoSpecifications {
     }
 
     /** detail:like */
+    //Todo TechAdy todoSpecification 詳細のキーワード検索メソッドを以下の条件で作成して下さい。
+    // ・メソッド名 : detailContains
+    // ・検索条件 : Like
     static Specification<Todo> detailContains(String detail) {
         return StringUtils.isEmpty(detail) ? null : new Specification<Todo>() {
             @Override
@@ -37,6 +40,9 @@ class TodoSpecifications {
     }
 
     /** remarks:like */
+    //Todo TechAdv todoSpecification 備考のキーワード検索メソッドを以下の条件で作成してください。
+    // ・メソッド名　： remarksContains
+    // ・検索条件　：　Like
     static Specification<Todo> remarksContains(String remarks) {
         return StringUtils.isEmpty(remarks) ? null : new Specification<Todo>() {
             @Override
@@ -47,6 +53,9 @@ class TodoSpecifications {
     }
 
     /** startDate:greaterThanOrEqualTo */
+    //Todo TechAdv todoSpecification  開始日のキーワード検索メソッドを以下の条件で作成してください。
+    // ・メソッド名　： startDateContains
+    // ・検索条件　：　
     static Specification<Todo> startDateContains(String startDate) {
         return StringUtils.isEmpty(startDate) ? null : new Specification<Todo>() {
             @Override
