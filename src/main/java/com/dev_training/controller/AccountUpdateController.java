@@ -26,22 +26,34 @@ public class AccountUpdateController {
     /** HTTPセッション */
     private final HttpSession session;
     /** セッションキー(ログインユーザのアカウント) */
-    private static final String SESSION_FORM_ID = "account";
+    private static final String SESSION_FORM_ID = "account"; //毎回文字列でもよいが複数回使う場合は定数のほうがメンテナンス性よき
 
     @Autowired
     public AccountUpdateController(AccountUpdateService accountUpdateService, HttpSession session) {
         this.service = accountUpdateService;
         this.session = session;
     }
-
-    /**
-     * アカウント情報更新-初期表示。
-     *
-     * @param model モデル
-     * @return Path
-     */
+    /** アカウント情報更新-初期表示。　...*/
     @RequestMapping(value = "/init")
-    public String antUPdateInit(Model model){
+    public String updateInit(Model model){}
+
+    /**　アカウント情報更新　確認画面表示。 ...*/
+    @RequestMapping(value ="/confirm" , method = RequestMethod.POST)
+    public String confirm(@ModelAttribute @Validated AccountUpdateForm accountUpdateForm, BindingResult bindingResult){
+        // BeanValidation　のエラー確認
+        if(bindingResult.hasErrors()){
+            return "account/accountUpdateForm";
+        }
+        //Todo TechAdv session セッションに格納されているアカウント情報を取得してください。
+        Account account = (Account) session.getAttribute(SESSION_FORM_ID);
+
+        //Todo TechAdv session　取得したアカウント情報のIDを使用し、アカウント情報を検索してください。
+        Account targetAccount = service.getAccountById(account.getId());
+
+        return "redirect:/account/accountUpdateForm";
+    }
+    @RequestMapping(value = "/init")
+    public String antUpdateInit(Model model){
         Account account = (Account) session.getAttribute(SESSION_FORM_ID);
         Account targetAccount = service.getAccountById(account.getId());
         model.addAttribute("accountUpdateForm", targetAccount);
