@@ -61,5 +61,7 @@ public class AccountUnsubscribeController {
         // セッション破棄
         session.invalidate();
         return "account/accountUnsubscribeCompleteForm";
+
+
     }
 }

@@ -39,7 +39,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/").permitAll()
                 .antMatchers("/login").permitAll()
                 .antMatchers("/account/register/**").permitAll()
-                .anyRequest().authenticated();
+                //Todo TechAdv todoSecurity アプリ紹介ページを認証状態によらず許可するURLに追加する。
+                .antMatchers("/login/introduction").permitAll()//認証なしで許可するURLの設定
+                .anyRequest().authenticated();//すべてのリクエストに対し認証を設定する。
 
         http.formLogin()
                 .loginPage("/login") // ログインページのパス

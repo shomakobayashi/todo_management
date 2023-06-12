@@ -9,9 +9,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/login")
 public class LoginController {
-
-    @RequestMapping(value="")
+    @RequestMapping("")
     public String login() {
-        return "login/loginForm";
+
+        return "/login/loginForm";
+    }
+    //Todo TechAdv todoSecurity アプリ紹介ページを表示するためのメソッドに追加する。
+    // ・アプリ紹介ページは、[login/introduction.html]を新規に作成してください。
+    /**
+     *  todo紹介
+     *
+     * @return Path
+     * */
+    @RequestMapping(value ="/introduction")
+    public String introduction(){
+        return "/login/introduction";
     }
 }

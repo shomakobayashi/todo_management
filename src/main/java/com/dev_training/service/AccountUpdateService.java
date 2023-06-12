@@ -20,6 +20,7 @@ public class AccountUpdateService {
 
     @Autowired
     public AccountUpdateService(AccountRepository accountRepository) {
+
         this.accountRepository = accountRepository;
     }
 
@@ -70,6 +71,7 @@ public class AccountUpdateService {
      */
     @Transactional
     public void updateAccountById(Account account) {
+
         accountRepository.save(account);
     }
 

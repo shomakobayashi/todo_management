@@ -1,5 +1,5 @@
 -- USE
-USE dev_training
+USE dev_training;
 
 -- CREATE
 CREATE TABLE `accounts` (

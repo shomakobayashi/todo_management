@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common/common_header::base_header(~{::title})">
+  <title>アプリ紹介</title>
+</head>
+<body style="background-color:#eeeeee;">
+<nav th:replace="common/noLoginNav"></nav>
+<div class="container">
+  <div class="row">
+    <div class="col-12 mx-auto">
+      <h3 class="h3 text-center mb-5">TODO管理システムの紹介</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-10">
+      <h5 class="font-weight-bold">TODO登録機能</h5>
+      <p class="grey-text mb-5">忘れずにTODOを登録し、タスクを消化していきましょう!慣れると効率的に作業ができるように</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-10">
+      <h5 class="font-weight-bold">つぶやき機能</h5>
+      <p class="grey-text mb-5">会員間で、コミュニケーションツールとして、つぶやき機能が使えます。</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-10">
+      <h5 class="font-weight-bold">天気予報</h5>
+      <p class="grey-text mb-5">天気予報を確認することができます。天気のいい日は、早く作業を消化して、遊びにいきましょう</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-10">
+      <a href="/login" >ログイン画面へ</a>
+    </div>
+  </div>
+</div>
+<hr class="my-5">
+<footer th:replace="common/common_footer"></footer>
+</body>
+</html>
