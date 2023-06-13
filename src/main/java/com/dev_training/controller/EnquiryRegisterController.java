@@ -1,9 +1,11 @@
 package com.dev_training.controller;
 
 import com.dev_training.entity.Account;
+import com.dev_training.entity.Enquiry;
 import com.dev_training.form.AccountRegisterForm;
 import com.dev_training.form.EnquiryRegisterForm;
 import com.dev_training.service.AccountRegisterService;
+import com.dev_training.service.EnquiryRegisterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,13 +22,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping(value = "/enquiry/register")
 public class EnquiryRegisterController {
 
-   /* *//** 登録サービス *//*
-    private final AccountRegisterService service;
+  /**
+   * 問い合わせ
+   */
+    private final EnquiryRegisterService service;
 
     @Autowired
-    public EnquiryRegisterController(AccountRegisterService accountRegisterService) {
-        this.service = accountRegisterService;
-    }*/
+    public EnquiryRegisterController(EnquiryRegisterService enquiryRegisterService) {
+        this.service = enquiryRegisterService;
+    }
 
     /**
      * 問い合わせ登録-初期表示。
@@ -42,66 +46,59 @@ public class EnquiryRegisterController {
 
     */
 /**
-     * アカウント登録-確認画面表示。
+     * 問い合わせ登録-確認画面表示。
      *
-     * @param accountRegisterForm 精査済みフォーム
-     * @param bindingResult       精査結果
+     * @param enquiryRegisterForm 問い合わせフォーム
+     * @param bindingResult       問い合わせ結果
      * @param model               モデル
      * @return Path
-     *//*
+     */
 
     @RequestMapping(value = "/confirm", method = RequestMethod.POST)
-    String registerConfirm(@ModelAttribute @Validated AccountRegisterForm accountRegisterForm, BindingResult bindingResult, Model model) {
+    String registerConfirm(@ModelAttribute @Validated EnquiryRegisterForm enquiryRegisterForm, BindingResult bindingResult, Model model) {
         // BeanValidationのエラー確認
         if (bindingResult.hasErrors()) {
-            return "account/accountRegisterForm";
+            return "enquiry/enquiryRegisterForm";
         }
-        // アカウントIDの重複精査
-        if (service.isExistsAccountId(accountRegisterForm.getAccountId())) {
-            bindingResult.rejectValue("accountId", "validation.duplicate", new String[]{"アカウントID"}, "default message");
-            return "account/accountRegisterForm";
-        }
-        return "account/accountRegisterConfirmForm";
+        return "enquiry/enquiryRegisterConfirmForm";
     }
 
-    */
 /**
-     * アカウント登録-完了画面表示。
+     * 問い合わせ登録-完了画面表示。
      *
-     * @param accountRegisterForm 精査済みフォーム
+     * @param enquiryRegisterForm 精査済みフォーム
      * @param bindingResult       精査結果
      * @return Path
-     *//*
+     */
 
     @RequestMapping(value = "/do", params = "register", method = RequestMethod.POST)
-    String registerComplete(@ModelAttribute @Validated AccountRegisterForm accountRegisterForm, BindingResult bindingResult) {
+    String registerComplete(@ModelAttribute @Validated EnquiryRegisterForm enquiryRegisterForm, BindingResult bindingResult) {
         // BeanValidationのエラー確認
         if (bindingResult.hasErrors()) {
-            return "account/accountRegisterForm";
+            return "enquiry/enquiryRegisterForm";
         }
-        // 登録するアカウントの作成
-        Account account = new Account();
-        account.setAccountId(accountRegisterForm.getAccountId());
-        account.setName(accountRegisterForm.getName());
-        account.setSelfIntroduction(accountRegisterForm.getSelfIntroduction());
-        account.setEmail(accountRegisterForm.getEmail());
-        // アカウントの登録
-        service.register(account, accountRegisterForm.getPassword());
-        return "account/accountRegisterCompleteForm";
+        // 登録する問い合わせの作成
+        Enquiry enquiry = new Enquiry();
+        enquiry.setTitle(enquiryRegisterForm.getTitle());
+        enquiry.setName(enquiryRegisterForm.getName());
+        enquiry.setEmail(enquiryRegisterForm.getEmail());
+        enquiry.setDetail(enquiryRegisterForm.getDetail());
+        // 問い合わせの登録
+        service.register(enquiry);
+        return "enquiry/enquiryRegisterCompleteForm";
     }
 
-    */
 /**
-     * アカウント登録-入力画面に戻る。
+     * 問い合わせ登録-入力画面に戻る。
      *
-     * @param accountRegisterForm アカウント登録フォーム。
+     * @param enquiryRegisterForm 問い合わせ登録フォーム。
      * @return Path
-     *//*
-
+     */
+    //params=の中身はenquiRegisterFormで戻るを押すと下のメソッドが実行される
     @RequestMapping(value = "/do", params = "registerBack", method = RequestMethod.POST)
-    String registerBack(@ModelAttribute AccountRegisterForm accountRegisterForm) {
-        return "account/accountRegisterForm";
+    String registerBack(@ModelAttribute EnquiryRegisterForm enquiryRegisterForm) {
+        return "enquiry/enquiryRegisterForm";
     }
-*/
+
 
 }

@@ -38,3 +38,13 @@ CREATE TABLE `comment` (
   `created_tms` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+CREATE TABLE `enquiry` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `title` varchar(15) NOT NULL,
+ `name` varchar(45) NOT NULL,
+ `email` varchar(255) NOT NULL,
+ `detail` text NOT NULL,
+ `created_tms` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;

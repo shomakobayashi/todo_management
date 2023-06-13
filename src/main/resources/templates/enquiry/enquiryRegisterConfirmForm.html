@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common/common_header::base_header(~{::title})">
+    <title>問い合わせ登録確認</title>
+</head>
+<body>
+
+<nav th:replace="common/noLoginNav"></nav>
+
+<div class="container py-3">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="text-center pb-4">問い合わせ登録確認</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 mx-auto">
+            <div class="card rounded-0 card-shadow">
+                <div class="card-header bg-custom1">
+                    <h3 class="mb-0">問い合わせ情報確認</h3>
+                </div>
+                <div class="card-body">
+                    <form id="enquiryForm" th:action="@{/enquiry/register/do}" th:object="${enquiryRegisterForm}" method="post">
+                        <fieldset id="account_field">
+                            <div class="form-group">
+                                <label>タイトル</label><br/>
+                                <span class="form-control-static" th:text="*{title}"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>氏名</label><br/>
+                                <span class="form-control-static" th:text="*{name}"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>E-mail</label><br/>
+                                <span class="form-control-static" th:text="*{email}"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>内容</label><br/>
+                                <span class="form-control-static" id="detailPreview" th:utext="*{detail}"></span>
+                            </div>
+                            <input type="hidden" name="title" id="title" th:value="*{title}"/>
+                            <input type="hidden" name="name" id="name" th:value="*{name}"/>
+                            <input type="hidden" name="email" id="email" th:value="*{email}"/>
+                            <input type="hidden" name="detail" id="detail" th:value="*{detail}"/>
+                            <div class="col text-center">
+                                <div class="btn-group">
+                                    <input type="submit" name="registerBack" value="戻る" class="btn bg-custom3 btn-lg text-white "/>
+                                </div>
+                                <div class="btn-group">
+                                    <input type="submit" name="register" value="登録" class="btn bg-custom3 btn-lg text-white "/>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer th:replace="common/common_footer"></footer>
+
+<script type="text/javascript">
+    $(function () {
+        var selfIntroductionPreview = $('#detailPreview').text();
+        $('#detailPreview').html(selfIntroductionPreview.replace(/[\n\r]/g, '<br>'));
+    });
+</script>
+
+</body>
+</html>
